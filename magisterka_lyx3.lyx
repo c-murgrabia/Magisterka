@@ -1555,109 +1555,104 @@ Testy aplikacji w Laboratorium Zanurzonej Wizualizacji Przestrzennej
 \end_layout
 
 \begin_layout Standard
-W piątek 6.
- maja odbyły się pierwsze testy aplikacji BlenderVR.
- Jednostka, na której odbywały się testy została wyposażona w procesor klasy
- Intel Xeon, kartę graficzną Nvidia Quadro oraz monitor ASUS 24'' w pełni
- obsługujący wyświetlanie obrazu 3D.
- Aplikacja oraz wszystkie niezbędne komponenty musiały zostać dostarczone
- na zewnętrznym nośniku ponieważ komputer nie został podłączony do Internetu.
+Test aplikacji BlenderVR został przeprowadzony na specjalnie przygotowanych
+ stanowiskach komputerowych.
+ W skład jednostki testowej wchodził sprzęt:
+\end_layout
+
+\begin_layout Itemize
+Komputer stacjonarny wyposażony w:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+procesor klasy Intel Xeon
+\end_layout
+
+\begin_layout Itemize
+karta graficzna Nvidia Quadro
+\end_layout
+
+\begin_layout Itemize
+32 GB pamięci RAM
+\end_layout
+
+\begin_layout Itemize
+Dysk HDD o pojemności 500 GB
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Monitor ASUS 24'' z możliwością wyświetlenia obrazu 3D
+\end_layout
+
+\begin_layout Itemize
+Aktywne okulary 3D
+\end_layout
+
+\begin_layout Standard
+System operacyjny zainstalowany na jednostkach testowych to Windows 7 Profession
+al.
+ Każdy komputer wpięty został w tę samą sieć ethernet.
+ Żaden z komputerów nie miał dostępu do Internetu.
+ Wszystkie niezbędne programy oraz pakiety zostały dostarczone ze źródeł
+ zewnętrznych przy użyciu dysku przenośnego.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Instalacja BlenderVR
+\end_layout
+
+\begin_layout Standard
+Do instalacji programu wykorzystano gotowy pakiet instalacyjny.
+ Zawierał on zarówno źródła aplikacji jak i wszystkie potrzebne programy
+ do jego uruchomienia: Python3.4 oraz Qt4.8.
+ Automatyczny instalator sam dodaje zmienną środowiskową Pythona oraz BlenderVR.
+ Pakiet instalacyjny ma również opcję automatycznego uruchomienia skryptu
+ przygotowującego do pierwszego uruchomienia aplikacji.
+ Skrypt automatycznie dodaje odpowiednie wpisy do rejestru, instaluje dwa
+ dodatkowe pakiety do Pythona: VirtualEnv oraz PySide 1.2.2.
+ Kolejnym krokiem jest zainstalowanie programu Blender3D, z którego będzie
+ korzystał BlenderVR.
+ Tak skonfigurowane środowisko jest już gotowe do pracy.
  
 \end_layout
 
 \begin_layout Standard
-Pierwsza próba instalacji i uruchomienia odbyła się w środowisku systemu
- Linux.
- Jednakże brak dostępu do Internetu sprawił, że niektóre biblioteki pakietów
- Pythona oraz Qt4.8 nie mogły zostać pobrane (jak również był problem z dostarcze
-niem odpowienich plików i zależności z zewnątrz).
- Kolejna próba odbyła się w środowisku Windows.
- Instalator automatyczny, stworzony przez deweloperów BlenderVR, zawierał
- prawie kompletny pakiet Pythona3.4 oraz kompletny pakiet bibliotek Qt4.8.
- Problemem na tej platformie również okazał się brak dostępu do Internetu.
- Brakowało pakietów Pythona o nazwie PySide oraz Virtualenv.
- Te jednak udało się dostarczyć i zainstalować.
-\end_layout
-
-\begin_layout Standard
-Aplikacja została uruchomiona.
- Przystąpiono więc do pierwszych testów przykładowych scen, dołączonych
- do programu.
- Podstawowa konfiguracja programu wymagała podania ścieżki do plików wykonywalny
-ch blender.exe oraz blenderplayer.exe.
- Okazało się, że program Blender3D nie może być zainstalowany na dysku C:
- (tak, jak było to domyślnie ustawione) z powodu braku wystarczających uprawnień
- użytkownika.
- Usunięcie oraz zainstalowanie ponownie aplikacji Blender3D na dysku D:
- wyeliminowało problem braku uprawnień.
+Kolejnym krokiem jest przygotowanie pliku konfiguracyjnego.
+ Do źródeł aplikacji dołączono kilka przykładowych konfiguracji zależnie
+ od systemu operacyjnego oraz środowiska, w którym będzie testowana aplikacja.
+ Na początek wystarczy sprawdzić czy program uruchamia przykładową scenę
+ oraz czy konsola nie pokazuje żadnego błędu.
+ Do tego wykorzystany zostanie plik konfiguracyjny przygotowany dla Windowsa.
+ W pliku zmieniono odpowiednio ścieżki dostępu do Blendera3D oraz BlenderPlayer.
+ Wyświetlanie obrazu 2D zostało ustawione jako okno o rozmiarze 400x400
+ pikesli.
+ Konfiguracja została zapisana oraz załadowana do programu.
+ Przykładowa scena wybrana do pierwszego testu to basic.blend.
+ <<tu dopisać coś co znajduje się na tej przykładowej scenie>>.
+ Próba zakończyła się sukcesem.
+ Na monitorze wyświetlona została przykładowa scena w oknie.
  
 \end_layout
 
 \begin_layout Standard
-Pierwsza próba wyświetlenia sceny przykładowej przeprowadzona została w
- konfiguracji 2D oraz wyświetlaniu w oknie 400x400 pikseli.
- Po załadowaniu odpowiedniego pliku konfiguracyjnego oraz ustawień ekranu
- na monitorze pokazało się okno z przykładową sceną.
- Sukces.
-\end_layout
-
-\begin_layout Standard
-Kolejna próba wykorzystywała już możliwości 3D monitora.
- Odpowiednio zmodyfikowany plik konfiguracyjny: Stereo 3D Quad Buffer oraz
- odświeżaniu 120Hz.
- Tyle wynosi odświeżanie aktywnych okularów 3D (po 60Hz na każde oko, obraz
- wyświetlany naprzemiennie)
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-http://blender-vr-manual.readthedocs.io/components/configuration-file.html#desktop-
-stereo-3d (dostęp 07.05.20016)
-\end_layout
-
-\end_inset
-
-.
- Tutaj wystąpił problem bibliotek Visual C++ Redistributable, który udało
- się dość szybko wyeliminować poprzez instalację odpowiedniego pakietu.
- Próba ostatecznie zakończyła się sukcesem a na monitorze został wyświetlony
- stereoskopiczny obraz dopasowany do aktywnych okularów 3D.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-drugie spotkanie
-\end_layout
-
-\end_inset
-
-Kolejną próbą w laboratorium LZWP była próba nawiązania połączenia przez
- sieć między dwoma komputerami.
- BlenderVR posługuje się protokołem komunikacyjnym SSH.
- Dzięki temu program jest w stanie na podanych komputerach uruchomić wybraną
- scenę w BGE.
- W laboratorium zakładano testy w środowisku Linux (ponieważ protokół jest
- tam wbudowany) jednakże pewne problemy techniczne podczas uruchamiania
- systemu uniemożliwiły przeprowadzenie testu.
- Na systemie operacyjnym Windows do wykorzystania protokołu ssh potrzebujemy
- programu OpenSSH for Windows.
- Umożliwia on użycie z poziomu konsoli polecenia 
+Następna faza testu sprawdzi czy aplikacja wyświetli obraz stereoskopiczny
+ na przystosowanym do tego monitorze.
+ Do pliku konfiguracyjnego dodano ustawienia ekranu o nazwie Quadbuffer
+ z opcją 
 \begin_inset Quotes pld
 \end_inset
 
-ssh
+hwpageflip
 \begin_inset Quotes prd
 \end_inset
 
 .
- Po udanym zainstalowaniu serwera oraz klienta protokołu SSH z powodzeniem
- nawiązano połączenie.
- Następnym krokiem będzie rekonfiguracja BlenderVR tak, by można było wykorzysta
-ć go do uruchomienia przykładowej sceny BGE na drugim komputerze.
+ Opcja pozwala na zdefiniowanie dwóch buforów graficznych - jeden dla prawego
+ i jeden dla lewego oka.
+ 
 \end_layout
 
 \end_body
