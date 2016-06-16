@@ -1,0 +1,1664 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language polish
+\language_package none
+\inputencoding utf8
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 4cm
+\topmargin 2.5cm
+\rightmargin 2cm
+\bottommargin 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language polish
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+tutaj strona główna
+\end_layout
+
+\begin_layout Section*
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+tutaj pusto
+\end_layout
+
+\begin_layout Section*
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+tutaj spis treści
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+Słownik
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Rzeczywistość wirtualna (ang.
+ Virtual Reality)
+\series default
+ - sposób użycia technologii komputerowej do tworzenia trójwymiarowego świata,
+ w którym obiekty dają wrażenie przestrzennej obecności 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Steve Bryson 
+\begin_inset Quotes pld
+\end_inset
+
+Virtual reality: A Definition History - A Personal Essay
+\begin_inset Quotes prd
+\end_inset
+
+, 1998, s.
+ 4 http://arxiv.org/pdf/1312.4322.pdf
+\end_layout
+
+\end_inset
+
+.
+ Do zanurzenia się w rzeczywistości wirtualnej potrzebne jest urządzenie
+ wyświetlające obraz.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Maszyny arcade, automaty do gier
+\series default
+ - konstrukcja służąca rozrywce, umieszczana najczęściej w salonach gier
+ bądź też pubach lub klubach.
+ Uruchomienie gry następuje w momencie wrzucenia monety bądź żetonu w otwór
+ wrzutowy, zabawa ograniczona jest zwykle pewnym wyznacznikiem narzuconym
+ przez producenta lub właściciela automatu (np.
+ liczba prób/żyć, przejście na wyższy poziom, zdobycie określonego celu
+ w zadanym czasie, ukończenie gry).
+ Zwykle automat do gier wyposażony był w gałkę sterującą i kilka klawiszy.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+CAVE (ang.
+ Cave Automatic Virtual Environement)
+\series default
+ - obiekt o kształtach sześcianu służący do zanurzenia się w rzeczywistość
+ wirtualną.
+ Składa się z akrylowych ekranów tylnej projekcji oraz projektorów, rzucających
+ obrazy na każdą ze ścian.
+ Człowiek wewnątrz musi nosić aktywne okulary 3D by móc oglądać dowolnie
+ wyświetlony obiekt z każdej strony.
+ Wewnątrz znajdują się również kamery śledzące pozycje użytkownika dzięki
+ czemu obraz jest na bieżąco dostosowywany do pozycji śledzonego.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Tylna projekcja (ang: Rear Screen Projection)
+\series default
+ - projekcja obrazu na półprzezroczysty ekran znajdujący się między obserwatorem
+ a urządzeniem.
+ Dzięki wykorzystaniu tej techniki obraz jest jaśniejszy i bardziej wyraźny
+ w porównaniu do klasycznej projekcji.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Aktywne okulary 3D
+\series default
+ - rodzaj okularów 3D zasilanych bateriami by rozdzielać renderowane klatki
+ specjalnie dla prawego i lewego oka.
+ Działają na zasadzie migawki: kiedy aktualnie wyświetlana klatka jest przeznacz
+ona dla lewego oka, praczona dla lewego oka, prawa migawka pozostaje zamknięta
+ i vice versa.
+ Przy takiej formie odbierania obrazu wyświetlacz powinien odświeżać obraz
+ na tyle szybko by każde z oczu otrzymywało przynajmniej 60 klatek na sekundę
+ (co daje łącznie odświeżanie na poziomie 120 Hz)
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.cnet.com/news/active-3d-vs-passive-3d-whats-better/ (dostęp: 22.05.2016)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Odświeżanie obrazu
+\series default
+ - dla ekranów LCD jest to liczba wyświetleń w ciągu sekundy danych dostarczonyc
+h przez procesor graficzny.
+ Ekrany typu CRT odświeżają obraz na zasadzie 
+\begin_inset Quotes pld
+\end_inset
+
+namalowania
+\begin_inset Quotes prd
+\end_inset
+
+ klatki na ekranie po czym wygaszenie i proces się powtarza.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+LCD (ang.
+ Liquid Crystal Display)
+\series default
+ - Rodzaj ciekło-krystalicznych wyświetlaczy gdzie obraz jest sterowany
+ poprzez zmianę poszczególnych pikseli lub ich grup.
+ Panel LCD nie emituje światła sam z siebie, dlatego wymagane jest podświetlenie
+ by obraz stał się widoczny.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+CRT (ang.
+ Cathode-Ray Tube)
+\series default
+ - Rodzaj wyświetlaczy bazujący na lampie obrazowej oraz dziale eletronowym.
+ Wyświetlacz używa wiązki elektronów wystrzeliwanej z działa do wzbudzenia
+ świecenia luminofora.
+ Wiązka po wystrzeleniu przebiegała przez całą powierzchnię ekranu wywołując
+ świecenie i ukazując na jego powierzchni obraz.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Luminofor 
+\series default
+- związek chemiczny wykazujący luminescencję.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+BGE (Blender Game Engine)
+\series default
+ - jeden z komponentów Blendera 3D.
+ Jest to open-sourcowy silnik graficzny używany do tworzenia interaktywnych
+ scen w czasie rzeczywistym.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+HMD (Head Mounted Display)
+\series default
+ - urządzenie wyświetlające przeznaczone do zakładania na głowę, wyposażone
+ w soczewki pomiędzy ekranem a okiem.
+ Obraz jest ustawiony tak by każde oko widziało swoją część co sprawia wrażenie
+ stereoskopii.
+ Wyświetlacze HMD pozwalają zanurzyć się w rzeczywistość wirtualną.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Stereoskopia 
+\series default
+- technika pokazywania obrazu polegająca na tworzeniu lub uwydatnianiu jego
+ głębii.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+FullHD
+\series default
+ - standard wyświetlania obrazu wysokiej jakości odznaczający się 1080.
+ horyzontalnymi liniami w rozdzielczości obrazu.
+ Zazwyczaj zakłada się też, że wyświetlacz jest panoramiczny (stosunek boków
+ jest 16:9) i posiada rozdzielczość 1920 na 1080.
+ Sygnał wideo jakości FullHD na oznaczenie 1080p.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Organiczna dioda elektroluminescencyjna, OLED (ang.
+ Organic Light-Emitting Diode)
+\series default
+ - dioda wytwarzana ze związków organicznych.
+ Jest to również oznaczenie klasy wyświetlaczy graficznych zbudowanych na
+ diodach OLED.
+ W przeciwieństwie do ekranów LCD, OLED nie wymaga dodatkowego podświetlenia
+ i emituje światło sam z siebie co pozwala na uzyskanie prawdziwej czerni
+ i lepszego kontrastu
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.oled-info.com/introduction (dostęp: 22.05.2016)
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Immersja
+\series default
+ - Odczuwanie, wczuwanie się w świat cyfrowy.
+ Proces zanurzenia się w ukazywanej, nierealnej rzeczywistości.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Protokół SSH (ang.
+ Secure Shell)
+\series default
+ - zaszyfrowany protokół sieciowy pozwalający na zdalne logowanie do innych
+ komputerów w obrębie danej sieci.
+ Jest następną protokołu telnet, który przesyłał niezaszyfrowane hasła i
+ inne informacje.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Finansowanie społecznościowe (ang.
+ Crowdfunding)
+\series default
+ - Źródło kapitału dostarczanego przez szeroką społeczność wirtualną, która
+ chce wesprzeć kreatywnego pomysłodawcę
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://crowdfunding.pl/crowdfunding-faq/ (dostęp: 22.05.2016)
+\end_layout
+
+\end_inset
+
+.
+ Akcje zbiórki organizowane są zazwyczaj na platformach internetowych gdzie
+ pomysłodawca przedstawia swój projekt.
+ Każdy może wesprzeć dowolną kwotą pomysłodawcę.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+6DoF (ang.
+ six degrees of freedom - 6 stopni swobody)
+\series default
+ - możliwości wykonania ruchu przez ciało w przestrzeni trójwymiarowej.
+ Dla 6.
+ stopni swobody są to:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+przesunięcie góra/dół względem osi X
+\end_layout
+
+\begin_layout Itemize
+przesunięcie góra/dół względem osi Y
+\end_layout
+
+\begin_layout Itemize
+przesunięcie góra/dół względem osi Z
+\end_layout
+
+\begin_layout Itemize
+rotacja względem osi X
+\end_layout
+
+\begin_layout Itemize
+rotacja względem osi Y
+\end_layout
+
+\begin_layout Itemize
+rotacja względem osi Z
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Podwójne buforowanie obrazu metodą Page Flipping - 
+\series default
+metoda rysowania i wyświetlania klatek wykorzystująca dwa osobne bufory
+ w pamięci.
+ Gdy jeden z nich wyświetla gotową klatkę drugi rysuje kolejną.
+ Kiedy operacje rysowania klatki są zakończone następuje przełączenie pomiędzy
+ wyświetlaniem buforów.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Poczwórne buforowanie (ang: Quad buffering)
+\series default
+ - stereoskopiczna implementacja podwójnego buforowania.
+ W tym przypadku mamy 4 bufory, z czego po dwa przydzielone są do rysowania
+ obrazu dla jednego oka.
+ Operacja podmiany aktualnie wyświetlanego bufora jest jednoczesna dla buforów
+ prawego i lewego oka.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Video Wall 
+\series default
+- specjalny zestaw kilku lub więcej wyświetlaczy ułożonych jeden przy drugim.
+ Tworzą w ten sposób jeden duży ekran.
+ Wyświetlacze wykorzystywane przy budowie video walla zazwyczaj mają jak
+ najcieńszą ramę dookoła ekranu by zminimalizować przerwy pomiędzy ekranami
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.pixell.com/what_is_a_vw.htm (dostęp: 22.05.2016)
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Part*
+\begin_inset Newpage newpage
+\end_inset
+
+Wstęp
+\end_layout
+
+\begin_layout Standard
+Niniejsza praca ma na celu rozszerzenie możliwości wykorzystania jaskini
+ wirtualnej rzeczywistości CAVE poprzez implementację silnika graficznego
+ Blender Game Engine w Laboratorium Zanurzonej Wizualizacji Przestrzennej
+ znajdującego się na Politechnice Gdańskiej.
+ Wykorzystując aplikację BlenderVR każda scena odpowiednio zaprogramowana
+ i zaprojektowana w BGE może zostać wyświetlona w jaskini wirtualnej rzeczywisto
+ści lub na architekturze odpowiednio podobnej.
+ Aplikacja BlenderVR jak i Blender3D są programami open-source.
+ Dzięki temu systemy typu CAVE mogą rozwijać się bardziej dynamicznie wraz
+ z dedykowanymi dla nich scenami lub grami.
+ Aktualnie głównymi silnikami graficznymi, które wykorzystywane są w Laboratoriu
+m Zanurzonej Wizualizacji Przestrzennej są Unity i Unreal Engine.
+ Oba zostały przystosowane do pracy w jaskiniach wirtualnej rzeczywistości.
+ Żaden z nich nie jest jednak programem open-source co nie pozwala na dokładne
+ dopasowanie do potrzeb laboratorium.
+ Wykorzystanie nowej opcji jaką jest Blender Game Engine rozszerzy możliwości
+ modelowania scen dedykowanych dla CAVE’a.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Technologia wirtualnej rzeczywistości 
+\end_layout
+
+\begin_layout Standard
+Wirtualna rzeczywistość od zawsze intrygowała człowieka.
+ W wielu filmach czy książkach wizje przyszłości często zawierały urządzenia
+ pozwalające oderwać się od rzeczywistości i w pełni zanurzyć się w dowolnie
+ ukształtowanym świecie wirtualnym.
+ Teraźniejszość coraz bardziej zaczyna przypominać tę przyszłość.
+\end_layout
+
+\begin_layout Standard
+Pierwsze wzmianki o rzeczywistości wirtualnej mogą pochodzić z lat 30.
+ XX wieku.
+ Terminu 
+\begin_inset Quotes pld
+\end_inset
+
+la réalité virtuelle
+\begin_inset Quotes prd
+\end_inset
+
+ użył Antonin Artaud w swoim zbiorze esejów pod tytułem 
+\begin_inset Quotes pld
+\end_inset
+
+Le Théâtre et son double
+\begin_inset Quotes prd
+\end_inset
+
+.
+ Jako rzeczywistość wirtualna została opisana iluzjonistyczna natura postaci
+ i obiektów w teatrze
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.almaclassics.com/excerpts/Theatre_Double.pdf (dostęp 07.05.20016)
+\end_layout
+
+\end_inset
+
+.
+ To co dzisiaj kryje się pod nazwą rzeczywistości wirtualnej zostało rozpopulary
+zowane dopiero przez media masowe w filmach takich jak: 
+\begin_inset Quotes pld
+\end_inset
+
+Brainstorm
+\begin_inset Quotes prd
+\end_inset
+
+ i 
+\begin_inset Quotes pld
+\end_inset
+
+The Lawnmover Man
+\begin_inset Quotes prd
+\end_inset
+
+.
+ Pierwszym urządzeniem, które można by nazwać systemem VR była Sensorama
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.theverge.com/a/virtual-reality/oral_history (dostęp 07.05.20016)
+\end_layout
+
+\end_inset
+
+.
+ Była to maszyna podobna wyglądem do automatów do gier wyświetlająca stereoskopi
+czny obraz 3D, zapewniała przechylanie pozycji użytkownika oraz wspierała
+ dźwięk przestrzenny.
+ W budowie planowano również systemy generujące podmuchy wiatru oraz uwalniające
+ odpowiednie zapachy
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.mortonheilig.com/SensoramaPatent.pdf (dostęp 07.05.20016)
+\end_layout
+
+\end_inset
+
+.
+ W latach 70.
+ i 80.
+ rozwój wirtualnej rzeczywistości nie był jednak nagłośniony.
+ Mało kto wiedział o nowościach technologicznych w świecie VR.
+ Dopiero w '91 zaczęto wydawać magazyn 
+\begin_inset Quotes pld
+\end_inset
+
+CyberEdge Journal
+\begin_inset Quotes prd
+\end_inset
+
+, który był biuletynem o gadżetach VR
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.theverge.com/a/virtual-reality/oral_history (dostęp 07.05.20016)
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Section
+Urządzenia montowane na głowie
+\end_layout
+
+\begin_layout Standard
+Pierwsze gogle wirtualnej rzeczywistości dostępne komercyjnie zostały zapowiedzi
+ane na Consumer Electronics Show w 1994 roku.
+ Nazywały się Forte VFX-1.
+ Gogle mogły wyświetlać stereoskopiczny obraz, miały wbudowane słuchawki
+ stereo oraz sensor śledzący pozycje głowy w 3.
+ osiach
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.ibiblio.org/GameBytes/issue21/flooks/vfx1.html (dostęp 07.05.20016)
+\end_layout
+
+\end_inset
+
+.
+ Kolejną nowinką w tej dziedzinie były okulary Glasstron, wypuszczone w
+ 1997 roku przez firmę Sony.
+ W odróżnieniu od Forte VFX-1 miały dodatkowo czujniki pozycyjne co dodatkowo
+ pogłębiało immersję.
+ Gogle można było zastosować w grze o nazwie MechWarrior 2.
+ Gracz, używając Glasstrona, mógł włączyć nową perspektywę z kokpitu maszyny
+ kroczącej.
+\end_layout
+
+\begin_layout Standard
+Prawdziwą rewolucją stały się jednak gogle wirtualnej rzeczywistości od
+ Oculusa.
+ W 2012 roku, dzięki kampaniom crowfundingowym, firma zebrała 2.5 miliona
+ dolarów na rozwój projektu okularów VR
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+https://www.kickstarter.com/projects/1523379957/oculus-rift-step-into-the-game
+ (dostęp 07.05.20016)
+\end_layout
+
+\end_inset
+
+.
+ Pierwszym modelem dostępnym do zamówienia był Rift Development Kit 1.
+ DK1 wyposażony został w 7mio calowy ekran o rozdzielczości 1280x800 pikseli.
+ Ten prototyp skonstruowano już tak, by każde z oczu widziało obraz z odpowiedni
+m przesunięciem ale nie nakładający się w 100%.
+ Znaczy to, że lewe oko widziało troche więcej po lewej a prawe oko troche
+ więcej po prawej w porównaniu do drugiego oka.
+ Producenci zadbali również o użytkowników z wadami wzroku.
+ Do zestawu dołączano 3.
+ pary soczewek, które były dopasowane zależnie od potrzeby korekcji soczewki
+ lub jej braku
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://in2gpu.com/2014/08/10/oculus-rift-dk1-vs-dk2/ (dostęp 07.05.20016)
+\end_layout
+
+\end_inset
+
+.
+ Gadżet sprzedał się w liczbie około 65 000 egzemplarzy
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.hypergridbusiness.com/2014/06/more-than-100000-oculus-rifts-sold/
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Po sukcesie jaki odniósł Rift DK1, Oculus rozpoczął prace nad kolejną wersją
+ deweloperską.
+ Tak powstał Rift Developer Kit 2.
+ Wyposażony już w ekran OLED o rozdzieczości 1920x1080 pikseli.
+ Zwiększone zostało również odświeżanie z 60Hz do 75Hz co zmniejszyło dyskomfort
+ i możliwość wystąpienia nudności.
+ Do zestawu DK2 dołączana była specjalna kamera, która pozwalała na śledzenie
+ pozycji gogli w przestrzeni.
+ Dzięki temu deweloperskie gogle Oculusa pozwalały na śledzenie 6DoF.
+\end_layout
+
+\begin_layout Standard
+Następna wersja gogli CV1 - Consumer Version 1, czyli w pełni oficjalne
+ wydanie, zapowiedziano na pierwszy kwartał 2016 roku
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+https://www.oculus.com/en-us/blog/first-look-at-the-rift-shipping-q1-2016/
+ (dostęp 07.05.20016)
+\end_layout
+
+\end_inset
+
+.
+ Przedsprzedaż rozpoczęto 6 stycznia 2016 roku a wysyłkę zapowiedziano na
+ 28 marca.
+ W ciągu 10 dni otrzymano tyle zamówień, że datę wysyłki kolejnych partii
+ Rift CV1 przesunięto na lipiec 2016
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+www.roadtovr.com/oculus-rift-pre-order-backorder-july/ (dostęp 07.05.20016)
+\end_layout
+
+\end_inset
+
+.
+ Nowa wersja Rifta została wyposażona w dwa osobne ekrany (po jednym na
+ każde oko) o łącznej rozdzielczości 2160×1200 pikseli i odświeżaniu 90Hz
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.roadtovr.com/oculus-rift-resolution-recommended-specs/ (dostęp
+ 07.05.20016)
+\end_layout
+
+\end_inset
+
+.
+ Do tego doszły różne usprawnienia zewnętrzne: ergonomiczny kształt, nowoczesny
+ wygląd, wbudowane słuchawki stereo i nowa kamera śledząca.
+\end_layout
+
+\begin_layout Standard
+Inne firmy również zaczęły wchodzić w branżę wirtualnej rzeczywistości.
+ Swoją wersję okularów VR na rynek wprowadził również HTC (przy współpracy
+ z platformą Steam).
+ HTC Vive pierwszy raz został pokazany w 2015 roku na Mobile World Congress
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.theverge.com/2015/3/1/8127445/htc-vive-valve-vr-headset (dostęp
+ 07.05.20016)
+\end_layout
+
+\end_inset
+
+.
+ Nie był on dostępny w przedsprzedażach aczkolwiek część wybranych przez
+ firmę deweloperów dostała wersję Developer Edition wcześniej
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.pcmag.com/article2/0,2817,2479252,00.asp (dostęp 07.05.20016)
+\end_layout
+
+\end_inset
+
+.
+ Poza HTC również Sony, które wróciło na rynek VR, rozpoczęło prace nad
+ goglami VR specjalnie dla konsoli PlayStation 4.
+\end_layout
+
+\begin_layout Section
+Jaskinia wirtualnej rzeczywistości CAVE 
+\end_layout
+
+\begin_layout Standard
+Technologia wirtualnej rzeczywistości rozwija się w kilka różnych „gałęzi”.
+ Oprócz okularów HMD istnieją również bardziej zaawansowane rozwiązania
+ pozwalające na zanurzenie się w świecie wirtualnym.
+ Jednym z nich jest jaskinia wirtualnej rzeczywistości.
+ Rozwiązanie to jest skierowane głównie do deweloperów oraz instytucji naukowych
+ z racji rozmiarów oraz wymaganych środków pieniężnych.
+ CAVE – cave automatic virtual environement - składa się z kilku akrylowych
+ ścian, na których wyświetlane są obrazy wirtualnego świata.
+ Najpopularniejszą metodą jest użycie dwóch projektorów wyświetlających
+ obraz na jedną ścianę odpowiednio dla lewego i prawego oka naprzemiennie.
+ Użytkownik w takim przypadku musi nosić okulary spolaryzowane oddzielające
+ obraz dla danego oka
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+https://www.evl.uic.edu/documents/cacm92-cave-cruz-neira.pdf (dostęp 07.05.20016)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.visbox.com/technology/stereo/ (dostęp 07.05.20016)
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graphic/cave2_pogladowy.jpg
+	scale 90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Wyświetlanie obrazu w CAVE
+\begin_inset Newline newline
+\end_inset
+
+Źródło: http://escience.anu.edu.au/lecture/cg/Display/cave.en.html (dostęp: 07.05.2016)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ilustracja załączona powyżej przedstawia podstawowe założenia budowy środowiska
+ jaskini wirtualnej rzeczywistości.
+ W standardowy rozkład ścian wchodzi: przednia, boczne oraz podłogowa.
+ Projektory umieszczone są na zewnątrz, rzucając obraz od tyłu – jest to
+ tzw.
+ tylna projekcja (ang: Rear Screen Projection).
+ Obraz rzucany na podłogę może być przez projektor z góry lub z dołu.
+ Projektory użyte do wyświetlania muszą charakteryzować się wysoką rozdzielczośc
+ią oraz szybkim odświeżaniem.
+ Zazwyczaj jest to rozdzielczość FullHD oraz odświeżanie o częstotliwości
+ powyżej 90Hz.
+ Obraz rzucany na kwadratową ścianę jest ucinany na bokach a Często wykorzystuje
+ się lustra by zmniejszyć odległość między projektorem a ekranem.
+ Każdy projektor jest kontrolowany przez jeden z komputerów połączonych
+ w klaster.
+ W klastrze jeden z komputerów jest nadrzędny i sprawuje kontrole nad pozostałym
+i, renderującymi obraz dla projektorów.
+ Jest to rozwiązanie zwiększające szybkość generowania klatek oraz tańsze
+ w utrzymaniu.
+ 
+\end_layout
+
+\begin_layout Standard
+Obraz wyświetlany w jaskini wirtualnej jest dostosowywany zależnie od położenia
+ „użytkownika głównego”.
+ Kamery śledzą położenie czujników zamontowanych na okularach by wyświetlany
+ obraz był odpowiednio zsynchronizowany na krawędziach i dopasowany do perspekty
+wy odbiorcy.
+ Każdy inny użytkownik, który nie jest śledzony przez kamery widzi obraz
+ nieco przesunięty względem użytkownika głównego.
+ Objawia się to źle sklejonym obrazem lub/i nienaturalną perspektywą.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graphic/CaveUDK_Architecture.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Architektura systemu CAVE na przykładzie użycia Unreal Engine
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Oprócz samego wyświetlania obrazu, jaskinia wirtualnej rzeczywistości pozwala
+ również na interakcje ze światem otaczającym.
+ Dzieje się to przy pomocy różnych kontrolerów np.
+ FlySticka lub tzw.
+ różdżki.
+ Są to swego rodzaju bezprzewodowe joysticki wyposażone w zestaw czujników
+ potrafiących określić pozycje (jako zestaw trzech wektorów) oraz orientacje
+ (podawaną jako kwaternion) urządzenia w przestrzeni.
+ Oprócz tego kontroler wyposażony jest w podstawowe części takie jak: analogowy,
+ dwuosiowy joystick oraz kilka przycisków i/lub trigger.
+ Przykładowy model został pokazany na obrazku (Fig.
+ 3).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graphic/Flystick_2small.jpg
+	scale 80
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename graphic/Flystick3_small.jpg
+	scale 80
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Dwa modele joysticka Flystick firmy ART
+\begin_inset Newline newline
+\end_inset
+
+Źródło: http://www.middlevr.com/doc/1.2/ch04s03.html (dostęp 07.05.2016)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Porównanie HMD i CAVE
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.visbox.com/technology/cave-vs-hmd/ (dostęp 07.05.20016)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Head-mounted display oraz CAVE to bardzo różniące się sposoby na wizualizację
+ świata wirtualnego.
+ Wysokie koszty jaskini wirtualnej rzeczywistości pozwalają na większe możliwośc
+i wykorzystania oraz trochę większy komfort użytkowania.
+ Z drugiej strony jednak jaskinia wirtualnej rzeczywistości zajmuje bardzo
+ dużo miejsca w porównaniu do okularów wirtualnej rzeczywistości, które
+ są też o wiele tańsze.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Porównanie HMD i CAVE
+\begin_inset Newline newline
+\end_inset
+
+Źródło: Opracowanie własne, http://www.visbox.com/technology/cave-vs-hmd/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="3">
+<features rotate="0" tabularvalignment="middle" tabularwidth="15cm">
+<column alignment="center" valignment="top" width="3cm">
+<column alignment="center" valignment="top" width="4cm">
+<column alignment="center" valignment="top" width="5cm">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HMD
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CAVE
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Rozdzielczość (w megapikselach)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1-2 Mpx/oko
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2-8 Mpx/ekran
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Jakość obrazu
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Wymaga użycia zniekształcenia; dobra
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+bardzo dobra
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Immersja
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bardzo duża
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Duża
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pole widzenia (w stopniach)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+~110
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Takie jak człowieka
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mobilność użytkownika
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ograniczona okablowaniem i czujnikami
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nieograniczona
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Użytkownicy
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Jeden
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Wielu
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Komfort użytkowania
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ekran blisko oka może wywoływać ból głowy; możliwe nudności
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ekrany daleko od oka co pozwala na dłuższe użytkowanie; możliwe nudności
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Koszt
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Niewielki
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Wysoki
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Implementacja BlenderVR w środowisku wirtualnej jaskini CAVE
+\end_layout
+
+\begin_layout Subsection
+Opis aplikacji
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Strona instytutu LIMSI we Francji https://blendervr.limsi.fr/doku.php (dostęp
+ 07.05.20016)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aplikacja BlenderVR powstała w laboratorium LIMSI we Francji.
+ Twórcami są: Dalai Felinto, Damien Touraine, David Poirier-Quinot, Laurent
+ Pointal i Bran F.G.
+ Katz.
+ Aplikacja pozwala na użycie scen generowanych przez Blender Game Engine,
+ w środowiskach wirtualnych: CAVE, okulary wirtualnej rzeczywistości HMD
+ lub Video Wall.
+\end_layout
+
+\begin_layout Standard
+BlenderVR jest narzędziem skalowalnym oraz wieloplatformowym.
+ Działa zarówno na komputerach z system Windows jak i Linux/iOS.
+ Przenoszenie sceny pomiędzy różnymi platformami wirtualnej rzeczywistości
+ nie wymaga jej edytowania.
+ Wszystkim zajmuje się odpowiednia konfiguracja programu.
+ Aplikację można dostosować do dowolnej liczby komputerów obsługujących
+ dowolną liczbę ekranów.
+ BlenderVR posiada wsparcie dla wyświetlania obrazu 3D (poczwórne buforowanie
+ - ang: Quad Buffering) i protokołów komunikacyjnych np.
+ VRPN – virtual reality peripherial network lub OSC – open sound control.
+\end_layout
+
+\begin_layout Standard
+--tutaj jakieś mocne i słabe strony blendervr, problemy jakie moga wystąpić
+ i co go wyróżnia.
+ na co pozwala.--
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graphic/blendervr-applications.jpg
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Możliwości i zastosowania aplikacji BlenderVR 
+\begin_inset Newline newline
+\end_inset
+
+Źródło: https://blendervr.limsi.fr/doku.php (dostęp 07.05.20016)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wszystkie ustawienia BlenderVR znajdują się w jednym pliku XML.
+ Ułatwia to przenoszenie konfiguracji pomiędzy komputerami lub jej klonowanie.
+ W pliku konfiguracyjnym najważniejszymi ustawieniami są:
+\end_layout
+
+\begin_layout Itemize
+Ścieżki do bibliotek i programów, z których korzysta BlenderVR.
+\end_layout
+
+\begin_layout Itemize
+Adresy komputerów typu „slave” – obsługujących wyświetlanie obrazu oraz
+ dane logowania przez protokół SSH.
+\end_layout
+
+\begin_layout Itemize
+Ilość ekranów, ich położenie oraz relacje oko<-->ekran.
+\end_layout
+
+\begin_layout Itemize
+Ustawienia wtyczki interakcji ze sceną: serwer odbierający dane z urządzeń
+ wskazujących oraz konfiguracja czujników.
+\end_layout
+
+\begin_layout Standard
+Interfejs jest przejrzysty i prosty w obsłudze.
+ Po uruchomieniu wystarczy załadować odpowiedni plik konfiguracyjny, następnie
+ wybrać konfigurację ekranów i wskazać miejsca pliku ze sceną do symulacji.
+ W zakładce „Run” znajduje się start programu oraz konsola do debugowania.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graphic/user-interface-1.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Interfejs aplikacji BlenderVR
+\begin_inset Newline newline
+\end_inset
+
+Źródło: https://blendervr.limsi.fr/doku.php (dostęp 07.05.20016)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Założenia projektu
+\end_layout
+
+\begin_layout Standard
+Niniejszy projekt zakłada wdrożenie aplikacji BlenderVR w środowisku wirtualnej
+ rzeczywistości CAVE w Laboratorium Zanurzonej Wizualizacji Przestrzennej
+ (LZWP) znajdującym się na Politechnice Gdańskiej.
+ Po wdrożeniu i przetestowaniu zostanie również stworzona dedykowana scena
+ do symulacji specjalnie dla Politechniki Gdańskiej.
+ Dodatkowo wykorzystane zostanie oprogramowanie do obsługi zewnętrznych
+ kontrolerów pozwalających na kontrolowanie sceny.
+ Z uwagi na wysokie koszty uruchomieniowe oraz zużycie materiałów prawdziwego
+ CAVE’a konfigurowanie przeprowadzone zostanie w specjalnie przygotowanym
+ laboratorium testowym.
+\end_layout
+
+\begin_layout Standard
+Proces wdrożenia aplikacji:
+\end_layout
+
+\begin_layout Enumerate
+Wdrożenie aplikacji na laboratorium testowym na środowisku jednego komputera
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Zainstalowanie aplikacji
+\end_layout
+
+\begin_layout Enumerate
+Dostosowanie konfiguracji BlenderVR do warunków laboratoryjnych 
+\end_layout
+
+\begin_layout Enumerate
+Testowanie aplikacji przy użyciu przykładowych scen 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Powtórzenie kroku 1.
+ dla specjalnego zestawu komputerów symulujących architekture wirtualnej
+ jaskini - MidiCAVE
+\end_layout
+
+\begin_layout Enumerate
+Kompilacja i ustawienie wtyczki do obsługi kontrolerów – VRPN
+\end_layout
+
+\begin_layout Enumerate
+Podłączenie wtyczki VRPN do BlenderVR oraz test całości na MidiCAVE
+\end_layout
+
+\begin_layout Enumerate
+Przeprowadzenie powyższych działań w środowisku docelowym – jaskini wirtualnej
+ rzeczywistości CAVE
+\end_layout
+
+\begin_layout Standard
+Pierwsze prawdziwe testy implementacyjne odbędą się w laboratorium testowym
+ – MidiCAVE.
+ Jest to symulacja struktury prawdziwego CAVE'a jednak do testów używa się
+ komputerów spiętych w sieć i monitorów.
+ Konfiguracja aplikacji powinna więc pozostać taka sama: każdy z monitorów
+ odwzorowuje jedną ze ścian prawdziwej jaskini.
+ Również dopiero w tej fazie zostanie pierwszy raz skompilowana i przetestowana
+ wtyczka do obsługi urządzeń peryferyjnych z użyciem śledzenia okularów
+ oraz kontrolera FlyStick.
+\end_layout
+
+\begin_layout Subsection
+Testy aplikacji w Laboratorium Zanurzonej Wizualizacji Przestrzennej
+\end_layout
+
+\begin_layout Standard
+W piątek 6.
+ maja odbyły się pierwsze testy aplikacji BlenderVR.
+ Jednostka, na której odbywały się testy została wyposażona w procesor klasy
+ Intel Xeon, kartę graficzną Nvidia Quadro oraz monitor ASUS 24'' w pełni
+ obsługujący wyświetlanie obrazu 3D.
+ Aplikacja oraz wszystkie niezbędne komponenty musiały zostać dostarczone
+ na zewnętrznym nośniku ponieważ komputer nie został podłączony do Internetu.
+ 
+\end_layout
+
+\begin_layout Standard
+Pierwsza próba instalacji i uruchomienia odbyła się w środowisku systemu
+ Linux.
+ Jednakże brak dostępu do Internetu sprawił, że niektóre biblioteki pakietów
+ Pythona oraz Qt4.8 nie mogły zostać pobrane (jak również był problem z dostarcze
+niem odpowienich plików i zależności z zewnątrz).
+ Kolejna próba odbyła się w środowisku Windows.
+ Instalator automatyczny, stworzony przez deweloperów BlenderVR, zawierał
+ prawie kompletny pakiet Pythona3.4 oraz kompletny pakiet bibliotek Qt4.8.
+ Problemem na tej platformie również okazał się brak dostępu do Internetu.
+ Brakowało pakietów Pythona o nazwie PySide oraz Virtualenv.
+ Te jednak udało się dostarczyć i zainstalować.
+\end_layout
+
+\begin_layout Standard
+Aplikacja została uruchomiona.
+ Przystąpiono więc do pierwszych testów przykładowych scen, dołączonych
+ do programu.
+ Podstawowa konfiguracja programu wymagała podania ścieżki do plików wykonywalny
+ch blender.exe oraz blenderplayer.exe.
+ Okazało się, że program Blender3D nie może być zainstalowany na dysku C:
+ (tak, jak było to domyślnie ustawione) z powodu braku wystarczających uprawnień
+ użytkownika.
+ Usunięcie oraz zainstalowanie ponownie aplikacji Blender3D na dysku D:
+ wyeliminowało problem braku uprawnień.
+ 
+\end_layout
+
+\begin_layout Standard
+Pierwsza próba wyświetlenia sceny przykładowej przeprowadzona została w
+ konfiguracji 2D oraz wyświetlaniu w oknie 400x400 pikseli.
+ Po załadowaniu odpowiedniego pliku konfiguracyjnego oraz ustawień ekranu
+ na monitorze pokazało się okno z przykładową sceną.
+ Sukces.
+\end_layout
+
+\begin_layout Standard
+Kolejna próba wykorzystywała już możliwości 3D monitora.
+ Odpowiednio zmodyfikowany plik konfiguracyjny: Stereo 3D Quad Buffer oraz
+ odświeżaniu 120Hz.
+ Tyle wynosi odświeżanie aktywnych okularów 3D (po 60Hz na każde oko, obraz
+ wyświetlany naprzemiennie)
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://blender-vr-manual.readthedocs.io/components/configuration-file.html#desktop-
+stereo-3d (dostęp 07.05.20016)
+\end_layout
+
+\end_inset
+
+.
+ Tutaj wystąpił problem bibliotek Visual C++ Redistributable, który udało
+ się dość szybko wyeliminować poprzez instalację odpowiedniego pakietu.
+ Próba ostatecznie zakończyła się sukcesem a na monitorze został wyświetlony
+ stereoskopiczny obraz dopasowany do aktywnych okularów 3D.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+drugie spotkanie
+\end_layout
+
+\end_inset
+
+Kolejną próbą w laboratorium LZWP była próba nawiązania połączenia przez
+ sieć między dwoma komputerami.
+ BlenderVR posługuje się protokołem komunikacyjnym SSH.
+ Dzięki temu program jest w stanie na podanych komputerach uruchomić wybraną
+ scenę w BGE.
+ W laboratorium zakładano testy w środowisku Linux (ponieważ protokół jest
+ tam wbudowany) jednakże pewne problemy techniczne podczas uruchamiania
+ systemu uniemożliwiły przeprowadzenie testu.
+ Na systemie operacyjnym Windows do wykorzystania protokołu ssh potrzebujemy
+ programu OpenSSH for Windows.
+ Umożliwia on użycie z poziomu konsoli polecenia 
+\begin_inset Quotes pld
+\end_inset
+
+ssh
+\begin_inset Quotes prd
+\end_inset
+
+.
+ Po udanym zainstalowaniu serwera oraz klienta protokołu SSH z powodzeniem
+ nawiązano połączenie.
+ Następnym krokiem będzie rekonfiguracja BlenderVR tak, by można było wykorzysta
+ć go do uruchomienia przykładowej sceny BGE na drugim komputerze.
+\end_layout
+
+\end_body
+\end_document
