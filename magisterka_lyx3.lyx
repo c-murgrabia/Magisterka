@@ -1365,9 +1365,9 @@ BlenderVR jest narzędziem skalowalnym oraz wieloplatformowym.
 \end_layout
 
 \begin_layout Standard
---tutaj jakieś mocne i słabe strony blendervr, problemy jakie moga wystąpić
+<<tutaj jakieś mocne i słabe strony blendervr, problemy jakie moga wystąpić
  i co go wyróżnia.
- na co pozwala.--
+ na co pozwala>>
 \end_layout
 
 \begin_layout Standard
@@ -1551,7 +1551,12 @@ Pierwsze prawdziwe testy implementacyjne odbędą się w laboratorium testowym
 \end_layout
 
 \begin_layout Subsection
-Testy aplikacji w Laboratorium Zanurzonej Wizualizacji Przestrzennej
+Instalacja i testy aplikacji w Laboratorium Zanurzonej Wizualizacji Przestrzenne
+j
+\end_layout
+
+\begin_layout Subsubsection
+Środowisko testowe
 \end_layout
 
 \begin_layout Standard
@@ -1597,11 +1602,10 @@ al.
  Żaden z komputerów nie miał dostępu do Internetu.
  Wszystkie niezbędne programy oraz pakiety zostały dostarczone ze źródeł
  zewnętrznych przy użyciu dysku przenośnego.
- 
 \end_layout
 
 \begin_layout Subsubsection
-Instalacja BlenderVR
+Testy z wykorzystaniem jednego stanowiska PC
 \end_layout
 
 \begin_layout Standard
@@ -1652,7 +1656,147 @@ hwpageflip
 .
  Opcja pozwala na zdefiniowanie dwóch buforów graficznych - jeden dla prawego
  i jeden dla lewego oka.
+ Monitor przystosowany do wyświetlania obrazu 3D pozwala na większe odświeżanie
+ ekranu dzięki czemu można otrzymać stabilne 60 klatek dla każdego oka oddzielni
+e.
+ I w tym przypadku próba zakończyła się sukcesem.
+ Na monitorze ukazał się obraz, który po założeniu okularów 3D sprawiał
+ wrażenie trójwymiarowego.
+\end_layout
+
+\begin_layout Subsubsection
+Testy z wykorzystaniem dwóch stanowisk PC
+\end_layout
+
+\begin_layout Standard
+Środowisko jaskini wirtualnej rzeczywistości wymaga współpracy kilku stanowisk
+ komputerowych.
+ W tym celu każde z nich musi zostać wyposażone w aplikację pokazującą obraz
+ z perspektywy danego urządzenia wyświetlającego.
+ BlenderVR wykorzystując protokół SSH potrafi zarządzać swoimi kopiami na
+ komputerach typu 
+\begin_inset Quotes pld
+\end_inset
+
+slave
+\begin_inset Quotes prd
+\end_inset
+
+.
+ Jeden komputer zdefiniowany jako nadrzędny 
+\begin_inset Quotes pld
+\end_inset
+
+master
+\begin_inset Quotes prd
+\end_inset
+
+ może uruchamiać oraz synchronizować inne instancje BlenderVR na komputerach
+ typu 
+\begin_inset Quotes pld
+\end_inset
+
+slave
+\begin_inset Quotes prd
+\end_inset
+
+.
  
+\end_layout
+
+\begin_layout Standard
+Na tej zasadzie jedno ze stanowisk w laboratorium stało się nadrzędne względem
+ drugiego stanowiska - 
+\begin_inset Quotes pld
+\end_inset
+
+slave'a
+\begin_inset Quotes prd
+\end_inset
+
+.
+ Na obu komputerach zainstalowano w ten sam sposób aplikację BlenderVR.
+ Niestety system operacyjny Windows nie posiada wbudowanego protokołu SSH.
+ Program OpenSSH for Windows pozwolił na uzyskanie bezpośredniego połącznia
+ przez ten protokół.
+ Między komputerami wymieniono klucze do identyfikacji.
+ Pozwoliło to na połączenie nie wymagające hasła.
+ Jest to jeden z wymogów aplikacji BlenderVR do jej poprawnego działania.
+\end_layout
+
+\begin_layout Standard
+W przypadku połączenia między wieloma komputerami należy w plik konfiguracyjny
+ wpisać każdy z komputerów podrzędnych.
+ W sekcji <computers> każda z wpisanych jednostek powinna zawierać:
+\end_layout
+
+\begin_layout Itemize
+Nazwę własną
+\end_layout
+
+\begin_layout Itemize
+Adres IP w sieci
+\end_layout
+
+\begin_layout Itemize
+Ścieżkę do katalogu głównego aplikacji BlenderVR
+\end_layout
+
+\begin_layout Itemize
+Ścieżkę do katalogu z przykładowymi scenami
+\end_layout
+
+\begin_layout Itemize
+Ścieżkę do głównego katalogu systemu (w tym przypadku do katalogu Windows)
+\end_layout
+
+\begin_layout Itemize
+Ścieżkę do BlenderPlayer z Blendera3D
+\end_layout
+
+\begin_layout Standard
+BlenderVR przy połączeniu do drugiego stanowiska próbuje uruchomić na nim
+ skrypt 
+\begin_inset Quotes pld
+\end_inset
+
+daemona
+\begin_inset Quotes prd
+\end_inset
+
+ - programu działającego w tle, który cały czas przetwarza dane lub wykonuje
+ pewne czynności
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.python.rk.edu.pl/w/p/proste-demony-uniksowe-w-pythonie/ (dostęp:
+ 16.06.2016)
+\end_layout
+
+\end_inset
+
+.
+ Odpowiednio zapisany plik konfiguracyjny został załadowany do aplikacji.
+ Niestety konsola z informacjami wyświetliła błąd 
+\begin_inset Quotes pld
+\end_inset
+
+Error: Cannot start daemon for screen <screenName>
+\begin_inset Quotes prd
+\end_inset
+
+.
+ Na stronie BlenderVR błąd jest rozpoznany i według autora rozwiązania problem
+ występuje jeśli połączenie miedzy komputerami wymaga hasła.
+ W tym przypadku jednak nie ma to odniesienia ponieważ komputery zostały
+ wymienione kluczami.
+ Połączenie SSH zostało przetestowane przez konsolę Windowsa i nie wymagało
+ użycia hasła.
+ Po konsultacji jeden z twórców oprogramowania polecił sprawdzić czy polecenie
+ wykonywane przez BlenderVR można również wykonać ręcznie przez konsolę.
+ Ręczne wykonanie nie zwróciło jednak żadnego błędu; komenda wykonała się
+ poprawnie.
 \end_layout
 
 \end_body

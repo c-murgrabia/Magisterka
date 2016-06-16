@@ -414,8 +414,8 @@ obrazu 3D (poczwórne buforowanie - ang: Quad Buffering) i protokołów
 komunikacyjnych np. VRPN – virtual reality peripherial network lub
 OSC – open sound control.
 
---tutaj jakieś mocne i słabe strony blendervr, problemy jakie moga
-wystąpić i co go wyróżnia. na co pozwala.--
+<\textcompwordmark{}<tutaj jakieś mocne i słabe strony blendervr,
+problemy jakie moga wystąpić i co go wyróżnia. na co pozwala>\textcompwordmark{}>
 
 \begin{figure}[H]
 \begin{centering}
@@ -493,7 +493,11 @@ obsługi urządzeń peryferyjnych z użyciem śledzenia okularów oraz kontroler
 FlyStick.
 
 
-\subsection{Testy aplikacji w Laboratorium Zanurzonej Wizualizacji Przestrzennej}
+\subsection{Instalacja i testy aplikacji w Laboratorium Zanurzonej Wizualizacji
+Przestrzennej}
+
+
+\subsubsection{Środowisko testowe}
 
 Test aplikacji BlenderVR został przeprowadzony na specjalnie przygotowanych
 stanowiskach komputerowych. W skład jednostki testowej wchodził sprzęt:
@@ -513,10 +517,10 @@ System operacyjny zainstalowany na jednostkach testowych to Windows
 7 Professional. Każdy komputer wpięty został w tę samą sieć ethernet.
 Żaden z komputerów nie miał dostępu do Internetu. Wszystkie niezbędne
 programy oraz pakiety zostały dostarczone ze źródeł zewnętrznych przy
-użyciu dysku przenośnego. 
+użyciu dysku przenośnego.
 
 
-\subsubsection{Instalacja BlenderVR}
+\subsubsection{Testy z wykorzystaniem jednego stanowiska PC}
 
 Do instalacji programu wykorzystano gotowy pakiet instalacyjny. Zawierał
 on zarówno źródła aplikacji jak i wszystkie potrzebne programy do
@@ -547,5 +551,56 @@ Następna faza testu sprawdzi czy aplikacja wyświetli obraz stereoskopiczny
 na przystosowanym do tego monitorze. Do pliku konfiguracyjnego dodano
 ustawienia ekranu o nazwie Quadbuffer z opcją ,,hwpageflip''. Opcja
 pozwala na zdefiniowanie dwóch buforów graficznych - jeden dla prawego
-i jeden dla lewego oka. 
+i jeden dla lewego oka. Monitor przystosowany do wyświetlania obrazu
+3D pozwala na większe odświeżanie ekranu dzięki czemu można otrzymać
+stabilne 60 klatek dla każdego oka oddzielnie. I w tym przypadku próba
+zakończyła się sukcesem. Na monitorze ukazał się obraz, który po założeniu
+okularów 3D sprawiał wrażenie trójwymiarowego.
+
+
+\subsubsection{Testy z wykorzystaniem dwóch stanowisk PC}
+
+Środowisko jaskini wirtualnej rzeczywistości wymaga współpracy kilku
+stanowisk komputerowych. W tym celu każde z nich musi zostać wyposażone
+w aplikację pokazującą obraz z perspektywy danego urządzenia wyświetlającego.
+BlenderVR wykorzystując protokół SSH potrafi zarządzać swoimi kopiami
+na komputerach typu ,,slave''. Jeden komputer zdefiniowany jako
+nadrzędny ,,master'' może uruchamiać oraz synchronizować inne instancje
+BlenderVR na komputerach typu ,,slave''. 
+
+Na tej zasadzie jedno ze stanowisk w laboratorium stało się nadrzędne
+względem drugiego stanowiska - ,,slave'a''. Na obu komputerach zainstalowano
+w ten sam sposób aplikację BlenderVR. Niestety system operacyjny Windows
+nie posiada wbudowanego protokołu SSH. Program OpenSSH for Windows
+pozwolił na uzyskanie bezpośredniego połącznia przez ten protokół.
+Między komputerami wymieniono klucze do identyfikacji. Pozwoliło to
+na połączenie nie wymagające hasła. Jest to jeden z wymogów aplikacji
+BlenderVR do jej poprawnego działania.
+
+W przypadku połączenia między wieloma komputerami należy w plik konfiguracyjny
+wpisać każdy z komputerów podrzędnych. W sekcji <computers> każda
+z wpisanych jednostek powinna zawierać:
+\begin{itemize}
+\item Nazwę własną
+\item Adres IP w sieci
+\item Ścieżkę do katalogu głównego aplikacji BlenderVR
+\item Ścieżkę do katalogu z przykładowymi scenami
+\item Ścieżkę do głównego katalogu systemu (w tym przypadku do katalogu
+Windows)
+\item Ścieżkę do BlenderPlayer z Blendera3D
+\end{itemize}
+BlenderVR przy połączeniu do drugiego stanowiska próbuje uruchomić
+na nim skrypt ,,daemona'' - programu działającego w tle, który cały
+czas przetwarza dane lub wykonuje pewne czynności\footnote{http://www.python.rk.edu.pl/w/p/proste-demony-uniksowe-w-pythonie/
+(dostęp: 16.06.2016)}. Odpowiednio zapisany plik konfiguracyjny został załadowany do aplikacji.
+Niestety konsola z informacjami wyświetliła błąd ,,Error: Cannot
+start daemon for screen <screenName>''. Na stronie BlenderVR błąd
+jest rozpoznany i według autora rozwiązania problem występuje jeśli
+połączenie miedzy komputerami wymaga hasła. W tym przypadku jednak
+nie ma to odniesienia ponieważ komputery zostały wymienione kluczami.
+Połączenie SSH zostało przetestowane przez konsolę Windowsa i nie
+wymagało użycia hasła. Po konsultacji jeden z twórców oprogramowania
+polecił sprawdzić czy polecenie wykonywane przez BlenderVR można również
+wykonać ręcznie przez konsolę. Ręczne wykonanie nie zwróciło jednak
+żadnego błędu; komenda wykonała się poprawnie.
 \end{document}
