@@ -590,7 +590,7 @@ Windows)
 \item Ścieżkę do BlenderPlayer z Blendera3D
 \end{itemize}
 BlenderVR przy połączeniu do drugiego stanowiska próbuje uruchomić
-na nim skrypt ,,daemona'' - programu działającego w tle, który cały
+na nim skrypt ,,demona'' - programu działającego w tle, który cały
 czas przetwarza dane lub wykonuje pewne czynności\footnote{http://www.python.rk.edu.pl/w/p/proste-demony-uniksowe-w-pythonie/
 (dostęp: 16.06.2016)}. Odpowiednio zapisany plik konfiguracyjny został załadowany do aplikacji.
 Niestety konsola z informacjami wyświetliła błąd ,,Error: Cannot
@@ -603,4 +603,32 @@ wymagało użycia hasła. Po konsultacji jeden z twórców oprogramowania
 polecił sprawdzić czy polecenie wykonywane przez BlenderVR można również
 wykonać ręcznie przez konsolę. Ręczne wykonanie nie zwróciło jednak
 żadnego błędu; komenda wykonała się poprawnie.
+
+Problemem w tym przypadku może być brak <\textcompwordmark{}<natywnego
+wsparcia>\textcompwordmark{}> protokołu SSH przez system operacyjny
+Windows 7. Zewnętrzne narzędzia pozwalają na połączenie pomiędzy jednostkami
+ale możliwe, że nie radzą sobie z prawami administratora. Logowanie
+przez protokół na komputer podrzędny odbywało się przy użyciu konta
+z prawami administratora. Zanim stanowiska zostały wymienione kluczami,
+do logowania było wymagane hasło takie samo jak przy logowaniu użytkownika
+na docelowym systemie. Teoretycznie rzecz biorąc po zalogowaniu się
+przez SSH, użytkownik powinien mieć wszystkie prawa administratora. 
+
+Kolejną możliwością jest brak praw administratorskich środowiska Python.
+Skrypt wykonywany przez aplikację BlenderVR wymaga uruchomienia najpierw
+Pythona a później skryptu demona. Być może uruchamia się on bez praw
+administratora co nie pozwala mu na działanie w tle. 
+
+<tutaj coś jeszcze rozwinąć>
+
+
+\subsection{Krótki test w środowisku Linux <\textcompwordmark{}<lub 4.0 jako
+rozdział kolejny>\textcompwordmark{}>}
+
+Powyższe próby implenetacji oraz uruchomienia aplikacji BlenderVR
+pokazały, że nie jest on w pełni dostosowany do systemu operacyjnego
+jakim jest Windows. Brak najprostszych protokołów komunikacyjnych
+oraz słabe zarządzanie prawami administatora (uruchamiane programy
+użytkownika z pełnią praw nie zawsze te prawa dziedziczą) spowodowały
+spore utrudnienia w implementacji BlenderVR. 
 \end{document}

@@ -1760,7 +1760,7 @@ BlenderVR przy połączeniu do drugiego stanowiska próbuje uruchomić na nim
 \begin_inset Quotes pld
 \end_inset
 
-daemona
+demona
 \begin_inset Quotes prd
 \end_inset
 
@@ -1797,6 +1797,46 @@ Error: Cannot start daemon for screen <screenName>
  wykonywane przez BlenderVR można również wykonać ręcznie przez konsolę.
  Ręczne wykonanie nie zwróciło jednak żadnego błędu; komenda wykonała się
  poprawnie.
+\end_layout
+
+\begin_layout Standard
+Problemem w tym przypadku może być brak <<natywnego wsparcia>> protokołu
+ SSH przez system operacyjny Windows 7.
+ Zewnętrzne narzędzia pozwalają na połączenie pomiędzy jednostkami ale możliwe,
+ że nie radzą sobie z prawami administratora.
+ Logowanie przez protokół na komputer podrzędny odbywało się przy użyciu
+ konta z prawami administratora.
+ Zanim stanowiska zostały wymienione kluczami, do logowania było wymagane
+ hasło takie samo jak przy logowaniu użytkownika na docelowym systemie.
+ Teoretycznie rzecz biorąc po zalogowaniu się przez SSH, użytkownik powinien
+ mieć wszystkie prawa administratora.
+ 
+\end_layout
+
+\begin_layout Standard
+Kolejną możliwością jest brak praw administratorskich środowiska Python.
+ Skrypt wykonywany przez aplikację BlenderVR wymaga uruchomienia najpierw
+ Pythona a później skryptu demona.
+ Być może uruchamia się on bez praw administratora co nie pozwala mu na
+ działanie w tle.
+ 
+\end_layout
+
+\begin_layout Standard
+<tutaj coś jeszcze rozwinąć>
+\end_layout
+
+\begin_layout Subsection
+Krótki test w środowisku Linux <<lub 4.0 jako rozdział kolejny>>
+\end_layout
+
+\begin_layout Standard
+Powyższe próby implenetacji oraz uruchomienia aplikacji BlenderVR pokazały,
+ że nie jest on w pełni dostosowany do systemu operacyjnego jakim jest Windows.
+ Brak najprostszych protokołów komunikacyjnych oraz słabe zarządzanie prawami
+ administatora (uruchamiane programy użytkownika z pełnią praw nie zawsze
+ te prawa dziedziczą) spowodowały spore utrudnienia w implementacji BlenderVR.
+ 
 \end_layout
 
 \end_body
