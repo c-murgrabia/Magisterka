@@ -1827,7 +1827,7 @@ Kolejną możliwością jest brak praw administratorskich środowiska Python.
 \end_layout
 
 \begin_layout Subsection
-Krótki test w środowisku Linux <<lub 4.0 jako rozdział kolejny>>
+Krótki test w środowisku Linux <<lub 4.0 jako kolejny rozdział>>
 \end_layout
 
 \begin_layout Standard
@@ -1835,8 +1835,18 @@ Powyższe próby implenetacji oraz uruchomienia aplikacji BlenderVR pokazały,
  że nie jest on w pełni dostosowany do systemu operacyjnego jakim jest Windows.
  Brak najprostszych protokołów komunikacyjnych oraz słabe zarządzanie prawami
  administatora (uruchamiane programy użytkownika z pełnią praw nie zawsze
- te prawa dziedziczą) spowodowały spore utrudnienia w implementacji BlenderVR.
+ te prawa dziedziczą) spowodowały problemy i przestoje w implementacji BlenderVR.
+ Aplikacja mimo swojej wieloplatformowości zdecydowanie trudniej implementuje
+ się na systemach Windows.
  
+\end_layout
+
+\begin_layout Standard
+Postanowiono przeprowadzić krótki test implementacji w środowisku Linux
+ by sprawdzić czy BlenderVR poradzi sobie lepiej w tym przypadku.
+ Test odbył się w pracowni komputerowej na Wydziale Matematyki, Fizyki i
+ Informatyki Uniwerytetu Gdańskiego.
+ Zostały przygotowane dwa stanowiska 
 \end_layout
 
 \end_body
