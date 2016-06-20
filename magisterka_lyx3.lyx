@@ -774,7 +774,7 @@ http://www.pcmag.com/article2/0,2817,2479252,00.asp (dostęp 07.05.20016)
 \end_layout
 
 \begin_layout Section
-Jaskinia wirtualnej rzeczywistości CAVE 
+Jaskinia wirtualnej rzeczywistości CAVE
 \end_layout
 
 \begin_layout Standard
@@ -896,7 +896,7 @@ wy odbiorcy.
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -936,9 +936,9 @@ Oprócz samego wyświetlania obrazu, jaskinia wirtualnej rzeczywistości pozwala
  Dzieje się to przy pomocy różnych kontrolerów np.
  FlySticka lub tzw.
  różdżki.
- Są to swego rodzaju bezprzewodowe joysticki wyposażone w zestaw czujników
- potrafiących określić pozycje (jako zestaw trzech wektorów) oraz orientacje
- (podawaną jako kwaternion) urządzenia w przestrzeni.
+ Są to bezprzewodowe joysticki wyposażone w zestaw czujników potrafiących
+ określić pozycje (jako zestaw trzech wektorów) oraz orientacje (podawaną
+ jako kwaternion) urządzenia w przestrzeni.
  Oprócz tego kontroler wyposażony jest w podstawowe części takie jak: analogowy,
  dwuosiowy joystick oraz kilka przycisków i/lub trigger.
  Przykładowy model został pokazany na obrazku (Fig.
@@ -1322,6 +1322,19 @@ Wysoki
 
 \end_layout
 
+\begin_layout Standard
+Obecnie systemy wirtualnej jaskini ją wykorzystywane głównie w laboratoriach
+ instytutów.
+ Nie są one dostępne dla szerszego odbioru.
+ Urządzenia HMD są za to dostępne dla każdego a ich obsługa i ustawienie
+ jest znacznie łatwiejsze.
+ Na rynku pojawiają się również coraz więcej modeli znanych i mniej znanych
+ firm przystosowanych specjalnie do smartfonów.
+ Wybór wśród nich jest więc znacznie wiekszy niż w przypadku CAVE'ów, które
+ często muszą instalować i częściowo obsługiwać zewnętrzne firmy.
+ 
+\end_layout
+
 \begin_layout Section
 Implementacja BlenderVR w środowisku wirtualnej jaskini CAVE
 \end_layout
@@ -1362,12 +1375,6 @@ BlenderVR jest narzędziem skalowalnym oraz wieloplatformowym.
  BlenderVR posiada wsparcie dla wyświetlania obrazu 3D (poczwórne buforowanie
  - ang: Quad Buffering) i protokołów komunikacyjnych np.
  VRPN – virtual reality peripherial network lub OSC – open sound control.
-\end_layout
-
-\begin_layout Standard
-<<tutaj jakieś mocne i słabe strony blendervr, problemy jakie moga wystąpić
- i co go wyróżnia.
- na co pozwala>>
 \end_layout
 
 \begin_layout Standard
@@ -1599,7 +1606,7 @@ Aktywne okulary 3D
 System operacyjny zainstalowany na jednostkach testowych to Windows 7 Profession
 al.
  Każdy komputer wpięty został w tę samą sieć ethernet.
- Żaden z komputerów nie miał dostępu do Internetu.
+ Żaden z komputerów nie ma dostępu do Internetu.
  Wszystkie niezbędne programy oraz pakiety zostały dostarczone ze źródeł
  zewnętrznych przy użyciu dysku przenośnego.
 \end_layout
@@ -1846,7 +1853,174 @@ Postanowiono przeprowadzić krótki test implementacji w środowisku Linux
  by sprawdzić czy BlenderVR poradzi sobie lepiej w tym przypadku.
  Test odbył się w pracowni komputerowej na Wydziale Matematyki, Fizyki i
  Informatyki Uniwerytetu Gdańskiego.
- Zostały przygotowane dwa stanowiska 
+ Zostały przygotowane dwa stanowiska.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+<<do wykorzystania we wnioskach; na sam koniec, albo gdzieś>>
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Wady i zalety aplikacji BlenderVR
+\begin_inset Newline newline
+\end_inset
+
+Źródło: Opracowanie własne
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top" width="7cm">
+<column alignment="center" valignment="top" width="7cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Zalety
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Wady
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dość prosta obsługa
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Problematyczna implementacja na systemie Windows
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Duża skalowalność
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Samoczynne dostosowanie kamer na scenie BGE
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Łączenie komputerów przez SSH
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Obsługa wielu systemów wyświetlających (CAVE, HMD, monitor, wiele monitorów)
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body

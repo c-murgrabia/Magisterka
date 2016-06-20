@@ -265,7 +265,7 @@ Poza HTC również Sony, które wróciło na rynek VR, rozpoczęło prace
 nad goglami VR specjalnie dla konsoli PlayStation 4.
 
 
-\section{Jaskinia wirtualnej rzeczywistości CAVE }
+\section{Jaskinia wirtualnej rzeczywistości CAVE}
 
 Technologia wirtualnej rzeczywistości rozwija się w kilka różnych
 „gałęzi”. Oprócz okularów HMD istnieją również bardziej zaawansowane
@@ -332,12 +332,12 @@ lub/i nienaturalną perspektywą.
 Oprócz samego wyświetlania obrazu, jaskinia wirtualnej rzeczywistości
 pozwala również na interakcje ze światem otaczającym. Dzieje się to
 przy pomocy różnych kontrolerów np. FlySticka lub tzw. różdżki. Są
-to swego rodzaju bezprzewodowe joysticki wyposażone w zestaw czujników
-potrafiących określić pozycje (jako zestaw trzech wektorów) oraz orientacje
-(podawaną jako kwaternion) urządzenia w przestrzeni. Oprócz tego kontroler
-wyposażony jest w podstawowe części takie jak: analogowy, dwuosiowy
-joystick oraz kilka przycisków i/lub trigger. Przykładowy model został
-pokazany na obrazku (Fig. 3).
+to bezprzewodowe joysticki wyposażone w zestaw czujników potrafiących
+określić pozycje (jako zestaw trzech wektorów) oraz orientacje (podawaną
+jako kwaternion) urządzenia w przestrzeni. Oprócz tego kontroler wyposażony
+jest w podstawowe części takie jak: analogowy, dwuosiowy joystick
+oraz kilka przycisków i/lub trigger. Przykładowy model został pokazany
+na obrazku (Fig. 3).
 
 \begin{figure}[H]
 \begin{centering}
@@ -391,6 +391,14 @@ Koszt & Niewielki & Wysoki\tabularnewline
 \end{table}
 
 
+Obecnie systemy wirtualnej jaskini ją wykorzystywane głównie w laboratoriach
+instytutów. Nie są one dostępne dla szerszego odbioru. Urządzenia
+HMD są za to dostępne dla każdego a ich obsługa i ustawienie jest
+znacznie łatwiejsze. Na rynku pojawiają się również coraz więcej modeli
+znanych i mniej znanych firm przystosowanych specjalnie do smartfonów.
+Wybór wśród nich jest więc znacznie wiekszy niż w przypadku CAVE'ów,
+które często muszą instalować i częściowo obsługiwać zewnętrzne firmy. 
+
 
 \section{Implementacja BlenderVR w środowisku wirtualnej jaskini CAVE}
 
@@ -413,9 +421,6 @@ dowolną liczbę ekranów. BlenderVR posiada wsparcie dla wyświetlania
 obrazu 3D (poczwórne buforowanie - ang: Quad Buffering) i protokołów
 komunikacyjnych np. VRPN – virtual reality peripherial network lub
 OSC – open sound control.
-
-<\textcompwordmark{}<tutaj jakieś mocne i słabe strony blendervr,
-problemy jakie moga wystąpić i co go wyróżnia. na co pozwala>\textcompwordmark{}>
 
 \begin{figure}[H]
 \begin{centering}
@@ -515,7 +520,7 @@ stanowiskach komputerowych. W skład jednostki testowej wchodził sprzęt:
 \end{itemize}
 System operacyjny zainstalowany na jednostkach testowych to Windows
 7 Professional. Każdy komputer wpięty został w tę samą sieć ethernet.
-Żaden z komputerów nie miał dostępu do Internetu. Wszystkie niezbędne
+Żaden z komputerów nie ma dostępu do Internetu. Wszystkie niezbędne
 programy oraz pakiety zostały dostarczone ze źródeł zewnętrznych przy
 użyciu dysku przenośnego.
 
@@ -637,5 +642,35 @@ Windows.
 Postanowiono przeprowadzić krótki test implementacji w środowisku
 Linux by sprawdzić czy BlenderVR poradzi sobie lepiej w tym przypadku.
 Test odbył się w pracowni komputerowej na Wydziale Matematyki, Fizyki
-i Informatyki Uniwerytetu Gdańskiego. Zostały przygotowane dwa stanowiska 
+i Informatyki Uniwerytetu Gdańskiego. Zostały przygotowane dwa stanowiska. 
+
+\begin{table}
+<\textcompwordmark{}<do wykorzystania we wnioskach; na sam koniec,
+albo gdzieś>\textcompwordmark{}>
+
+\begin{raggedright}
+\caption{Wady i zalety aplikacji BlenderVR\protect \\
+Źródło: Opracowanie własne}
+
+\par\end{raggedright}
+
+\begin{tabular}{|>{\centering}p{7cm}|>{\centering}p{7cm}|}
+\hline 
+Zalety & Wady\tabularnewline
+\hline 
+\hline 
+Dość prosta obsługa & Problematyczna implementacja na systemie Windows\tabularnewline
+\hline 
+Duża skalowalność & \tabularnewline
+\hline 
+Samoczynne dostosowanie kamer na scenie BGE & \tabularnewline
+\hline 
+Łączenie komputerów przez SSH & \tabularnewline
+\hline 
+Obsługa wielu systemów wyświetlających (CAVE, HMD, monitor, wiele
+monitorów)  & \tabularnewline
+\hline 
+\end{tabular}
+\end{table}
+
 \end{document}
