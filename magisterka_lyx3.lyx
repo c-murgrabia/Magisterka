@@ -1336,7 +1336,7 @@ Obecnie systemy wirtualnej jaskini ją wykorzystywane głównie w laboratoriach
 \end_layout
 
 \begin_layout Section
-Implementacja BlenderVR w środowisku wirtualnej jaskini CAVE
+Próba implementacji BlenderVR w środowisku wirtualnej jaskini CAVE
 \end_layout
 
 \begin_layout Subsection
@@ -1851,10 +1851,80 @@ Powyższe próby implenetacji oraz uruchomienia aplikacji BlenderVR pokazały,
 \begin_layout Standard
 Postanowiono przeprowadzić krótki test implementacji w środowisku Linux
  by sprawdzić czy BlenderVR poradzi sobie lepiej w tym przypadku.
- Test odbył się w pracowni komputerowej na Wydziale Matematyki, Fizyki i
- Informatyki Uniwerytetu Gdańskiego.
- Zostały przygotowane dwa stanowiska.
- 
+ Test został przeprowadzony na dwóch maszynach wirtualnych, na których był
+ zainstalowany Debian8.5.
+ Nie ma automatycznego instalatora dla środowiska Linux więc wykonano po
+ kolei instalację paczek według instrukcji na stronie BlenderVR.
+\end_layout
+
+\begin_layout Enumerate
+Instalacja Blender3D w wersji 2.75 lub nowszej
+\end_layout
+
+\begin_layout Enumerate
+Ściągnięcie oraz rozpakowanie BlenderVR oraz przykładowych scen
+\end_layout
+
+\begin_layout Enumerate
+Instalacja zależności
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Python3.4 - użyta w teście kompilacja Debiana posiadała juz zainstalowanego
+ Pythona w wersji 3.4.
+ Do jej uruchomienia użyto komendy python3
+\end_layout
+
+\begin_layout Enumerate
+Qt4.8 - pakiet Qt wymagany przy kompilacji PySide1.2.2 (patrz niżej).
+ Nazwa paczki w repozytorium: qt4-dev-tools
+\end_layout
+
+\begin_layout Enumerate
+PIP - pakietu brakowało więc został ściągnięty ze strony https://pip.pypa.io/en/la
+test/installing/ oraz zainstalowany poleceniem python3 get-pip.py
+\end_layout
+
+\begin_layout Enumerate
+Virtualenv - wirtualne środowisko dla Pythona.
+ Instalowane przy pomocy polocenia pip3 install virtualenv.
+ Tutaj od instrukcji jest pewne odstępstwo gdyż zamiast polecenia pyvenv
+ lub pyvenv-3.4 należy użyć virtualenv
+\end_layout
+
+\begin_layout Enumerate
+PySide1.2.2 - paczka pobrana i skompilowana w uruchomionym już środowisku
+ wirtualnym Pythona.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Mając zainstalowane wszystkie zależności wystarczy aktywować środowisko
+ wirtualne i uruchomić plik blendervr.
+ Pojawi się okno z ustawieniami a konsola terminala może posłużyć za narzędzie
+ do wyszukiwania błędów.
+\end_layout
+
+\begin_layout Standard
+Tak samo jak w przypadku testu w środowisku Windows: oba komputery zostały
+ wymienione kluczami do połączenia SSH.
+ Krótki test połączenia pokazał, że nie wymaga ono hasła.
+ Ustawienia BlenderVR zostały odpowiednio dostosowane do ścieżek systemu
+ operacyjnego.
+ Po załadowaniu konfiguracji w konsoli nie pojawił się żaden błąd.
+ Wybranie ustawień ekranu oraz sceny przykładowej również nie pokazało żadnego
+ błędu.
+ Scena została uruchomiona na komputerze podrzędnym.
+ Test został zakończony sukcesem.
+\end_layout
+
+\begin_layout Section
+Analiza i wnioski
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \begin_layout Standard

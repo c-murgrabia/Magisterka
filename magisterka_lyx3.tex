@@ -400,7 +400,7 @@ Wybór wśród nich jest więc znacznie wiekszy niż w przypadku CAVE'ów,
 które często muszą instalować i częściowo obsługiwać zewnętrzne firmy. 
 
 
-\section{Implementacja BlenderVR w środowisku wirtualnej jaskini CAVE}
+\section{Próba implementacji BlenderVR w środowisku wirtualnej jaskini CAVE}
 
 
 \subsection{Opis aplikacji\protect\footnote{Strona instytutu LIMSI we Francji https://blendervr.limsi.fr/doku.php
@@ -641,8 +641,46 @@ Windows.
 
 Postanowiono przeprowadzić krótki test implementacji w środowisku
 Linux by sprawdzić czy BlenderVR poradzi sobie lepiej w tym przypadku.
-Test odbył się w pracowni komputerowej na Wydziale Matematyki, Fizyki
-i Informatyki Uniwerytetu Gdańskiego. Zostały przygotowane dwa stanowiska. 
+Test został przeprowadzony na dwóch maszynach wirtualnych, na których
+był zainstalowany Debian8.5. Nie ma automatycznego instalatora dla
+środowiska Linux więc wykonano po kolei instalację paczek według instrukcji
+na stronie BlenderVR.
+\begin{enumerate}
+\item Instalacja Blender3D w wersji 2.75 lub nowszej
+\item Ściągnięcie oraz rozpakowanie BlenderVR oraz przykładowych scen
+\item Instalacja zależności
+
+\begin{enumerate}
+\item Python3.4 - użyta w teście kompilacja Debiana posiadała juz zainstalowanego
+Pythona w wersji 3.4. Do jej uruchomienia użyto komendy python3
+\item Qt4.8 - pakiet Qt wymagany przy kompilacji PySide1.2.2 (patrz niżej).
+Nazwa paczki w repozytorium: qt4-dev-tools
+\item PIP - pakietu brakowało więc został ściągnięty ze strony https://pip.pypa.io/en/latest/installing/
+oraz zainstalowany poleceniem python3 get-pip.py
+\item Virtualenv - wirtualne środowisko dla Pythona. Instalowane przy pomocy
+polocenia pip3 install virtualenv. Tutaj od instrukcji jest pewne
+odstępstwo gdyż zamiast polecenia pyvenv lub pyvenv-3.4 należy użyć
+virtualenv
+\item PySide1.2.2 - paczka pobrana i skompilowana w uruchomionym już środowisku
+wirtualnym Pythona.
+\end{enumerate}
+\end{enumerate}
+Mając zainstalowane wszystkie zależności wystarczy aktywować środowisko
+wirtualne i uruchomić plik blendervr. Pojawi się okno z ustawieniami
+a konsola terminala może posłużyć za narzędzie do wyszukiwania błędów.
+
+Tak samo jak w przypadku testu w środowisku Windows: oba komputery
+zostały wymienione kluczami do połączenia SSH. Krótki test połączenia
+pokazał, że nie wymaga ono hasła. Ustawienia BlenderVR zostały odpowiednio
+dostosowane do ścieżek systemu operacyjnego. Po załadowaniu konfiguracji
+w konsoli nie pojawił się żaden błąd. Wybranie ustawień ekranu oraz
+sceny przykładowej również nie pokazało żadnego błędu. Scena została
+uruchomiona na komputerze podrzędnym. Test został zakończony sukcesem.
+
+
+\section{Analiza i wnioski}
+
+
 
 \begin{table}
 <\textcompwordmark{}<do wykorzystania we wnioskach; na sam koniec,
