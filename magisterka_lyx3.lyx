@@ -1,24 +1,29 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass article
+\begin_preamble
+\hyphenation{MechWarrior przes-trzen-nej u-żyt-kow-ni-ka jas-ki-ni jas-ki-nia naj-waż-niej-szy-mi do-łą-czo-no u-sta-wio-ne przy-sto-so-wa-nym}
+\end_preamble
 \use_default_options true
 \maintain_unincluded_children false
 \language polish
 \language_package none
 \inputencoding utf8
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -75,6 +80,11 @@
 
 \begin_layout Standard
 tutaj strona główna
+\end_layout
+
+\begin_layout Standard
+System wizualizacji oparty o Blender w środowisku jaskini rzeczywistości
+ wirtualnej
 \end_layout
 
 \begin_layout Section*
@@ -177,7 +187,7 @@ CAVE (ang.
 \series bold
 Tylna projekcja (ang: Rear Screen Projection)
 \series default
- - projekcja obrazu na półprzezroczysty ekran znajdujący się między obserwatorem
+ - projekcja obrazu na półprzeźroczysty ekran znajdujący się między obserwatorem
  a urządzeniem.
  Dzięki wykorzystaniu tej techniki obraz jest jaśniejszy i bardziej wyraźny
  w porównaniu do klasycznej projekcji.
@@ -191,8 +201,7 @@ Aktywne okulary 3D
  - rodzaj okularów 3D zasilanych bateriami by rozdzielać renderowane klatki
  specjalnie dla prawego i lewego oka.
  Działają na zasadzie migawki: kiedy aktualnie wyświetlana klatka jest przeznacz
-ona dla lewego oka, praczona dla lewego oka, prawa migawka pozostaje zamknięta
- i vice versa.
+ona dla lewego oka, prawa migawka pozostaje zamknięta i vice versa.
  Przy takiej formie odbierania obrazu wyświetlacz powinien odświeżać obraz
  na tyle szybko by każde z oczu otrzymywało przynajmniej 60 klatek na sekundę
  (co daje łącznie odświeżanie na poziomie 120 Hz)
@@ -215,15 +224,8 @@ Odświeżanie obrazu
 \series default
  - dla ekranów LCD jest to liczba wyświetleń w ciągu sekundy danych dostarczonyc
 h przez procesor graficzny.
- Ekrany typu CRT odświeżają obraz na zasadzie 
-\begin_inset Quotes pld
-\end_inset
-
-namalowania
-\begin_inset Quotes prd
-\end_inset
-
- klatki na ekranie po czym wygaszenie i proces się powtarza.
+ Ekrany typu CRT odświeżają obraz wytrzeliwując elektrony pobudzające luminofor
+ (patrz: CRT).
 \end_layout
 
 \begin_layout Itemize
@@ -296,11 +298,10 @@ Stereoskopia
 \series bold
 FullHD
 \series default
- - standard wyświetlania obrazu wysokiej jakości odznaczający się 1080.
- horyzontalnymi liniami w rozdzielczości obrazu.
+ - standard wyświetlania obrazu wysokiej jakości.
  Zazwyczaj zakłada się też, że wyświetlacz jest panoramiczny (stosunek boków
- jest 16:9) i posiada rozdzielczość 1920 na 1080.
- Sygnał wideo jakości FullHD na oznaczenie 1080p.
+ jest 16:9) i posiada rozdzielczość 1920 na 1080 pikseli.
+ Sygnał wideo jakości FullHD ma oznaczenie 1080p.
 \end_layout
 
 \begin_layout Itemize
@@ -381,6 +382,10 @@ http://crowdfunding.pl/crowdfunding-faq/ (dostęp: 22.05.2016)
  - możliwości wykonania ruchu przez ciało w przestrzeni trójwymiarowej.
  Dla 6.
  stopni swobody są to:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -477,8 +482,8 @@ Niniejsza praca ma na celu rozszerzenie możliwości wykorzystania jaskini
  Aktualnie głównymi silnikami graficznymi, które wykorzystywane są w Laboratoriu
 m Zanurzonej Wizualizacji Przestrzennej są Unity i Unreal Engine.
  Oba zostały przystosowane do pracy w jaskiniach wirtualnej rzeczywistości.
- Żaden z nich nie jest jednak programem open-source co nie pozwala na dokładne
- dopasowanie do potrzeb laboratorium.
+ Nie są one jednak programami open-source co nie pozwala na dokładne dopasowanie
+ do potrzeb laboratorium.
  Wykorzystanie nowej opcji jaką jest Blender Game Engine rozszerzy możliwości
  modelowania scen dedykowanych dla CAVE’a.
  
@@ -535,8 +540,8 @@ http://www.almaclassics.com/excerpts/Theatre_Double.pdf (dostęp 07.05.20016)
 \end_inset
 
 .
- To co dzisiaj kryje się pod nazwą rzeczywistości wirtualnej zostało rozpopulary
-zowane dopiero przez media masowe w filmach takich jak: 
+ To co dzisiaj kryje się pod nazwą rzeczywistości wirtualnej było popularyzowane
+ dopiero przez media masowe w filmach takich jak: 
 \begin_inset Quotes pld
 \end_inset
 
@@ -564,8 +569,8 @@ http://www.theverge.com/a/virtual-reality/oral_history (dostęp 07.05.20016)
 \end_inset
 
 .
- Była to maszyna podobna wyglądem do automatów do gier wyświetlająca stereoskopi
-czny obraz 3D, zapewniała przechylanie pozycji użytkownika oraz wspierała
+ Była to maszyna podobna wyglądem do automatów do gier wyświetlająca stereoskopo
+wy obraz 3D, zapewniała przechylanie pozycji użytkownika oraz wspierała
  dźwięk przestrzenny.
  W budowie planowano również systemy generujące podmuchy wiatru oraz uwalniające
  odpowiednie zapachy
@@ -613,8 +618,8 @@ Urządzenia montowane na głowie
 Pierwsze gogle wirtualnej rzeczywistości dostępne komercyjnie zostały zapowiedzi
 ane na Consumer Electronics Show w 1994 roku.
  Nazywały się Forte VFX-1.
- Gogle mogły wyświetlać stereoskopiczny obraz, miały wbudowane słuchawki
- stereo oraz sensor śledzący pozycje głowy w 3.
+ Gogle mogły wyświetlać stereoskopowy obraz, miały wbudowane słuchawki stereo
+ oraz sensor śledzący pozycje głowy w 3.
  osiach
 \begin_inset Foot
 status open
@@ -630,9 +635,24 @@ http://www.ibiblio.org/GameBytes/issue21/flooks/vfx1.html (dostęp 07.05.20016)
  1997 roku przez firmę Sony.
  W odróżnieniu od Forte VFX-1 miały dodatkowo czujniki pozycyjne co dodatkowo
  pogłębiało immersję.
- Gogle można było zastosować w grze o nazwie MechWarrior 2.
+ Gogle można było zastosować w grze o nazwie MechWarrior
+\begin_inset space ~
+\end_inset
+
+2.
  Gracz, używając Glasstrona, mógł włączyć nową perspektywę z kokpitu maszyny
  kroczącej.
+\end_layout
+
+\begin_layout Standard
+Można tu równiez wspomnieć o specyficznych zdjęciach ulic firmy Google -
+ Street View.
+ Wprowadzone w 2007 roku panoramiczne zdjęcia, które pozwalały przyglądać
+ się okolicy z miejsca samochodu robiącego zdjęcia.
+ Jest to ciekawe wykorzystanie technologii opartych o rzeczywistość wirtualną
+ w nawigacji.
+ Street View umożliwia rozejrzenie się za punktami orientacyjnymi na danej
+ ulicy.
 \end_layout
 
 \begin_layout Standard
@@ -771,6 +791,19 @@ http://www.pcmag.com/article2/0,2817,2479252,00.asp (dostęp 07.05.20016)
 .
  Poza HTC również Sony, które wróciło na rynek VR, rozpoczęło prace nad
  goglami VR specjalnie dla konsoli PlayStation 4.
+\end_layout
+
+\begin_layout Standard
+Poza HTC, Oculusem oraz Sony jest jeszcze kilku gigantów pracujących z goglami
+ VR lub AR.
+ Microsoft aktualnie dopracowuje gogle rozszerzonej rzeczywistości Hololens.
+ Gogle mają przeźroczyste szkła, przez które widać otoczenie.
+ Dopiero na to otoczenie nakładany jest obraz wirtualny np.
+ na pustą ścianę w mieszkaniu nałożony może zostać obraz jakiegoś plakatu
+ lub dekoracji.
+ Gogle zapowiadają się rewelacyjnie przy pracach projektowych gdzie w naturalnym
+ środowisku będzie można obejrzeć model 1:1 lub nałożyć wykończenie na szkielet
+ projektu.
 \end_layout
 
 \begin_layout Section
@@ -934,8 +967,7 @@ Architektura systemu CAVE na przykładzie użycia Unreal Engine
 Oprócz samego wyświetlania obrazu, jaskinia wirtualnej rzeczywistości pozwala
  również na interakcje ze światem otaczającym.
  Dzieje się to przy pomocy różnych kontrolerów np.
- FlySticka lub tzw.
- różdżki.
+ FlySticka lub MagicWand.
  Są to bezprzewodowe joysticki wyposażone w zestaw czujników potrafiących
  określić pozycje (jako zestaw trzech wektorów) oraz orientacje (podawaną
  jako kwaternion) urządzenia w przestrzeni.
@@ -1045,7 +1077,7 @@ Porównanie HMD i CAVE
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="9" columns="3">
-<features rotate="0" tabularvalignment="middle" tabularwidth="15cm">
+<features tabularvalignment="middle" tabularwidth="15cm">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="4cm">
 <column alignment="center" valignment="top" width="5cm">
@@ -1326,8 +1358,11 @@ Wysoki
 Obecnie systemy wirtualnej jaskini ją wykorzystywane głównie w laboratoriach
  instytutów.
  Nie są one dostępne dla szerszego odbioru.
- Urządzenia HMD są za to dostępne dla każdego a ich obsługa i ustawienie
- jest znacznie łatwiejsze.
+ Urządzenia HMD są za to dostępne dla każdego a
+\begin_inset space ~
+\end_inset
+
+ich obsługa i ustawienie jest znacznie łatwiejsze.
  Na rynku pojawiają się również coraz więcej modeli znanych i mniej znanych
  firm przystosowanych specjalnie do smartfonów.
  Wybór wśród nich jest więc znacznie wiekszy niż w przypadku CAVE'ów, które
@@ -1371,7 +1406,7 @@ BlenderVR jest narzędziem skalowalnym oraz wieloplatformowym.
  nie wymaga jej edytowania.
  Wszystkim zajmuje się odpowiednia konfiguracja programu.
  Aplikację można dostosować do dowolnej liczby komputerów obsługujących
- dowolną liczbę ekranów.
+ różne ekrany.
  BlenderVR posiada wsparcie dla wyświetlania obrazu 3D (poczwórne buforowanie
  - ang: Quad Buffering) i protokołów komunikacyjnych np.
  VRPN – virtual reality peripherial network lub OSC – open sound control.
@@ -1432,11 +1467,11 @@ Adresy komputerów typu „slave” – obsługujących wyświetlanie obrazu ora
 \end_layout
 
 \begin_layout Itemize
-Ilość ekranów, ich położenie oraz relacje oko<-->ekran.
+Ilość ekranów, ich położenie oraz relacje oko - ekran.
 \end_layout
 
 \begin_layout Itemize
-Ustawienia wtyczki interakcji ze sceną: serwer odbierający dane z urządzeń
+Ustawienia wtyczki do interakcji ze sceną: serwer odbierający dane z urządzeń
  wskazujących oraz konfiguracja czujników.
 \end_layout
 
@@ -1444,7 +1479,8 @@ Ustawienia wtyczki interakcji ze sceną: serwer odbierający dane z urządzeń
 Interfejs jest przejrzysty i prosty w obsłudze.
  Po uruchomieniu wystarczy załadować odpowiedni plik konfiguracyjny, następnie
  wybrać konfigurację ekranów i wskazać miejsca pliku ze sceną do symulacji.
- W zakładce „Run” znajduje się start programu oraz konsola do debugowania.
+ W zakładce „Run” znajduje się przycisk do uruchomienia programu oraz konsola
+ do debugowania.
 \end_layout
 
 \begin_layout Standard
@@ -1510,6 +1546,10 @@ Proces wdrożenia aplikacji:
 \begin_layout Enumerate
 Wdrożenie aplikacji na laboratorium testowym na środowisku jednego komputera
  
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1533,7 +1573,7 @@ Powtórzenie kroku 1.
 \end_layout
 
 \begin_layout Enumerate
-Kompilacja i ustawienie wtyczki do obsługi kontrolerów – VRPN
+Kompilacja i ustawienie plugina do obsługi kontrolerów – VRPN
 \end_layout
 
 \begin_layout Enumerate
@@ -1574,11 +1614,15 @@ Test aplikacji BlenderVR został przeprowadzony na specjalnie przygotowanych
 
 \begin_layout Itemize
 Komputer stacjonarny wyposażony w:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-procesor klasy Intel Xeon
+procesor Intel Xeon E5-1630
 \end_layout
 
 \begin_layout Itemize
@@ -1595,7 +1639,8 @@ Dysk HDD o pojemności 500 GB
 
 \end_deeper
 \begin_layout Itemize
-Monitor ASUS 24'' z możliwością wyświetlenia obrazu 3D
+Monitor ASUS 24'' z możliwością wyświetlenia obrazu 3D.
+ Częstotliwość odświeżania wynosi 120Hz
 \end_layout
 
 \begin_layout Itemize
@@ -1605,7 +1650,7 @@ Aktywne okulary 3D
 \begin_layout Standard
 System operacyjny zainstalowany na jednostkach testowych to Windows 7 Profession
 al.
- Każdy komputer wpięty został w tę samą sieć ethernet.
+ Każdy komputer wpięty został w tę samą sieć Ethernet.
  Żaden z komputerów nie ma dostępu do Internetu.
  Wszystkie niezbędne programy oraz pakiety zostały dostarczone ze źródeł
  zewnętrznych przy użyciu dysku przenośnego.
@@ -1633,7 +1678,11 @@ Do instalacji programu wykorzystano gotowy pakiet instalacyjny.
 \begin_layout Standard
 Kolejnym krokiem jest przygotowanie pliku konfiguracyjnego.
  Do źródeł aplikacji dołączono kilka przykładowych konfiguracji zależnie
- od systemu operacyjnego oraz środowiska, w którym będzie testowana aplikacja.
+ od systemu operacyjnego oraz środowiska, w
+\begin_inset space ~
+\end_inset
+
+którym będzie testowana aplikacja.
  Na początek wystarczy sprawdzić czy program uruchamia przykładową scenę
  oraz czy konsola nie pokazuje żadnego błędu.
  Do tego wykorzystany zostanie plik konfiguracyjny przygotowany dla Windowsa.
@@ -1649,7 +1698,7 @@ Kolejnym krokiem jest przygotowanie pliku konfiguracyjnego.
 \end_layout
 
 \begin_layout Standard
-Następna faza testu sprawdzi czy aplikacja wyświetli obraz stereoskopiczny
+Następna faza testu sprawdzi czy aplikacja wyświetli obraz stereoskopowy
  na przystosowanym do tego monitorze.
  Do pliku konfiguracyjnego dodano ustawienia ekranu o nazwie Quadbuffer
  z opcją 
@@ -1663,9 +1712,9 @@ hwpageflip
 .
  Opcja pozwala na zdefiniowanie dwóch buforów graficznych - jeden dla prawego
  i jeden dla lewego oka.
- Monitor przystosowany do wyświetlania obrazu 3D pozwala na większe odświeżanie
- ekranu dzięki czemu można otrzymać stabilne 60 klatek dla każdego oka oddzielni
-e.
+ Monitor przystosowany do wyświetlania obrazu 3D pozwala na wyższą częstotliwość
+ odświeżania ekranu dzięki czemu można otrzymać stabilne 60 klatek dla każdego
+ oka oddzielnie.
  I w tym przypadku próba zakończyła się sukcesem.
  Na monitorze ukazał się obraz, który po założeniu okularów 3D sprawiał
  wrażenie trójwymiarowego.
@@ -1796,9 +1845,9 @@ Error: Cannot start daemon for screen <screenName>
 .
  Na stronie BlenderVR błąd jest rozpoznany i według autora rozwiązania problem
  występuje jeśli połączenie miedzy komputerami wymaga hasła.
- W tym przypadku jednak nie ma to odniesienia ponieważ komputery zostały
+ Błąd w tym przypadku nie powinien występować ponieważ komputery zostały
  wymienione kluczami.
- Połączenie SSH zostało przetestowane przez konsolę Windowsa i nie wymagało
+ Połączenie SSH zostało przetestowane poprzez konsolę Windowsa i nie wymagało
  użycia hasła.
  Po konsultacji jeden z twórców oprogramowania polecił sprawdzić czy polecenie
  wykonywane przez BlenderVR można również wykonać ręcznie przez konsolę.
@@ -1807,16 +1856,14 @@ Error: Cannot start daemon for screen <screenName>
 \end_layout
 
 \begin_layout Standard
-Problemem w tym przypadku może być brak <<natywnego wsparcia>> protokołu
- SSH przez system operacyjny Windows 7.
- Zewnętrzne narzędzia pozwalają na połączenie pomiędzy jednostkami ale możliwe,
- że nie radzą sobie z prawami administratora.
+Problemem w tym przypadku może być konfiguracja serwera SSH, które nie pozwala
+ na logowanie jako administrator.
  Logowanie przez protokół na komputer podrzędny odbywało się przy użyciu
  konta z prawami administratora.
  Zanim stanowiska zostały wymienione kluczami, do logowania było wymagane
  hasło takie samo jak przy logowaniu użytkownika na docelowym systemie.
  Teoretycznie rzecz biorąc po zalogowaniu się przez SSH, użytkownik powinien
- mieć wszystkie prawa administratora.
+ mieć wszystkie niezbędne prawa do zarządzania komputerem.
  
 \end_layout
 
@@ -1867,13 +1914,16 @@ Instalacja Blender3D w wersji 2.75 lub nowszej
 
 \begin_layout Enumerate
 Instalacja zależności
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
 Python3.4 - użyta w teście kompilacja Debiana posiadała juz zainstalowanego
  Pythona w wersji 3.4.
- Do jej uruchomienia użyto komendy python3
 \end_layout
 
 \begin_layout Enumerate
@@ -1888,7 +1938,7 @@ test/installing/ oraz zainstalowany poleceniem python3 get-pip.py
 
 \begin_layout Enumerate
 Virtualenv - wirtualne środowisko dla Pythona.
- Instalowane przy pomocy polocenia pip3 install virtualenv.
+ Instalowane przy pomocy polecenia pip3 install virtualenv.
  Tutaj od instrukcji jest pewne odstępstwo gdyż zamiast polecenia pyvenv
  lub pyvenv-3.4 należy użyć virtualenv
 \end_layout
@@ -1957,7 +2007,7 @@ Wady i zalety aplikacji BlenderVR
 \begin_layout Plain Layout
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="2">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="7cm">
 <column alignment="center" valignment="top" width="7cm">
 <row>

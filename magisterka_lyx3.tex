@@ -1,4 +1,4 @@
-%% LyX 2.1.4 created this file.  For more info, see http://www.lyx.org/.
+%% LyX 2.2.0 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
 \documentclass[11pt]{article}
 \usepackage[T1]{fontenc}
@@ -32,23 +32,26 @@
 %% Because html converters don't know tabularnewline
 \providecommand{\tabularnewline}{\\}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\hyphenation{MechWarrior przes-trzen-nej u-żyt-kow-ni-ka jas-ki-ni jas-ki-nia naj-waż-niej-szy-mi do-łą-czo-no u-sta-wio-ne przy-sto-so-wa-nym}
+
 \makeatother
 
 \begin{document}
 tutaj strona główna
 
+System wizualizacji oparty o Blender w środowisku jaskini rzeczywistości
+wirtualnej
 
 \section*{\newpage{}}
 
 tutaj pusto
-
 
 \section*{\newpage{}}
 
 tutaj spis treści
 
 \newpage{}
-
 
 \part*{Słownik}
 \begin{itemize}
@@ -73,22 +76,21 @@ aktywne okulary 3D by móc oglądać dowolnie wyświetlony obiekt z każdej
 strony. Wewnątrz znajdują się również kamery śledzące pozycje użytkownika
 dzięki czemu obraz jest na bieżąco dostosowywany do pozycji śledzonego.
 \item \textbf{Tylna projekcja (ang: Rear Screen Projection)} - projekcja
-obrazu na półprzezroczysty ekran znajdujący się między obserwatorem
+obrazu na półprzeźroczysty ekran znajdujący się między obserwatorem
 a urządzeniem. Dzięki wykorzystaniu tej techniki obraz jest jaśniejszy
 i bardziej wyraźny w porównaniu do klasycznej projekcji.
 \item \textbf{Aktywne okulary 3D} - rodzaj okularów 3D zasilanych bateriami
 by rozdzielać renderowane klatki specjalnie dla prawego i lewego oka.
 Działają na zasadzie migawki: kiedy aktualnie wyświetlana klatka jest
-przeznaczona dla lewego oka, praczona dla lewego oka, prawa migawka
-pozostaje zamknięta i vice versa. Przy takiej formie odbierania obrazu
-wyświetlacz powinien odświeżać obraz na tyle szybko by każde z oczu
-otrzymywało przynajmniej 60 klatek na sekundę (co daje łącznie odświeżanie
-na poziomie 120 Hz)\footnote{http://www.cnet.com/news/active-3d-vs-passive-3d-whats-better/ (dostęp:
+przeznaczona dla lewego oka, prawa migawka pozostaje zamknięta i vice
+versa. Przy takiej formie odbierania obrazu wyświetlacz powinien odświeżać
+obraz na tyle szybko by każde z oczu otrzymywało przynajmniej 60 klatek
+na sekundę (co daje łącznie odświeżanie na poziomie 120 Hz)\footnote{http://www.cnet.com/news/active-3d-vs-passive-3d-whats-better/ (dostęp:
 22.05.2016)}
 \item \textbf{Odświeżanie obrazu} - dla ekranów LCD jest to liczba wyświetleń
 w ciągu sekundy danych dostarczonych przez procesor graficzny. Ekrany
-typu CRT odświeżają obraz na zasadzie ,,namalowania'' klatki na
-ekranie po czym wygaszenie i proces się powtarza.
+typu CRT odświeżają obraz wytrzeliwując elektrony pobudzające luminofor
+(patrz: CRT).
 \item \textbf{LCD (ang. Liquid Crystal Display)} - Rodzaj ciekło-krystalicznych
 wyświetlaczy gdzie obraz jest sterowany poprzez zmianę poszczególnych
 pikseli lub ich grup. Panel LCD nie emituje światła sam z siebie,
@@ -109,11 +111,10 @@ wrażenie stereoskopii. Wyświetlacze HMD pozwalają zanurzyć się w rzeczywist
 wirtualną.
 \item \textbf{Stereoskopia }- technika pokazywania obrazu polegająca na
 tworzeniu lub uwydatnianiu jego głębii.
-\item \textbf{FullHD} - standard wyświetlania obrazu wysokiej jakości odznaczający
-się 1080. horyzontalnymi liniami w rozdzielczości obrazu. Zazwyczaj
+\item \textbf{FullHD} - standard wyświetlania obrazu wysokiej jakości. Zazwyczaj
 zakłada się też, że wyświetlacz jest panoramiczny (stosunek boków
-jest 16:9) i posiada rozdzielczość 1920 na 1080. Sygnał wideo jakości
-FullHD na oznaczenie 1080p.
+jest 16:9) i posiada rozdzielczość 1920 na 1080 pikseli. Sygnał wideo
+jakości FullHD ma oznaczenie 1080p.
 \item \textbf{Organiczna dioda elektroluminescencyjna, OLED (ang. Organic
 Light-Emitting Diode)} - dioda wytwarzana ze związków organicznych.
 Jest to również oznaczenie klasy wyświetlaczy graficznych zbudowanych
@@ -175,13 +176,12 @@ mogą rozwijać się bardziej dynamicznie wraz z dedykowanymi dla nich
 scenami lub grami. Aktualnie głównymi silnikami graficznymi, które
 wykorzystywane są w Laboratorium Zanurzonej Wizualizacji Przestrzennej
 są Unity i Unreal Engine. Oba zostały przystosowane do pracy w jaskiniach
-wirtualnej rzeczywistości. Żaden z nich nie jest jednak programem
-open-source co nie pozwala na dokładne dopasowanie do potrzeb laboratorium.
-Wykorzystanie nowej opcji jaką jest Blender Game Engine rozszerzy
-możliwości modelowania scen dedykowanych dla CAVE’a. 
+wirtualnej rzeczywistości. Nie są one jednak programami open-source
+co nie pozwala na dokładne dopasowanie do potrzeb laboratorium. Wykorzystanie
+nowej opcji jaką jest Blender Game Engine rozszerzy możliwości modelowania
+scen dedykowanych dla CAVE’a. 
 
 \pagebreak{}
-
 
 \part{Technologia wirtualnej rzeczywistości }
 
@@ -196,12 +196,12 @@ Pierwsze wzmianki o rzeczywistości wirtualnej mogą pochodzić z lat
 w swoim zbiorze esejów pod tytułem ,,Le Théâtre et son double''.
 Jako rzeczywistość wirtualna została opisana iluzjonistyczna natura
 postaci i obiektów w teatrze\footnote{http://www.almaclassics.com/excerpts/Theatre\_Double.pdf (dostęp 07.05.20016)}.
-To co dzisiaj kryje się pod nazwą rzeczywistości wirtualnej zostało
-rozpopularyzowane dopiero przez media masowe w filmach takich jak:
-,,Brainstorm'' i ,,The Lawnmover Man''. Pierwszym urządzeniem,
-które można by nazwać systemem VR była Sensorama\footnote{http://www.theverge.com/a/virtual-reality/oral\_history (dostęp 07.05.20016)}.
+To co dzisiaj kryje się pod nazwą rzeczywistości wirtualnej było popularyzowane
+dopiero przez media masowe w filmach takich jak: ,,Brainstorm''
+i ,,The Lawnmover Man''. Pierwszym urządzeniem, które można by nazwać
+systemem VR była Sensorama\footnote{http://www.theverge.com/a/virtual-reality/oral\_history (dostęp 07.05.20016)}.
 Była to maszyna podobna wyglądem do automatów do gier wyświetlająca
-stereoskopiczny obraz 3D, zapewniała przechylanie pozycji użytkownika
+stereoskopowy obraz 3D, zapewniała przechylanie pozycji użytkownika
 oraz wspierała dźwięk przestrzenny. W budowie planowano również systemy
 generujące podmuchy wiatru oraz uwalniające odpowiednie zapachy\footnote{http://www.mortonheilig.com/SensoramaPatent.pdf (dostęp 07.05.20016)}.
 W latach 70. i 80. rozwój wirtualnej rzeczywistości nie był jednak
@@ -209,18 +209,24 @@ nagłośniony. Mało kto wiedział o nowościach technologicznych w świecie
 VR. Dopiero w '91 zaczęto wydawać magazyn ,,CyberEdge Journal'',
 który był biuletynem o gadżetach VR\footnote{http://www.theverge.com/a/virtual-reality/oral\_history (dostęp 07.05.20016)}. 
 
-
 \section{Urządzenia montowane na głowie}
 
 Pierwsze gogle wirtualnej rzeczywistości dostępne komercyjnie zostały
 zapowiedziane na Consumer Electronics Show w 1994 roku. Nazywały się
-Forte VFX-1. Gogle mogły wyświetlać stereoskopiczny obraz, miały wbudowane
+Forte VFX-1. Gogle mogły wyświetlać stereoskopowy obraz, miały wbudowane
 słuchawki stereo oraz sensor śledzący pozycje głowy w 3. osiach\footnote{http://www.ibiblio.org/GameBytes/issue21/flooks/vfx1.html (dostęp
 07.05.20016)}. Kolejną nowinką w tej dziedzinie były okulary Glasstron, wypuszczone
 w 1997 roku przez firmę Sony. W odróżnieniu od Forte VFX-1 miały dodatkowo
 czujniki pozycyjne co dodatkowo pogłębiało immersję. Gogle można było
-zastosować w grze o nazwie MechWarrior 2. Gracz, używając Glasstrona,
+zastosować w grze o nazwie MechWarrior~2. Gracz, używając Glasstrona,
 mógł włączyć nową perspektywę z kokpitu maszyny kroczącej.
+
+Można tu równiez wspomnieć o specyficznych zdjęciach ulic firmy Google
+- Street View. Wprowadzone w 2007 roku panoramiczne zdjęcia, które
+pozwalały przyglądać się okolicy z miejsca samochodu robiącego zdjęcia.
+Jest to ciekawe wykorzystanie technologii opartych o rzeczywistość
+wirtualną w nawigacji. Street View umożliwia rozejrzenie się za punktami
+orientacyjnymi na danej ulicy.
 
 Prawdziwą rewolucją stały się jednak gogle wirtualnej rzeczywistości
 od Oculusa. W 2012 roku, dzięki kampaniom crowfundingowym, firma zebrała
@@ -264,6 +270,14 @@ przez firmę deweloperów dostała wersję Developer Edition wcześniej\footnote
 Poza HTC również Sony, które wróciło na rynek VR, rozpoczęło prace
 nad goglami VR specjalnie dla konsoli PlayStation 4.
 
+Poza HTC, Oculusem oraz Sony jest jeszcze kilku gigantów pracujących
+z goglami VR lub AR. Microsoft aktualnie dopracowuje gogle rozszerzonej
+rzeczywistości Hololens. Gogle mają przeźroczyste szkła, przez które
+widać otoczenie. Dopiero na to otoczenie nakładany jest obraz wirtualny
+np. na pustą ścianę w mieszkaniu nałożony może zostać obraz jakiegoś
+plakatu lub dekoracji. Gogle zapowiadają się rewelacyjnie przy pracach
+projektowych gdzie w naturalnym środowisku będzie można obejrzeć model
+1:1 lub nałożyć wykończenie na szkielet projektu.
 
 \section{Jaskinia wirtualnej rzeczywistości CAVE}
 
@@ -285,14 +299,11 @@ danego oka\footnote{https://www.evl.uic.edu/documents/cacm92-cave-cruz-neira.pdf
 \begin{centering}
 \includegraphics[scale=0.9]{graphic/cave2_pogladowy}
 \par\end{centering}
-
 \caption{Wyświetlanie obrazu w CAVE\protect \\
 Źródło: http://escience.anu.edu.au/lecture/cg/Display/cave.en.html
 (dostęp: 07.05.2016)}
 
-
 \end{figure}
-
 
 Ilustracja załączona powyżej przedstawia podstawowe założenia budowy
 środowiska jaskini wirtualnej rzeczywistości. W standardowy rozkład
@@ -322,17 +333,14 @@ lub/i nienaturalną perspektywą.
 \begin{centering}
 \includegraphics[scale=0.4]{graphic/CaveUDK_Architecture}
 \par\end{centering}
-
 \caption{Architektura systemu CAVE na przykładzie użycia Unreal Engine}
-
 
 \end{figure}
 
-
 Oprócz samego wyświetlania obrazu, jaskinia wirtualnej rzeczywistości
 pozwala również na interakcje ze światem otaczającym. Dzieje się to
-przy pomocy różnych kontrolerów np. FlySticka lub tzw. różdżki. Są
-to bezprzewodowe joysticki wyposażone w zestaw czujników potrafiących
+przy pomocy różnych kontrolerów np. FlySticka lub MagicWand. Są to
+bezprzewodowe joysticki wyposażone w zestaw czujników potrafiących
 określić pozycje (jako zestaw trzech wektorów) oraz orientacje (podawaną
 jako kwaternion) urządzenia w przestrzeni. Oprócz tego kontroler wyposażony
 jest w podstawowe części takie jak: analogowy, dwuosiowy joystick
@@ -343,11 +351,8 @@ na obrazku (Fig. 3).
 \begin{centering}
 \includegraphics[scale=0.8]{graphic/Flystick_2small}\includegraphics[scale=0.8]{graphic/Flystick3_small}\caption{Dwa modele joysticka Flystick firmy ART\protect \\
 Źródło: http://www.middlevr.com/doc/1.2/ch04s03.html (dostęp 07.05.2016)}
-
 \par\end{centering}
-
 \end{figure}
-
 
 
 \subsection{Porównanie HMD i CAVE\protect\footnote{http://www.visbox.com/technology/cave-vs-hmd/ (dostęp 07.05.20016)}}
@@ -363,9 +368,7 @@ które są też o wiele tańsze.
 \begin{centering}
 \caption{Porównanie HMD i CAVE\protect \\
 Źródło: Opracowanie własne, http://www.visbox.com/technology/cave-vs-hmd/}
-
 \par\end{centering}
-
 \centering{}%
 \begin{tabular*}{15cm}{@{\extracolsep{\fill}}|>{\centering}p{3cm}|>{\centering}p{4cm}|>{\centering}p{5cm}|}
 \cline{2-3} 
@@ -390,18 +393,15 @@ Koszt & Niewielki & Wysoki\tabularnewline
 \end{tabular*}
 \end{table}
 
-
 Obecnie systemy wirtualnej jaskini ją wykorzystywane głównie w laboratoriach
 instytutów. Nie są one dostępne dla szerszego odbioru. Urządzenia
-HMD są za to dostępne dla każdego a ich obsługa i ustawienie jest
+HMD są za to dostępne dla każdego a~ich obsługa i ustawienie jest
 znacznie łatwiejsze. Na rynku pojawiają się również coraz więcej modeli
 znanych i mniej znanych firm przystosowanych specjalnie do smartfonów.
 Wybór wśród nich jest więc znacznie wiekszy niż w przypadku CAVE'ów,
 które często muszą instalować i częściowo obsługiwać zewnętrzne firmy. 
 
-
 \section{Próba implementacji BlenderVR w środowisku wirtualnej jaskini CAVE}
-
 
 \subsection{Opis aplikacji\protect\footnote{Strona instytutu LIMSI we Francji https://blendervr.limsi.fr/doku.php
 (dostęp 07.05.20016)}}
@@ -417,20 +417,18 @@ zarówno na komputerach z system Windows jak i Linux/iOS. Przenoszenie
 sceny pomiędzy różnymi platformami wirtualnej rzeczywistości nie wymaga
 jej edytowania. Wszystkim zajmuje się odpowiednia konfiguracja programu.
 Aplikację można dostosować do dowolnej liczby komputerów obsługujących
-dowolną liczbę ekranów. BlenderVR posiada wsparcie dla wyświetlania
-obrazu 3D (poczwórne buforowanie - ang: Quad Buffering) i protokołów
-komunikacyjnych np. VRPN – virtual reality peripherial network lub
-OSC – open sound control.
+różne ekrany. BlenderVR posiada wsparcie dla wyświetlania obrazu 3D
+(poczwórne buforowanie - ang: Quad Buffering) i protokołów komunikacyjnych
+np. VRPN – virtual reality peripherial network lub OSC – open sound
+control.
 
 \begin{figure}[H]
 \begin{centering}
 \includegraphics[scale=0.4]{graphic/blendervr-applications}
 \par\end{centering}
-
 \caption{Możliwości i zastosowania aplikacji BlenderVR \protect \\
 Źródło: https://blendervr.limsi.fr/doku.php (dostęp 07.05.20016)}
 \end{figure}
-
 
 Wszystkie ustawienia BlenderVR znajdują się w jednym pliku XML. Ułatwia
 to przenoszenie konfiguracji pomiędzy komputerami lub jej klonowanie.
@@ -439,24 +437,23 @@ W pliku konfiguracyjnym najważniejszymi ustawieniami są:
 \item Ścieżki do bibliotek i programów, z których korzysta BlenderVR.
 \item Adresy komputerów typu „slave” – obsługujących wyświetlanie obrazu
 oraz dane logowania przez protokół SSH.
-\item Ilość ekranów, ich położenie oraz relacje oko<-->ekran.
-\item Ustawienia wtyczki interakcji ze sceną: serwer odbierający dane z
-urządzeń wskazujących oraz konfiguracja czujników.
+\item Ilość ekranów, ich położenie oraz relacje oko - ekran.
+\item Ustawienia wtyczki do interakcji ze sceną: serwer odbierający dane
+z urządzeń wskazujących oraz konfiguracja czujników.
 \end{itemize}
 Interfejs jest przejrzysty i prosty w obsłudze. Po uruchomieniu wystarczy
 załadować odpowiedni plik konfiguracyjny, następnie wybrać konfigurację
 ekranów i wskazać miejsca pliku ze sceną do symulacji. W zakładce
-„Run” znajduje się start programu oraz konsola do debugowania.
+„Run” znajduje się przycisk do uruchomienia programu oraz konsola
+do debugowania.
 
 \begin{figure}[H]
 \begin{centering}
 \includegraphics[scale=0.4]{graphic/user-interface-1}
 \par\end{centering}
-
 \caption{Interfejs aplikacji BlenderVR\protect \\
 Źródło: https://blendervr.limsi.fr/doku.php (dostęp 07.05.20016)}
 \end{figure}
-
 
 
 \subsection{Założenia projektu}
@@ -483,7 +480,7 @@ komputera
 \end{enumerate}
 \item Powtórzenie kroku 1. dla specjalnego zestawu komputerów symulujących
 architekture wirtualnej jaskini - MidiCAVE
-\item Kompilacja i ustawienie wtyczki do obsługi kontrolerów – VRPN
+\item Kompilacja i ustawienie plugina do obsługi kontrolerów – VRPN
 \item Podłączenie wtyczki VRPN do BlenderVR oraz test całości na MidiCAVE
 \item Przeprowadzenie powyższych działań w środowisku docelowym – jaskini
 wirtualnej rzeczywistości CAVE
@@ -497,10 +494,8 @@ fazie zostanie pierwszy raz skompilowana i przetestowana wtyczka do
 obsługi urządzeń peryferyjnych z użyciem śledzenia okularów oraz kontrolera
 FlyStick.
 
-
 \subsection{Instalacja i testy aplikacji w Laboratorium Zanurzonej Wizualizacji
 Przestrzennej}
-
 
 \subsubsection{Środowisko testowe}
 
@@ -510,20 +505,20 @@ stanowiskach komputerowych. W skład jednostki testowej wchodził sprzęt:
 \item Komputer stacjonarny wyposażony w:
 
 \begin{itemize}
-\item procesor klasy Intel Xeon
+\item procesor Intel Xeon E5-1630
 \item karta graficzna Nvidia Quadro
 \item 32 GB pamięci RAM
 \item Dysk HDD o pojemności 500 GB
 \end{itemize}
-\item Monitor ASUS 24'' z możliwością wyświetlenia obrazu 3D
+\item Monitor ASUS 24'' z możliwością wyświetlenia obrazu 3D. Częstotliwość
+odświeżania wynosi 120Hz
 \item Aktywne okulary 3D
 \end{itemize}
 System operacyjny zainstalowany na jednostkach testowych to Windows
-7 Professional. Każdy komputer wpięty został w tę samą sieć ethernet.
+7 Professional. Każdy komputer wpięty został w tę samą sieć Ethernet.
 Żaden z komputerów nie ma dostępu do Internetu. Wszystkie niezbędne
 programy oraz pakiety zostały dostarczone ze źródeł zewnętrznych przy
 użyciu dysku przenośnego.
-
 
 \subsubsection{Testy z wykorzystaniem jednego stanowiska PC}
 
@@ -540,7 +535,7 @@ programu Blender3D, z którego będzie korzystał BlenderVR. Tak skonfigurowane
 
 Kolejnym krokiem jest przygotowanie pliku konfiguracyjnego. Do źródeł
 aplikacji dołączono kilka przykładowych konfiguracji zależnie od systemu
-operacyjnego oraz środowiska, w którym będzie testowana aplikacja.
+operacyjnego oraz środowiska, w~którym będzie testowana aplikacja.
 Na początek wystarczy sprawdzić czy program uruchamia przykładową
 scenę oraz czy konsola nie pokazuje żadnego błędu. Do tego wykorzystany
 zostanie plik konfiguracyjny przygotowany dla Windowsa. W pliku zmieniono
@@ -552,16 +547,15 @@ dopisać coś co znajduje się na tej przykładowej scenie>\textcompwordmark{}>.
 Próba zakończyła się sukcesem. Na monitorze wyświetlona została przykładowa
 scena w oknie. 
 
-Następna faza testu sprawdzi czy aplikacja wyświetli obraz stereoskopiczny
+Następna faza testu sprawdzi czy aplikacja wyświetli obraz stereoskopowy
 na przystosowanym do tego monitorze. Do pliku konfiguracyjnego dodano
 ustawienia ekranu o nazwie Quadbuffer z opcją ,,hwpageflip''. Opcja
 pozwala na zdefiniowanie dwóch buforów graficznych - jeden dla prawego
 i jeden dla lewego oka. Monitor przystosowany do wyświetlania obrazu
-3D pozwala na większe odświeżanie ekranu dzięki czemu można otrzymać
-stabilne 60 klatek dla każdego oka oddzielnie. I w tym przypadku próba
-zakończyła się sukcesem. Na monitorze ukazał się obraz, który po założeniu
-okularów 3D sprawiał wrażenie trójwymiarowego.
-
+3D pozwala na wyższą częstotliwość odświeżania ekranu dzięki czemu
+można otrzymać stabilne 60 klatek dla każdego oka oddzielnie. I w
+tym przypadku próba zakończyła się sukcesem. Na monitorze ukazał się
+obraz, który po założeniu okularów 3D sprawiał wrażenie trójwymiarowego.
 
 \subsubsection{Testy z wykorzystaniem dwóch stanowisk PC}
 
@@ -601,23 +595,21 @@ czas przetwarza dane lub wykonuje pewne czynności\footnote{http://www.python.rk
 Niestety konsola z informacjami wyświetliła błąd ,,Error: Cannot
 start daemon for screen <screenName>''. Na stronie BlenderVR błąd
 jest rozpoznany i według autora rozwiązania problem występuje jeśli
-połączenie miedzy komputerami wymaga hasła. W tym przypadku jednak
-nie ma to odniesienia ponieważ komputery zostały wymienione kluczami.
-Połączenie SSH zostało przetestowane przez konsolę Windowsa i nie
+połączenie miedzy komputerami wymaga hasła. Błąd w tym przypadku nie
+powinien występować ponieważ komputery zostały wymienione kluczami.
+Połączenie SSH zostało przetestowane poprzez konsolę Windowsa i nie
 wymagało użycia hasła. Po konsultacji jeden z twórców oprogramowania
 polecił sprawdzić czy polecenie wykonywane przez BlenderVR można również
 wykonać ręcznie przez konsolę. Ręczne wykonanie nie zwróciło jednak
 żadnego błędu; komenda wykonała się poprawnie.
 
-Problemem w tym przypadku może być brak <\textcompwordmark{}<natywnego
-wsparcia>\textcompwordmark{}> protokołu SSH przez system operacyjny
-Windows 7. Zewnętrzne narzędzia pozwalają na połączenie pomiędzy jednostkami
-ale możliwe, że nie radzą sobie z prawami administratora. Logowanie
-przez protokół na komputer podrzędny odbywało się przy użyciu konta
-z prawami administratora. Zanim stanowiska zostały wymienione kluczami,
-do logowania było wymagane hasło takie samo jak przy logowaniu użytkownika
-na docelowym systemie. Teoretycznie rzecz biorąc po zalogowaniu się
-przez SSH, użytkownik powinien mieć wszystkie prawa administratora. 
+Problemem w tym przypadku może być konfiguracja serwera SSH, które
+nie pozwala na logowanie jako administrator. Logowanie przez protokół
+na komputer podrzędny odbywało się przy użyciu konta z prawami administratora.
+Zanim stanowiska zostały wymienione kluczami, do logowania było wymagane
+hasło takie samo jak przy logowaniu użytkownika na docelowym systemie.
+Teoretycznie rzecz biorąc po zalogowaniu się przez SSH, użytkownik
+powinien mieć wszystkie niezbędne prawa do zarządzania komputerem. 
 
 Kolejną możliwością jest brak praw administratorskich środowiska Python.
 Skrypt wykonywany przez aplikację BlenderVR wymaga uruchomienia najpierw
@@ -625,7 +617,6 @@ Pythona a później skryptu demona. Być może uruchamia się on bez praw
 administratora co nie pozwala mu na działanie w tle. 
 
 <tutaj coś jeszcze rozwinąć>
-
 
 \subsection{Krótki test w środowisku Linux <\textcompwordmark{}<lub 4.0 jako
 kolejny rozdział>\textcompwordmark{}>}
@@ -652,13 +643,13 @@ na stronie BlenderVR.
 
 \begin{enumerate}
 \item Python3.4 - użyta w teście kompilacja Debiana posiadała juz zainstalowanego
-Pythona w wersji 3.4. Do jej uruchomienia użyto komendy python3
+Pythona w wersji 3.4.
 \item Qt4.8 - pakiet Qt wymagany przy kompilacji PySide1.2.2 (patrz niżej).
 Nazwa paczki w repozytorium: qt4-dev-tools
 \item PIP - pakietu brakowało więc został ściągnięty ze strony https://pip.pypa.io/en/latest/installing/
 oraz zainstalowany poleceniem python3 get-pip.py
 \item Virtualenv - wirtualne środowisko dla Pythona. Instalowane przy pomocy
-polocenia pip3 install virtualenv. Tutaj od instrukcji jest pewne
+polecenia pip3 install virtualenv. Tutaj od instrukcji jest pewne
 odstępstwo gdyż zamiast polecenia pyvenv lub pyvenv-3.4 należy użyć
 virtualenv
 \item PySide1.2.2 - paczka pobrana i skompilowana w uruchomionym już środowisku
@@ -677,21 +668,15 @@ w konsoli nie pojawił się żaden błąd. Wybranie ustawień ekranu oraz
 sceny przykładowej również nie pokazało żadnego błędu. Scena została
 uruchomiona na komputerze podrzędnym. Test został zakończony sukcesem.
 
-
 \section{Analiza i wnioski}
-
-
 
 \begin{table}
 <\textcompwordmark{}<do wykorzystania we wnioskach; na sam koniec,
 albo gdzieś>\textcompwordmark{}>
-
 \begin{raggedright}
 \caption{Wady i zalety aplikacji BlenderVR\protect \\
 Źródło: Opracowanie własne}
-
 \par\end{raggedright}
-
 \begin{tabular}{|>{\centering}p{7cm}|>{\centering}p{7cm}|}
 \hline 
 Zalety & Wady\tabularnewline
