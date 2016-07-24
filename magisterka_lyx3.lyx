@@ -26,7 +26,7 @@
 \font_tt_scale 100 100
 \graphics default
 \default_output_format default
-\output_sync 0
+\output_sync 1
 \bibtex_command bibtex
 \index_command default
 \paperfontsize 11
@@ -1519,6 +1519,520 @@ Interfejs aplikacji BlenderVR
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Subsection
+Opis pliku konfiguracyjnego
+\end_layout
+
+\begin_layout Standard
+Jedną z najwazniejszych części aplikacji jest plik konfiguracyjny.
+ W nim zawarte są wszystkie informacje odnośnie połączeń do komputerów podrzędny
+ch, ustawień ekranów, wyświetlania obrazu oraz konfiguracji wtyczek.
+ Plik ustawień zapisywany jest w formacie XML.
+ Ułatwia to edycję ponieważ wystarczy do tego zwykły edytor plików tekstowych.
+ Przykładowa konfiguracja dla CAVE w systemie Linux:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\scriptsize}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<?xml version="1.0"?>
+\end_layout
+
+\begin_layout Plain Layout
+
+<blendervr>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <starter anchor='/tmp/console' blender='/usr/local/blender/2.74/bin/blender'>
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+     <config name='console'>console screen</config>
+\end_layout
+
+\begin_layout Plain Layout
+
+     <config name='virtual environment'>console screen, front screen, left
+ screen, right screen
+\end_layout
+
+\begin_layout Plain Layout
+
+</config>
+\end_layout
+
+\begin_layout Plain Layout
+
+  </starter>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <users>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <user name='user A' />
+\end_layout
+
+\begin_layout Plain Layout
+
+  </users>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <!-- Here, we define the console parameters -->
+\end_layout
+
+\begin_layout Plain Layout
+
+  <computers>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <computer name='console computer' hostname='console.fqdn'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+  </computers>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <screens>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <screen name='console screen' computer='console computer'>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <display options='-w 600 600'>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <environment>DISPLAY=:0.0</environment>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <graphic_buffer user='user A'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+      </display>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <wall>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <corner name='topRightCorner'>1.0, 1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <corner name='topLeftCorner'>-1.0, 1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <corner name='bottomRightCorner'>1.0, -1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+      </wall>
+\end_layout
+
+\begin_layout Plain Layout
+
+    </screen>
+\end_layout
+
+\begin_layout Plain Layout
+
+  </screens>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <computers>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <system root='/usr/local/blender/vr/1.0' anchor='/tmp/node'>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <login remote_command="ssh `self._attributs_inheritance['hostname']`"
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+python='/usr/local/blender/2.74/dependencies/bin/python3.3'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <daemon transmit='True'>   <environment>PATH=/usr/bin:/bin</environment>
+\end_layout
+
+\begin_layout Plain Layout
+
+      </daemon>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <blenderplayer executable='/usr/local/blender/2.74/bin/blenderplayer'
+ />
+\end_layout
+
+\begin_layout Plain Layout
+
+    </system>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <computer name='front computer' hostname='front.fqdn' />
+\end_layout
+
+\begin_layout Plain Layout
+
+    <computer name='right computer' hostname='right.fqdn' />
+\end_layout
+
+\begin_layout Plain Layout
+
+    <computer name='left computer' hostname='left.fqdn' />
+\end_layout
+
+\begin_layout Plain Layout
+
+  </computers>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <screens>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <display options='-f -s hwpageflip'>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <environment>DISPLAY=:0.0</environment>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <graphic_buffer buffer='left' user='user A' eye='left'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <graphic_buffer buffer='right' user='user A' eye='right'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+    </display>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <screen name='front screen' computer='front computer'>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <wall>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <corner name='topRightCorner'>1.0, 1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <corner name='topLeftCorner'>-1.0, 1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <corner name='bottomRightCorner'>1.0, -1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+      </wall>
+\end_layout
+
+\begin_layout Plain Layout
+
+    </screen>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <screen name='left screen' computer='left computer'>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <wall>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <corner name='topRightCorner'>-1.0, 1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <corner name='topLeftCorner'>-1.0, 1.0, 1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <corner name='bottomRightCorner'>-1.0, -1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+      </wall>
+\end_layout
+
+\begin_layout Plain Layout
+
+    </screen>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <screen name='right screen' computer='right computer'>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <wall>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <corner name='topRightCorner'>1.0, 1.0, 1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <corner name='topLeftCorner'>1.0, 1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <corner name='bottomRightCorner'>1.0, -1.0, 1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+      </wall>
+\end_layout
+
+\begin_layout Plain Layout
+
+    </screen>
+\end_layout
+
+\begin_layout Plain Layout
+
+  </screens>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <plugins>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <vrpn>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <floor x='0.0'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <tracker device='GTK' host='localhost'>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <transformation>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <post_translation z='-1.6'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <post_rotation x='1.0' y='1.0' z='1.0' angle="`-2*math.pi/3`"/>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <pre_rotation x='1.0' y='1.0' z='1.0' angle="`2*math.pi/3`"/>
+\end_layout
+
+\begin_layout Plain Layout
+
+  </transformation>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <sensor id='0' processor_method='user_position' users='user A'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <sensor id='1' processor_method='tracker_1'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <sensor id='2' processor_method='tracker_2'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <sensor id='3' processor_method='tracker_3'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+      </tracker>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <analog device='GTK' host='localhost' processor_method='movements'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <button device='GTK' host='localhost' processor_method='buttons'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+    </vrpn>
+\end_layout
+
+\begin_layout Plain Layout
+
+  </plugins>
+\end_layout
+
+\begin_layout Plain Layout
+
+</blendervr>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Sekcja <Starter>
+\end_layout
+
+\begin_layout Standard
+Zawiera definicje ustawień ekranów.
+ Lista musi zawierać wszystkie ekrany oddzielone przecinkami, które będą
+ używane w danej formie ustawienia.
+ Np.
+ ustawienie 
+\begin_inset Quotes pld
+\end_inset
+
+console
+\begin_inset Quotes prd
+\end_inset
+
+ będzie korzystać tylko z ekranu o nazwie 
+\begin_inset Quotes pld
+\end_inset
+
+console
+\begin_inset Quotes prd
+\end_inset
+
+ natomiast ustawienie 
+\begin_inset Quotes pld
+\end_inset
+
+CAVE
+\begin_inset Quotes prd
+\end_inset
+
+ z ekranów: floor, front, left, right.
+ Sekcja wskazuje również gdzie znaleźć program Blender3D.
+\end_layout
+
+\begin_layout Subsubsection*
+Sekcja <Users>
+\end_layout
+
+\begin_layout Standard
+Każdy użytkownik, który będzie śledzony powinien zostać tutaj wpisany.
+ Dzięki temu program dostosuje renderowany obraz do położenia danego użytkownika.
+ Dla każdego z wpisanych użytkowników należy zdefiniować pozycję startową
+ (default_position) oraz rozstaw oczu (eye_separation).
+\end_layout
+
+\begin_layout Subsubsection*
+Sekcja <Computers>
+\end_layout
+
+\begin_layout Standard
 
 \end_layout
 

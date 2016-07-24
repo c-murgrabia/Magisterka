@@ -5,6 +5,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{geometry}
 \geometry{verbose,tmargin=2.5cm,bmargin=3cm,lmargin=4cm,rmargin=2cm}
+\synctex=-1
 \usepackage{array}
 \usepackage{float}
 \usepackage{textcomp}
@@ -36,6 +37,9 @@
 \hyphenation{MechWarrior przes-trzen-nej u-żyt-kow-ni-ka jas-ki-ni jas-ki-nia naj-waż-niej-szy-mi do-łą-czo-no u-sta-wio-ne przy-sto-so-wa-nym}
 
 \makeatother
+
+\usepackage{listings}
+\renewcommand{\lstlistingname}{\inputencoding{latin2}Listing}
 
 \begin{document}
 tutaj strona główna
@@ -454,6 +458,123 @@ do debugowania.
 \caption{Interfejs aplikacji BlenderVR\protect \\
 Źródło: https://blendervr.limsi.fr/doku.php (dostęp 07.05.20016)}
 \end{figure}
+
+
+\subsection{Opis pliku konfiguracyjnego}
+
+Jedną z najwazniejszych części aplikacji jest plik konfiguracyjny.
+W nim zawarte są wszystkie informacje odnośnie połączeń do komputerów
+podrzędnych, ustawień ekranów, wyświetlania obrazu oraz konfiguracji
+wtyczek. Plik ustawień zapisywany jest w formacie XML. Ułatwia to
+edycję ponieważ wystarczy do tego zwykły edytor plików tekstowych.
+Przykładowa konfiguracja dla CAVE w systemie Linux:
+
+\inputencoding{latin2}\begin{lstlisting}[basicstyle={\scriptsize}]
+<?xml version="1.0"?>
+<blendervr>
+  <starter anchor='/tmp/console' blender='/usr/local/blender/2.74/bin/blender'> 
+     <config name='console'>console screen</config>
+     <config name='virtual environment'>console screen, front screen, left screen, right screen
+</config>
+  </starter>
+  <users>
+    <user name='user A' />
+  </users>
+  <!-- Here, we define the console parameters -->
+  <computers>
+    <computer name='console computer' hostname='console.fqdn'/>
+  </computers>
+  <screens>
+    <screen name='console screen' computer='console computer'>
+      <display options='-w 600 600'>
+  <environment>DISPLAY=:0.0</environment>
+  <graphic_buffer user='user A'/>
+      </display>
+      <wall>
+  <corner name='topRightCorner'>1.0, 1.0, -1.0</corner>
+  <corner name='topLeftCorner'>-1.0, 1.0, -1.0</corner>
+  <corner name='bottomRightCorner'>1.0, -1.0, -1.0</corner>
+      </wall>
+    </screen>
+  </screens>
+  <computers>
+    <system root='/usr/local/blender/vr/1.0' anchor='/tmp/node'>
+      <login remote_command="ssh `self._attributs_inheritance['hostname']`" 
+python='/usr/local/blender/2.74/dependencies/bin/python3.3'/>
+      <daemon transmit='True'>   <environment>PATH=/usr/bin:/bin</environment>
+      </daemon>
+      <blenderplayer executable='/usr/local/blender/2.74/bin/blenderplayer' />
+    </system>
+    <computer name='front computer' hostname='front.fqdn' />
+    <computer name='right computer' hostname='right.fqdn' />
+    <computer name='left computer' hostname='left.fqdn' />
+  </computers>
+  <screens>
+    <display options='-f -s hwpageflip'>
+      <environment>DISPLAY=:0.0</environment>
+      <graphic_buffer buffer='left' user='user A' eye='left'/>
+      <graphic_buffer buffer='right' user='user A' eye='right'/>
+    </display>
+    <screen name='front screen' computer='front computer'>
+      <wall>
+  <corner name='topRightCorner'>1.0, 1.0, -1.0</corner>
+  <corner name='topLeftCorner'>-1.0, 1.0, -1.0</corner>
+  <corner name='bottomRightCorner'>1.0, -1.0, -1.0</corner>
+      </wall>
+    </screen>
+    <screen name='left screen' computer='left computer'>
+      <wall>
+  <corner name='topRightCorner'>-1.0, 1.0, -1.0</corner>
+  <corner name='topLeftCorner'>-1.0, 1.0, 1.0</corner>
+  <corner name='bottomRightCorner'>-1.0, -1.0, -1.0</corner>
+      </wall>
+    </screen>
+    <screen name='right screen' computer='right computer'>
+      <wall>
+  <corner name='topRightCorner'>1.0, 1.0, 1.0</corner>
+  <corner name='topLeftCorner'>1.0, 1.0, -1.0</corner>
+  <corner name='bottomRightCorner'>1.0, -1.0, 1.0</corner>
+      </wall>
+    </screen>
+  </screens>
+  <plugins>
+    <vrpn>
+      <floor x='0.0'/>
+      <tracker device='GTK' host='localhost'>
+  <transformation>
+    <post_translation z='-1.6'/>
+    <post_rotation x='1.0' y='1.0' z='1.0' angle="`-2*math.pi/3`"/>
+    <pre_rotation x='1.0' y='1.0' z='1.0' angle="`2*math.pi/3`"/>
+  </transformation>
+  <sensor id='0' processor_method='user_position' users='user A'/>
+  <sensor id='1' processor_method='tracker_1'/>
+  <sensor id='2' processor_method='tracker_2'/>
+  <sensor id='3' processor_method='tracker_3'/>
+      </tracker>
+      <analog device='GTK' host='localhost' processor_method='movements'/>
+      <button device='GTK' host='localhost' processor_method='buttons'/>
+    </vrpn>
+  </plugins>
+</blendervr>
+\end{lstlisting}
+\inputencoding{utf8}
+
+\subsubsection*{Sekcja <Starter>}
+
+Zawiera definicje ustawień ekranów. Lista musi zawierać wszystkie
+ekrany oddzielone przecinkami, które będą używane w danej formie ustawienia.
+Np. ustawienie ,,console'' będzie korzystać tylko z ekranu o nazwie
+,,console'' natomiast ustawienie ,,CAVE'' z ekranów: floor, front,
+left, right. Sekcja wskazuje również gdzie znaleźć program Blender3D.
+
+\subsubsection*{Sekcja <Users>}
+
+Każdy użytkownik, który będzie śledzony powinien zostać tutaj wpisany.
+Dzięki temu program dostosuje renderowany obraz do położenia danego
+użytkownika. Dla każdego z wpisanych użytkowników należy zdefiniować
+pozycję startową (default\_position) oraz rozstaw oczu (eye\_separation).
+
+\subsubsection*{Sekcja <Computers>}
 
 
 \subsection{Założenia projektu}
