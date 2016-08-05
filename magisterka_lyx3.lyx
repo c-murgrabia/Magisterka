@@ -127,12 +127,12 @@ Rzeczywistość wirtualna (ang.
  Virtual Reality)
 \series default
  - sposób użycia technologii komputerowej do tworzenia trójwymiarowego świata,
- w którym obiekty dają wrażenie przestrzennej obecności 
+ w którym obiekty dają wrażenie przestrzennej obecności
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-Steve Bryson 
+Steve Bryson
 \begin_inset Quotes pld
 \end_inset
 
@@ -238,7 +238,7 @@ LCD (ang.
  poprzez zmianę poszczególnych pikseli lub ich grup.
  Panel LCD nie emituje światła sam z siebie, dlatego wymagane jest podświetlenie
  by obraz stał się widoczny.
- 
+
 \end_layout
 
 \begin_layout Itemize
@@ -257,7 +257,7 @@ CRT (ang.
 \begin_layout Itemize
 
 \series bold
-Luminofor 
+Luminofor
 \series default
 - związek chemiczny wykazujący luminescencję.
 \end_layout
@@ -287,7 +287,7 @@ HMD (Head Mounted Display)
 \begin_layout Itemize
 
 \series bold
-Stereoskopia 
+Stereoskopia
 \series default
 - technika pokazywania obrazu polegająca na tworzeniu lub uwydatnianiu jego
  głębii.
@@ -347,7 +347,7 @@ Protokół SSH (ang.
  komputerów w obrębie danej sieci.
  Jest następną protokołu telnet, który przesyłał niezaszyfrowane hasła i
  inne informacje.
- 
+
 \end_layout
 
 \begin_layout Itemize
@@ -417,14 +417,14 @@ rotacja względem osi Z
 \begin_layout Itemize
 
 \series bold
-Podwójne buforowanie obrazu metodą Page Flipping - 
+Podwójne buforowanie obrazu metodą Page Flipping -
 \series default
 metoda rysowania i wyświetlania klatek wykorzystująca dwa osobne bufory
  w pamięci.
  Gdy jeden z nich wyświetla gotową klatkę drugi rysuje kolejną.
  Kiedy operacje rysowania klatki są zakończone następuje przełączenie pomiędzy
  wyświetlaniem buforów.
- 
+
 \end_layout
 
 \begin_layout Itemize
@@ -442,7 +442,7 @@ Poczwórne buforowanie (ang: Quad buffering)
 \begin_layout Itemize
 
 \series bold
-Video Wall 
+Video Wall
 \series default
 - specjalny zestaw kilku lub więcej wyświetlaczy ułożonych jeden przy drugim.
  Tworzą w ten sposób jeden duży ekran.
@@ -458,7 +458,7 @@ http://www.pixell.com/what_is_a_vw.htm (dostęp: 22.05.2016)
 \end_inset
 
 .
- 
+
 \end_layout
 
 \begin_layout Part*
@@ -486,7 +486,7 @@ m Zanurzonej Wizualizacji Przestrzennej są Unity i Unreal Engine.
  do potrzeb laboratorium.
  Wykorzystanie nowej opcji jaką jest Blender Game Engine rozszerzy możliwości
  modelowania scen dedykowanych dla CAVE’a.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -497,7 +497,7 @@ m Zanurzonej Wizualizacji Przestrzennej są Unity i Unreal Engine.
 \end_layout
 
 \begin_layout Part
-Technologia wirtualnej rzeczywistości 
+Technologia wirtualnej rzeczywistości
 \end_layout
 
 \begin_layout Standard
@@ -511,7 +511,7 @@ Wirtualna rzeczywistość od zawsze intrygowała człowieka.
 \begin_layout Standard
 Pierwsze wzmianki o rzeczywistości wirtualnej mogą pochodzić z lat 30.
  XX wieku.
- Terminu 
+ Terminu
 \begin_inset Quotes pld
 \end_inset
 
@@ -519,7 +519,7 @@ la réalité virtuelle
 \begin_inset Quotes prd
 \end_inset
 
- użył Antonin Artaud w swoim zbiorze esejów pod tytułem 
+ użył Antonin Artaud w swoim zbiorze esejów pod tytułem
 \begin_inset Quotes pld
 \end_inset
 
@@ -541,7 +541,7 @@ http://www.almaclassics.com/excerpts/Theatre_Double.pdf (dostęp 07.05.20016)
 
 .
  To co dzisiaj kryje się pod nazwą rzeczywistości wirtualnej było popularyzowane
- dopiero przez media masowe w filmach takich jak: 
+ dopiero przez media masowe w filmach takich jak:
 \begin_inset Quotes pld
 \end_inset
 
@@ -549,7 +549,7 @@ Brainstorm
 \begin_inset Quotes prd
 \end_inset
 
- i 
+ i
 \begin_inset Quotes pld
 \end_inset
 
@@ -588,7 +588,7 @@ http://www.mortonheilig.com/SensoramaPatent.pdf (dostęp 07.05.20016)
  i 80.
  rozwój wirtualnej rzeczywistości nie był jednak nagłośniony.
  Mało kto wiedział o nowościach technologicznych w świecie VR.
- Dopiero w '91 zaczęto wydawać magazyn 
+ Dopiero w '91 zaczęto wydawać magazyn
 \begin_inset Quotes pld
 \end_inset
 
@@ -607,7 +607,7 @@ http://www.theverge.com/a/virtual-reality/oral_history (dostęp 07.05.20016)
 \end_inset
 
 .
- 
+
 \end_layout
 
 \begin_layout Section
@@ -843,7 +843,7 @@ http://www.visbox.com/technology/stereo/ (dostęp 07.05.20016)
 \end_inset
 
 .
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -909,7 +909,7 @@ ią oraz szybkim odświeżaniem.
 i, renderującymi obraz dla projektorów.
  Jest to rozwiązanie zwiększające szybkość generowania klatek oraz tańsze
  w utrzymaniu.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -921,7 +921,7 @@ wy odbiorcy.
  Każdy inny użytkownik, który nie jest śledzony przez kamery widzi obraz
  nieco przesunięty względem użytkownika głównego.
  Objawia się to źle sklejonym obrazem lub/i nienaturalną perspektywą.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -1046,7 +1046,7 @@ i wykorzystania oraz trochę większy komfort użytkowania.
  Z drugiej strony jednak jaskinia wirtualnej rzeczywistości zajmuje bardzo
  dużo miejsca w porównaniu do okularów wirtualnej rzeczywistości, które
  są też o wiele tańsze.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -1367,7 +1367,7 @@ ich obsługa i ustawienie jest znacznie łatwiejsze.
  firm przystosowanych specjalnie do smartfonów.
  Wybór wśród nich jest więc znacznie wiekszy niż w przypadku CAVE'ów, które
  często muszą instalować i częściowo obsługiwać zewnętrzne firmy.
- 
+
 \end_layout
 
 \begin_layout Section
@@ -1434,7 +1434,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Możliwości i zastosowania aplikacji BlenderVR 
+Możliwości i zastosowania aplikacji BlenderVR
 \begin_inset Newline newline
 \end_inset
 
@@ -1554,7 +1554,7 @@ status open
 \begin_layout Plain Layout
 
   <starter anchor='/tmp/console' blender='/usr/local/blender/2.74/bin/blender'>
- 
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -1691,7 +1691,7 @@ status open
 \begin_layout Plain Layout
 
       <login remote_command="ssh `self._attributs_inheritance['hostname']`"
- 
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -1989,7 +1989,7 @@ Zawiera definicje ustawień ekranów.
  Lista musi zawierać wszystkie ekrany oddzielone przecinkami, które będą
  używane w danej formie ustawienia.
  Np.
- ustawienie 
+ ustawienie
 \begin_inset Quotes pld
 \end_inset
 
@@ -1997,7 +1997,7 @@ console
 \begin_inset Quotes prd
 \end_inset
 
- będzie korzystać tylko z ekranu o nazwie 
+ będzie korzystać tylko z ekranu o nazwie
 \begin_inset Quotes pld
 \end_inset
 
@@ -2005,7 +2005,7 @@ console
 \begin_inset Quotes prd
 \end_inset
 
- natomiast ustawienie 
+ natomiast ustawienie
 \begin_inset Quotes pld
 \end_inset
 
@@ -2033,6 +2033,7 @@ Sekcja <Computers>
 \end_layout
 
 \begin_layout Standard
+W tej sekcji należy ustawić adresy wszystkich komputerów, które będą wykorzystywane do obsługi docelowej architektury. W tej częsci znajdują się m.in. adresy komputerów podrzędnych oraz komputera nadrzędnego, ścieżki do plików oraz ustawienia parametrów logowania. Sekcję <computers> musi być zdefiniowana dla każdego zestawu ustawień osobno. Dla ustawień debugowania (jeden komputer, na którym będzie tylko okno konsoli) będzie to ustawienie jednego komputera oraz jego ustawienia ekranu i wyświetlania. Do ustawień np CAVEa należy wpisać wszystkie komputery obsługujące renderowanie obrazu na ekrany oraz każdemu z osobna przypisać opcje wyświetlania tego obrazu. Należy zwrócić uwagę na nazwy komputerów. Powinny się one zgadzać z nazwami wpisanymi w późniejszej sekcji <screen>.
 
 \end_layout
 
@@ -2059,7 +2060,7 @@ Proces wdrożenia aplikacji:
 
 \begin_layout Enumerate
 Wdrożenie aplikacji na laboratorium testowym na środowisku jednego komputera
- 
+
 \begin_inset Separator latexpar
 \end_inset
 
@@ -2072,11 +2073,11 @@ Zainstalowanie aplikacji
 \end_layout
 
 \begin_layout Enumerate
-Dostosowanie konfiguracji BlenderVR do warunków laboratoryjnych 
+Dostosowanie konfiguracji BlenderVR do warunków laboratoryjnych
 \end_layout
 
 \begin_layout Enumerate
-Testowanie aplikacji przy użyciu przykładowych scen 
+Testowanie aplikacji przy użyciu przykładowych scen
 \end_layout
 
 \end_deeper
@@ -2186,7 +2187,7 @@ Do instalacji programu wykorzystano gotowy pakiet instalacyjny.
  Kolejnym krokiem jest zainstalowanie programu Blender3D, z którego będzie
  korzystał BlenderVR.
  Tak skonfigurowane środowisko jest już gotowe do pracy.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -2208,14 +2209,14 @@ którym będzie testowana aplikacja.
  <<tu dopisać coś co znajduje się na tej przykładowej scenie>>.
  Próba zakończyła się sukcesem.
  Na monitorze wyświetlona została przykładowa scena w oknie.
- 
+
 \end_layout
 
 \begin_layout Standard
 Następna faza testu sprawdzi czy aplikacja wyświetli obraz stereoskopowy
  na przystosowanym do tego monitorze.
  Do pliku konfiguracyjnego dodano ustawienia ekranu o nazwie Quadbuffer
- z opcją 
+ z opcją
 \begin_inset Quotes pld
 \end_inset
 
@@ -2244,7 +2245,7 @@ Testy z wykorzystaniem dwóch stanowisk PC
  W tym celu każde z nich musi zostać wyposażone w aplikację pokazującą obraz
  z perspektywy danego urządzenia wyświetlającego.
  BlenderVR wykorzystując protokół SSH potrafi zarządzać swoimi kopiami na
- komputerach typu 
+ komputerach typu
 \begin_inset Quotes pld
 \end_inset
 
@@ -2253,7 +2254,7 @@ slave
 \end_inset
 
 .
- Jeden komputer zdefiniowany jako nadrzędny 
+ Jeden komputer zdefiniowany jako nadrzędny
 \begin_inset Quotes pld
 \end_inset
 
@@ -2262,7 +2263,7 @@ master
 \end_inset
 
  może uruchamiać oraz synchronizować inne instancje BlenderVR na komputerach
- typu 
+ typu
 \begin_inset Quotes pld
 \end_inset
 
@@ -2271,12 +2272,12 @@ slave
 \end_inset
 
 .
- 
+
 \end_layout
 
 \begin_layout Standard
 Na tej zasadzie jedno ze stanowisk w laboratorium stało się nadrzędne względem
- drugiego stanowiska - 
+ drugiego stanowiska -
 \begin_inset Quotes pld
 \end_inset
 
@@ -2326,7 +2327,7 @@ Adres IP w sieci
 
 \begin_layout Standard
 BlenderVR przy połączeniu do drugiego stanowiska próbuje uruchomić na nim
- skrypt 
+ skrypt
 \begin_inset Quotes pld
 \end_inset
 
@@ -2348,7 +2349,7 @@ http://www.python.rk.edu.pl/w/p/proste-demony-uniksowe-w-pythonie/ (dostęp:
 
 .
  Odpowiednio zapisany plik konfiguracyjny został załadowany do aplikacji.
- Niestety konsola z informacjami wyświetliła błąd 
+ Niestety konsola z informacjami wyświetliła błąd
 \begin_inset Quotes pld
 \end_inset
 
@@ -2378,7 +2379,7 @@ Problemem w tym przypadku może być konfiguracja serwera SSH, które nie pozwal
  hasło takie samo jak przy logowaniu użytkownika na docelowym systemie.
  Teoretycznie rzecz biorąc po zalogowaniu się przez SSH, użytkownik powinien
  mieć wszystkie niezbędne prawa do zarządzania komputerem.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -2387,7 +2388,7 @@ Kolejną możliwością jest brak praw administratorskich środowiska Python.
  Pythona a później skryptu demona.
  Być może uruchamia się on bez praw administratora co nie pozwala mu na
  działanie w tle.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -2406,7 +2407,7 @@ Powyższe próby implenetacji oraz uruchomienia aplikacji BlenderVR pokazały,
  te prawa dziedziczą) spowodowały problemy i przestoje w implementacji BlenderVR.
  Aplikacja mimo swojej wieloplatformowości zdecydowanie trudniej implementuje
  się na systemach Windows.
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -2630,7 +2631,7 @@ Samoczynne dostosowanie kamer na scenie BGE
 
 \begin_layout Plain Layout
 Obsługa wielu systemów wyświetlających (CAVE, HMD, monitor, wiele monitorów)
- 
+
 \end_layout
 
 \end_inset
