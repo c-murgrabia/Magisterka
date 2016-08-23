@@ -238,7 +238,6 @@ LCD (ang.
  poprzez zmianę poszczególnych pikseli lub ich grup.
  Panel LCD nie emituje światła sam z siebie, dlatego wymagane jest podświetlenie
  by obraz stał się widoczny.
-
 \end_layout
 
 \begin_layout Itemize
@@ -347,7 +346,6 @@ Protokół SSH (ang.
  komputerów w obrębie danej sieci.
  Jest następną protokołu telnet, który przesyłał niezaszyfrowane hasła i
  inne informacje.
-
 \end_layout
 
 \begin_layout Itemize
@@ -424,7 +422,6 @@ metoda rysowania i wyświetlania klatek wykorzystująca dwa osobne bufory
  Gdy jeden z nich wyświetla gotową klatkę drugi rysuje kolejną.
  Kiedy operacje rysowania klatki są zakończone następuje przełączenie pomiędzy
  wyświetlaniem buforów.
-
 \end_layout
 
 \begin_layout Itemize
@@ -458,7 +455,6 @@ http://www.pixell.com/what_is_a_vw.htm (dostęp: 22.05.2016)
 \end_inset
 
 .
-
 \end_layout
 
 \begin_layout Part*
@@ -486,7 +482,6 @@ m Zanurzonej Wizualizacji Przestrzennej są Unity i Unreal Engine.
  do potrzeb laboratorium.
  Wykorzystanie nowej opcji jaką jest Blender Game Engine rozszerzy możliwości
  modelowania scen dedykowanych dla CAVE’a.
-
 \end_layout
 
 \begin_layout Standard
@@ -607,7 +602,6 @@ http://www.theverge.com/a/virtual-reality/oral_history (dostęp 07.05.20016)
 \end_inset
 
 .
-
 \end_layout
 
 \begin_layout Section
@@ -843,7 +837,6 @@ http://www.visbox.com/technology/stereo/ (dostęp 07.05.20016)
 \end_inset
 
 .
-
 \end_layout
 
 \begin_layout Standard
@@ -909,7 +902,6 @@ ią oraz szybkim odświeżaniem.
 i, renderującymi obraz dla projektorów.
  Jest to rozwiązanie zwiększające szybkość generowania klatek oraz tańsze
  w utrzymaniu.
-
 \end_layout
 
 \begin_layout Standard
@@ -921,7 +913,6 @@ wy odbiorcy.
  Każdy inny użytkownik, który nie jest śledzony przez kamery widzi obraz
  nieco przesunięty względem użytkownika głównego.
  Objawia się to źle sklejonym obrazem lub/i nienaturalną perspektywą.
-
 \end_layout
 
 \begin_layout Standard
@@ -1046,7 +1037,6 @@ i wykorzystania oraz trochę większy komfort użytkowania.
  Z drugiej strony jednak jaskinia wirtualnej rzeczywistości zajmuje bardzo
  dużo miejsca w porównaniu do okularów wirtualnej rzeczywistości, które
  są też o wiele tańsze.
-
 \end_layout
 
 \begin_layout Standard
@@ -1367,7 +1357,6 @@ ich obsługa i ustawienie jest znacznie łatwiejsze.
  firm przystosowanych specjalnie do smartfonów.
  Wybór wśród nich jest więc znacznie wiekszy niż w przypadku CAVE'ów, które
  często muszą instalować i częściowo obsługiwać zewnętrzne firmy.
-
 \end_layout
 
 \begin_layout Section
@@ -1554,7 +1543,6 @@ status open
 \begin_layout Plain Layout
 
   <starter anchor='/tmp/console' blender='/usr/local/blender/2.74/bin/blender'>
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -1691,7 +1679,6 @@ status open
 \begin_layout Plain Layout
 
       <login remote_command="ssh `self._attributs_inheritance['hostname']`"
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -2056,19 +2043,33 @@ ch.
 \end_layout
 
 \begin_layout Itemize
-Library Path
+Library Path - pluginy często wymagają dostępu do zewnętrznych bibliotek.
+ W tej podsekcji możemy wskazać gdzie znajdują się niezbędne pliki.
+ Np: <library path="/usr/local/lib/vrpn/" />
 \end_layout
 
 \begin_layout Itemize
-Login
+Login - precyzuje jak wygląda komenda połączenia się z komputerami odpowiedzialn
+ymi za renderowanie.
+ Np: <login remote_command="ssh me@host" python="/usr/bin/python3"/>
 \end_layout
 
 \begin_layout Itemize
-Daemon
+Daemon - opcje dotyczące uruchomienia demona.
+ Parametr 
+\series bold
+Transmit
+\series default
+ decyduje czy demon przesyła zmienne środowiskowe do blendera kiedy go uruchamia.
+ 
+\series bold
+Environment
+\series default
+ natomiast dodaje specyficzne zmienne środowiskowe dla samego demona.
 \end_layout
 
 \begin_layout Itemize
-Blenderplayer
+Blenderplayer - w tej podsekcji 
 \end_layout
 
 \begin_layout Subsection
@@ -2094,7 +2095,6 @@ Proces wdrożenia aplikacji:
 
 \begin_layout Enumerate
 Wdrożenie aplikacji na laboratorium testowym na środowisku jednego komputera
-
 \begin_inset Separator latexpar
 \end_inset
 
@@ -2221,7 +2221,6 @@ Do instalacji programu wykorzystano gotowy pakiet instalacyjny.
  Kolejnym krokiem jest zainstalowanie programu Blender3D, z którego będzie
  korzystał BlenderVR.
  Tak skonfigurowane środowisko jest już gotowe do pracy.
-
 \end_layout
 
 \begin_layout Standard
@@ -2243,7 +2242,6 @@ którym będzie testowana aplikacja.
  <<tu dopisać coś co znajduje się na tej przykładowej scenie>>.
  Próba zakończyła się sukcesem.
  Na monitorze wyświetlona została przykładowa scena w oknie.
-
 \end_layout
 
 \begin_layout Standard
@@ -2306,7 +2304,6 @@ slave
 \end_inset
 
 .
-
 \end_layout
 
 \begin_layout Standard
@@ -2413,7 +2410,6 @@ Problemem w tym przypadku może być konfiguracja serwera SSH, które nie pozwal
  hasło takie samo jak przy logowaniu użytkownika na docelowym systemie.
  Teoretycznie rzecz biorąc po zalogowaniu się przez SSH, użytkownik powinien
  mieć wszystkie niezbędne prawa do zarządzania komputerem.
-
 \end_layout
 
 \begin_layout Standard
@@ -2422,7 +2418,6 @@ Kolejną możliwością jest brak praw administratorskich środowiska Python.
  Pythona a później skryptu demona.
  Być może uruchamia się on bez praw administratora co nie pozwala mu na
  działanie w tle.
-
 \end_layout
 
 \begin_layout Standard
@@ -2441,7 +2436,6 @@ Powyższe próby implenetacji oraz uruchomienia aplikacji BlenderVR pokazały,
  te prawa dziedziczą) spowodowały problemy i przestoje w implementacji BlenderVR.
  Aplikacja mimo swojej wieloplatformowości zdecydowanie trudniej implementuje
  się na systemach Windows.
-
 \end_layout
 
 \begin_layout Standard
@@ -2665,7 +2659,6 @@ Samoczynne dostosowanie kamer na scenie BGE
 
 \begin_layout Plain Layout
 Obsługa wielu systemów wyświetlających (CAVE, HMD, monitor, wiele monitorów)
-
 \end_layout
 
 \end_inset
