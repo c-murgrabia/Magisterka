@@ -2033,8 +2033,42 @@ Sekcja <Computers>
 \end_layout
 
 \begin_layout Standard
-W tej sekcji należy ustawić adresy wszystkich komputerów, które będą wykorzystywane do obsługi docelowej architektury. W tej częsci znajdują się m.in. adresy komputerów podrzędnych oraz komputera nadrzędnego, ścieżki do plików oraz ustawienia parametrów logowania. Sekcję <computers> musi być zdefiniowana dla każdego zestawu ustawień osobno. Dla ustawień debugowania (jeden komputer, na którym będzie tylko okno konsoli) będzie to ustawienie jednego komputera oraz jego ustawienia ekranu i wyświetlania. Do ustawień np CAVEa należy wpisać wszystkie komputery obsługujące renderowanie obrazu na ekrany oraz każdemu z osobna przypisać opcje wyświetlania tego obrazu. Należy zwrócić uwagę na nazwy komputerów. Powinny się one zgadzać z nazwami wpisanymi w późniejszej sekcji <screen>.
+W tej sekcji opisany jest jak każdy z komputerów renderujących działa.
+ Mieszczą się tutaj informacje odnośnie konfiguracji blenderplayer np.
+ ścieżki do plików, zmienne środowiskowe itp.
+ Mogą być one różne dla każdego stanowiska.
+ Każdy węzeł renderujący (komputer) musi mieć sprecyzowaną nazwę oraz adres
+ sieciowy (lub nazwę sięciową).
+\end_layout
 
+\begin_layout Subsubsection*
+Sekcja <System>
+\end_layout
+
+\begin_layout Standard
+Zawiera ścieżki do najważniejszych plików programu oraz systemu, zwłaszcza
+ w przypadku platformy Windows gdzie należy podać ścieżkę do katalogu Windowsa.
+ Tutaj można dopisywać również ścieżki wspólne dla wszystkich stacji renderujący
+ch.
+ Jeśli pewne ścieżki na każdym z komputerów są takie same wystarczy umieścić
+ je tutaj zamiast wypisywać to samo dla każdego komputera w sekcji <computers>.
+ Sekcja ta zawiera kilka szczególnych podsekcji, które warto opisać:
+\end_layout
+
+\begin_layout Itemize
+Library Path
+\end_layout
+
+\begin_layout Itemize
+Login
+\end_layout
+
+\begin_layout Itemize
+Daemon
+\end_layout
+
+\begin_layout Itemize
+Blenderplayer
 \end_layout
 
 \begin_layout Subsection
