@@ -2077,9 +2077,9 @@ Założenia projektu
 \end_layout
 
 \begin_layout Standard
-Niniejszy projekt zakłada wdrożenie aplikacji BlenderVR w środowisku wirtualnej
- rzeczywistości CAVE w Laboratorium Zanurzonej Wizualizacji Przestrzennej
- (LZWP) znajdującym się na Politechnice Gdańskiej.
+Niniejszy projekt zakłada próbę wdrożenia aplikacji BlenderVR w środowisku
+ wirtualnej rzeczywistości CAVE w Laboratorium Zanurzonej Wizualizacji Przestrze
+nnej (LZWP) znajdującym się na Politechnice Gdańskiej.
  Po wdrożeniu i przetestowaniu zostanie również stworzona dedykowana scena
  do symulacji specjalnie dla Politechniki Gdańskiej.
  Dodatkowo wykorzystane zostanie oprogramowanie do obsługi zewnętrznych
@@ -2111,7 +2111,7 @@ Dostosowanie konfiguracji BlenderVR do warunków laboratoryjnych
 \end_layout
 
 \begin_layout Enumerate
-Testowanie aplikacji przy użyciu przykładowych scen
+Testowanie aplikacji przy użyciu przykładowych scen oraz różnych konfiguracji
 \end_layout
 
 \end_deeper
@@ -2175,7 +2175,7 @@ procesor Intel Xeon E5-1630
 \end_layout
 
 \begin_layout Itemize
-karta graficzna Nvidia Quadro
+karta graficzna Nvidia Quadro k5200
 \end_layout
 
 \begin_layout Itemize
@@ -2189,7 +2189,7 @@ Dysk HDD o pojemności 500 GB
 \end_deeper
 \begin_layout Itemize
 Monitor ASUS 24'' z możliwością wyświetlenia obrazu 3D.
- Częstotliwość odświeżania wynosi 120Hz
+ Częstotliwość odświeżania do 144Hz
 \end_layout
 
 \begin_layout Itemize
