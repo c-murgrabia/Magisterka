@@ -6,7 +6,8 @@
 \origin unavailable
 \textclass article
 \begin_preamble
-\hyphenation{MechWarrior przes-trzen-nej u-żyt-kow-ni-ka jas-ki-ni jas-ki-nia naj-waż-niej-szy-mi do-łą-czo-no u-sta-wio-ne przy-sto-so-wa-nym}
+\hyphenation{MechWarrior przes-trzen-nej u-żyt-kow-ni-ka jas-ki-ni jas-ki-nia naj-waż-niej-szy-mi do-łą-czo-no u-sta-wio-ne przy-sto-so-wa-nym prze-tes-to-wa-ne}
+\sloppy
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -16,7 +17,7 @@
 \fontencoding global
 \font_roman "default" "default"
 \font_sans "default" "default"
-\font_typewriter "default" "default"
+\font_typewriter "lmtt" "default"
 \font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
@@ -1360,7 +1361,7 @@ ich obsługa i ustawienie jest znacznie łatwiejsze.
 \end_layout
 
 \begin_layout Section
-Próba implementacji BlenderVR w środowisku wirtualnej jaskini CAVE
+Opis aplikacji BlenderVR
 \end_layout
 
 \begin_layout Subsection
@@ -1525,9 +1526,7 @@ ch, ustawień ekranów, wyświetlania obrazu oraz konfiguracji wtyczek.
 \end_layout
 
 \begin_layout Standard
-\begin_inset listings
-lstparams "basicstyle={\scriptsize}"
-inline false
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
@@ -1573,7 +1572,7 @@ status open
 
 \begin_layout Plain Layout
 
-    <user name='user A' />
+<user name='user A' />
 \end_layout
 
 \begin_layout Plain Layout
@@ -1864,7 +1863,7 @@ python='/usr/local/blender/2.74/dependencies/bin/python3.3'/>
 
 \begin_layout Plain Layout
 
-  </screens>
+</screens>
 \end_layout
 
 \begin_layout Plain Layout
@@ -1874,12 +1873,12 @@ python='/usr/local/blender/2.74/dependencies/bin/python3.3'/>
 
 \begin_layout Plain Layout
 
-    <vrpn>
+<vrpn>
 \end_layout
 
 \begin_layout Plain Layout
 
-      <floor x='0.0'/>
+<floor x='0.0'/>
 \end_layout
 
 \begin_layout Plain Layout
@@ -2045,13 +2044,21 @@ ch.
 \begin_layout Itemize
 Library Path - pluginy często wymagają dostępu do zewnętrznych bibliotek.
  W tej podsekcji możemy wskazać gdzie znajdują się niezbędne pliki.
- Np: <library path="/usr/local/lib/vrpn/" />
+ Np: 
+\family typewriter
+<library path="/usr/local/lib/vrpn/" />
+\family default
+.
 \end_layout
 
 \begin_layout Itemize
 Login - precyzuje jak wygląda komenda połączenia się z komputerami odpowiedzialn
 ymi za renderowanie.
- Np: <login remote_command="ssh me@host" python="/usr/bin/python3"/>
+ Np: 
+\family typewriter
+<login remote_command="ssh me@host" python="/usr/bin/python3"/>
+\family default
+.
 \end_layout
 
 \begin_layout Itemize
@@ -2069,90 +2076,17 @@ Environment
 \end_layout
 
 \begin_layout Itemize
-Blenderplayer - w tej podsekcji 
+Blenderplayer - w tej podsekcji ustawiona jest ścieżka do aplikacji blenderplaye
+r.
 \end_layout
 
-\begin_layout Subsection
-Założenia projektu
-\end_layout
-
-\begin_layout Standard
-Niniejszy projekt zakłada próbę wdrożenia aplikacji BlenderVR w środowisku
- wirtualnej rzeczywistości CAVE w Laboratorium Zanurzonej Wizualizacji Przestrze
-nnej (LZWP) znajdującym się na Politechnice Gdańskiej.
- Po wdrożeniu i przetestowaniu zostanie również stworzona dedykowana scena
- do symulacji specjalnie dla Politechniki Gdańskiej.
- Dodatkowo wykorzystane zostanie oprogramowanie do obsługi zewnętrznych
- kontrolerów pozwalających na kontrolowanie sceny.
- Z uwagi na wysokie koszty uruchomieniowe oraz zużycie materiałów prawdziwego
- CAVE’a konfigurowanie przeprowadzone zostanie w specjalnie przygotowanym
- laboratorium testowym.
-\end_layout
-
-\begin_layout Standard
-Proces wdrożenia aplikacji:
-\end_layout
-
-\begin_layout Enumerate
-Wdrożenie aplikacji na laboratorium testowym na środowisku jednego komputera
-\begin_inset Separator latexpar
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-Zainstalowanie aplikacji
-\end_layout
-
-\begin_layout Enumerate
-Dostosowanie konfiguracji BlenderVR do warunków laboratoryjnych
-\end_layout
-
-\begin_layout Enumerate
-Testowanie aplikacji przy użyciu przykładowych scen oraz różnych konfiguracji
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Powtórzenie kroku 1.
- dla specjalnego zestawu komputerów symulujących architekture wirtualnej
- jaskini - MidiCAVE
-\end_layout
-
-\begin_layout Enumerate
-Kompilacja i ustawienie plugina do obsługi kontrolerów – VRPN
-\end_layout
-
-\begin_layout Enumerate
-Podłączenie wtyczki VRPN do BlenderVR oraz test całości na MidiCAVE
-\end_layout
-
-\begin_layout Enumerate
-Przeprowadzenie powyższych działań w środowisku docelowym – jaskini wirtualnej
- rzeczywistości CAVE
-\end_layout
-
-\begin_layout Standard
-Pierwsze prawdziwe testy implementacyjne odbędą się w laboratorium testowym
- – MidiCAVE.
- Jest to symulacja struktury prawdziwego CAVE'a jednak do testów używa się
- komputerów spiętych w sieć i monitorów.
- Konfiguracja aplikacji powinna więc pozostać taka sama: każdy z monitorów
- odwzorowuje jedną ze ścian prawdziwej jaskini.
- Również dopiero w tej fazie zostanie pierwszy raz skompilowana i przetestowana
- wtyczka do obsługi urządzeń peryferyjnych z użyciem śledzenia okularów
- oraz kontrolera FlyStick.
-\end_layout
-
-\begin_layout Subsection
+\begin_layout Section
 Instalacja i testy aplikacji w Laboratorium Zanurzonej Wizualizacji Przestrzenne
 j
 \end_layout
 
-\begin_layout Subsubsection
-Środowisko testowe
+\begin_layout Subsection
+Środowisko wdrożeniowe systemu Windows
 \end_layout
 
 \begin_layout Standard
@@ -2200,71 +2134,386 @@ Aktywne okulary 3D
 System operacyjny zainstalowany na jednostkach testowych to Windows 7 Profession
 al.
  Każdy komputer wpięty został w tę samą sieć Ethernet.
- Żaden z komputerów nie ma dostępu do Internetu.
+ Żaden nie ma dostępu do Internetu.
  Wszystkie niezbędne programy oraz pakiety zostały dostarczone ze źródeł
  zewnętrznych przy użyciu dysku przenośnego.
 \end_layout
 
-\begin_layout Subsubsection
-Testy z wykorzystaniem jednego stanowiska PC
+\begin_layout Subsection
+Instalacja aplikacji BlenderVR w systemie operacyjnym Windows
 \end_layout
 
 \begin_layout Standard
-Do instalacji programu wykorzystano gotowy pakiet instalacyjny.
- Zawierał on zarówno źródła aplikacji jak i wszystkie potrzebne programy
- do jego uruchomienia: Python3.4 oraz Qt4.8.
- Automatyczny instalator sam dodaje zmienną środowiskową Pythona oraz BlenderVR.
- Pakiet instalacyjny ma również opcję automatycznego uruchomienia skryptu
- przygotowującego do pierwszego uruchomienia aplikacji.
- Skrypt automatycznie dodaje odpowiednie wpisy do rejestru, instaluje dwa
- dodatkowe pakiety do Pythona: VirtualEnv oraz PySide 1.2.2.
- Kolejnym krokiem jest zainstalowanie programu Blender3D, z którego będzie
- korzystał BlenderVR.
- Tak skonfigurowane środowisko jest już gotowe do pracy.
+Deweloperzy dostarczają gotową paczkę instalacyjną.
+ Należy ściągnąć instalator ze strony internetowej oraz go uruchomić.
+ Podczas procesu oprócz BlenderVR zostanie zainstalowany również Python
+ oraz pakiet bibliotek graficznych Qt4.8.
+ W systemie dodatkowo zostaną utworzone ścieżki tak, by aplikacja przy uruchomie
+niu nie miała problemów ze znalezieniem wszystkich zależności.
+ W laboratorium instalacja paczki BlenderVR przebiegła pomyślnie i bez żadnych
+ problemów.
+\end_layout
+
+\begin_layout Subsection
+Uruchomienie aplikacji BlenderVR w systemie operacyjnym Windows
 \end_layout
 
 \begin_layout Standard
-Kolejnym krokiem jest przygotowanie pliku konfiguracyjnego.
- Do źródeł aplikacji dołączono kilka przykładowych konfiguracji zależnie
- od systemu operacyjnego oraz środowiska, w
-\begin_inset space ~
-\end_inset
-
-którym będzie testowana aplikacja.
- Na początek wystarczy sprawdzić czy program uruchamia przykładową scenę
- oraz czy konsola nie pokazuje żadnego błędu.
- Do tego wykorzystany zostanie plik konfiguracyjny przygotowany dla Windowsa.
- W pliku zmieniono odpowiednio ścieżki dostępu do Blendera3D oraz BlenderPlayer.
- Wyświetlanie obrazu 2D zostało ustawione jako okno o rozmiarze 400x400
- pikesli.
- Konfiguracja została zapisana oraz załadowana do programu.
- Przykładowa scena wybrana do pierwszego testu to basic.blend.
- <<tu dopisać coś co znajduje się na tej przykładowej scenie>>.
- Próba zakończyła się sukcesem.
- Na monitorze wyświetlona została przykładowa scena w oknie.
+W przypadku systemu operacyjnego Windows uruchomienie jest proste.
+ Wystarczy użyć skrótu na pulpicie, który jest tworzony po zainstalowaniu
+ gotowej paczki.
+ Przygotowano odpowiedni plik konfiguracyjny dla systemu Windows na bazie
+ przykładu dostępnego na stronie dewelopera: 
 \end_layout
 
 \begin_layout Standard
-Następna faza testu sprawdzi czy aplikacja wyświetli obraz stereoskopowy
- na przystosowanym do tego monitorze.
- Do pliku konfiguracyjnego dodano ustawienia ekranu o nazwie Quadbuffer
- z opcją
-\begin_inset Quotes pld
-\end_inset
+<?xml version="1.0"?> 
+\end_layout
 
-hwpageflip
-\begin_inset Quotes prd
-\end_inset
+\begin_layout Standard
+	<blendervr>     
+\end_layout
 
+\begin_layout Standard
+	 <starter blender="C:/blender/blender.exe"> 
+\end_layout
+
+\begin_layout Standard
+<config name="Fullscreen">fullscreen</config>   
+\end_layout
+
+\begin_layout Standard
+<config name="Console">console</config>       
+\end_layout
+
+\begin_layout Standard
+	<config name="Split">console half left, console half right</config>   
+\end_layout
+
+\begin_layout Standard
+</starter>  
+\end_layout
+
+\begin_layout Standard
+<users> 
+\end_layout
+
+\begin_layout Standard
+<user name="user A" />  
+\end_layout
+
+\begin_layout Standard
+</users>   
+\end_layout
+
+\begin_layout Standard
+<computers>   
+\end_layout
+
+\begin_layout Standard
+<system> 
+\end_layout
+
+\begin_layout Standard
+<daemon transmit="True">
+\end_layout
+
+\begin_layout Standard
+<environment>SystemRoot=C:/Windows</environment>
+\end_layout
+
+\begin_layout Standard
+</daemon>   
+\end_layout
+
+\begin_layout Standard
+<blenderplayer executable="C:/blender/blenderplayer.exe" />
+\end_layout
+
+\begin_layout Standard
+</system>  
+\end_layout
+
+\begin_layout Standard
+      <computer name="Any" hostname="*" /> 
+\end_layout
+
+\begin_layout Standard
+   </computers>  
+\end_layout
+
+\begin_layout Standard
+  <screens>    
+\end_layout
+
+\begin_layout Standard
+    <screen name="fullscreen" computer="Any">  
+\end_layout
+
+\begin_layout Standard
+           <display options="-f"> 
+\end_layout
+
+\begin_layout Standard
+           <graphic_buffer buffer="mono" user="user A" eye="middle" />
+\end_layout
+
+\begin_layout Standard
+           </display>  
+\end_layout
+
+\begin_layout Standard
+          <wall>   
+\end_layout
+
+\begin_layout Standard
+             <corner name="topRightCorner">1.0, 1.0, -1.0</corner> 
+\end_layout
+
+\begin_layout Standard
+             <corner name="topLeftCorner">-1.0, 1.0, -1.0</corner> 
+\end_layout
+
+\begin_layout Standard
+             <corner name="bottomRightCorner">1.0, -1.0, -1.0</corner> 
+\end_layout
+
+\begin_layout Standard
+           </wall>     
+\end_layout
+
+\begin_layout Standard
+   </screen>    
+\end_layout
+
+\begin_layout Standard
+   <screen name="console" computer="Any">    
+\end_layout
+
+\begin_layout Standard
+      	 <display options="-w 400 400"> 
+\end_layout
+
+\begin_layout Standard
+           <graphic_buffer buffer="mono" user="user A" eye="middle" />
+\end_layout
+
+\begin_layout Standard
+           </display>   
+\end_layout
+
+\begin_layout Standard
+         <wall>        
+\end_layout
+
+\begin_layout Standard
+        <corner name="topRightCorner">1.0, 1.0, -1.0</corner>  
+\end_layout
+
+\begin_layout Standard
+             <corner name="topLeftCorner">-1.0, 1.0, -1.0</corner>   
+\end_layout
+
+\begin_layout Standard
+             <corner name="bottomRightCorner">1.0, -1.0, -1.0</corner>  
+\end_layout
+
+\begin_layout Standard
+          </wall>   
+\end_layout
+
+\begin_layout Standard
+     </screen>   
+\end_layout
+
+\begin_layout Standard
+     <screen name="console half left" computer="Any"> 
+\end_layout
+
+\begin_layout Standard
+           <display options="-w 400 400 200 300">
+\end_layout
+
+\begin_layout Standard
+            <graphic_buffer user="user A" />
+\end_layout
+
+\begin_layout Standard
+            </display>
+\end_layout
+
+\begin_layout Standard
+            <wall>
+\end_layout
+
+\begin_layout Standard
+                <corner name="topRightCorner">0.0, 1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Standard
+                <corner name="topLeftCorner">-1.0, 1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Standard
+                <corner name="bottomRightCorner">0.0, -1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Standard
+            </wall>
+\end_layout
+
+\begin_layout Standard
+      </screen>
+\end_layout
+
+\begin_layout Standard
+      <screen name="console half right" computer="Any">
+\end_layout
+
+\begin_layout Standard
+            <display options="-w 400 400 600 300">
+\end_layout
+
+\begin_layout Standard
+                <graphic_buffer user="user A" />
+\end_layout
+
+\begin_layout Standard
+            </display>
+\end_layout
+
+\begin_layout Standard
+            <wall>
+\end_layout
+
+\begin_layout Standard
+                <corner name="topRightCorner">1.0, 1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Standard
+                <corner name="topLeftCorner">0.0, 1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Standard
+                <corner name="bottomRightCorner">1.0, -1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Standard
+            </wall>
+\end_layout
+
+\begin_layout Standard
+</screen>
+\end_layout
+
+\begin_layout Standard
+    </screens>
+\end_layout
+
+\begin_layout Standard
+    <plugins></plugins>
+\end_layout
+
+\begin_layout Standard
+</blendervr>
+\end_layout
+
+\begin_layout Standard
+Po pierwszej próbie uruchomienia BlenderVR konsola systemu Windows zwróciła
+ błąd: 
+\family typewriter
+C:
+\backslash
+BlenderVR
+\backslash
+Required
+\backslash
+Python3
+\backslash
+python.exe: Can't open file C:/BlenderVR/source/utilsdaemon.py
+\family default
 .
- Opcja pozwala na zdefiniowanie dwóch buforów graficznych - jeden dla prawego
- i jeden dla lewego oka.
- Monitor przystosowany do wyświetlania obrazu 3D pozwala na wyższą częstotliwość
- odświeżania ekranu dzięki czemu można otrzymać stabilne 60 klatek dla każdego
- oka oddzielnie.
- I w tym przypadku próba zakończyła się sukcesem.
- Na monitorze ukazał się obraz, który po założeniu okularów 3D sprawiał
- wrażenie trójwymiarowego.
+ Natomiast okienko logowania BlenderVR wyświetliło komendę, która była wykonywan
+a przy ładowaniu pliku: 
+\family typewriter
+C:/BlenderVR/Required/Python3/python.exe C:/BlenderVR/source/utils
+\backslash
+daemon.py
+\family default
+.
+ Wiersz tekstu w pliku konfiguracyjnym odpowiedzialny za początek ścieżki:
+ 
+\family typewriter
+<system root='C:/BlenderVR/source/'>
+\family default
+ oraz za wykonanie polecenia uruchomienia skryptu: 
+\family typewriter
+C:/BlenderVR/Required/Python3/python.exe
+\family default
+.
+ Wyglądało na to, że aplikacja dodaje do ścieżki katalog oraz skrypt do
+ uruchomienia jednak z błędnym znakiem separacji katalogów.
+ Zwrócono uwagę na to, że program nie parsuje wszystkich ścieżek odpowiednio
+ do systemu operacyjnego.
+ W systemach Windows używany jest znak '
+\backslash
+' jako separator katalogów.
+ W przykładowym pliku konfiguracyjnym na stronie dewelopera (na podstawie
+ którego pisany był plik aktualnie testowany) znajdują się ścieżki pisane
+ w stylu unixowym.
+ Zmiana znaków w pliku konfiguracyjnym ze "slash" na "backslash" spowodowała
+ inny błąd.
+ Tym razem w oknie logowania wyświetlone zostało 
+\family typewriter
+C:BlenderVRRequiredPython3Python.exe command not found
+\family default
+.
+ Zdiagnozowano dzięki temu problem z parsowaniem znaków '/' i '
+\backslash
+' przez aplikację.
+\end_layout
+
+\begin_layout Standard
+Moduł odpowiedzialny za ładowanie demona został znaleziony w pliku: 
+\family typewriter
+BlenderVR/modules/blendervr/console/logic/screen.py
+\family default
+.
+ Fragment kodu: 
+\family typewriter
+self._daemon['command'].append(os.path.join(system['root'],'utils', 'daemon.py')).
+
+\family default
+ Za przygotowanie ścieżki odpowiedniej dla danego systemu odpowiedzialna
+ jest część 
+\family typewriter
+os.path.join
+\family default
+.
+ W przypadku systemu Windows komenda ta dostawia ‘
+\backslash
+’ do ścieżki, co powodowało błąd przy dalszym parsowaniu ścieżki.
+ Z powyższych testów wynikało jednak, że dostawiony backslash jest błędny
+ i usuwany podczas przekazywania komendy do konsoli Windowsa.
+ Zmieniono tą część kodu i wpisano na sztywno: 
+\family typewriter
+self._daemon['command'].append("/".join((system['root'], utils', 'daemon.py'))).
+
+\family default
+ Poprawka w kodzie pozwoliła aplikacji odpowiednio zinterpretować ścieżki.
+ Do konsoli Windows została przekazana następująca komenda: 
+\family typewriter
+C:/BlenderVR/Required/Python3/python.exe C:/BlenderVR/source/utils/daemon.py
+\family default
+.
+ Wpis w okienku logowania „Daemon for screen console started” oznajmił,
+ że konfiguracja jest prawidłowa i załadowana.
+ Następnie wybrano jedną z dostępnych scen przykładowych.
+ Załadowano ją wraz z odpowiadającym jej plikiem procesora dla sceny.
+ Po przejściu do zakładki „run” i kliknięciu przycisku startu na ekranie
+ pojawiła się wybrana scena.
+ Próba uruchomienia w podstawowej konfiguracji zakończyła się sukcesem.
+ 
 \end_layout
 
 \begin_layout Subsubsection
@@ -2277,7 +2526,7 @@ Testy z wykorzystaniem dwóch stanowisk PC
  W tym celu każde z nich musi zostać wyposażone w aplikację pokazującą obraz
  z perspektywy danego urządzenia wyświetlającego.
  BlenderVR wykorzystując protokół SSH potrafi zarządzać swoimi kopiami na
- komputerach typu
+ komputerach typu 
 \begin_inset Quotes pld
 \end_inset
 
@@ -2295,7 +2544,7 @@ master
 \end_inset
 
  może uruchamiać oraz synchronizować inne instancje BlenderVR na komputerach
- typu
+ typu 
 \begin_inset Quotes pld
 \end_inset
 

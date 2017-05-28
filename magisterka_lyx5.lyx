@@ -1,0 +1,3259 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\hyphenation{MechWarrior przes-trzen-nej u-żyt-kow-ni-ka jas-ki-ni jas-ki-nia naj-waż-niej-szy-mi do-łą-czo-no u-sta-wio-ne przy-sto-so-wa-nym prze-tes-to-wa-ne}
+\sloppy
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language polish
+\language_package none
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "lmtt" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 1
+\bibtex_command bibtex
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 4cm
+\topmargin 2.5cm
+\rightmargin 2cm
+\bottommargin 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language polish
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+tutaj strona główna
+\end_layout
+
+\begin_layout Standard
+System wizualizacji oparty o Blender w środowisku jaskini rzeczywistości
+ wirtualnej
+\end_layout
+
+\begin_layout Section*
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+tutaj pusto
+\end_layout
+
+\begin_layout Section*
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+tutaj spis treści
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+Słownik
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Rzeczywistość wirtualna (ang.
+ Virtual Reality)
+\series default
+ - sposób użycia technologii komputerowej do tworzenia trójwymiarowego świata,
+ w którym obiekty dają wrażenie przestrzennej obecności
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Steve Bryson
+\begin_inset Quotes pld
+\end_inset
+
+Virtual reality: A Definition History - A Personal Essay
+\begin_inset Quotes prd
+\end_inset
+
+, 1998, s.
+ 4 http://arxiv.org/pdf/1312.4322.pdf
+\end_layout
+
+\end_inset
+
+.
+ Do zanurzenia się w rzeczywistości wirtualnej potrzebne jest urządzenie
+ wyświetlające obraz.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Maszyny arcade, automaty do gier
+\series default
+ - konstrukcja służąca rozrywce, umieszczana najczęściej w salonach gier
+ bądź też pubach lub klubach.
+ Uruchomienie gry następuje w momencie wrzucenia monety bądź żetonu w otwór
+ wrzutowy, zabawa ograniczona jest zwykle pewnym wyznacznikiem narzuconym
+ przez producenta lub właściciela automatu (np.
+ liczba prób/żyć, przejście na wyższy poziom, zdobycie określonego celu
+ w zadanym czasie, ukończenie gry).
+ Zwykle automat do gier wyposażony był w gałkę sterującą i kilka klawiszy.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+CAVE (ang.
+ Cave Automatic Virtual Environement)
+\series default
+ - obiekt o kształtach sześcianu służący do zanurzenia się w rzeczywistość
+ wirtualną.
+ Składa się z akrylowych ekranów tylnej projekcji oraz projektorów, rzucających
+ obrazy na każdą ze ścian.
+ Człowiek wewnątrz musi nosić aktywne okulary 3D by móc oglądać dowolnie
+ wyświetlony obiekt z każdej strony.
+ Wewnątrz znajdują się również kamery śledzące pozycje użytkownika dzięki
+ czemu obraz jest na bieżąco dostosowywany do pozycji śledzonego.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Tylna projekcja (ang: Rear Screen Projection)
+\series default
+ - projekcja obrazu na półprzeźroczysty ekran znajdujący się między obserwatorem
+ a urządzeniem.
+ Dzięki wykorzystaniu tej techniki obraz jest jaśniejszy i bardziej wyraźny
+ w porównaniu do klasycznej projekcji.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Aktywne okulary 3D
+\series default
+ - rodzaj okularów 3D zasilanych bateriami by rozdzielać renderowane klatki
+ specjalnie dla prawego i lewego oka.
+ Działają na zasadzie migawki: kiedy aktualnie wyświetlana klatka jest przeznacz
+ona dla lewego oka, prawa migawka pozostaje zamknięta i vice versa.
+ Przy takiej formie odbierania obrazu wyświetlacz powinien odświeżać obraz
+ na tyle szybko by każde z oczu otrzymywało przynajmniej 60 klatek na sekundę
+ (co daje łącznie odświeżanie na poziomie 120 Hz)
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.cnet.com/news/active-3d-vs-passive-3d-whats-better/ (dostęp: 22.05.2016)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Odświeżanie obrazu
+\series default
+ - dla ekranów LCD jest to liczba wyświetleń w ciągu sekundy danych dostarczonyc
+h przez procesor graficzny.
+ Ekrany typu CRT odświeżają obraz wytrzeliwując elektrony pobudzające luminofor
+ (patrz: CRT).
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+LCD (ang.
+ Liquid Crystal Display)
+\series default
+ - Rodzaj ciekło-krystalicznych wyświetlaczy gdzie obraz jest sterowany
+ poprzez zmianę poszczególnych pikseli lub ich grup.
+ Panel LCD nie emituje światła sam z siebie, dlatego wymagane jest podświetlenie
+ by obraz stał się widoczny.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+CRT (ang.
+ Cathode-Ray Tube)
+\series default
+ - Rodzaj wyświetlaczy bazujący na lampie obrazowej oraz dziale eletronowym.
+ Wyświetlacz używa wiązki elektronów wystrzeliwanej z działa do wzbudzenia
+ świecenia luminofora.
+ Wiązka po wystrzeleniu przebiegała przez całą powierzchnię ekranu wywołując
+ świecenie i ukazując na jego powierzchni obraz.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Luminofor
+\series default
+- związek chemiczny wykazujący luminescencję.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+BGE (Blender Game Engine)
+\series default
+ - jeden z komponentów Blendera 3D.
+ Jest to open-sourcowy silnik graficzny używany do tworzenia interaktywnych
+ scen w czasie rzeczywistym.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+HMD (Head Mounted Display)
+\series default
+ - urządzenie wyświetlające przeznaczone do zakładania na głowę, wyposażone
+ w soczewki pomiędzy ekranem a okiem.
+ Obraz jest ustawiony tak by każde oko widziało swoją część co sprawia wrażenie
+ stereoskopii.
+ Wyświetlacze HMD pozwalają zanurzyć się w rzeczywistość wirtualną.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Stereoskopia
+\series default
+- technika pokazywania obrazu polegająca na tworzeniu lub uwydatnianiu jego
+ głębii.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+FullHD
+\series default
+ - standard wyświetlania obrazu wysokiej jakości.
+ Zazwyczaj zakłada się też, że wyświetlacz jest panoramiczny (stosunek boków
+ jest 16:9) i posiada rozdzielczość 1920 na 1080 pikseli.
+ Sygnał wideo jakości FullHD ma oznaczenie 1080p.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Organiczna dioda elektroluminescencyjna, OLED (ang.
+ Organic Light-Emitting Diode)
+\series default
+ - dioda wytwarzana ze związków organicznych.
+ Jest to również oznaczenie klasy wyświetlaczy graficznych zbudowanych na
+ diodach OLED.
+ W przeciwieństwie do ekranów LCD, OLED nie wymaga dodatkowego podświetlenia
+ i emituje światło sam z siebie co pozwala na uzyskanie prawdziwej czerni
+ i lepszego kontrastu
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.oled-info.com/introduction (dostęp: 22.05.2016)
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Immersja
+\series default
+ - Odczuwanie, wczuwanie się w świat cyfrowy.
+ Proces zanurzenia się w ukazywanej, nierealnej rzeczywistości.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Protokół SSH (ang.
+ Secure Shell)
+\series default
+ - zaszyfrowany protokół sieciowy pozwalający na zdalne logowanie do innych
+ komputerów w obrębie danej sieci.
+ Jest następną protokołu telnet, który przesyłał niezaszyfrowane hasła i
+ inne informacje.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Finansowanie społecznościowe (ang.
+ Crowdfunding)
+\series default
+ - Źródło kapitału dostarczanego przez szeroką społeczność wirtualną, która
+ chce wesprzeć kreatywnego pomysłodawcę
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://crowdfunding.pl/crowdfunding-faq/ (dostęp: 22.05.2016)
+\end_layout
+
+\end_inset
+
+.
+ Akcje zbiórki organizowane są zazwyczaj na platformach internetowych gdzie
+ pomysłodawca przedstawia swój projekt.
+ Każdy może wesprzeć dowolną kwotą pomysłodawcę.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+6DoF (ang.
+ six degrees of freedom - 6 stopni swobody)
+\series default
+ - możliwości wykonania ruchu przez ciało w przestrzeni trójwymiarowej.
+ Dla 6.
+ stopni swobody są to:
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+przesunięcie góra/dół względem osi X
+\end_layout
+
+\begin_layout Itemize
+przesunięcie góra/dół względem osi Y
+\end_layout
+
+\begin_layout Itemize
+przesunięcie góra/dół względem osi Z
+\end_layout
+
+\begin_layout Itemize
+rotacja względem osi X
+\end_layout
+
+\begin_layout Itemize
+rotacja względem osi Y
+\end_layout
+
+\begin_layout Itemize
+rotacja względem osi Z
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Podwójne buforowanie obrazu metodą Page Flipping -
+\series default
+metoda rysowania i wyświetlania klatek wykorzystująca dwa osobne bufory
+ w pamięci.
+ Gdy jeden z nich wyświetla gotową klatkę drugi rysuje kolejną.
+ Kiedy operacje rysowania klatki są zakończone następuje przełączenie pomiędzy
+ wyświetlaniem buforów.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Poczwórne buforowanie (ang: Quad buffering)
+\series default
+ - stereoskopiczna implementacja podwójnego buforowania.
+ W tym przypadku mamy 4 bufory, z czego po dwa przydzielone są do rysowania
+ obrazu dla jednego oka.
+ Operacja podmiany aktualnie wyświetlanego bufora jest jednoczesna dla buforów
+ prawego i lewego oka.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Video Wall
+\series default
+- specjalny zestaw kilku lub więcej wyświetlaczy ułożonych jeden przy drugim.
+ Tworzą w ten sposób jeden duży ekran.
+ Wyświetlacze wykorzystywane przy budowie video walla zazwyczaj mają jak
+ najcieńszą ramę dookoła ekranu by zminimalizować przerwy pomiędzy ekranami
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.pixell.com/what_is_a_vw.htm (dostęp: 22.05.2016)
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Part*
+\begin_inset Newpage newpage
+\end_inset
+
+Wstęp
+\end_layout
+
+\begin_layout Standard
+Niniejsza praca ma na celu rozszerzenie możliwości wykorzystania jaskini
+ wirtualnej rzeczywistości CAVE poprzez implementację silnika graficznego
+ Blender Game Engine w Laboratorium Zanurzonej Wizualizacji Przestrzennej
+ znajdującego się na Politechnice Gdańskiej.
+ Wykorzystując aplikację BlenderVR każda scena odpowiednio zaprogramowana
+ i zaprojektowana w BGE może zostać wyświetlona w jaskini wirtualnej rzeczywisto
+ści lub na architekturze odpowiednio podobnej.
+ Aplikacja BlenderVR jak i Blender3D są programami open-source.
+ Dzięki temu systemy typu CAVE mogą rozwijać się bardziej dynamicznie wraz
+ z dedykowanymi dla nich scenami lub grami.
+ Aktualnie głównymi silnikami graficznymi, które wykorzystywane są w Laboratoriu
+m Zanurzonej Wizualizacji Przestrzennej są Unity i Unreal Engine.
+ Oba zostały przystosowane do pracy w jaskiniach wirtualnej rzeczywistości.
+ Nie są one jednak programami open-source co nie pozwala na dokładne dopasowanie
+ do potrzeb laboratorium.
+ Wykorzystanie nowej opcji jaką jest Blender Game Engine rozszerzy możliwości
+ modelowania scen dedykowanych dla CAVE’a.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Technologia wirtualnej rzeczywistości
+\end_layout
+
+\begin_layout Standard
+Wirtualna rzeczywistość od zawsze intrygowała człowieka.
+ W wielu filmach czy książkach wizje przyszłości często zawierały urządzenia
+ pozwalające oderwać się od rzeczywistości i w pełni zanurzyć się w dowolnie
+ ukształtowanym świecie wirtualnym.
+ Teraźniejszość coraz bardziej zaczyna przypominać tę przyszłość.
+\end_layout
+
+\begin_layout Standard
+Pierwsze wzmianki o rzeczywistości wirtualnej mogą pochodzić z lat 30.
+ XX wieku.
+ Terminu
+\begin_inset Quotes pld
+\end_inset
+
+la réalité virtuelle
+\begin_inset Quotes prd
+\end_inset
+
+ użył Antonin Artaud w swoim zbiorze esejów pod tytułem
+\begin_inset Quotes pld
+\end_inset
+
+Le Théâtre et son double
+\begin_inset Quotes prd
+\end_inset
+
+.
+ Jako rzeczywistość wirtualna została opisana iluzjonistyczna natura postaci
+ i obiektów w teatrze
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.almaclassics.com/excerpts/Theatre_Double.pdf (dostęp 07.05.20016)
+\end_layout
+
+\end_inset
+
+.
+ To co dzisiaj kryje się pod nazwą rzeczywistości wirtualnej było popularyzowane
+ dopiero przez media masowe w filmach takich jak:
+\begin_inset Quotes pld
+\end_inset
+
+Brainstorm
+\begin_inset Quotes prd
+\end_inset
+
+ i
+\begin_inset Quotes pld
+\end_inset
+
+The Lawnmover Man
+\begin_inset Quotes prd
+\end_inset
+
+.
+ Pierwszym urządzeniem, które można by nazwać systemem VR była Sensorama
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.theverge.com/a/virtual-reality/oral_history (dostęp 07.05.20016)
+\end_layout
+
+\end_inset
+
+.
+ Była to maszyna podobna wyglądem do automatów do gier wyświetlająca stereoskopo
+wy obraz 3D, zapewniała przechylanie pozycji użytkownika oraz wspierała
+ dźwięk przestrzenny.
+ W budowie planowano również systemy generujące podmuchy wiatru oraz uwalniające
+ odpowiednie zapachy
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.mortonheilig.com/SensoramaPatent.pdf (dostęp 07.05.20016)
+\end_layout
+
+\end_inset
+
+.
+ W latach 70.
+ i 80.
+ rozwój wirtualnej rzeczywistości nie był jednak nagłośniony.
+ Mało kto wiedział o nowościach technologicznych w świecie VR.
+ Dopiero w '91 zaczęto wydawać magazyn
+\begin_inset Quotes pld
+\end_inset
+
+CyberEdge Journal
+\begin_inset Quotes prd
+\end_inset
+
+, który był biuletynem o gadżetach VR
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.theverge.com/a/virtual-reality/oral_history (dostęp 07.05.20016)
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Urządzenia montowane na głowie
+\end_layout
+
+\begin_layout Standard
+Pierwsze gogle wirtualnej rzeczywistości dostępne komercyjnie zostały zapowiedzi
+ane na Consumer Electronics Show w 1994 roku.
+ Nazywały się Forte VFX-1.
+ Gogle mogły wyświetlać stereoskopowy obraz, miały wbudowane słuchawki stereo
+ oraz sensor śledzący pozycje głowy w 3.
+ osiach
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.ibiblio.org/GameBytes/issue21/flooks/vfx1.html (dostęp 07.05.20016)
+\end_layout
+
+\end_inset
+
+.
+ Kolejną nowinką w tej dziedzinie były okulary Glasstron, wypuszczone w
+ 1997 roku przez firmę Sony.
+ W odróżnieniu od Forte VFX-1 miały dodatkowo czujniki pozycyjne co dodatkowo
+ pogłębiało immersję.
+ Gogle można było zastosować w grze o nazwie MechWarrior
+\begin_inset space ~
+\end_inset
+
+2.
+ Gracz, używając Glasstrona, mógł włączyć nową perspektywę z kokpitu maszyny
+ kroczącej.
+\end_layout
+
+\begin_layout Standard
+Można tu równiez wspomnieć o specyficznych zdjęciach ulic firmy Google -
+ Street View.
+ Wprowadzone w 2007 roku panoramiczne zdjęcia, które pozwalały przyglądać
+ się okolicy z miejsca samochodu robiącego zdjęcia.
+ Jest to ciekawe wykorzystanie technologii opartych o rzeczywistość wirtualną
+ w nawigacji.
+ Street View umożliwia rozejrzenie się za punktami orientacyjnymi na danej
+ ulicy.
+\end_layout
+
+\begin_layout Standard
+Prawdziwą rewolucją stały się jednak gogle wirtualnej rzeczywistości od
+ Oculusa.
+ W 2012 roku, dzięki kampaniom crowfundingowym, firma zebrała 2.5 miliona
+ dolarów na rozwój projektu okularów VR
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+https://www.kickstarter.com/projects/1523379957/oculus-rift-step-into-the-game
+ (dostęp 07.05.20016)
+\end_layout
+
+\end_inset
+
+.
+ Pierwszym modelem dostępnym do zamówienia był Rift Development Kit 1.
+ DK1 wyposażony został w 7mio calowy ekran o rozdzielczości 1280x800 pikseli.
+ Ten prototyp skonstruowano już tak, by każde z oczu widziało obraz z odpowiedni
+m przesunięciem ale nie nakładający się w 100%.
+ Znaczy to, że lewe oko widziało troche więcej po lewej a prawe oko troche
+ więcej po prawej w porównaniu do drugiego oka.
+ Producenci zadbali również o użytkowników z wadami wzroku.
+ Do zestawu dołączano 3.
+ pary soczewek, które były dopasowane zależnie od potrzeby korekcji soczewki
+ lub jej braku
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://in2gpu.com/2014/08/10/oculus-rift-dk1-vs-dk2/ (dostęp 07.05.20016)
+\end_layout
+
+\end_inset
+
+.
+ Gadżet sprzedał się w liczbie około 65 000 egzemplarzy
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.hypergridbusiness.com/2014/06/more-than-100000-oculus-rifts-sold/
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Po sukcesie jaki odniósł Rift DK1, Oculus rozpoczął prace nad kolejną wersją
+ deweloperską.
+ Tak powstał Rift Developer Kit 2.
+ Wyposażony już w ekran OLED o rozdzieczości 1920x1080 pikseli.
+ Zwiększone zostało również odświeżanie z 60Hz do 75Hz co zmniejszyło dyskomfort
+ i możliwość wystąpienia nudności.
+ Do zestawu DK2 dołączana była specjalna kamera, która pozwalała na śledzenie
+ pozycji gogli w przestrzeni.
+ Dzięki temu deweloperskie gogle Oculusa pozwalały na śledzenie 6DoF.
+\end_layout
+
+\begin_layout Standard
+Następna wersja gogli CV1 - Consumer Version 1, czyli w pełni oficjalne
+ wydanie, zapowiedziano na pierwszy kwartał 2016 roku
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+https://www.oculus.com/en-us/blog/first-look-at-the-rift-shipping-q1-2016/
+ (dostęp 07.05.20016)
+\end_layout
+
+\end_inset
+
+.
+ Przedsprzedaż rozpoczęto 6 stycznia 2016 roku a wysyłkę zapowiedziano na
+ 28 marca.
+ W ciągu 10 dni otrzymano tyle zamówień, że datę wysyłki kolejnych partii
+ Rift CV1 przesunięto na lipiec 2016
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+www.roadtovr.com/oculus-rift-pre-order-backorder-july/ (dostęp 07.05.20016)
+\end_layout
+
+\end_inset
+
+.
+ Nowa wersja Rifta została wyposażona w dwa osobne ekrany (po jednym na
+ każde oko) o łącznej rozdzielczości 2160×1200 pikseli i odświeżaniu 90Hz
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.roadtovr.com/oculus-rift-resolution-recommended-specs/ (dostęp
+ 07.05.20016)
+\end_layout
+
+\end_inset
+
+.
+ Do tego doszły różne usprawnienia zewnętrzne: ergonomiczny kształt, nowoczesny
+ wygląd, wbudowane słuchawki stereo i nowa kamera śledząca.
+\end_layout
+
+\begin_layout Standard
+Inne firmy również zaczęły wchodzić w branżę wirtualnej rzeczywistości.
+ Swoją wersję okularów VR na rynek wprowadził również HTC (przy współpracy
+ z platformą Steam).
+ HTC Vive pierwszy raz został pokazany w 2015 roku na Mobile World Congress
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.theverge.com/2015/3/1/8127445/htc-vive-valve-vr-headset (dostęp
+ 07.05.20016)
+\end_layout
+
+\end_inset
+
+.
+ Nie był on dostępny w przedsprzedażach aczkolwiek część wybranych przez
+ firmę deweloperów dostała wersję Developer Edition wcześniej
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.pcmag.com/article2/0,2817,2479252,00.asp (dostęp 07.05.20016)
+\end_layout
+
+\end_inset
+
+.
+ Poza HTC również Sony, które wróciło na rynek VR, rozpoczęło prace nad
+ goglami VR specjalnie dla konsoli PlayStation 4.
+\end_layout
+
+\begin_layout Standard
+Poza HTC, Oculusem oraz Sony jest jeszcze kilku gigantów pracujących z goglami
+ VR lub AR.
+ Microsoft aktualnie dopracowuje gogle rozszerzonej rzeczywistości Hololens.
+ Gogle mają przeźroczyste szkła, przez które widać otoczenie.
+ Dopiero na to otoczenie nakładany jest obraz wirtualny np.
+ na pustą ścianę w mieszkaniu nałożony może zostać obraz jakiegoś plakatu
+ lub dekoracji.
+ Gogle zapowiadają się rewelacyjnie przy pracach projektowych gdzie w naturalnym
+ środowisku będzie można obejrzeć model 1:1 lub nałożyć wykończenie na szkielet
+ projektu.
+\end_layout
+
+\begin_layout Section
+Jaskinia wirtualnej rzeczywistości CAVE
+\end_layout
+
+\begin_layout Standard
+Technologia wirtualnej rzeczywistości rozwija się w kilka różnych „gałęzi”.
+ Oprócz okularów HMD istnieją również bardziej zaawansowane rozwiązania
+ pozwalające na zanurzenie się w świecie wirtualnym.
+ Jednym z nich jest jaskinia wirtualnej rzeczywistości.
+ Rozwiązanie to jest skierowane głównie do deweloperów oraz instytucji naukowych
+ z racji rozmiarów oraz wymaganych środków pieniężnych.
+ CAVE – cave automatic virtual environement - składa się z kilku akrylowych
+ ścian, na których wyświetlane są obrazy wirtualnego świata.
+ Najpopularniejszą metodą jest użycie dwóch projektorów wyświetlających
+ obraz na jedną ścianę odpowiednio dla lewego i prawego oka naprzemiennie.
+ Użytkownik w takim przypadku musi nosić okulary spolaryzowane oddzielające
+ obraz dla danego oka
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+https://www.evl.uic.edu/documents/cacm92-cave-cruz-neira.pdf (dostęp 07.05.20016)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.visbox.com/technology/stereo/ (dostęp 07.05.20016)
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graphic/cave2_pogladowy.jpg
+	scale 90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Wyświetlanie obrazu w CAVE
+\begin_inset Newline newline
+\end_inset
+
+Źródło: http://escience.anu.edu.au/lecture/cg/Display/cave.en.html (dostęp: 07.05.2016)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ilustracja załączona powyżej przedstawia podstawowe założenia budowy środowiska
+ jaskini wirtualnej rzeczywistości.
+ W standardowy rozkład ścian wchodzi: przednia, boczne oraz podłogowa.
+ Projektory umieszczone są na zewnątrz, rzucając obraz od tyłu – jest to
+ tzw.
+ tylna projekcja (ang: Rear Screen Projection).
+ Obraz rzucany na podłogę może być przez projektor z góry lub z dołu.
+ Projektory użyte do wyświetlania muszą charakteryzować się wysoką rozdzielczośc
+ią oraz szybkim odświeżaniem.
+ Zazwyczaj jest to rozdzielczość FullHD oraz odświeżanie o częstotliwości
+ powyżej 90Hz.
+ Obraz rzucany na kwadratową ścianę jest ucinany na bokach a Często wykorzystuje
+ się lustra by zmniejszyć odległość między projektorem a ekranem.
+ Każdy projektor jest kontrolowany przez jeden z komputerów połączonych
+ w klaster.
+ W klastrze jeden z komputerów jest nadrzędny i sprawuje kontrole nad pozostałym
+i, renderującymi obraz dla projektorów.
+ Jest to rozwiązanie zwiększające szybkość generowania klatek oraz tańsze
+ w utrzymaniu.
+\end_layout
+
+\begin_layout Standard
+Obraz wyświetlany w jaskini wirtualnej jest dostosowywany zależnie od położenia
+ „użytkownika głównego”.
+ Kamery śledzą położenie czujników zamontowanych na okularach by wyświetlany
+ obraz był odpowiednio zsynchronizowany na krawędziach i dopasowany do perspekty
+wy odbiorcy.
+ Każdy inny użytkownik, który nie jest śledzony przez kamery widzi obraz
+ nieco przesunięty względem użytkownika głównego.
+ Objawia się to źle sklejonym obrazem lub/i nienaturalną perspektywą.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graphic/CaveUDK_Architecture.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Architektura systemu CAVE na przykładzie użycia Unreal Engine
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Oprócz samego wyświetlania obrazu, jaskinia wirtualnej rzeczywistości pozwala
+ również na interakcje ze światem otaczającym.
+ Dzieje się to przy pomocy różnych kontrolerów np.
+ FlySticka lub MagicWand.
+ Są to bezprzewodowe joysticki wyposażone w zestaw czujników potrafiących
+ określić pozycje (jako zestaw trzech wektorów) oraz orientacje (podawaną
+ jako kwaternion) urządzenia w przestrzeni.
+ Oprócz tego kontroler wyposażony jest w podstawowe części takie jak: analogowy,
+ dwuosiowy joystick oraz kilka przycisków i/lub trigger.
+ Przykładowy model został pokazany na obrazku (Fig.
+ 3).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graphic/Flystick_2small.jpg
+	scale 80
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename graphic/Flystick3_small.jpg
+	scale 80
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Dwa modele joysticka Flystick firmy ART
+\begin_inset Newline newline
+\end_inset
+
+Źródło: http://www.middlevr.com/doc/1.2/ch04s03.html (dostęp 07.05.2016)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Porównanie HMD i CAVE
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.visbox.com/technology/cave-vs-hmd/ (dostęp 07.05.20016)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Head-mounted display oraz CAVE to bardzo różniące się sposoby na wizualizację
+ świata wirtualnego.
+ Wysokie koszty jaskini wirtualnej rzeczywistości pozwalają na większe możliwośc
+i wykorzystania oraz trochę większy komfort użytkowania.
+ Z drugiej strony jednak jaskinia wirtualnej rzeczywistości zajmuje bardzo
+ dużo miejsca w porównaniu do okularów wirtualnej rzeczywistości, które
+ są też o wiele tańsze.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Porównanie HMD i CAVE
+\begin_inset Newline newline
+\end_inset
+
+Źródło: Opracowanie własne, http://www.visbox.com/technology/cave-vs-hmd/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="3">
+<features tabularvalignment="middle" tabularwidth="15cm">
+<column alignment="center" valignment="top" width="3cm">
+<column alignment="center" valignment="top" width="4cm">
+<column alignment="center" valignment="top" width="5cm">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HMD
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CAVE
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Rozdzielczość (w megapikselach)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1-2 Mpx/oko
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2-8 Mpx/ekran
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Jakość obrazu
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Wymaga użycia zniekształcenia; dobra
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+bardzo dobra
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Immersja
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bardzo duża
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Duża
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pole widzenia (w stopniach)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+~110
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Takie jak człowieka
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mobilność użytkownika
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ograniczona okablowaniem i czujnikami
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nieograniczona
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Użytkownicy
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Jeden
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Wielu
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Komfort użytkowania
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ekran blisko oka może wywoływać ból głowy; możliwe nudności
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ekrany daleko od oka co pozwala na dłuższe użytkowanie; możliwe nudności
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Koszt
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Niewielki
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Wysoki
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Obecnie systemy wirtualnej jaskini ją wykorzystywane głównie w laboratoriach
+ instytutów.
+ Nie są one dostępne dla szerszego odbioru.
+ Urządzenia HMD są za to dostępne dla każdego a
+\begin_inset space ~
+\end_inset
+
+ich obsługa i ustawienie jest znacznie łatwiejsze.
+ Na rynku pojawiają się również coraz więcej modeli znanych i mniej znanych
+ firm przystosowanych specjalnie do smartfonów.
+ Wybór wśród nich jest więc znacznie wiekszy niż w przypadku CAVE'ów, które
+ często muszą instalować i częściowo obsługiwać zewnętrzne firmy.
+\end_layout
+
+\begin_layout Section
+Opis aplikacji BlenderVR
+\end_layout
+
+\begin_layout Subsection
+Opis aplikacji
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Strona instytutu LIMSI we Francji https://blendervr.limsi.fr/doku.php (dostęp
+ 07.05.20016)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aplikacja BlenderVR powstała w laboratorium LIMSI we Francji.
+ Twórcami są: Dalai Felinto, Damien Touraine, David Poirier-Quinot, Laurent
+ Pointal i Bran F.G.
+ Katz.
+ Aplikacja pozwala na użycie scen generowanych przez Blender Game Engine,
+ w środowiskach wirtualnych: CAVE, okulary wirtualnej rzeczywistości HMD
+ lub Video Wall.
+\end_layout
+
+\begin_layout Standard
+BlenderVR jest narzędziem skalowalnym oraz wieloplatformowym.
+ Działa zarówno na komputerach z system Windows jak i Linux/iOS.
+ Przenoszenie sceny pomiędzy różnymi platformami wirtualnej rzeczywistości
+ nie wymaga jej edytowania.
+ Wszystkim zajmuje się odpowiednia konfiguracja programu.
+ Aplikację można dostosować do dowolnej liczby komputerów obsługujących
+ różne ekrany.
+ BlenderVR posiada wsparcie dla wyświetlania obrazu 3D (poczwórne buforowanie
+ - ang: Quad Buffering) i protokołów komunikacyjnych np.
+ VRPN – virtual reality peripherial network lub OSC – open sound control.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graphic/blendervr-applications.jpg
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Możliwości i zastosowania aplikacji BlenderVR
+\begin_inset Newline newline
+\end_inset
+
+Źródło: https://blendervr.limsi.fr/doku.php (dostęp 07.05.20016)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wszystkie ustawienia BlenderVR znajdują się w jednym pliku XML.
+ Ułatwia to przenoszenie konfiguracji pomiędzy komputerami lub jej klonowanie.
+ W pliku konfiguracyjnym najważniejszymi ustawieniami są:
+\end_layout
+
+\begin_layout Itemize
+Ścieżki do bibliotek i programów, z których korzysta BlenderVR.
+\end_layout
+
+\begin_layout Itemize
+Adresy komputerów typu „slave” – obsługujących wyświetlanie obrazu oraz
+ dane logowania przez protokół SSH.
+\end_layout
+
+\begin_layout Itemize
+Ilość ekranów, ich położenie oraz relacje oko - ekran.
+\end_layout
+
+\begin_layout Itemize
+Ustawienia wtyczki do interakcji ze sceną: serwer odbierający dane z urządzeń
+ wskazujących oraz konfiguracja czujników.
+\end_layout
+
+\begin_layout Standard
+Interfejs jest przejrzysty i prosty w obsłudze.
+ Po uruchomieniu wystarczy załadować odpowiedni plik konfiguracyjny, następnie
+ wybrać konfigurację ekranów i wskazać miejsca pliku ze sceną do symulacji.
+ W zakładce „Run” znajduje się przycisk do uruchomienia programu oraz konsola
+ do debugowania.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graphic/user-interface-1.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Interfejs aplikacji BlenderVR
+\begin_inset Newline newline
+\end_inset
+
+Źródło: https://blendervr.limsi.fr/doku.php (dostęp 07.05.20016)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Opis pliku konfiguracyjnego
+\end_layout
+
+\begin_layout Standard
+Jedną z najwazniejszych części aplikacji jest plik konfiguracyjny.
+ W nim zawarte są wszystkie informacje odnośnie połączeń do komputerów podrzędny
+ch, ustawień ekranów, wyświetlania obrazu oraz konfiguracji wtyczek.
+ Plik ustawień zapisywany jest w formacie XML.
+ Ułatwia to edycję ponieważ wystarczy do tego zwykły edytor plików tekstowych.
+ Przykładowa konfiguracja dla CAVE w systemie Linux:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<?xml version="1.0"?>
+\end_layout
+
+\begin_layout Plain Layout
+
+<blendervr>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <starter anchor='/tmp/console' blender='/usr/local/blender/2.74/bin/blender'>
+\end_layout
+
+\begin_layout Plain Layout
+
+     <config name='console'>console screen</config>
+\end_layout
+
+\begin_layout Plain Layout
+
+     <config name='virtual environment'>console screen, front screen, left
+ screen, right screen
+\end_layout
+
+\begin_layout Plain Layout
+
+</config>
+\end_layout
+
+\begin_layout Plain Layout
+
+  </starter>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <users>
+\end_layout
+
+\begin_layout Plain Layout
+
+<user name='user A' />
+\end_layout
+
+\begin_layout Plain Layout
+
+  </users>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <!-- Here, we define the console parameters -->
+\end_layout
+
+\begin_layout Plain Layout
+
+  <computers>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <computer name='console computer' hostname='console.fqdn'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+  </computers>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <screens>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <screen name='console screen' computer='console computer'>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <display options='-w 600 600'>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <environment>DISPLAY=:0.0</environment>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <graphic_buffer user='user A'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+      </display>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <wall>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <corner name='topRightCorner'>1.0, 1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <corner name='topLeftCorner'>-1.0, 1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <corner name='bottomRightCorner'>1.0, -1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+      </wall>
+\end_layout
+
+\begin_layout Plain Layout
+
+    </screen>
+\end_layout
+
+\begin_layout Plain Layout
+
+  </screens>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <computers>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <system root='/usr/local/blender/vr/1.0' anchor='/tmp/node'>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <login remote_command="ssh `self._attributs_inheritance['hostname']`"
+\end_layout
+
+\begin_layout Plain Layout
+
+python='/usr/local/blender/2.74/dependencies/bin/python3.3'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <daemon transmit='True'>   <environment>PATH=/usr/bin:/bin</environment>
+\end_layout
+
+\begin_layout Plain Layout
+
+      </daemon>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <blenderplayer executable='/usr/local/blender/2.74/bin/blenderplayer'
+ />
+\end_layout
+
+\begin_layout Plain Layout
+
+    </system>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <computer name='front computer' hostname='front.fqdn' />
+\end_layout
+
+\begin_layout Plain Layout
+
+    <computer name='right computer' hostname='right.fqdn' />
+\end_layout
+
+\begin_layout Plain Layout
+
+    <computer name='left computer' hostname='left.fqdn' />
+\end_layout
+
+\begin_layout Plain Layout
+
+  </computers>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <screens>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <display options='-f -s hwpageflip'>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <environment>DISPLAY=:0.0</environment>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <graphic_buffer buffer='left' user='user A' eye='left'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <graphic_buffer buffer='right' user='user A' eye='right'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+    </display>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <screen name='front screen' computer='front computer'>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <wall>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <corner name='topRightCorner'>1.0, 1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <corner name='topLeftCorner'>-1.0, 1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <corner name='bottomRightCorner'>1.0, -1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+      </wall>
+\end_layout
+
+\begin_layout Plain Layout
+
+    </screen>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <screen name='left screen' computer='left computer'>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <wall>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <corner name='topRightCorner'>-1.0, 1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <corner name='topLeftCorner'>-1.0, 1.0, 1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <corner name='bottomRightCorner'>-1.0, -1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+      </wall>
+\end_layout
+
+\begin_layout Plain Layout
+
+    </screen>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <screen name='right screen' computer='right computer'>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <wall>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <corner name='topRightCorner'>1.0, 1.0, 1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <corner name='topLeftCorner'>1.0, 1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <corner name='bottomRightCorner'>1.0, -1.0, 1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+      </wall>
+\end_layout
+
+\begin_layout Plain Layout
+
+    </screen>
+\end_layout
+
+\begin_layout Plain Layout
+
+</screens>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <plugins>
+\end_layout
+
+\begin_layout Plain Layout
+
+<vrpn>
+\end_layout
+
+\begin_layout Plain Layout
+
+<floor x='0.0'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <tracker device='GTK' host='localhost'>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <transformation>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <post_translation z='-1.6'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <post_rotation x='1.0' y='1.0' z='1.0' angle="`-2*math.pi/3`"/>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <pre_rotation x='1.0' y='1.0' z='1.0' angle="`2*math.pi/3`"/>
+\end_layout
+
+\begin_layout Plain Layout
+
+  </transformation>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <sensor id='0' processor_method='user_position' users='user A'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <sensor id='1' processor_method='tracker_1'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <sensor id='2' processor_method='tracker_2'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <sensor id='3' processor_method='tracker_3'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+      </tracker>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <analog device='GTK' host='localhost' processor_method='movements'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <button device='GTK' host='localhost' processor_method='buttons'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+    </vrpn>
+\end_layout
+
+\begin_layout Plain Layout
+
+  </plugins>
+\end_layout
+
+\begin_layout Plain Layout
+
+</blendervr>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Sekcja <Starter>
+\end_layout
+
+\begin_layout Standard
+Zawiera definicje ustawień ekranów.
+ Lista musi zawierać wszystkie ekrany oddzielone przecinkami, które będą
+ używane w danej formie ustawienia.
+ Np.
+ ustawienie
+\begin_inset Quotes pld
+\end_inset
+
+console
+\begin_inset Quotes prd
+\end_inset
+
+ będzie korzystać tylko z ekranu o nazwie
+\begin_inset Quotes pld
+\end_inset
+
+console
+\begin_inset Quotes prd
+\end_inset
+
+ natomiast ustawienie
+\begin_inset Quotes pld
+\end_inset
+
+CAVE
+\begin_inset Quotes prd
+\end_inset
+
+ z ekranów: floor, front, left, right.
+ Sekcja wskazuje również gdzie znaleźć program Blender3D.
+\end_layout
+
+\begin_layout Subsubsection*
+Sekcja <Users>
+\end_layout
+
+\begin_layout Standard
+Każdy użytkownik, który będzie śledzony powinien zostać tutaj wpisany.
+ Dzięki temu program dostosuje renderowany obraz do położenia danego użytkownika.
+ Dla każdego z wpisanych użytkowników należy zdefiniować pozycję startową
+ (default_position) oraz rozstaw oczu (eye_separation).
+\end_layout
+
+\begin_layout Subsubsection*
+Sekcja <Computers>
+\end_layout
+
+\begin_layout Standard
+W tej sekcji opisany jest jak każdy z komputerów renderujących działa.
+ Mieszczą się tutaj informacje odnośnie konfiguracji blenderplayer np.
+ ścieżki do plików, zmienne środowiskowe itp.
+ Mogą być one różne dla każdego stanowiska.
+ Każdy węzeł renderujący (komputer) musi mieć sprecyzowaną nazwę oraz adres
+ sieciowy (lub nazwę sięciową).
+\end_layout
+
+\begin_layout Subsubsection*
+Sekcja <System>
+\end_layout
+
+\begin_layout Standard
+Zawiera ścieżki do najważniejszych plików programu oraz systemu, zwłaszcza
+ w przypadku platformy Windows gdzie należy podać ścieżkę do katalogu Windowsa.
+ Tutaj można dopisywać również ścieżki wspólne dla wszystkich stacji renderujący
+ch.
+ Jeśli pewne ścieżki na każdym z komputerów są takie same wystarczy umieścić
+ je tutaj zamiast wypisywać to samo dla każdego komputera w sekcji <computers>.
+ Sekcja ta zawiera kilka szczególnych podsekcji, które warto opisać:
+\end_layout
+
+\begin_layout Itemize
+Library Path - pluginy często wymagają dostępu do zewnętrznych bibliotek.
+ W tej podsekcji możemy wskazać gdzie znajdują się niezbędne pliki.
+ Np: 
+\family typewriter
+<library path="/usr/local/lib/vrpn/" />
+\family default
+.
+\end_layout
+
+\begin_layout Itemize
+Login - precyzuje jak wygląda komenda połączenia się z komputerami odpowiedzialn
+ymi za renderowanie.
+ Np: 
+\family typewriter
+<login remote_command="ssh me@host" python="/usr/bin/python3"/>
+\family default
+.
+\end_layout
+
+\begin_layout Itemize
+Daemon - opcje dotyczące uruchomienia demona.
+ Parametr 
+\series bold
+Transmit
+\series default
+ decyduje czy demon przesyła zmienne środowiskowe do blendera kiedy go uruchamia.
+ 
+\series bold
+Environment
+\series default
+ natomiast dodaje specyficzne zmienne środowiskowe dla samego demona.
+\end_layout
+
+\begin_layout Itemize
+Blenderplayer - w tej podsekcji ustawiona jest ścieżka do aplikacji blenderplaye
+r.
+\end_layout
+
+\begin_layout Section
+Instalacja i testy aplikacji w Laboratorium Zanurzonej Wizualizacji Przestrzenne
+j
+\end_layout
+
+\begin_layout Subsection
+Środowisko wdrożeniowe systemu operacyjnego Windows
+\end_layout
+
+\begin_layout Standard
+Test aplikacji BlenderVR został przeprowadzony na specjalnie przygotowanych
+ stanowiskach komputerowych.
+ W skład jednostki testowej wchodził sprzęt:
+\end_layout
+
+\begin_layout Itemize
+Komputer stacjonarny wyposażony w:
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+procesor Intel Xeon E5-1630
+\end_layout
+
+\begin_layout Itemize
+karta graficzna Nvidia Quadro k5200
+\end_layout
+
+\begin_layout Itemize
+32 GB pamięci RAM
+\end_layout
+
+\begin_layout Itemize
+Dysk HDD o pojemności 500 GB
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Monitor ASUS 24'' z możliwością wyświetlenia obrazu 3D.
+ Częstotliwość odświeżania do 144Hz
+\end_layout
+
+\begin_layout Itemize
+Aktywne okulary 3D
+\end_layout
+
+\begin_layout Standard
+System operacyjny zainstalowany na jednostkach testowych to Windows 7 Profession
+al.
+ Każdy komputer wpięty został w tę samą sieć Ethernet.
+ Żaden nie ma dostępu do Internetu.
+ Wszystkie niezbędne programy oraz pakiety zostały dostarczone ze źródeł
+ zewnętrznych przy użyciu dysku przenośnego.
+\end_layout
+
+\begin_layout Subsection
+Instalacja aplikacji BlenderVR w systemie operacyjnym Windows
+\end_layout
+
+\begin_layout Standard
+Deweloperzy dostarczają gotową paczkę instalacyjną.
+ Należy ściągnąć instalator ze strony internetowej oraz go uruchomić.
+ Podczas procesu oprócz BlenderVR zostanie zainstalowany również Python
+ oraz pakiet bibliotek graficznych Qt4.8.
+ W systemie dodatkowo zostaną utworzone ścieżki tak, by aplikacja przy uruchomie
+niu nie miała problemów ze znalezieniem wszystkich zależności.
+ W laboratorium instalacja paczki BlenderVR przebiegła pomyślnie i bez żadnych
+ problemów.
+\end_layout
+
+\begin_layout Subsection
+Uruchomienie aplikacji BlenderVR w systemie operacyjnym Windows
+\end_layout
+
+\begin_layout Standard
+W przypadku systemu operacyjnego Windows uruchomienie jest proste.
+ Wystarczy użyć skrótu na pulpicie, który jest tworzony po zainstalowaniu
+ gotowej paczki.
+ Przygotowano odpowiedni plik konfiguracyjny dla systemu Windows na bazie
+ przykładu dostępnego na stronie dewelopera: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<?xml version="1.0"?> 
+\end_layout
+
+\begin_layout Plain Layout
+
+<blendervr>     
+\end_layout
+
+\begin_layout Plain Layout
+
+	<starter blender="C:/blender/blender.exe"> 
+\end_layout
+
+\begin_layout Plain Layout
+
+		<config name="Fullscreen">fullscreen</config>   
+\end_layout
+
+\begin_layout Plain Layout
+
+		<config name="Console">console</config>       
+\end_layout
+
+\begin_layout Plain Layout
+
+		<config name="Split">console half left, console half right</config>  
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+	</starter>  
+\end_layout
+
+\begin_layout Plain Layout
+
+<users> 
+\end_layout
+
+\begin_layout Plain Layout
+
+<user name="user A" />  
+\end_layout
+
+\begin_layout Plain Layout
+
+</users>   
+\end_layout
+
+\begin_layout Plain Layout
+
+<computers>   
+\end_layout
+
+\begin_layout Plain Layout
+
+<system> 
+\end_layout
+
+\begin_layout Plain Layout
+
+<daemon transmit="True">
+\end_layout
+
+\begin_layout Plain Layout
+
+<environment>SystemRoot=C:/Windows</environment>
+\end_layout
+
+\begin_layout Plain Layout
+
+</daemon>   
+\end_layout
+
+\begin_layout Plain Layout
+
+<blenderplayer executable="C:/blender/blenderplayer.exe" />
+\end_layout
+
+\begin_layout Plain Layout
+
+</system>  
+\end_layout
+
+\begin_layout Plain Layout
+
+      <computer name="Any" hostname="*" /> 
+\end_layout
+
+\begin_layout Plain Layout
+
+   </computers>  
+\end_layout
+
+\begin_layout Plain Layout
+
+  <screens>    
+\end_layout
+
+\begin_layout Plain Layout
+
+    <screen name="fullscreen" computer="Any">  
+\end_layout
+
+\begin_layout Plain Layout
+
+           <display options="-f"> 
+\end_layout
+
+\begin_layout Plain Layout
+
+           <graphic_buffer buffer="mono" user="user A" eye="middle" />
+\end_layout
+
+\begin_layout Plain Layout
+
+           </display>  
+\end_layout
+
+\begin_layout Plain Layout
+
+          <wall>   
+\end_layout
+
+\begin_layout Plain Layout
+
+             <corner name="topRightCorner">1.0, 1.0, -1.0</corner> 
+\end_layout
+
+\begin_layout Plain Layout
+
+             <corner name="topLeftCorner">-1.0, 1.0, -1.0</corner> 
+\end_layout
+
+\begin_layout Plain Layout
+
+             <corner name="bottomRightCorner">1.0, -1.0, -1.0</corner> 
+\end_layout
+
+\begin_layout Plain Layout
+
+           </wall>     
+\end_layout
+
+\begin_layout Plain Layout
+
+   </screen>    
+\end_layout
+
+\begin_layout Plain Layout
+
+   <screen name="console" computer="Any">    
+\end_layout
+
+\begin_layout Plain Layout
+
+      	 <display options="-w 400 400"> 
+\end_layout
+
+\begin_layout Plain Layout
+
+           <graphic_buffer buffer="mono" user="user A" eye="middle" />
+\end_layout
+
+\begin_layout Plain Layout
+
+           </display>   
+\end_layout
+
+\begin_layout Plain Layout
+
+         <wall>        
+\end_layout
+
+\begin_layout Plain Layout
+
+        <corner name="topRightCorner">1.0, 1.0, -1.0</corner>  
+\end_layout
+
+\begin_layout Plain Layout
+
+             <corner name="topLeftCorner">-1.0, 1.0, -1.0</corner>   
+\end_layout
+
+\begin_layout Plain Layout
+
+             <corner name="bottomRightCorner">1.0, -1.0, -1.0</corner>  
+\end_layout
+
+\begin_layout Plain Layout
+
+          </wall>   
+\end_layout
+
+\begin_layout Plain Layout
+
+     </screen>   
+\end_layout
+
+\begin_layout Plain Layout
+
+     <screen name="console half left" computer="Any"> 
+\end_layout
+
+\begin_layout Plain Layout
+
+           <display options="-w 400 400 200 300">
+\end_layout
+
+\begin_layout Plain Layout
+
+            <graphic_buffer user="user A" />
+\end_layout
+
+\begin_layout Plain Layout
+
+            </display>
+\end_layout
+
+\begin_layout Plain Layout
+
+            <wall>
+\end_layout
+
+\begin_layout Plain Layout
+
+                <corner name="topRightCorner">0.0, 1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+                <corner name="topLeftCorner">-1.0, 1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+                <corner name="bottomRightCorner">0.0, -1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+            </wall>
+\end_layout
+
+\begin_layout Plain Layout
+
+      </screen>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <screen name="console half right" computer="Any">
+\end_layout
+
+\begin_layout Plain Layout
+
+            <display options="-w 400 400 600 300">
+\end_layout
+
+\begin_layout Plain Layout
+
+                <graphic_buffer user="user A" />
+\end_layout
+
+\begin_layout Plain Layout
+
+            </display>
+\end_layout
+
+\begin_layout Plain Layout
+
+            <wall>
+\end_layout
+
+\begin_layout Plain Layout
+
+                <corner name="topRightCorner">1.0, 1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+                <corner name="topLeftCorner">0.0, 1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+                <corner name="bottomRightCorner">1.0, -1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+            </wall>
+\end_layout
+
+\begin_layout Plain Layout
+
+</screen>
+\end_layout
+
+\begin_layout Plain Layout
+
+    </screens>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <plugins></plugins>
+\end_layout
+
+\begin_layout Plain Layout
+
+</blendervr>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Po pierwszej próbie uruchomienia BlenderVR konsola systemu Windows zwróciła
+ błąd: 
+\family typewriter
+C:
+\backslash
+BlenderVR
+\backslash
+Required
+\backslash
+Python3
+\backslash
+python.exe: Can't open file C:/BlenderVR/source/utilsdaemon.py
+\family default
+.
+ Natomiast okienko logowania BlenderVR wyświetliło komendę, która była wykonywan
+a przy ładowaniu pliku: 
+\family typewriter
+C:/BlenderVR/Required/Python3/python.exe C:/BlenderVR/source/utils
+\backslash
+daemon.py
+\family default
+.
+ Wiersz tekstu w pliku konfiguracyjnym odpowiedzialny za początek ścieżki:
+ 
+\family typewriter
+<system root='C:/BlenderVR/source/'>
+\family default
+ oraz za wykonanie polecenia uruchomienia skryptu: 
+\family typewriter
+C:/BlenderVR/Required/Python3/python.exe
+\family default
+.
+ Wyglądało na to, że aplikacja dodaje do ścieżki katalog oraz skrypt do
+ uruchomienia jednak z błędnym znakiem separacji katalogów.
+ Zwrócono uwagę na to, że program nie parsuje wszystkich ścieżek odpowiednio
+ do systemu operacyjnego.
+ W systemach Windows używany jest znak '
+\backslash
+' jako separator katalogów.
+ W przykładowym pliku konfiguracyjnym na stronie dewelopera (na podstawie
+ którego pisany był plik aktualnie testowany) znajdują się ścieżki pisane
+ w stylu unixowym.
+ Zmiana znaków w pliku konfiguracyjnym ze "slash" na "backslash" spowodowała
+ inny błąd.
+ Tym razem w oknie logowania wyświetlone zostało 
+\family typewriter
+C:BlenderVRRequiredPython3Python.exe command not found
+\family default
+.
+ Zdiagnozowano dzięki temu problem z parsowaniem znaków '/' i '
+\backslash
+' przez aplikację.
+\end_layout
+
+\begin_layout Standard
+Moduł odpowiedzialny za ładowanie demona został znaleziony w pliku: 
+\family typewriter
+BlenderVR/modules/blendervr/console/logic/screen.py
+\family default
+.
+ Fragment kodu: 
+\family typewriter
+self._daemon['command'].append(os.path.join(system['root'],'utils', 'daemon.py')).
+
+\family default
+ Za przygotowanie ścieżki odpowiedniej dla danego systemu odpowiedzialna
+ jest część 
+\family typewriter
+os.path.join
+\family default
+.
+ W przypadku systemu Windows komenda ta dostawia ‘
+\backslash
+’ do ścieżki, co powodowało błąd przy dalszym parsowaniu ścieżki.
+ Z powyższych testów wynikało jednak, że dostawiony backslash jest błędny
+ i usuwany podczas przekazywania komendy do konsoli Windowsa.
+ Zmieniono tą część kodu i wpisano na sztywno: 
+\family typewriter
+self._daemon['command'].append("/".join((system['root'], utils', 'daemon.py'))).
+
+\family default
+ Poprawka w kodzie pozwoliła aplikacji odpowiednio zinterpretować ścieżki.
+ Do konsoli Windows została przekazana następująca komenda: 
+\family typewriter
+C:/BlenderVR/Required/Python3/python.exe C:/BlenderVR/source/utils/daemon.py
+\family default
+.
+ Wpis w okienku logowania „Daemon for screen console started” oznajmił,
+ że konfiguracja jest prawidłowa i załadowana.
+ Następnie wybrano jedną z dostępnych scen przykładowych.
+ Załadowano ją wraz z odpowiadającym jej plikiem procesora dla sceny.
+ Po przejściu do zakładki „run” i kliknięciu przycisku startu na ekranie
+ pojawiła się wybrana scena.
+ Próba uruchomienia w podstawowej konfiguracji zakończyła się sukcesem.
+ 
+\end_layout
+
+\begin_layout Subsection
+Działanie aplikacji BlenderVR w innych konfiguracjach
+\end_layout
+
+\begin_layout Standard
+Po udanej próbie uruchomienia BlenderVR w konfiguracji podstawowej kolejnym
+ punktem jest test z użyciem dwóch stanowisk.
+ Nastąpi próba połączenia przez protokół SSH, który nie jest natywnie wbudowany
+ w system Windows.
+ Zostanie użyty program, który umożliwi uruchomienie serwera oraz klienta
+ protokołu SSH.
+ Wybranym programem jest prosty w obsłudze OpenSSH.
+ 
+\end_layout
+
+\begin_layout Standard
+BlenderVR wymaga by połączenie między komputerami nie wymagało hasła.
+ Oba stanowiska zostały wymienione kluczami SSH.
+ Przy załadowaniu odpowiednio napisanej konfiguracji nastąpi próba połączenia
+ oraz uruchomienie demona na obu stanowiskach.
+ 
+\end_layout
+
+\begin_layout Standard
+Podstawy pliku konfiguracyjnego pozostają te same: oba środowiska uruchomieniowe
+ posiadają identyczną architekturę.
+ Dzięki temu wystarczy jedynie dopisać dodatkowe komputery do ustawień wraz
+ z ich adresami IP.
+ 
+\end_layout
+
+\begin_layout Standard
+Procedura uruchamiania BlenderVR w tym przypadku jest taka sama jak przy
+ teście wykonanym na jednym stanowisku.
+ Załadowanie pliku konfiguracyjnego jednak wyświetliło błąd jak poprzednio:
+ cannot start daemon for screen dual.
+ Po pierwsze sprawdzono czy połączenie SSH jest możliwe wraz ze zdalnym
+ uruchomieniem Pythona.
+ Poprzez konsolę Windowsa udało się bez problemów podłączyć do drugiego
+ komputera.
+ Problem nie leżał w samym połączeniu.
+ Raz jeszcze został zweryfikowany plik konfiguracyjny, ale nie znaleziono
+ w nim błędów.
+ Próba wykonania tego samego polecenia co aplikacje BlenderVR zwraca komunikat
+ o nieistniejącym pliku.
+ Podłoże tego problemu najprawodpodobniej leży w ograniczeniach nałożonych
+ na konto, które nie ma praw administratora komputera.
+ W laboratorium konta dostępne do testów miały wystarczające uprawnienia
+ by instalować i uruchamiać większość programów znajdujących się poza dyskiem
+ C (lub pewnymi jego katalogami).
+ Sesja SSH nie posiadała wszystkich zmiennych środowiskowych oraz była uruchamia
+na w ograniczonym środowisku co powodowało problemy ze zdalnym uruchomieniem
+ skryptu demona.
+ <TUTAJ DODAĆ JAKIEŚ ZAKOŃCZENIE> 
+\end_layout
+
+\begin_layout Subsection
+Środowisko wdrożeniowe systemu operacyjnego Linux
+\end_layout
+
+\begin_layout Standard
+Hardware'owa konfiguracja stanowiska PC jest identyczna jak w przypadku
+ systemu Windows.
+ Zainstalowaną dystrybucją linuxa jest CentOS w wersji 6.8.
+ Pakiety zainstalowane domyślnie w systemie:
+\end_layout
+
+\begin_layout Itemize
+Python 2.7
+\end_layout
+
+\begin_layout Itemize
+Qt4
+\end_layout
+
+\begin_layout Itemize
+gmake
+\end_layout
+
+\begin_layout Itemize
+glibc 2.12
+\end_layout
+
+\begin_layout Standard
+Instalacja pakietów w systemie Linux jest utrudniona z powodu braku dostępu
+ do Internetu.
+ Każdy wymagany pakiet musi zostać dostarczony z zewnątrz, skonfigurowany
+ i zainstalowany.
+ Konto użytkownika nie miało praw super-user więc każdy z pakietów był instalowa
+ny do katalogu domowego użytkownika, a następnie każdy został dodany do
+ zmiennej środowiskowej PATH.
+\end_layout
+
+\begin_layout Subsection
+Instalacja aplikacji BlenderVR w systemie operacyjnym Linux
+\end_layout
+
+\begin_layout Standard
+Instalacja wszystkich niezbędnych pakietów w środowisku Linux jest procesem
+ bardziej skomplikowanym niż w przypadku systemu Windows.
+ Instrukcja dostępna na stronie dewelopera aplikacji nie jest dokładna i
+ wiele wyników poprawnej konfiguracji jest na podstawie metody prób i błędów.
+ Wszystkie pakiety dostarczone były jako źródła oraz kompilowane i instalowane
+ na stanowiskach, ponieważ sieć odcięta była od Internetu.
+ 
+\end_layout
+
+\begin_layout Standard
+Pakietem, który jest wymagany podczas procesu instalacji wszystkich zależności
+ jest przede wszystkim cmake.
+ Był on już zainstalowany na stanowiskach w laboratorium, dlatego pominięto
+ ten krok w opisie.
+ 
+\end_layout
+
+\begin_layout Standard
+Podstawowym wymaganym programem jest Python w wersji 3.4.
+ Należy skompilować źródła z dodatkową flagą 
+\family typewriter
+--enable-shared
+\family default
+.
+ Nie jest to zawarte w instrukcji na stornie dewelopera i powoduje problemy
+ przy kompilacji pakietu PySide w dalszej części procesu.
+ Jedyna wzmianka znaleziona o problemie oraz rozwiązaniu znajduje się w
+ sekcji często zadawanych pytań.
+ 
+\end_layout
+
+\begin_layout Standard
+Kolejnym wymaganym pakietem jest Qt4 wraz z development headers.
+ Nagłówki funkcji mogą być dostępne w osobnym pakiecie np.
+ libqt4-dev.
+ W takim wypadku należy skompilować i zainstalować podstawowe biblioteki
+ qt4 oraz nagłówki.
+ Jest to wymagane przez pakiet PySide.
+ Źródła Qt4 dostępne są na stronie deweloperów.
+\end_layout
+
+\begin_layout Standard
+Źródła Pythona3.4 nie zawsze zawierają w sobie modułu PIP.
+ Należy spróbować wykonać polecenie 
+\family typewriter
+pip3 install virtualenv
+\family default
+.
+ Jeśli PIP nie jest zainstalowany najłatwiej użyć polecenia: 
+\family typewriter
+python get-pip.py
+\family default
+ lub ściągnąć źródło ze strony https://pypi.python.org.
+ 
+\end_layout
+
+\begin_layout Standard
+Następnym krokiem jest kompilacja PySide.
+ W laboratorium użyto wersji 1.2.2 – taką, jakiej zalecają deweloperzy.
+ Pakiet został skompilowany z domyślnymi ustawieniami.
+ W tym kroku wystąpiło najwięcej problemów z kompilacją.
+ Pierwszym napotkanym był problem z brakiem bibliotek Pythona, gdy ten został
+ wcześniej skompilowany bez flagi 
+\family typewriter
+--enable-shared
+\family default
+.
+ Kolejnym błędem był brak pakietu qmake4.
+ W poprzednim kroku został zainstalowany Qt4 wraz z qmake4.
+ By usunąć błąd należało dodać dodatkową opcję ze ścieżką do programu qmake:
+ 
+\family typewriter
+python3 /home/cezmurgr/PySide-1.2.4/setup.py install --qmake /usr/bin/qmake-qt4
+\family default
+.
+ Po rozwiązaniu tych dwóch problemów, kompilacja i instalacja PySide przebiegła
+ pomyślnie.
+ 
+\end_layout
+
+\begin_layout Standard
+Ostatnim niezbędnym pakietem jest VirtualEnv.
+ Pakiet pozwala utworzyć wirtualne środowisko uruchomieniowe.
+ Podczas kompilacji i następnie instalacji pakietu nie wystąpiły żadne problemy.
+ 
+\end_layout
+
+\begin_layout Standard
+Podsumowując: niewiele czasu pochłonęło ściąganie oraz przerzucanie przez
+ dysk zewnętrzny pakietów.
+ Najwięcej czasu poświęcono jednak kompilacji i instalacji z nie do końca
+ jasnymi instrukcjami.
+ Większość kompilacji zakończyła się niepowodzeniem, ponieważ zabrakło konkretne
+j opcji przy konfiguracji poprzedniego pakietu, lub pakiet był instalowany
+ w złej kolejności.
+\end_layout
+
+\begin_layout Subsection
+Uruchomienie aplikacji BlenderVR w systemie Linux
+\end_layout
+
+\begin_layout Standard
+W przypadku środowiska Linux uruchomienie następuje przez polecenia w terminalu.
+ Należy użyć komend w kolejności:
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ cd $INSTALL_DIR 
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ source venv/bin/activate 
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+$ ./source/blendervr
+\end_layout
+
+\begin_layout Standard
+Niestety, pierwsze uruchomienie się nie powiodło, a w terminalu pokazał
+ się błąd:
+\family typewriter
+ /home/cezmurgr/pajton3/bin/python3: error while loading shared libraries:
+ libpython3.4m.so.1.0: cannot open shared object file: No such file or directory
+\family default
+.
+ Problem rozwiązano poprzez eksport nowej zmiennej środowiskowej o nazwie:
+ 
+\family typewriter
+LD_LIBRARY_PATH=LD_LIBRARY_PATH=/home/cezmurgr/pajton3/lib
+\family default
+.
+ Zmienna wskazuje na katalog, w którym znajduje się 
+\family typewriter
+libpython3.4m.so.1.0
+\family default
+.
+ Dzięki temu BlenderVR uruchomił się zgodnie z założeniami.
+ Na ekranie pokazał się interfejs aplikacji.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Testy z wykorzystaniem dwóch stanowisk PC
+\end_layout
+
+\begin_layout Standard
+Środowisko jaskini wirtualnej rzeczywistości wymaga współpracy kilku stanowisk
+ komputerowych.
+ W tym celu każde z nich musi zostać wyposażone w aplikację pokazującą obraz
+ z perspektywy danego urządzenia wyświetlającego.
+ BlenderVR wykorzystując protokół SSH potrafi zarządzać swoimi kopiami na
+ komputerach typu 
+\begin_inset Quotes pld
+\end_inset
+
+slave
+\begin_inset Quotes prd
+\end_inset
+
+.
+ Jeden komputer zdefiniowany jako nadrzędny
+\begin_inset Quotes pld
+\end_inset
+
+master
+\begin_inset Quotes prd
+\end_inset
+
+ może uruchamiać oraz synchronizować inne instancje BlenderVR na komputerach
+ typu 
+\begin_inset Quotes pld
+\end_inset
+
+slave
+\begin_inset Quotes prd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Na tej zasadzie jedno ze stanowisk w laboratorium stało się nadrzędne względem
+ drugiego stanowiska -
+\begin_inset Quotes pld
+\end_inset
+
+slave'a
+\begin_inset Quotes prd
+\end_inset
+
+.
+ Na obu komputerach zainstalowano w ten sam sposób aplikację BlenderVR.
+ Niestety system operacyjny Windows nie posiada wbudowanego protokołu SSH.
+ Program OpenSSH for Windows pozwolił na uzyskanie bezpośredniego połącznia
+ przez ten protokół.
+ Między komputerami wymieniono klucze do identyfikacji.
+ Pozwoliło to na połączenie nie wymagające hasła.
+ Jest to jeden z wymogów aplikacji BlenderVR do jej poprawnego działania.
+\end_layout
+
+\begin_layout Standard
+W przypadku połączenia między wieloma komputerami należy w plik konfiguracyjny
+ wpisać każdy z komputerów podrzędnych.
+ W sekcji <computers> każda z wpisanych jednostek powinna zawierać:
+\end_layout
+
+\begin_layout Itemize
+Nazwę własną
+\end_layout
+
+\begin_layout Itemize
+Adres IP w sieci
+\end_layout
+
+\begin_layout Itemize
+Ścieżkę do katalogu głównego aplikacji BlenderVR
+\end_layout
+
+\begin_layout Itemize
+Ścieżkę do katalogu z przykładowymi scenami
+\end_layout
+
+\begin_layout Itemize
+Ścieżkę do głównego katalogu systemu (w tym przypadku do katalogu Windows)
+\end_layout
+
+\begin_layout Itemize
+Ścieżkę do BlenderPlayer z Blendera3D
+\end_layout
+
+\begin_layout Standard
+BlenderVR przy połączeniu do drugiego stanowiska próbuje uruchomić na nim
+ skrypt
+\begin_inset Quotes pld
+\end_inset
+
+demona
+\begin_inset Quotes prd
+\end_inset
+
+ - programu działającego w tle, który cały czas przetwarza dane lub wykonuje
+ pewne czynności
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.python.rk.edu.pl/w/p/proste-demony-uniksowe-w-pythonie/ (dostęp:
+ 16.06.2016)
+\end_layout
+
+\end_inset
+
+.
+ Odpowiednio zapisany plik konfiguracyjny został załadowany do aplikacji.
+ Niestety konsola z informacjami wyświetliła błąd
+\begin_inset Quotes pld
+\end_inset
+
+Error: Cannot start daemon for screen <screenName>
+\begin_inset Quotes prd
+\end_inset
+
+.
+ Na stronie BlenderVR błąd jest rozpoznany i według autora rozwiązania problem
+ występuje jeśli połączenie miedzy komputerami wymaga hasła.
+ Błąd w tym przypadku nie powinien występować ponieważ komputery zostały
+ wymienione kluczami.
+ Połączenie SSH zostało przetestowane poprzez konsolę Windowsa i nie wymagało
+ użycia hasła.
+ Po konsultacji jeden z twórców oprogramowania polecił sprawdzić czy polecenie
+ wykonywane przez BlenderVR można również wykonać ręcznie przez konsolę.
+ Ręczne wykonanie nie zwróciło jednak żadnego błędu; komenda wykonała się
+ poprawnie.
+\end_layout
+
+\begin_layout Standard
+Problemem w tym przypadku może być konfiguracja serwera SSH, które nie pozwala
+ na logowanie jako administrator.
+ Logowanie przez protokół na komputer podrzędny odbywało się przy użyciu
+ konta z prawami administratora.
+ Zanim stanowiska zostały wymienione kluczami, do logowania było wymagane
+ hasło takie samo jak przy logowaniu użytkownika na docelowym systemie.
+ Teoretycznie rzecz biorąc po zalogowaniu się przez SSH, użytkownik powinien
+ mieć wszystkie niezbędne prawa do zarządzania komputerem.
+\end_layout
+
+\begin_layout Standard
+Kolejną możliwością jest brak praw administratorskich środowiska Python.
+ Skrypt wykonywany przez aplikację BlenderVR wymaga uruchomienia najpierw
+ Pythona a później skryptu demona.
+ Być może uruchamia się on bez praw administratora co nie pozwala mu na
+ działanie w tle.
+\end_layout
+
+\begin_layout Standard
+<tutaj coś jeszcze rozwinąć>
+\end_layout
+
+\begin_layout Subsection
+Krótki test w środowisku Linux <<lub 4.0 jako kolejny rozdział>>
+\end_layout
+
+\begin_layout Standard
+Powyższe próby implenetacji oraz uruchomienia aplikacji BlenderVR pokazały,
+ że nie jest on w pełni dostosowany do systemu operacyjnego jakim jest Windows.
+ Brak najprostszych protokołów komunikacyjnych oraz słabe zarządzanie prawami
+ administatora (uruchamiane programy użytkownika z pełnią praw nie zawsze
+ te prawa dziedziczą) spowodowały problemy i przestoje w implementacji BlenderVR.
+ Aplikacja mimo swojej wieloplatformowości zdecydowanie trudniej implementuje
+ się na systemach Windows.
+\end_layout
+
+\begin_layout Standard
+Postanowiono przeprowadzić krótki test implementacji w środowisku Linux
+ by sprawdzić czy BlenderVR poradzi sobie lepiej w tym przypadku.
+ Test został przeprowadzony na dwóch maszynach wirtualnych, na których był
+ zainstalowany Debian8.5.
+ Nie ma automatycznego instalatora dla środowiska Linux więc wykonano po
+ kolei instalację paczek według instrukcji na stronie BlenderVR.
+\end_layout
+
+\begin_layout Enumerate
+Instalacja Blender3D w wersji 2.75 lub nowszej
+\end_layout
+
+\begin_layout Enumerate
+Ściągnięcie oraz rozpakowanie BlenderVR oraz przykładowych scen
+\end_layout
+
+\begin_layout Enumerate
+Instalacja zależności
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Python3.4 - użyta w teście kompilacja Debiana posiadała juz zainstalowanego
+ Pythona w wersji 3.4.
+\end_layout
+
+\begin_layout Enumerate
+Qt4.8 - pakiet Qt wymagany przy kompilacji PySide1.2.2 (patrz niżej).
+ Nazwa paczki w repozytorium: qt4-dev-tools
+\end_layout
+
+\begin_layout Enumerate
+PIP - pakietu brakowało więc został ściągnięty ze strony https://pip.pypa.io/en/la
+test/installing/ oraz zainstalowany poleceniem python3 get-pip.py
+\end_layout
+
+\begin_layout Enumerate
+Virtualenv - wirtualne środowisko dla Pythona.
+ Instalowane przy pomocy polecenia pip3 install virtualenv.
+ Tutaj od instrukcji jest pewne odstępstwo gdyż zamiast polecenia pyvenv
+ lub pyvenv-3.4 należy użyć virtualenv
+\end_layout
+
+\begin_layout Enumerate
+PySide1.2.2 - paczka pobrana i skompilowana w uruchomionym już środowisku
+ wirtualnym Pythona.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Mając zainstalowane wszystkie zależności wystarczy aktywować środowisko
+ wirtualne i uruchomić plik blendervr.
+ Pojawi się okno z ustawieniami a konsola terminala może posłużyć za narzędzie
+ do wyszukiwania błędów.
+\end_layout
+
+\begin_layout Standard
+Tak samo jak w przypadku testu w środowisku Windows: oba komputery zostały
+ wymienione kluczami do połączenia SSH.
+ Krótki test połączenia pokazał, że nie wymaga ono hasła.
+ Ustawienia BlenderVR zostały odpowiednio dostosowane do ścieżek systemu
+ operacyjnego.
+ Po załadowaniu konfiguracji w konsoli nie pojawił się żaden błąd.
+ Wybranie ustawień ekranu oraz sceny przykładowej również nie pokazało żadnego
+ błędu.
+ Scena została uruchomiona na komputerze podrzędnym.
+ Test został zakończony sukcesem.
+\end_layout
+
+\begin_layout Section
+Analiza i wnioski
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+<<do wykorzystania we wnioskach; na sam koniec, albo gdzieś>>
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Wady i zalety aplikacji BlenderVR
+\begin_inset Newline newline
+\end_inset
+
+Źródło: Opracowanie własne
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="7cm">
+<column alignment="center" valignment="top" width="7cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Zalety
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Wady
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dość prosta obsługa
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Problematyczna implementacja na systemie Windows
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Duża skalowalność
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Samoczynne dostosowanie kamer na scenie BGE
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Łączenie komputerów przez SSH
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Obsługa wielu systemów wyświetlających (CAVE, HMD, monitor, wiele monitorów)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

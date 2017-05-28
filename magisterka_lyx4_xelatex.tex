@@ -1,6 +1,7 @@
 %% LyX 2.2.0 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
 \documentclass[11pt]{article}
+\renewcommand{\ttdefault}{lmtt}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{geometry}
@@ -34,12 +35,10 @@
 \providecommand{\tabularnewline}{\\}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
-\hyphenation{MechWarrior przes-trzen-nej u-żyt-kow-ni-ka jas-ki-ni jas-ki-nia naj-waż-niej-szy-mi do-łą-czo-no u-sta-wio-ne przy-sto-so-wa-nym}
+\hyphenation{MechWarrior przes-trzen-nej u-żyt-kow-ni-ka jas-ki-ni jas-ki-nia naj-waż-niej-szy-mi do-łą-czo-no u-sta-wio-ne przy-sto-so-wa-nym prze-tes-to-wa-ne}
+\sloppy
 
 \makeatother
-
-\usepackage{listings}
-\renewcommand{\lstlistingname}{\inputencoding{latin2}Listing}
 
 \begin{document}
 tutaj strona główna
@@ -405,7 +404,7 @@ znanych i mniej znanych firm przystosowanych specjalnie do smartfonów.
 Wybór wśród nich jest więc znacznie wiekszy niż w przypadku CAVE'ów,
 które często muszą instalować i częściowo obsługiwać zewnętrzne firmy.
 
-\section{Próba implementacji BlenderVR w środowisku wirtualnej jaskini CAVE}
+\section{Opis aplikacji BlenderVR}
 
 \subsection{Opis aplikacji\protect\footnote{Strona instytutu LIMSI we Francji https://blendervr.limsi.fr/doku.php
 (dostęp 07.05.20016)}}
@@ -469,7 +468,6 @@ wtyczek. Plik ustawień zapisywany jest w formacie XML. Ułatwia to
 edycję ponieważ wystarczy do tego zwykły edytor plików tekstowych.
 Przykładowa konfiguracja dla CAVE w systemie Linux:
 
-\inputencoding{latin2}\begin{lstlisting}[basicstyle={\scriptsize}]
 <?xml version="1.0"?>
 <blendervr>
   <starter anchor='/tmp/console' blender='/usr/local/blender/2.74/bin/blender'>
@@ -478,7 +476,7 @@ Przykładowa konfiguracja dla CAVE w systemie Linux:
 </config>
   </starter>
   <users>
-    <user name='user A' />
+<user name='user A' />
   </users>
   <!-- Here, we define the console parameters -->
   <computers>
@@ -536,10 +534,10 @@ python='/usr/local/blender/2.74/dependencies/bin/python3.3'/>
   <corner name='bottomRightCorner'>1.0, -1.0, 1.0</corner>
       </wall>
     </screen>
-  </screens>
+</screens>
   <plugins>
-    <vrpn>
-      <floor x='0.0'/>
+<vrpn>
+<floor x='0.0'/>
       <tracker device='GTK' host='localhost'>
   <transformation>
     <post_translation z='-1.6'/>
@@ -556,8 +554,6 @@ python='/usr/local/blender/2.74/dependencies/bin/python3.3'/>
     </vrpn>
   </plugins>
 </blendervr>
-\end{lstlisting}
-\inputencoding{utf8}
 
 \subsubsection*{Sekcja <Starter>}
 
@@ -594,60 +590,23 @@ podsekcji, które warto opisać:
 \begin{itemize}
 \item Library Path - pluginy często wymagają dostępu do zewnętrznych bibliotek.
 W tej podsekcji możemy wskazać gdzie znajdują się niezbędne pliki.
-Np: <library path=\textquotedbl{}/usr/local/lib/vrpn/\textquotedbl{}
-/>
+Np: \texttt{<library path=\textquotedbl{}/usr/local/lib/vrpn/\textquotedbl{}
+/>}.
 \item Login - precyzuje jak wygląda komenda połączenia się z komputerami
-odpowiedzialnymi za renderowanie. Np: <login remote\_command=\textquotedbl{}ssh
-me@host\textquotedbl{} python=\textquotedbl{}/usr/bin/python3\textquotedbl{}/>
+odpowiedzialnymi za renderowanie. Np: \texttt{<login remote\_command=\textquotedbl{}ssh
+me@host\textquotedbl{} python=\textquotedbl{}/usr/bin/python3\textquotedbl{}/>}.
 \item Daemon - opcje dotyczące uruchomienia demona. Parametr \textbf{Transmit}
 decyduje czy demon przesyła zmienne środowiskowe do blendera kiedy
 go uruchamia. \textbf{Environment} natomiast dodaje specyficzne zmienne
 środowiskowe dla samego demona.
-\item Blenderplayer - w tej podsekcji 
+\item Blenderplayer - w tej podsekcji ustawiona jest ścieżka do aplikacji
+blenderplayer.
 \end{itemize}
 
-\subsection{Założenia projektu}
-
-Niniejszy projekt zakłada wdrożenie aplikacji BlenderVR w środowisku
-wirtualnej rzeczywistości CAVE w Laboratorium Zanurzonej Wizualizacji
-Przestrzennej (LZWP) znajdującym się na Politechnice Gdańskiej. Po
-wdrożeniu i przetestowaniu zostanie również stworzona dedykowana scena
-do symulacji specjalnie dla Politechniki Gdańskiej. Dodatkowo wykorzystane
-zostanie oprogramowanie do obsługi zewnętrznych kontrolerów pozwalających
-na kontrolowanie sceny. Z uwagi na wysokie koszty uruchomieniowe oraz
-zużycie materiałów prawdziwego CAVE’a konfigurowanie przeprowadzone
-zostanie w specjalnie przygotowanym laboratorium testowym.
-
-Proces wdrożenia aplikacji:
-\begin{enumerate}
-\item Wdrożenie aplikacji na laboratorium testowym na środowisku jednego
-komputera
-
-\begin{enumerate}
-\item Zainstalowanie aplikacji
-\item Dostosowanie konfiguracji BlenderVR do warunków laboratoryjnych
-\item Testowanie aplikacji przy użyciu przykładowych scen
-\end{enumerate}
-\item Powtórzenie kroku 1. dla specjalnego zestawu komputerów symulujących
-architekture wirtualnej jaskini - MidiCAVE
-\item Kompilacja i ustawienie plugina do obsługi kontrolerów – VRPN
-\item Podłączenie wtyczki VRPN do BlenderVR oraz test całości na MidiCAVE
-\item Przeprowadzenie powyższych działań w środowisku docelowym – jaskini
-wirtualnej rzeczywistości CAVE
-\end{enumerate}
-Pierwsze prawdziwe testy implementacyjne odbędą się w laboratorium
-testowym – MidiCAVE. Jest to symulacja struktury prawdziwego CAVE'a
-jednak do testów używa się komputerów spiętych w sieć i monitorów.
-Konfiguracja aplikacji powinna więc pozostać taka sama: każdy z monitorów
-odwzorowuje jedną ze ścian prawdziwej jaskini. Również dopiero w tej
-fazie zostanie pierwszy raz skompilowana i przetestowana wtyczka do
-obsługi urządzeń peryferyjnych z użyciem śledzenia okularów oraz kontrolera
-FlyStick.
-
-\subsection{Instalacja i testy aplikacji w Laboratorium Zanurzonej Wizualizacji
+\section{Instalacja i testy aplikacji w Laboratorium Zanurzonej Wizualizacji
 Przestrzennej}
 
-\subsubsection{Środowisko testowe}
+\subsection{Środowisko wdrożeniowe systemu Windows}
 
 Test aplikacji BlenderVR został przeprowadzony na specjalnie przygotowanych
 stanowiskach komputerowych. W skład jednostki testowej wchodził sprzęt:
@@ -656,56 +615,230 @@ stanowiskach komputerowych. W skład jednostki testowej wchodził sprzęt:
 
 \begin{itemize}
 \item procesor Intel Xeon E5-1630
-\item karta graficzna Nvidia Quadro
+\item karta graficzna Nvidia Quadro k5200
 \item 32 GB pamięci RAM
 \item Dysk HDD o pojemności 500 GB
 \end{itemize}
 \item Monitor ASUS 24'' z możliwością wyświetlenia obrazu 3D. Częstotliwość
-odświeżania wynosi 120Hz
+odświeżania do 144Hz
 \item Aktywne okulary 3D
 \end{itemize}
 System operacyjny zainstalowany na jednostkach testowych to Windows
 7 Professional. Każdy komputer wpięty został w tę samą sieć Ethernet.
-Żaden z komputerów nie ma dostępu do Internetu. Wszystkie niezbędne
-programy oraz pakiety zostały dostarczone ze źródeł zewnętrznych przy
-użyciu dysku przenośnego.
+Żaden nie ma dostępu do Internetu. Wszystkie niezbędne programy oraz
+pakiety zostały dostarczone ze źródeł zewnętrznych przy użyciu dysku
+przenośnego.
 
-\subsubsection{Testy z wykorzystaniem jednego stanowiska PC}
+\subsection{Instalacja aplikacji BlenderVR w systemie operacyjnym Windows}
 
-Do instalacji programu wykorzystano gotowy pakiet instalacyjny. Zawierał
-on zarówno źródła aplikacji jak i wszystkie potrzebne programy do
-jego uruchomienia: Python3.4 oraz Qt4.8. Automatyczny instalator sam
-dodaje zmienną środowiskową Pythona oraz BlenderVR. Pakiet instalacyjny
-ma również opcję automatycznego uruchomienia skryptu przygotowującego
-do pierwszego uruchomienia aplikacji. Skrypt automatycznie dodaje
-odpowiednie wpisy do rejestru, instaluje dwa dodatkowe pakiety do
-Pythona: VirtualEnv oraz PySide 1.2.2. Kolejnym krokiem jest zainstalowanie
-programu Blender3D, z którego będzie korzystał BlenderVR. Tak skonfigurowane
-środowisko jest już gotowe do pracy.
+Deweloperzy dostarczają gotową paczkę instalacyjną. Należy ściągnąć
+instalator ze strony internetowej oraz go uruchomić. Podczas procesu
+oprócz BlenderVR zostanie zainstalowany również Python oraz pakiet
+bibliotek graficznych Qt4.8. W systemie dodatkowo zostaną utworzone
+ścieżki tak, by aplikacja przy uruchomieniu nie miała problemów ze
+znalezieniem wszystkich zależności. W laboratorium instalacja paczki
+BlenderVR przebiegła pomyślnie i bez żadnych problemów.
 
-Kolejnym krokiem jest przygotowanie pliku konfiguracyjnego. Do źródeł
-aplikacji dołączono kilka przykładowych konfiguracji zależnie od systemu
-operacyjnego oraz środowiska, w~którym będzie testowana aplikacja.
-Na początek wystarczy sprawdzić czy program uruchamia przykładową
-scenę oraz czy konsola nie pokazuje żadnego błędu. Do tego wykorzystany
-zostanie plik konfiguracyjny przygotowany dla Windowsa. W pliku zmieniono
-odpowiednio ścieżki dostępu do Blendera3D oraz BlenderPlayer. Wyświetlanie
-obrazu 2D zostało ustawione jako okno o rozmiarze 400x400 pikesli.
-Konfiguracja została zapisana oraz załadowana do programu. Przykładowa
-scena wybrana do pierwszego testu to basic.blend. <\textcompwordmark{}<tu
-dopisać coś co znajduje się na tej przykładowej scenie>\textcompwordmark{}>.
-Próba zakończyła się sukcesem. Na monitorze wyświetlona została przykładowa
-scena w oknie.
+\subsection{Uruchomienie aplikacji BlenderVR w systemie operacyjnym Windows}
 
-Następna faza testu sprawdzi czy aplikacja wyświetli obraz stereoskopowy
-na przystosowanym do tego monitorze. Do pliku konfiguracyjnego dodano
-ustawienia ekranu o nazwie Quadbuffer z opcją,,hwpageflip''. Opcja
-pozwala na zdefiniowanie dwóch buforów graficznych - jeden dla prawego
-i jeden dla lewego oka. Monitor przystosowany do wyświetlania obrazu
-3D pozwala na wyższą częstotliwość odświeżania ekranu dzięki czemu
-można otrzymać stabilne 60 klatek dla każdego oka oddzielnie. I w
-tym przypadku próba zakończyła się sukcesem. Na monitorze ukazał się
-obraz, który po założeniu okularów 3D sprawiał wrażenie trójwymiarowego.
+W przypadku systemu operacyjnego Windows uruchomienie jest proste.
+Wystarczy użyć skrótu na pulpicie, który jest tworzony po zainstalowaniu
+gotowej paczki. Przygotowano odpowiedni plik konfiguracyjny dla systemu
+Windows na bazie przykładu dostępnego na stronie dewelopera: 
+
+<?xml version=\textquotedbl{}1.0\textquotedbl{}?> 
+
+	<blendervr>     
+
+	 <starter blender=\textquotedbl{}C:/blender/blender.exe\textquotedbl{}> 
+
+<config name=\textquotedbl{}Fullscreen\textquotedbl{}>fullscreen</config>
+  
+
+<config name=\textquotedbl{}Console\textquotedbl{}>console</config>
+      
+
+	<config name=\textquotedbl{}Split\textquotedbl{}>console half left,
+console half right</config>   
+
+</starter>  
+
+<users> 
+
+<user name=\textquotedbl{}user A\textquotedbl{} />  
+
+</users>   
+
+<computers>   
+
+<system> 
+
+<daemon transmit=\textquotedbl{}True\textquotedbl{}>
+
+<environment>SystemRoot=C:/Windows</environment>
+
+</daemon>   
+
+<blenderplayer executable=\textquotedbl{}C:/blender/blenderplayer.exe\textquotedbl{}
+/>
+
+</system>  
+
+      <computer name=\textquotedbl{}Any\textquotedbl{} hostname=\textquotedbl{}{*}\textquotedbl{}
+/> 
+
+   </computers>  
+
+  <screens>    
+
+    <screen name=\textquotedbl{}fullscreen\textquotedbl{} computer=\textquotedbl{}Any\textquotedbl{}>
+ 
+
+           <display options=\textquotedbl{}-f\textquotedbl{}> 
+
+           <graphic\_buffer buffer=\textquotedbl{}mono\textquotedbl{}
+user=\textquotedbl{}user A\textquotedbl{} eye=\textquotedbl{}middle\textquotedbl{}
+/>
+
+           </display>  
+
+          <wall>   
+
+             <corner name=\textquotedbl{}topRightCorner\textquotedbl{}>1.0,
+1.0, -1.0</corner> 
+
+             <corner name=\textquotedbl{}topLeftCorner\textquotedbl{}>-1.0,
+1.0, -1.0</corner> 
+
+             <corner name=\textquotedbl{}bottomRightCorner\textquotedbl{}>1.0,
+-1.0, -1.0</corner> 
+
+           </wall>     
+
+   </screen>    
+
+   <screen name=\textquotedbl{}console\textquotedbl{} computer=\textquotedbl{}Any\textquotedbl{}>
+   
+
+      	 <display options=\textquotedbl{}-w 400 400\textquotedbl{}> 
+
+           <graphic\_buffer buffer=\textquotedbl{}mono\textquotedbl{}
+user=\textquotedbl{}user A\textquotedbl{} eye=\textquotedbl{}middle\textquotedbl{}
+/>
+
+           </display>   
+
+         <wall>        
+
+        <corner name=\textquotedbl{}topRightCorner\textquotedbl{}>1.0,
+1.0, -1.0</corner>  
+
+             <corner name=\textquotedbl{}topLeftCorner\textquotedbl{}>-1.0,
+1.0, -1.0</corner>   
+
+             <corner name=\textquotedbl{}bottomRightCorner\textquotedbl{}>1.0,
+-1.0, -1.0</corner>  
+
+          </wall>   
+
+     </screen>   
+
+     <screen name=\textquotedbl{}console half left\textquotedbl{}
+computer=\textquotedbl{}Any\textquotedbl{}> 
+
+           <display options=\textquotedbl{}-w 400 400 200 300\textquotedbl{}>
+
+            <graphic\_buffer user=\textquotedbl{}user A\textquotedbl{}
+/>
+
+            </display>
+
+            <wall>
+
+                <corner name=\textquotedbl{}topRightCorner\textquotedbl{}>0.0,
+1.0, -1.0</corner>
+
+                <corner name=\textquotedbl{}topLeftCorner\textquotedbl{}>-1.0,
+1.0, -1.0</corner>
+
+                <corner name=\textquotedbl{}bottomRightCorner\textquotedbl{}>0.0,
+-1.0, -1.0</corner>
+
+            </wall>
+
+      </screen>
+
+      <screen name=\textquotedbl{}console half right\textquotedbl{}
+computer=\textquotedbl{}Any\textquotedbl{}>
+
+            <display options=\textquotedbl{}-w 400 400 600 300\textquotedbl{}>
+
+                <graphic\_buffer user=\textquotedbl{}user A\textquotedbl{}
+/>
+
+            </display>
+
+            <wall>
+
+                <corner name=\textquotedbl{}topRightCorner\textquotedbl{}>1.0,
+1.0, -1.0</corner>
+
+                <corner name=\textquotedbl{}topLeftCorner\textquotedbl{}>0.0,
+1.0, -1.0</corner>
+
+                <corner name=\textquotedbl{}bottomRightCorner\textquotedbl{}>1.0,
+-1.0, -1.0</corner>
+
+            </wall>
+
+</screen>
+
+    </screens>
+
+    <plugins></plugins>
+
+</blendervr>
+
+Po pierwszej próbie uruchomienia BlenderVR konsola systemu Windows
+zwróciła błąd: \texttt{C:\textbackslash{}BlenderVR\textbackslash{}Required\textbackslash{}Python3\textbackslash{}python.exe: Can't
+open file C:/BlenderVR/source/utilsdaemon.py}. Natomiast okienko logowania
+BlenderVR wyświetliło komendę, która była wykonywana przy ładowaniu
+pliku: \texttt{C:/BlenderVR/Required/Python3/python.exe C:/BlenderVR/source/utils\textbackslash{}daemon.py}.
+Wiersz tekstu w pliku konfiguracyjnym odpowiedzialny za początek ścieżki:
+\texttt{<system root='C:/BlenderVR/source/'>} oraz za wykonanie polecenia
+uruchomienia skryptu: \texttt{C:/BlenderVR/Required/Python3/python.exe}.
+Wyglądało na to, że aplikacja dodaje do ścieżki katalog oraz skrypt
+do uruchomienia jednak z błędnym znakiem separacji katalogów. Zwrócono
+uwagę na to, że program nie parsuje wszystkich ścieżek odpowiednio
+do systemu operacyjnego. W systemach Windows używany jest znak '\textbackslash{}'
+jako separator katalogów. W przykładowym pliku konfiguracyjnym na
+stronie dewelopera (na podstawie którego pisany był plik aktualnie
+testowany) znajdują się ścieżki pisane w stylu unixowym. Zmiana znaków
+w pliku konfiguracyjnym ze \textquotedbl{}slash\textquotedbl{} na
+\textquotedbl{}backslash\textquotedbl{} spowodowała inny błąd. Tym
+razem w oknie logowania wyświetlone zostało \texttt{C:BlenderVRRequiredPython3Python.exe
+command not found}. Zdiagnozowano dzięki temu problem z parsowaniem
+znaków '/' i '\textbackslash{}' przez aplikację.
+
+Moduł odpowiedzialny za ładowanie demona został znaleziony w pliku:
+\texttt{BlenderVR/modules/blendervr/console/logic/screen.py}. Fragment
+kodu: \texttt{self.\_daemon{[}'command'{]}.append(os.path.join(system{[}'root'{]},'utils',
+'daemon.py')).} Za przygotowanie ścieżki odpowiedniej dla danego systemu
+odpowiedzialna jest część \texttt{os.path.join}. W przypadku systemu
+Windows komenda ta dostawia ‘\textbackslash{}’ do ścieżki, co powodowało
+błąd przy dalszym parsowaniu ścieżki. Z powyższych testów wynikało
+jednak, że dostawiony backslash jest błędny i usuwany podczas przekazywania
+komendy do konsoli Windowsa. Zmieniono tą część kodu i wpisano na
+sztywno: \texttt{self.\_daemon{[}'command'{]}.append(\textquotedbl{}/\textquotedbl{}.join((system{[}'root'{]},
+utils', 'daemon.py'))).} Poprawka w kodzie pozwoliła aplikacji odpowiednio
+zinterpretować ścieżki. Do konsoli Windows została przekazana następująca
+komenda: \texttt{C:/BlenderVR/Required/Python3/python.exe C:/BlenderVR/source/utils/daemon.py}.
+Wpis w okienku logowania „Daemon for screen console started” oznajmił,
+że konfiguracja jest prawidłowa i załadowana. Następnie wybrano jedną
+z dostępnych scen przykładowych. Załadowano ją wraz z odpowiadającym
+jej plikiem procesora dla sceny. Po przejściu do zakładki „run” i
+kliknięciu przycisku startu na ekranie pojawiła się wybrana scena.
+Próba uruchomienia w podstawowej konfiguracji zakończyła się sukcesem. 
 
 \subsubsection{Testy z wykorzystaniem dwóch stanowisk PC}
 
@@ -713,9 +846,9 @@ obraz, który po założeniu okularów 3D sprawiał wrażenie trójwymiarowego.
 stanowisk komputerowych. W tym celu każde z nich musi zostać wyposażone
 w aplikację pokazującą obraz z perspektywy danego urządzenia wyświetlającego.
 BlenderVR wykorzystując protokół SSH potrafi zarządzać swoimi kopiami
-na komputerach typu,,slave''. Jeden komputer zdefiniowany jako nadrzędny,,master''
-może uruchamiać oraz synchronizować inne instancje BlenderVR na komputerach
-typu,,slave''.
+na komputerach typu ,,slave''. Jeden komputer zdefiniowany jako
+nadrzędny,,master'' może uruchamiać oraz synchronizować inne instancje
+BlenderVR na komputerach typu ,,slave''.
 
 Na tej zasadzie jedno ze stanowisk w laboratorium stało się nadrzędne
 względem drugiego stanowiska -,,slave'a''. Na obu komputerach zainstalowano
