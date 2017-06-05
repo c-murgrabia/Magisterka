@@ -2592,7 +2592,7 @@ C:/BlenderVR/Required/Python3/python.exe C:/BlenderVR/source/utils/daemon.py
 \end_layout
 
 \begin_layout Subsection
-Działanie aplikacji BlenderVR w innych konfiguracjach
+Działanie aplikacji BlenderVR w innych konfiguracjach w środowisku Windows
 \end_layout
 
 \begin_layout Standard
@@ -2644,7 +2644,53 @@ Procedura uruchamiania BlenderVR w tym przypadku jest taka sama jak przy
  Sesja SSH nie posiadała wszystkich zmiennych środowiskowych oraz była uruchamia
 na w ograniczonym środowisku co powodowało problemy ze zdalnym uruchomieniem
  skryptu demona.
- <TUTAJ DODAĆ JAKIEŚ ZAKOŃCZENIE> 
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename graphic/win_daemon_2pc.jpg
+	lyxscale 20
+	scale 10
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Błąd uruchomienia demona dla drugiego stanowiska.
+ Opracowanie własne
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Na tym etapie zakończono próbę wdrożenia aplikacji BlenderVR w środowisku
+ Windows.
+ System operacyjny CentOS został uruchomiony i udostępniony więc kolejne
+ próby odbędą się w tym właśnie środowisku.
+ Linux wspiera natywnie protokół SSH więc etap uruchomienia dwóch stanowisk
+ powinien być prostszy w konfiguracji.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -2837,422 +2883,305 @@ libpython3.4m.so.1.0
  
 \end_layout
 
-\begin_layout Subsubsection
-Testy z wykorzystaniem dwóch stanowisk PC
+\begin_layout Standard
+Również w tym przypadku pierwszym krokiem jest załadowanie pliku konfiguracyjneg
+o.
+ Został on napisany na przykładzie dostępnym na stronie dewelopera.
 \end_layout
 
 \begin_layout Standard
-Środowisko jaskini wirtualnej rzeczywistości wymaga współpracy kilku stanowisk
- komputerowych.
- W tym celu każde z nich musi zostać wyposażone w aplikację pokazującą obraz
- z perspektywy danego urządzenia wyświetlającego.
- BlenderVR wykorzystując protokół SSH potrafi zarządzać swoimi kopiami na
- komputerach typu 
-\begin_inset Quotes pld
-\end_inset
-
-slave
-\begin_inset Quotes prd
-\end_inset
-
-.
- Jeden komputer zdefiniowany jako nadrzędny
-\begin_inset Quotes pld
-\end_inset
-
-master
-\begin_inset Quotes prd
-\end_inset
-
- może uruchamiać oraz synchronizować inne instancje BlenderVR na komputerach
- typu 
-\begin_inset Quotes pld
-\end_inset
-
-slave
-\begin_inset Quotes prd
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Na tej zasadzie jedno ze stanowisk w laboratorium stało się nadrzędne względem
- drugiego stanowiska -
-\begin_inset Quotes pld
-\end_inset
-
-slave'a
-\begin_inset Quotes prd
-\end_inset
-
-.
- Na obu komputerach zainstalowano w ten sam sposób aplikację BlenderVR.
- Niestety system operacyjny Windows nie posiada wbudowanego protokołu SSH.
- Program OpenSSH for Windows pozwolił na uzyskanie bezpośredniego połącznia
- przez ten protokół.
- Między komputerami wymieniono klucze do identyfikacji.
- Pozwoliło to na połączenie nie wymagające hasła.
- Jest to jeden z wymogów aplikacji BlenderVR do jej poprawnego działania.
-\end_layout
-
-\begin_layout Standard
-W przypadku połączenia między wieloma komputerami należy w plik konfiguracyjny
- wpisać każdy z komputerów podrzędnych.
- W sekcji <computers> każda z wpisanych jednostek powinna zawierać:
-\end_layout
-
-\begin_layout Itemize
-Nazwę własną
-\end_layout
-
-\begin_layout Itemize
-Adres IP w sieci
-\end_layout
-
-\begin_layout Itemize
-Ścieżkę do katalogu głównego aplikacji BlenderVR
-\end_layout
-
-\begin_layout Itemize
-Ścieżkę do katalogu z przykładowymi scenami
-\end_layout
-
-\begin_layout Itemize
-Ścieżkę do głównego katalogu systemu (w tym przypadku do katalogu Windows)
-\end_layout
-
-\begin_layout Itemize
-Ścieżkę do BlenderPlayer z Blendera3D
-\end_layout
-
-\begin_layout Standard
-BlenderVR przy połączeniu do drugiego stanowiska próbuje uruchomić na nim
- skrypt
-\begin_inset Quotes pld
-\end_inset
-
-demona
-\begin_inset Quotes prd
-\end_inset
-
- - programu działającego w tle, który cały czas przetwarza dane lub wykonuje
- pewne czynności
-\begin_inset Foot
+\begin_inset listings
+inline false
 status open
 
 \begin_layout Plain Layout
-http://www.python.rk.edu.pl/w/p/proste-demony-uniksowe-w-pythonie/ (dostęp:
- 16.06.2016)
+
+<?xml version="1.0"?>
+\end_layout
+
+\begin_layout Plain Layout
+
+<blendervr>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <!-- Documentation can be found on BlenderVR web site: http://blendervr.limsi.fr
+/doku.php?id=doc:config -->
+\end_layout
+
+\begin_layout Plain Layout
+
+  <starter blender='/home/cezmurgr/blender/blender'>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <config name='console'>console</config>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <config name='split'>console half left, console half right</config>
+\end_layout
+
+\begin_layout Plain Layout
+
+  </starter>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <users>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <behavior eye_separation='0.06'>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <default_position>0.0, 0.0, 0.0</default_position>
+\end_layout
+
+\begin_layout Plain Layout
+
+    </behavior>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <user name="user A"/>
+\end_layout
+
+\begin_layout Plain Layout
+
+   </users>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <computers>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <system>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <blenderplayer executable='/home/cezmurgr/blender/blenderplayer'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+    </system>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <computer name='Any' hostname='*' />
+\end_layout
+
+\begin_layout Plain Layout
+
+  </computers>
+\end_layout
+
+\begin_layout Plain Layout
+
+  <screens>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <screen name="console" computer="Any">
+\end_layout
+
+\begin_layout Plain Layout
+
+      <display options="-w 400 400">
+\end_layout
+
+\begin_layout Plain Layout
+
+        <environment>DISPLAY=:0.0</environment>
+\end_layout
+
+\begin_layout Plain Layout
+
+        <graphic_buffer buffer="mono" user='user A' eye="middle"/>
+\end_layout
+
+\begin_layout Plain Layout
+
+      </display>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <wall>
+\end_layout
+
+\begin_layout Plain Layout
+
+        <corner name="topRightCorner">1.0, 1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+        <corner name="topLeftCorner">-1.0, 1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+        <corner name="bottomRightCorner">1.0, -1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+      </wall>
+\end_layout
+
+\begin_layout Plain Layout
+
+    </screen>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <screen name="console half left" computer="Any">
+\end_layout
+
+\begin_layout Plain Layout
+
+      <display options="-w 400 400 200 300">
+\end_layout
+
+\begin_layout Plain Layout
+
+        <environment>DISPLAY=:0.0</environment>
+\end_layout
+
+\begin_layout Plain Layout
+
+        <graphic_buffer user='user A'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+      </display>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <wall>
+\end_layout
+
+\begin_layout Plain Layout
+
+        <corner name="topRightCorner">0.0, 1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+        <corner name="topLeftCorner">-1.0, 1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+        <corner name="bottomRightCorner">0.0, -1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+      </wall>
+\end_layout
+
+\begin_layout Plain Layout
+
+    </screen>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <screen name="console half right" computer="Any">
+\end_layout
+
+\begin_layout Plain Layout
+
+      <display options="-w 400 400 600 300">
+\end_layout
+
+\begin_layout Plain Layout
+
+        <environment>DISPLAY=:0.0</environment>
+\end_layout
+
+\begin_layout Plain Layout
+
+        <graphic_buffer user='user A'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+      </display>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <wall>
+\end_layout
+
+\begin_layout Plain Layout
+
+        <corner name="topRightCorner">1.0, 1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+        <corner name="topLeftCorner">0.0, 1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+        <corner name="bottomRightCorner">1.0, -1.0, -1.0</corner>
+\end_layout
+
+\begin_layout Plain Layout
+
+      </wall>
+\end_layout
+
+\begin_layout Plain Layout
+
+    </screen>
+\end_layout
+
+\begin_layout Plain Layout
+
+  </screens>
+\end_layout
+
+\begin_layout Plain Layout
+
+</blendervr>
 \end_layout
 
 \end_inset
 
-.
- Odpowiednio zapisany plik konfiguracyjny został załadowany do aplikacji.
- Niestety konsola z informacjami wyświetliła błąd
-\begin_inset Quotes pld
-\end_inset
 
-Error: Cannot start daemon for screen <screenName>
-\begin_inset Quotes prd
-\end_inset
-
-.
- Na stronie BlenderVR błąd jest rozpoznany i według autora rozwiązania problem
- występuje jeśli połączenie miedzy komputerami wymaga hasła.
- Błąd w tym przypadku nie powinien występować ponieważ komputery zostały
- wymienione kluczami.
- Połączenie SSH zostało przetestowane poprzez konsolę Windowsa i nie wymagało
- użycia hasła.
- Po konsultacji jeden z twórców oprogramowania polecił sprawdzić czy polecenie
- wykonywane przez BlenderVR można również wykonać ręcznie przez konsolę.
- Ręczne wykonanie nie zwróciło jednak żadnego błędu; komenda wykonała się
- poprawnie.
 \end_layout
 
 \begin_layout Standard
-Problemem w tym przypadku może być konfiguracja serwera SSH, które nie pozwala
- na logowanie jako administrator.
- Logowanie przez protokół na komputer podrzędny odbywało się przy użyciu
- konta z prawami administratora.
- Zanim stanowiska zostały wymienione kluczami, do logowania było wymagane
- hasło takie samo jak przy logowaniu użytkownika na docelowym systemie.
- Teoretycznie rzecz biorąc po zalogowaniu się przez SSH, użytkownik powinien
- mieć wszystkie niezbędne prawa do zarządzania komputerem.
-\end_layout
-
-\begin_layout Standard
-Kolejną możliwością jest brak praw administratorskich środowiska Python.
- Skrypt wykonywany przez aplikację BlenderVR wymaga uruchomienia najpierw
- Pythona a później skryptu demona.
- Być może uruchamia się on bez praw administratora co nie pozwala mu na
- działanie w tle.
-\end_layout
-
-\begin_layout Standard
-<tutaj coś jeszcze rozwinąć>
-\end_layout
-
-\begin_layout Subsection
-Krótki test w środowisku Linux <<lub 4.0 jako kolejny rozdział>>
-\end_layout
-
-\begin_layout Standard
-Powyższe próby implenetacji oraz uruchomienia aplikacji BlenderVR pokazały,
- że nie jest on w pełni dostosowany do systemu operacyjnego jakim jest Windows.
- Brak najprostszych protokołów komunikacyjnych oraz słabe zarządzanie prawami
- administatora (uruchamiane programy użytkownika z pełnią praw nie zawsze
- te prawa dziedziczą) spowodowały problemy i przestoje w implementacji BlenderVR.
- Aplikacja mimo swojej wieloplatformowości zdecydowanie trudniej implementuje
- się na systemach Windows.
-\end_layout
-
-\begin_layout Standard
-Postanowiono przeprowadzić krótki test implementacji w środowisku Linux
- by sprawdzić czy BlenderVR poradzi sobie lepiej w tym przypadku.
- Test został przeprowadzony na dwóch maszynach wirtualnych, na których był
- zainstalowany Debian8.5.
- Nie ma automatycznego instalatora dla środowiska Linux więc wykonano po
- kolei instalację paczek według instrukcji na stronie BlenderVR.
-\end_layout
-
-\begin_layout Enumerate
-Instalacja Blender3D w wersji 2.75 lub nowszej
-\end_layout
-
-\begin_layout Enumerate
-Ściągnięcie oraz rozpakowanie BlenderVR oraz przykładowych scen
-\end_layout
-
-\begin_layout Enumerate
-Instalacja zależności
-\begin_inset Separator latexpar
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-Python3.4 - użyta w teście kompilacja Debiana posiadała juz zainstalowanego
- Pythona w wersji 3.4.
-\end_layout
-
-\begin_layout Enumerate
-Qt4.8 - pakiet Qt wymagany przy kompilacji PySide1.2.2 (patrz niżej).
- Nazwa paczki w repozytorium: qt4-dev-tools
-\end_layout
-
-\begin_layout Enumerate
-PIP - pakietu brakowało więc został ściągnięty ze strony https://pip.pypa.io/en/la
-test/installing/ oraz zainstalowany poleceniem python3 get-pip.py
-\end_layout
-
-\begin_layout Enumerate
-Virtualenv - wirtualne środowisko dla Pythona.
- Instalowane przy pomocy polecenia pip3 install virtualenv.
- Tutaj od instrukcji jest pewne odstępstwo gdyż zamiast polecenia pyvenv
- lub pyvenv-3.4 należy użyć virtualenv
-\end_layout
-
-\begin_layout Enumerate
-PySide1.2.2 - paczka pobrana i skompilowana w uruchomionym już środowisku
- wirtualnym Pythona.
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-Mając zainstalowane wszystkie zależności wystarczy aktywować środowisko
- wirtualne i uruchomić plik blendervr.
- Pojawi się okno z ustawieniami a konsola terminala może posłużyć za narzędzie
- do wyszukiwania błędów.
-\end_layout
-
-\begin_layout Standard
-Tak samo jak w przypadku testu w środowisku Windows: oba komputery zostały
- wymienione kluczami do połączenia SSH.
- Krótki test połączenia pokazał, że nie wymaga ono hasła.
- Ustawienia BlenderVR zostały odpowiednio dostosowane do ścieżek systemu
- operacyjnego.
- Po załadowaniu konfiguracji w konsoli nie pojawił się żaden błąd.
- Wybranie ustawień ekranu oraz sceny przykładowej również nie pokazało żadnego
- błędu.
- Scena została uruchomiona na komputerze podrzędnym.
- Test został zakończony sukcesem.
-\end_layout
-
-\begin_layout Section
-Analiza i wnioski
-\end_layout
-
-\begin_layout Standard
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float table
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-<<do wykorzystania we wnioskach; na sam koniec, albo gdzieś>>
-\end_layout
-
-\begin_layout Plain Layout
-\align left
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Wady i zalety aplikacji BlenderVR
-\begin_inset Newline newline
-\end_inset
-
-Źródło: Opracowanie własne
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Tabular
-<lyxtabular version="3" rows="6" columns="2">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="7cm">
-<column alignment="center" valignment="top" width="7cm">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Zalety
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Wady
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Dość prosta obsługa
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Problematyczna implementacja na systemie Windows
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Duża skalowalność
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Samoczynne dostosowanie kamer na scenie BGE
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Łączenie komputerów przez SSH
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Obsługa wielu systemów wyświetlających (CAVE, HMD, monitor, wiele monitorów)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
+Po załadowaniu pliku konfiguracyjnego wybrano podstawową scenę do testu.
+ Okienko logowania nie wykazało żadnych błędów.
+ Uruchomienie sceny przyniosło oczekiwany skutek.
+ Zgodnie z konfiguracją, na ekranie wyświetliło się okienko 400x400px z
+ wybraną sceną testową.
+ Nie wykryto żadnych problemów i zakłóceń w działaniu sceny czy samej aplikacji.
 \end_layout
 
 \end_body

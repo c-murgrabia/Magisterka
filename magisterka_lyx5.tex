@@ -759,7 +759,8 @@ jej plikiem procesora dla sceny. Po przejściu do zakładki „run” i
 kliknięciu przycisku startu na ekranie pojawiła się wybrana scena.
 Próba uruchomienia w podstawowej konfiguracji zakończyła się sukcesem. 
 
-\subsection{Działanie aplikacji BlenderVR w innych konfiguracjach}
+\subsection{Działanie aplikacji BlenderVR w innych konfiguracjach w środowisku
+Windows}
 
 Po udanej próbie uruchomienia BlenderVR w konfiguracji podstawowej
 kolejnym punktem jest test z użyciem dwóch stanowisk. Nastąpi próba
@@ -793,8 +794,20 @@ konta dostępne do testów miały wystarczające uprawnienia by instalować
 i uruchamiać większość programów znajdujących się poza dyskiem C (lub
 pewnymi jego katalogami). Sesja SSH nie posiadała wszystkich zmiennych
 środowiskowych oraz była uruchamiana w ograniczonym środowisku co
-powodowało problemy ze zdalnym uruchomieniem skryptu demona. <TUTAJ
-DODAĆ JAKIEŚ ZAKOŃCZENIE> 
+powodowało problemy ze zdalnym uruchomieniem skryptu demona. 
+
+\begin{figure}
+\begin{centering}
+\includegraphics[scale=0.1]{graphic/win_daemon_2pc}
+\par\end{centering}
+\caption{Błąd uruchomienia demona dla drugiego stanowiska. Opracowanie własne}
+\end{figure}
+
+Na tym etapie zakończono próbę wdrożenia aplikacji BlenderVR w środowisku
+Windows. System operacyjny CentOS został uruchomiony i udostępniony
+więc kolejne próby odbędą się w tym właśnie środowisku. Linux wspiera
+natywnie protokół SSH więc etap uruchomienia dwóch stanowisk powinien
+być prostszy w konfiguracji. 
 
 \subsection{Środowisko wdrożeniowe systemu operacyjnego Linux}
 
@@ -887,143 +900,70 @@ Zmienna wskazuje na katalog, w którym znajduje się \texttt{libpython3.4m.so.1.
 Dzięki temu BlenderVR uruchomił się zgodnie z założeniami. Na ekranie
 pokazał się interfejs aplikacji. 
 
-\subsubsection{Testy z wykorzystaniem dwóch stanowisk PC}
+Również w tym przypadku pierwszym krokiem jest załadowanie pliku konfiguracyjnego.
+Został on napisany na przykładzie dostępnym na stronie dewelopera.
 
-Środowisko jaskini wirtualnej rzeczywistości wymaga współpracy kilku
-stanowisk komputerowych. W tym celu każde z nich musi zostać wyposażone
-w aplikację pokazującą obraz z perspektywy danego urządzenia wyświetlającego.
-BlenderVR wykorzystując protokół SSH potrafi zarządzać swoimi kopiami
-na komputerach typu ,,slave''. Jeden komputer zdefiniowany jako
-nadrzędny,,master'' może uruchamiać oraz synchronizować inne instancje
-BlenderVR na komputerach typu ,,slave''.
-
-Na tej zasadzie jedno ze stanowisk w laboratorium stało się nadrzędne
-względem drugiego stanowiska -,,slave'a''. Na obu komputerach zainstalowano
-w ten sam sposób aplikację BlenderVR. Niestety system operacyjny Windows
-nie posiada wbudowanego protokołu SSH. Program OpenSSH for Windows
-pozwolił na uzyskanie bezpośredniego połącznia przez ten protokół.
-Między komputerami wymieniono klucze do identyfikacji. Pozwoliło to
-na połączenie nie wymagające hasła. Jest to jeden z wymogów aplikacji
-BlenderVR do jej poprawnego działania.
-
-W przypadku połączenia między wieloma komputerami należy w plik konfiguracyjny
-wpisać każdy z komputerów podrzędnych. W sekcji <computers> każda
-z wpisanych jednostek powinna zawierać:
-\begin{itemize}
-\item Nazwę własną
-\item Adres IP w sieci
-\item Ścieżkę do katalogu głównego aplikacji BlenderVR
-\item Ścieżkę do katalogu z przykładowymi scenami
-\item Ścieżkę do głównego katalogu systemu (w tym przypadku do katalogu
-Windows)
-\item Ścieżkę do BlenderPlayer z Blendera3D
-\end{itemize}
-BlenderVR przy połączeniu do drugiego stanowiska próbuje uruchomić
-na nim skrypt,,demona'' - programu działającego w tle, który cały
-czas przetwarza dane lub wykonuje pewne czynności\footnote{http://www.python.rk.edu.pl/w/p/proste-demony-uniksowe-w-pythonie/
-(dostęp: 16.06.2016)}. Odpowiednio zapisany plik konfiguracyjny został załadowany do aplikacji.
-Niestety konsola z informacjami wyświetliła błąd,,Error: Cannot start
-daemon for screen <screenName>''. Na stronie BlenderVR błąd jest
-rozpoznany i według autora rozwiązania problem występuje jeśli połączenie
-miedzy komputerami wymaga hasła. Błąd w tym przypadku nie powinien
-występować ponieważ komputery zostały wymienione kluczami. Połączenie
-SSH zostało przetestowane poprzez konsolę Windowsa i nie wymagało
-użycia hasła. Po konsultacji jeden z twórców oprogramowania polecił
-sprawdzić czy polecenie wykonywane przez BlenderVR można również wykonać
-ręcznie przez konsolę. Ręczne wykonanie nie zwróciło jednak żadnego
-błędu; komenda wykonała się poprawnie.
-
-Problemem w tym przypadku może być konfiguracja serwera SSH, które
-nie pozwala na logowanie jako administrator. Logowanie przez protokół
-na komputer podrzędny odbywało się przy użyciu konta z prawami administratora.
-Zanim stanowiska zostały wymienione kluczami, do logowania było wymagane
-hasło takie samo jak przy logowaniu użytkownika na docelowym systemie.
-Teoretycznie rzecz biorąc po zalogowaniu się przez SSH, użytkownik
-powinien mieć wszystkie niezbędne prawa do zarządzania komputerem.
-
-Kolejną możliwością jest brak praw administratorskich środowiska Python.
-Skrypt wykonywany przez aplikację BlenderVR wymaga uruchomienia najpierw
-Pythona a później skryptu demona. Być może uruchamia się on bez praw
-administratora co nie pozwala mu na działanie w tle.
-
-<tutaj coś jeszcze rozwinąć>
-
-\subsection{Krótki test w środowisku Linux <\textcompwordmark{}<lub 4.0 jako
-kolejny rozdział>\textcompwordmark{}>}
-
-Powyższe próby implenetacji oraz uruchomienia aplikacji BlenderVR
-pokazały, że nie jest on w pełni dostosowany do systemu operacyjnego
-jakim jest Windows. Brak najprostszych protokołów komunikacyjnych
-oraz słabe zarządzanie prawami administatora (uruchamiane programy
-użytkownika z pełnią praw nie zawsze te prawa dziedziczą) spowodowały
-problemy i przestoje w implementacji BlenderVR. Aplikacja mimo swojej
-wieloplatformowości zdecydowanie trudniej implementuje się na systemach
-Windows.
-
-Postanowiono przeprowadzić krótki test implementacji w środowisku
-Linux by sprawdzić czy BlenderVR poradzi sobie lepiej w tym przypadku.
-Test został przeprowadzony na dwóch maszynach wirtualnych, na których
-był zainstalowany Debian8.5. Nie ma automatycznego instalatora dla
-środowiska Linux więc wykonano po kolei instalację paczek według instrukcji
-na stronie BlenderVR.
-\begin{enumerate}
-\item Instalacja Blender3D w wersji 2.75 lub nowszej
-\item Ściągnięcie oraz rozpakowanie BlenderVR oraz przykładowych scen
-\item Instalacja zależności
-
-\begin{enumerate}
-\item Python3.4 - użyta w teście kompilacja Debiana posiadała juz zainstalowanego
-Pythona w wersji 3.4.
-\item Qt4.8 - pakiet Qt wymagany przy kompilacji PySide1.2.2 (patrz niżej).
-Nazwa paczki w repozytorium: qt4-dev-tools
-\item PIP - pakietu brakowało więc został ściągnięty ze strony https://pip.pypa.io/en/latest/installing/
-oraz zainstalowany poleceniem python3 get-pip.py
-\item Virtualenv - wirtualne środowisko dla Pythona. Instalowane przy pomocy
-polecenia pip3 install virtualenv. Tutaj od instrukcji jest pewne
-odstępstwo gdyż zamiast polecenia pyvenv lub pyvenv-3.4 należy użyć
-virtualenv
-\item PySide1.2.2 - paczka pobrana i skompilowana w uruchomionym już środowisku
-wirtualnym Pythona.
-\end{enumerate}
-\end{enumerate}
-Mając zainstalowane wszystkie zależności wystarczy aktywować środowisko
-wirtualne i uruchomić plik blendervr. Pojawi się okno z ustawieniami
-a konsola terminala może posłużyć za narzędzie do wyszukiwania błędów.
-
-Tak samo jak w przypadku testu w środowisku Windows: oba komputery
-zostały wymienione kluczami do połączenia SSH. Krótki test połączenia
-pokazał, że nie wymaga ono hasła. Ustawienia BlenderVR zostały odpowiednio
-dostosowane do ścieżek systemu operacyjnego. Po załadowaniu konfiguracji
-w konsoli nie pojawił się żaden błąd. Wybranie ustawień ekranu oraz
-sceny przykładowej również nie pokazało żadnego błędu. Scena została
-uruchomiona na komputerze podrzędnym. Test został zakończony sukcesem.
-
-\section{Analiza i wnioski}
-
-\begin{table}
-<\textcompwordmark{}<do wykorzystania we wnioskach; na sam koniec,
-albo gdzieś>\textcompwordmark{}>
-\begin{raggedright}
-\caption{Wady i zalety aplikacji BlenderVR\protect \\
-Źródło: Opracowanie własne}
-\par\end{raggedright}
-\begin{tabular}{|>{\centering}p{7cm}|>{\centering}p{7cm}|}
-\hline 
-Zalety & Wady\tabularnewline
-\hline 
-\hline 
-Dość prosta obsługa & Problematyczna implementacja na systemie Windows\tabularnewline
-\hline 
-Duża skalowalność & \tabularnewline
-\hline 
-Samoczynne dostosowanie kamer na scenie BGE & \tabularnewline
-\hline 
-Łączenie komputerów przez SSH & \tabularnewline
-\hline 
-Obsługa wielu systemów wyświetlających (CAVE, HMD, monitor, wiele
-monitorów) & \tabularnewline
-\hline 
-\end{tabular}
-\end{table}
-
+\inputencoding{latin2}\begin{lstlisting}
+<?xml version="1.0"?>
+<blendervr>
+  <!-- Documentation can be found on BlenderVR web site: http://blendervr.limsi.fr/doku.php?id=doc:config -->
+  <starter blender='/home/cezmurgr/blender/blender'>
+    <config name='console'>console</config>
+    <config name='split'>console half left, console half right</config>
+  </starter>
+  <users>
+    <behavior eye_separation='0.06'>
+      <default_position>0.0, 0.0, 0.0</default_position>
+    </behavior>
+    <user name="user A"/>
+   </users>
+  <computers>
+    <system>
+      <blenderplayer executable='/home/cezmurgr/blender/blenderplayer'/>
+    </system>
+    <computer name='Any' hostname='*' />
+  </computers>
+  <screens>
+    <screen name="console" computer="Any">
+      <display options="-w 400 400">
+        <environment>DISPLAY=:0.0</environment>
+        <graphic_buffer buffer="mono" user='user A' eye="middle"/>
+      </display>
+      <wall>
+        <corner name="topRightCorner">1.0, 1.0, -1.0</corner>
+        <corner name="topLeftCorner">-1.0, 1.0, -1.0</corner>
+        <corner name="bottomRightCorner">1.0, -1.0, -1.0</corner>
+      </wall>
+    </screen>
+    <screen name="console half left" computer="Any">
+      <display options="-w 400 400 200 300">
+        <environment>DISPLAY=:0.0</environment>
+        <graphic_buffer user='user A'/>
+      </display>
+      <wall>
+        <corner name="topRightCorner">0.0, 1.0, -1.0</corner>
+        <corner name="topLeftCorner">-1.0, 1.0, -1.0</corner>
+        <corner name="bottomRightCorner">0.0, -1.0, -1.0</corner>
+      </wall>
+    </screen>
+    <screen name="console half right" computer="Any">
+      <display options="-w 400 400 600 300">
+        <environment>DISPLAY=:0.0</environment>
+        <graphic_buffer user='user A'/>
+      </display>
+      <wall>
+        <corner name="topRightCorner">1.0, 1.0, -1.0</corner>
+        <corner name="topLeftCorner">0.0, 1.0, -1.0</corner>
+        <corner name="bottomRightCorner">1.0, -1.0, -1.0</corner>
+      </wall>
+    </screen>
+  </screens>
+</blendervr>
+\end{lstlisting}
+\inputencoding{utf8}
+Po załadowaniu pliku konfiguracyjnego wybrano podstawową scenę do
+testu. Okienko logowania nie wykazało żadnych błędów. Uruchomienie
+sceny przyniosło oczekiwany skutek. Zgodnie z konfiguracją, na ekranie
+wyświetliło się okienko 400x400px z wybraną sceną testową. Nie wykryto
+żadnych problemów i zakłóceń w działaniu sceny czy samej aplikacji.
 \end{document}
