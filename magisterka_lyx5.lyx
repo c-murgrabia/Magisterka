@@ -418,7 +418,7 @@ rotacja względem osi Z
 \series bold
 Podwójne buforowanie obrazu metodą Page Flipping -
 \series default
-metoda rysowania i wyświetlania klatek wykorzystująca dwa osobne bufory
+ metoda rysowania i wyświetlania klatek wykorzystująca dwa osobne bufory
  w pamięci.
  Gdy jeden z nich wyświetla gotową klatkę drugi rysuje kolejną.
  Kiedy operacje rysowania klatki są zakończone następuje przełączenie pomiędzy
@@ -442,7 +442,7 @@ Poczwórne buforowanie (ang: Quad buffering)
 \series bold
 Video Wall
 \series default
-- specjalny zestaw kilku lub więcej wyświetlaczy ułożonych jeden przy drugim.
+ - specjalny zestaw kilku lub więcej wyświetlaczy ułożonych jeden przy drugim.
  Tworzą w ten sposób jeden duży ekran.
  Wyświetlacze wykorzystywane przy budowie video walla zazwyczaj mają jak
  najcieńszą ramę dookoła ekranu by zminimalizować przerwy pomiędzy ekranami
@@ -456,6 +456,31 @@ http://www.pixell.com/what_is_a_vw.htm (dostęp: 22.05.2016)
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+InfiniBand
+\series default
+ - standard sieciowy wykorzystywany szczególnie przy budowie klastrów obliczenio
+wych.
+ Pozwala na bardzo szybki dostęp do zasobów oraz znacząco zmniejsza opóźnienia.
+ W przeciwieństwie do standardu Ethernet operacje związane z przesyłem danych
+ wykonywane są przez specjalny adapter zamiast bezpośrednio na CPU.
+ Do połączeń wykorzystywane są światłowody by zmaksymalizować ilość przesyłanych
+ danych.
+ Standard został stworzony przez firmę Mellanox.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.mellanox.com/pdf/whitepapers/IB_Intro_WP_190.pdf (dostęp: 08.06.2017)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Part*
@@ -2597,26 +2622,26 @@ Działanie aplikacji BlenderVR w innych konfiguracjach w środowisku Windows
 
 \begin_layout Standard
 Po udanej próbie uruchomienia BlenderVR w konfiguracji podstawowej kolejnym
- punktem jest test z użyciem dwóch stanowisk.
- Nastąpi próba połączenia przez protokół SSH, który nie jest natywnie wbudowany
+ punktem był test z użyciem dwóch stanowisk.
+ Wykonano próbę połączenia przez protokół SSH, który nie jest natywnie wbudowany
  w system Windows.
- Zostanie użyty program, który umożliwi uruchomienie serwera oraz klienta
+ Został użyty program, który umożliwiał uruchomienie serwera oraz klienta
  protokołu SSH.
- Wybranym programem jest prosty w obsłudze OpenSSH.
+ Wybranym programem był prosty w obsłudze OpenSSH.
  
 \end_layout
 
 \begin_layout Standard
 BlenderVR wymaga by połączenie między komputerami nie wymagało hasła.
- Oba stanowiska zostały wymienione kluczami SSH.
- Przy załadowaniu odpowiednio napisanej konfiguracji nastąpi próba połączenia
+ Na obu stanowiskach wymieniono klucze SSH.
+ Przy załadowaniu odpowiednio napisanej konfiguracji nastąpiła próba połączenia
  oraz uruchomienie demona na obu stanowiskach.
  
 \end_layout
 
 \begin_layout Standard
-Podstawy pliku konfiguracyjnego pozostają te same: oba środowiska uruchomieniowe
- posiadają identyczną architekturę.
+Podstawowe ustawienia w pliku konfiguracyjnym pozostają te same: oba środowiska
+ uruchomieniowe posiadają identyczną architekturę.
  Dzięki temu wystarczy jedynie dopisać dodatkowe komputery do ustawień wraz
  z ich adresami IP.
  
@@ -2625,8 +2650,12 @@ Podstawy pliku konfiguracyjnego pozostają te same: oba środowiska uruchomienio
 \begin_layout Standard
 Procedura uruchamiania BlenderVR w tym przypadku jest taka sama jak przy
  teście wykonanym na jednym stanowisku.
- Załadowanie pliku konfiguracyjnego jednak wyświetliło błąd jak poprzednio:
- cannot start daemon for screen dual.
+ Załadowanie pliku konfiguracyjnego jednak wyświetliło taki sam błąd jak
+ poprzednio: 
+\family typewriter
+cannot start daemon for screen dual
+\family default
+.
  Po pierwsze sprawdzono czy połączenie SSH jest możliwe wraz ze zdalnym
  uruchomieniem Pythona.
  Poprzez konsolę Windowsa udało się bez problemów podłączyć do drugiego
@@ -2670,7 +2699,7 @@ status open
 
 \begin_layout Plain Layout
 Błąd uruchomienia demona dla drugiego stanowiska.
- Opracowanie własne
+ Opracowanie własne.
 \end_layout
 
 \end_inset
@@ -2686,11 +2715,10 @@ Błąd uruchomienia demona dla drugiego stanowiska.
 \begin_layout Standard
 Na tym etapie zakończono próbę wdrożenia aplikacji BlenderVR w środowisku
  Windows.
- System operacyjny CentOS został uruchomiony i udostępniony więc kolejne
- próby odbędą się w tym właśnie środowisku.
- Linux wspiera natywnie protokół SSH więc etap uruchomienia dwóch stanowisk
- powinien być prostszy w konfiguracji.
- 
+ Oprócz Windows w pracowni został uruchomiony i udostępniony system operacyjny
+ CentOS, więc kolejne próby prowadzone były w tym właśnie środowisku.
+ Wsparcie dla protokołu SSH jest pod Linuxem zapewniane przez serwer OpenSSH,
+ więc etap uruchomienia dwóch stanowisk powinien być prostszy w konfiguracji.
 \end_layout
 
 \begin_layout Subsection
@@ -2722,12 +2750,12 @@ glibc 2.12
 
 \begin_layout Standard
 Instalacja pakietów w systemie Linux jest utrudniona z powodu braku dostępu
- do Internetu.
+ do Internetu w pracowni.
  Każdy wymagany pakiet musi zostać dostarczony z zewnątrz, skonfigurowany
  i zainstalowany.
  Konto użytkownika nie miało praw super-user więc każdy z pakietów był instalowa
-ny do katalogu domowego użytkownika, a następnie każdy został dodany do
- zmiennej środowiskowej PATH.
+ny lokalnie w katalogu domowym użytkownika, a następnie odpowiednie ścieżki
+ do nowego oprogramowania zostały dodane do zmiennej środowiskowej PATH.
 \end_layout
 
 \begin_layout Subsection
@@ -2738,17 +2766,16 @@ Instalacja aplikacji BlenderVR w systemie operacyjnym Linux
 Instalacja wszystkich niezbędnych pakietów w środowisku Linux jest procesem
  bardziej skomplikowanym niż w przypadku systemu Windows.
  Instrukcja dostępna na stronie dewelopera aplikacji nie jest dokładna i
- wiele wyników poprawnej konfiguracji jest na podstawie metody prób i błędów.
- Wszystkie pakiety dostarczone były jako źródła oraz kompilowane i instalowane
- na stanowiskach, ponieważ sieć odcięta była od Internetu.
- 
+ wiele wyników poprawnej konfiguracji osiągnięto metodą prób i błędów.
+ Wszystkie pakiety dostarczone były jako źródła na nośniku wymiennym a następnie
+ kompilowane i instalowane na obu stanowiskach.
 \end_layout
 
 \begin_layout Standard
 Pakietem, który jest wymagany podczas procesu instalacji wszystkich zależności
  jest przede wszystkim cmake.
  Był on już zainstalowany na stanowiskach w laboratorium, dlatego pominięto
- ten krok w opisie.
+ ten krok.
  
 \end_layout
 
@@ -2759,7 +2786,7 @@ Podstawowym wymaganym programem jest Python w wersji 3.4.
 --enable-shared
 \family default
 .
- Nie jest to zawarte w instrukcji na stornie dewelopera i powoduje problemy
+ Nie jest to zawarte w instrukcji na stronie dewelopera i powoduje problemy
  przy kompilacji pakietu PySide w dalszej części procesu.
  Jedyna wzmianka znaleziona o problemie oraz rozwiązaniu znajduje się w
  sekcji często zadawanych pytań.
@@ -2767,13 +2794,13 @@ Podstawowym wymaganym programem jest Python w wersji 3.4.
 \end_layout
 
 \begin_layout Standard
-Kolejnym wymaganym pakietem jest Qt4 wraz z development headers.
+Kolejnym wymaganym pakietem jest Qt4 wraz z nagłówkami.
  Nagłówki funkcji mogą być dostępne w osobnym pakiecie np.
  libqt4-dev.
  W takim wypadku należy skompilować i zainstalować podstawowe biblioteki
  qt4 oraz nagłówki.
  Jest to wymagane przez pakiet PySide.
- Źródła Qt4 dostępne są na stronie deweloperów.
+ Pakiety źródłowe Qt4 dostępne są na stronie deweloperów.
 \end_layout
 
 \begin_layout Standard
@@ -2793,7 +2820,7 @@ python get-pip.py
 
 \begin_layout Standard
 Następnym krokiem jest kompilacja PySide.
- W laboratorium użyto wersji 1.2.2 – taką, jakiej zalecają deweloperzy.
+ W laboratorium użyto wersji 1.2.2 – takiej, jakiej zalecają deweloperzy.
  Pakiet został skompilowany z domyślnymi ustawieniami.
  W tym kroku wystąpiło najwięcej problemów z kompilacją.
  Pierwszym napotkanym był problem z brakiem bibliotek Pythona, gdy ten został
@@ -2886,7 +2913,7 @@ libpython3.4m.so.1.0
 \begin_layout Standard
 Również w tym przypadku pierwszym krokiem jest załadowanie pliku konfiguracyjneg
 o.
- Został on napisany na przykładzie dostępnym na stronie dewelopera.
+ Został on napisany w oparciu o przykład dostępny na stronie dewelopera.
 \end_layout
 
 \begin_layout Standard
@@ -3181,7 +3208,386 @@ Po załadowaniu pliku konfiguracyjnego wybrano podstawową scenę do testu.
  Uruchomienie sceny przyniosło oczekiwany skutek.
  Zgodnie z konfiguracją, na ekranie wyświetliło się okienko 400x400px z
  wybraną sceną testową.
- Nie wykryto żadnych problemów i zakłóceń w działaniu sceny czy samej aplikacji.
+ Nie wykryto żadnych problemów i zakłóceń w działaniu sceny czy aplikacji.
+\end_layout
+
+\begin_layout Subsection
+Działanie aplikacji BlenderVR w innych konfiguracjach w środowisku Linux
+\end_layout
+
+\begin_layout Standard
+Dokładnie tak jak w przypadku systemu Windows kolejnym krokiem było sprawdzenie
+ aplikacji z użyciem dwóch stanowisk.
+ BlenderVR oraz wszystkie niezbędne pakiety zostały zainstalowane na drugm
+ stanowisku w taki sam sposób jak na pierwszym.
+ Znano już występujące problemy podczas instalacji więc tym razem udało
+ się ją przeprowadzić bezbłędnie.
+ Trudności wystąpiły dopiero przy tworzeniu pliku konfiguracyjnego.
+ Na stronie dewelopera znajduje się przykładowy plik konfiguracji połączenia
+ dwóch stanowisk, jednak jest on przygotowany z myślą o systemie Windows.
+ Na bazie poprzednio napisanego pliku konfiguracyjnego dla jednego stanowiska
+ dodawano poszczególne sekcje związane z połączeniem przez SSH.
+\end_layout
+
+\begin_layout Standard
+Oba komputery zostały wymienione kluczami SSH.
+ Pierwsze logowanie nastąpiło ręcznie w terminalu by zostawić 
+\begin_inset Quotes pld
+\end_inset
+
+odcisk
+\begin_inset Quotes prd
+\end_inset
+
+ i logować się bez potrzeby wpisywania hasła za każdym kolejnym razem.
+ W sekcji 
+\family typewriter
+<computers>
+\family default
+ dodano wpisy odpowiedzialne za połączenie oraz uruchomienie skryptu demona.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<computers>
+\end_layout
+
+\begin_layout Plain Layout
+
+        <computer name="right" hostname='192.168.66.8' />
+\end_layout
+
+\begin_layout Plain Layout
+
+    <system>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <login remote_command='ssh cezmurgr@192.168.66.8' python='/home/cezmurgr/pajt
+on3/bin/python3.4'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+    </system>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <computer name='left' hostname='192.168.66.7'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <system>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <login remote_command='ssh cezmurgr@192.168.66.7' python='/home/cezmurgr/pajt
+on3/bin/python3.4'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+    </system>
+\end_layout
+
+\begin_layout Plain Layout
+
+ </computers>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Zdefiniowano dwa komputery: prawy - 
+\family typewriter
+right
+\family default
+ oraz lewy - 
+\family typewriter
+left
+\family default
+.
+ Lewy był komputerem, na którym pracowano i uruchamiano główne okno BlenderVR.
+ Prawy służył jako „slave”.
+ Adresy IP użyte do logowania zostały przypisane w sieci InfiniBand.
+ Zapewni ona bardzo małe opóźnienia wymagane przy synchronizacji wszystkich
+ wyświetlanych scen.
+ Załadowanie pliku konfiguracyjnego wyświetliło jednak błąd: 
+\family typewriter
+cannot start daemon for screen
+\family default
+.
+ W terminalu systemowym wyświetliły się szczegóły dotyczące błędu: 
+\family typewriter
+socket.error: [Errno 113] No route to host
+\family default
+.
+ Informacje pozyskane od administratora sieci nie pomogły w rozwiązaniu
+ błędu.
+ Według nich wszystkie komputery były w jednej podsieci oraz nie było między
+ nimi restrykcji jeśli chodzi o protokoły SSH.
+ Sprawdzono łączność pomiędzy komputerami używając pingowania.
+ Wszystkie pingi przeszły i nie zarejestrowano żadnych opóźnień.
+ Próba ręcznego połączenia SSH się udała, jednak wykonania komendy: 
+\family typewriter
+/home/cezmurgr/pajton3/bin/python3 /home/cezmurgr/source/utils/daemon.py
+ 192.168.66.7:31415 console debug
+\family default
+ zakończyło się niepowodzeniem i pokazaniem tego samego błędu: 
+\family typewriter
+socket.error: [Errno 113] No route to host
+\family default
+.
+ Wyglądało na to, że z komputera 
+\family typewriter
+right
+\family default
+ nie można połączyć się do komputera 
+\family typewriter
+left
+\family default
+.
+ Po sprawdzeniu tablic routingu okazało się, że komputer prawy jest podłączony
+ przez dodatkowych switch, a nie jak reszta komputerów w pracowni do jednego
+ switcha.
+ Powodowało to problem przy połączeniu ponieważ po drodze pojawiała się
+ jedna dodatkowa podsieć.
+ 
+\end_layout
+
+\begin_layout Standard
+By definitywnie sprawdzić czy rzeczywiście dodatkowy switch powodował problem,
+ wybrano dwa inne stanowiska w laboratorium oraz również nazwano je 
+\family typewriter
+left
+\family default
+ i 
+\family typewriter
+right
+\family default
+.
+ Konfiguracja sekcji 
+\family typewriter
+<computers>
+\family default
+ musiała się w tym przypadku zmienić.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<computers>
+\end_layout
+
+\begin_layout Plain Layout
+
+        <computer name="right" hostname='192.168.66.6' />
+\end_layout
+
+\begin_layout Plain Layout
+
+    <system>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <login remote_command='ssh cezmurgr@192.168.66.6' python='/home/cezmurgr/pajt
+on3/bin/python3.4'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+    </system>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <computer name='left' hostname='192.168.66.5'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <system>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <login remote_command='ssh cezmurgr@192.168.66.5' python='/home/cezmurgr/pajt
+on3/bin/python3.4'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+    </system>
+\end_layout
+
+\begin_layout Plain Layout
+
+ </computers>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Załadowanie pliku konfiguracyjnego ponownie pokazało błąd: 
+\family typewriter
+cannot start daemon for screen
+\family default
+.
+ Błąd wyświetlony przez terminal systemowy był jednak inny: 
+\family typewriter
+/home/cezmurgr/pajton3/bin/python3: error while loading shared libraries:
+ libpython3.4m.so.1.0: cannot open shared object file: No such file or directory
+\family default
+.
+ Ten błąd wystąpił już wcześniej i wiedziano jak sobie z nim poradzić.
+ W konfiguracji dwóch stanowisk prawdopodobnie zmienna środowiskowa nie
+ była przesłana lub nie eksportowała się przy połączeniu SSH.
+ Spróbowano zalogować się na komputer prawy oraz wykonać komendę ręcznie.
+ Po zalogowaniu przez SSH zauważono, że zmienne środowiskowe zawierają jedynie
+ podstawowe wpisy i ścieżki.
+ Brakowało wszystkich zmiennych związanych ze ścieżkami do instalowanego
+ Pythona oraz jego bibliotek.
+ Wyeksportowano kolejno: 
+\family typewriter
+PATH=$PATH:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/us
+r/sbin:/sbin:/home/cezmurgr/cmake/bin/:/home/cezmurgr/pajton3/bin/
+\family default
+ oraz 
+\family typewriter
+LD_LIBRARY_PATH=/home/cezmurgr/pajton3/lib
+\family default
+.
+ Ręczne wykonanie komendy z aplikacji BlenderVR zakończyło się sukcesem.
+ Skrypt demona wystartował i próbowął nawiązać połączenie ze stanowiskiem
+ 
+\family typewriter
+left
+\family default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Przesyłanie zmiennych w aplikacji BlenderVR może odbywać się za pomocą odpowiedn
+ich wpisów w pliku konfiguracyjnym.
+ By rozwiązać problem braku zmiennych środowiskowych dodano podsekcje 
+\family typewriter
+library path
+\family default
+ w konfiguracji każdego ze stanowisk.
+ Dodatkowo wpisano również ścieżkę do zainstalowanego Pythona 3.4.
+ Nie jest to obowiązkowe ponieważ dokładna ścieżka jest podana w linijce
+ 
+\family typewriter
+<login remote_command='ssh cezmurgr@192.168.66.6' python='/home/cezmurgr/pajton3/bi
+n/python3.4'/>
+\family default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<computers>
+\end_layout
+
+\begin_layout Plain Layout
+
+        <computer name="right" hostname='192.168.66.6' />
+\end_layout
+
+\begin_layout Plain Layout
+
+    <system>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <login remote_command='ssh cezmurgr@192.168.66.6' python='/home/cezmurgr/pajt
+on3/bin/python3.4'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+	  <library path="/home/cezmurgr/pajton3/lib/" />
+\end_layout
+
+\begin_layout Plain Layout
+
+	  <environment>PYTHONPATH=/home/cezmurgr/pajton3/bin/</environment>
+\end_layout
+
+\begin_layout Plain Layout
+
+    </system>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <computer name='left' hostname='192.168.66.5'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <system>
+\end_layout
+
+\begin_layout Plain Layout
+
+      <login remote_command='ssh cezmurgr@192.168.66.5' python='/home/cezmurgr/pajt
+on3/bin/python3.4'/>
+\end_layout
+
+\begin_layout Plain Layout
+
+	  <library path="/home/cezmurgr/pajton3/lib/" />
+\end_layout
+
+\begin_layout Plain Layout
+
+	  <environment>PYTHONPATH=/home/cezmurgr/pajton3/bin/</environment>
+\end_layout
+
+\begin_layout Plain Layout
+
+    </system>
+\end_layout
+
+\begin_layout Plain Layout
+
+ </computers>
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body

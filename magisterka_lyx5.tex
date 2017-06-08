@@ -151,7 +151,7 @@ swobody są to:
 \item rotacja względem osi Y
 \item rotacja względem osi Z
 \end{itemize}
-\item \textbf{Podwójne buforowanie obrazu metodą Page Flipping -}metoda
+\item \textbf{Podwójne buforowanie obrazu metodą Page Flipping -} metoda
 rysowania i wyświetlania klatek wykorzystująca dwa osobne bufory w
 pamięci. Gdy jeden z nich wyświetla gotową klatkę drugi rysuje kolejną.
 Kiedy operacje rysowania klatki są zakończone następuje przełączenie
@@ -161,11 +161,19 @@ implementacja podwójnego buforowania. W tym przypadku mamy 4 bufory,
 z czego po dwa przydzielone są do rysowania obrazu dla jednego oka.
 Operacja podmiany aktualnie wyświetlanego bufora jest jednoczesna
 dla buforów prawego i lewego oka.
-\item \textbf{Video Wall}- specjalny zestaw kilku lub więcej wyświetlaczy
+\item \textbf{Video Wall} - specjalny zestaw kilku lub więcej wyświetlaczy
 ułożonych jeden przy drugim. Tworzą w ten sposób jeden duży ekran.
 Wyświetlacze wykorzystywane przy budowie video walla zazwyczaj mają
 jak najcieńszą ramę dookoła ekranu by zminimalizować przerwy pomiędzy
 ekranami\footnote{http://www.pixell.com/what\_is\_a\_vw.htm (dostęp: 22.05.2016)}.
+\item \textbf{InfiniBand} - standard sieciowy wykorzystywany szczególnie
+przy budowie klastrów obliczeniowych. Pozwala na bardzo szybki dostęp
+do zasobów oraz znacząco zmniejsza opóźnienia. W przeciwieństwie do
+standardu Ethernet operacje związane z przesyłem danych wykonywane
+są przez specjalny adapter zamiast bezpośrednio na CPU. Do połączeń
+wykorzystywane są światłowody by zmaksymalizować ilość przesyłanych
+danych. Standard został stworzony przez firmę Mellanox.\footnote{http://www.mellanox.com/pdf/whitepapers/IB\_Intro\_WP\_190.pdf (dostęp:
+08.06.2017)}
 \end{itemize}
 
 \part*{\newpage{}Wstęp}
@@ -763,51 +771,52 @@ Próba uruchomienia w podstawowej konfiguracji zakończyła się sukcesem.
 Windows}
 
 Po udanej próbie uruchomienia BlenderVR w konfiguracji podstawowej
-kolejnym punktem jest test z użyciem dwóch stanowisk. Nastąpi próba
+kolejnym punktem był test z użyciem dwóch stanowisk. Wykonano próbę
 połączenia przez protokół SSH, który nie jest natywnie wbudowany w
-system Windows. Zostanie użyty program, który umożliwi uruchomienie
-serwera oraz klienta protokołu SSH. Wybranym programem jest prosty
+system Windows. Został użyty program, który umożliwiał uruchomienie
+serwera oraz klienta protokołu SSH. Wybranym programem był prosty
 w obsłudze OpenSSH. 
 
 BlenderVR wymaga by połączenie między komputerami nie wymagało hasła.
-Oba stanowiska zostały wymienione kluczami SSH. Przy załadowaniu odpowiednio
-napisanej konfiguracji nastąpi próba połączenia oraz uruchomienie
+Na obu stanowiskach wymieniono klucze SSH. Przy załadowaniu odpowiednio
+napisanej konfiguracji nastąpiła próba połączenia oraz uruchomienie
 demona na obu stanowiskach. 
 
-Podstawy pliku konfiguracyjnego pozostają te same: oba środowiska
-uruchomieniowe posiadają identyczną architekturę. Dzięki temu wystarczy
-jedynie dopisać dodatkowe komputery do ustawień wraz z ich adresami
-IP. 
+Podstawowe ustawienia w pliku konfiguracyjnym pozostają te same: oba
+środowiska uruchomieniowe posiadają identyczną architekturę. Dzięki
+temu wystarczy jedynie dopisać dodatkowe komputery do ustawień wraz
+z ich adresami IP. 
 
 Procedura uruchamiania BlenderVR w tym przypadku jest taka sama jak
 przy teście wykonanym na jednym stanowisku. Załadowanie pliku konfiguracyjnego
-jednak wyświetliło błąd jak poprzednio: cannot start daemon for screen
-dual. Po pierwsze sprawdzono czy połączenie SSH jest możliwe wraz
-ze zdalnym uruchomieniem Pythona. Poprzez konsolę Windowsa udało się
-bez problemów podłączyć do drugiego komputera. Problem nie leżał w
-samym połączeniu. Raz jeszcze został zweryfikowany plik konfiguracyjny,
-ale nie znaleziono w nim błędów. Próba wykonania tego samego polecenia
-co aplikacje BlenderVR zwraca komunikat o nieistniejącym pliku. Podłoże
-tego problemu najprawodpodobniej leży w ograniczeniach nałożonych
-na konto, które nie ma praw administratora komputera. W laboratorium
-konta dostępne do testów miały wystarczające uprawnienia by instalować
-i uruchamiać większość programów znajdujących się poza dyskiem C (lub
-pewnymi jego katalogami). Sesja SSH nie posiadała wszystkich zmiennych
-środowiskowych oraz była uruchamiana w ograniczonym środowisku co
-powodowało problemy ze zdalnym uruchomieniem skryptu demona. 
+jednak wyświetliło taki sam błąd jak poprzednio: \texttt{cannot start
+daemon for screen dual}. Po pierwsze sprawdzono czy połączenie SSH
+jest możliwe wraz ze zdalnym uruchomieniem Pythona. Poprzez konsolę
+Windowsa udało się bez problemów podłączyć do drugiego komputera.
+Problem nie leżał w samym połączeniu. Raz jeszcze został zweryfikowany
+plik konfiguracyjny, ale nie znaleziono w nim błędów. Próba wykonania
+tego samego polecenia co aplikacje BlenderVR zwraca komunikat o nieistniejącym
+pliku. Podłoże tego problemu najprawodpodobniej leży w ograniczeniach
+nałożonych na konto, które nie ma praw administratora komputera. W
+laboratorium konta dostępne do testów miały wystarczające uprawnienia
+by instalować i uruchamiać większość programów znajdujących się poza
+dyskiem C (lub pewnymi jego katalogami). Sesja SSH nie posiadała wszystkich
+zmiennych środowiskowych oraz była uruchamiana w ograniczonym środowisku
+co powodowało problemy ze zdalnym uruchomieniem skryptu demona. 
 
 \begin{figure}
 \begin{centering}
 \includegraphics[scale=0.1]{graphic/win_daemon_2pc}
 \par\end{centering}
-\caption{Błąd uruchomienia demona dla drugiego stanowiska. Opracowanie własne}
+\caption{Błąd uruchomienia demona dla drugiego stanowiska. Opracowanie własne.}
 \end{figure}
 
 Na tym etapie zakończono próbę wdrożenia aplikacji BlenderVR w środowisku
-Windows. System operacyjny CentOS został uruchomiony i udostępniony
-więc kolejne próby odbędą się w tym właśnie środowisku. Linux wspiera
-natywnie protokół SSH więc etap uruchomienia dwóch stanowisk powinien
-być prostszy w konfiguracji. 
+Windows. Oprócz Windows w pracowni został uruchomiony i udostępniony
+system operacyjny CentOS, więc kolejne próby prowadzone były w tym
+właśnie środowisku. Wsparcie dla protokołu SSH jest pod Linuxem zapewniane
+przez serwer OpenSSH, więc etap uruchomienia dwóch stanowisk powinien
+być prostszy w konfiguracji.
 
 \subsection{Środowisko wdrożeniowe systemu operacyjnego Linux}
 
@@ -821,36 +830,36 @@ systemu Windows. Zainstalowaną dystrybucją linuxa jest CentOS w wersji
 \item glibc 2.12
 \end{itemize}
 Instalacja pakietów w systemie Linux jest utrudniona z powodu braku
-dostępu do Internetu. Każdy wymagany pakiet musi zostać dostarczony
-z zewnątrz, skonfigurowany i zainstalowany. Konto użytkownika nie
-miało praw super-user więc każdy z pakietów był instalowany do katalogu
-domowego użytkownika, a następnie każdy został dodany do zmiennej
-środowiskowej PATH.
+dostępu do Internetu w pracowni. Każdy wymagany pakiet musi zostać
+dostarczony z zewnątrz, skonfigurowany i zainstalowany. Konto użytkownika
+nie miało praw super-user więc każdy z pakietów był instalowany lokalnie
+w katalogu domowym użytkownika, a następnie odpowiednie ścieżki do
+nowego oprogramowania zostały dodane do zmiennej środowiskowej PATH.
 
 \subsection{Instalacja aplikacji BlenderVR w systemie operacyjnym Linux}
 
 Instalacja wszystkich niezbędnych pakietów w środowisku Linux jest
 procesem bardziej skomplikowanym niż w przypadku systemu Windows.
 Instrukcja dostępna na stronie dewelopera aplikacji nie jest dokładna
-i wiele wyników poprawnej konfiguracji jest na podstawie metody prób
-i błędów. Wszystkie pakiety dostarczone były jako źródła oraz kompilowane
-i instalowane na stanowiskach, ponieważ sieć odcięta była od Internetu. 
+i wiele wyników poprawnej konfiguracji osiągnięto metodą prób i błędów.
+Wszystkie pakiety dostarczone były jako źródła na nośniku wymiennym
+a następnie kompilowane i instalowane na obu stanowiskach.
 
 Pakietem, który jest wymagany podczas procesu instalacji wszystkich
 zależności jest przede wszystkim cmake. Był on już zainstalowany na
-stanowiskach w laboratorium, dlatego pominięto ten krok w opisie. 
+stanowiskach w laboratorium, dlatego pominięto ten krok. 
 
 Podstawowym wymaganym programem jest Python w wersji 3.4. Należy skompilować
 źródła z dodatkową flagą \texttt{-{}-enable-shared}. Nie jest to zawarte
-w instrukcji na stornie dewelopera i powoduje problemy przy kompilacji
+w instrukcji na stronie dewelopera i powoduje problemy przy kompilacji
 pakietu PySide w dalszej części procesu. Jedyna wzmianka znaleziona
 o problemie oraz rozwiązaniu znajduje się w sekcji często zadawanych
 pytań. 
 
-Kolejnym wymaganym pakietem jest Qt4 wraz z development headers. Nagłówki
-funkcji mogą być dostępne w osobnym pakiecie np. libqt4-dev. W takim
-wypadku należy skompilować i zainstalować podstawowe biblioteki qt4
-oraz nagłówki. Jest to wymagane przez pakiet PySide. Źródła Qt4 dostępne
+Kolejnym wymaganym pakietem jest Qt4 wraz z nagłówkami. Nagłówki funkcji
+mogą być dostępne w osobnym pakiecie np. libqt4-dev. W takim wypadku
+należy skompilować i zainstalować podstawowe biblioteki qt4 oraz nagłówki.
+Jest to wymagane przez pakiet PySide. Pakiety źródłowe Qt4 dostępne
 są na stronie deweloperów.
 
 Źródła Pythona3.4 nie zawsze zawierają w sobie modułu PIP. Należy
@@ -859,7 +868,7 @@ PIP nie jest zainstalowany najłatwiej użyć polecenia: \texttt{python
 get-pip.py} lub ściągnąć źródło ze strony https://pypi.python.org. 
 
 Następnym krokiem jest kompilacja PySide. W laboratorium użyto wersji
-1.2.2 – taką, jakiej zalecają deweloperzy. Pakiet został skompilowany
+1.2.2 – takiej, jakiej zalecają deweloperzy. Pakiet został skompilowany
 z domyślnymi ustawieniami. W tym kroku wystąpiło najwięcej problemów
 z kompilacją. Pierwszym napotkanym był problem z brakiem bibliotek
 Pythona, gdy ten został wcześniej skompilowany bez flagi \texttt{-{}-enable-shared}.
@@ -901,7 +910,7 @@ Dzięki temu BlenderVR uruchomił się zgodnie z założeniami. Na ekranie
 pokazał się interfejs aplikacji. 
 
 Również w tym przypadku pierwszym krokiem jest załadowanie pliku konfiguracyjnego.
-Został on napisany na przykładzie dostępnym na stronie dewelopera.
+Został on napisany w oparciu o przykład dostępny na stronie dewelopera.
 
 \inputencoding{latin2}\begin{lstlisting}
 <?xml version="1.0"?>
@@ -965,5 +974,124 @@ Po załadowaniu pliku konfiguracyjnego wybrano podstawową scenę do
 testu. Okienko logowania nie wykazało żadnych błędów. Uruchomienie
 sceny przyniosło oczekiwany skutek. Zgodnie z konfiguracją, na ekranie
 wyświetliło się okienko 400x400px z wybraną sceną testową. Nie wykryto
-żadnych problemów i zakłóceń w działaniu sceny czy samej aplikacji.
+żadnych problemów i zakłóceń w działaniu sceny czy aplikacji.
+
+\subsection{Działanie aplikacji BlenderVR w innych konfiguracjach w środowisku
+Linux}
+
+Dokładnie tak jak w przypadku systemu Windows kolejnym krokiem było
+sprawdzenie aplikacji z użyciem dwóch stanowisk. BlenderVR oraz wszystkie
+niezbędne pakiety zostały zainstalowane na drugm stanowisku w taki
+sam sposób jak na pierwszym. Znano już występujące problemy podczas
+instalacji więc tym razem udało się ją przeprowadzić bezbłędnie. Trudności
+wystąpiły dopiero przy tworzeniu pliku konfiguracyjnego. Na stronie
+dewelopera znajduje się przykładowy plik konfiguracji połączenia dwóch
+stanowisk, jednak jest on przygotowany z myślą o systemie Windows.
+Na bazie poprzednio napisanego pliku konfiguracyjnego dla jednego
+stanowiska dodawano poszczególne sekcje związane z połączeniem przez
+SSH.
+
+Oba komputery zostały wymienione kluczami SSH. Pierwsze logowanie
+nastąpiło ręcznie w terminalu by zostawić ,,odcisk'' i logować się
+bez potrzeby wpisywania hasła za każdym kolejnym razem. W sekcji \texttt{<computers>}
+dodano wpisy odpowiedzialne za połączenie oraz uruchomienie skryptu
+demona. 
+
+\inputencoding{latin2}\begin{lstlisting}
+<computers>
+        <computer name="right" hostname='192.168.66.8' />
+    <system>
+      <login remote_command='ssh cezmurgr@192.168.66.8' python='/home/cezmurgr/pajton3/bin/python3.4'/>
+    </system>
+    <computer name='left' hostname='192.168.66.7'/>
+    <system>
+      <login remote_command='ssh cezmurgr@192.168.66.7' python='/home/cezmurgr/pajton3/bin/python3.4'/>
+    </system>
+ </computers>
+\end{lstlisting}
+\inputencoding{utf8}
+Zdefiniowano dwa komputery: prawy - \texttt{right} oraz lewy - \texttt{left}.
+Lewy był komputerem, na którym pracowano i uruchamiano główne okno
+BlenderVR. Prawy służył jako „slave”. Adresy IP użyte do logowania
+zostały przypisane w sieci InfiniBand. Zapewni ona bardzo małe opóźnienia
+wymagane przy synchronizacji wszystkich wyświetlanych scen. Załadowanie
+pliku konfiguracyjnego wyświetliło jednak błąd: \texttt{cannot start
+daemon for screen}. W terminalu systemowym wyświetliły się szczegóły
+dotyczące błędu: \texttt{socket.error: {[}Errno 113{]} No route to
+host}. Informacje pozyskane od administratora sieci nie pomogły w
+rozwiązaniu błędu. Według nich wszystkie komputery były w jednej podsieci
+oraz nie było między nimi restrykcji jeśli chodzi o protokoły SSH.
+Sprawdzono łączność pomiędzy komputerami używając pingowania. Wszystkie
+pingi przeszły i nie zarejestrowano żadnych opóźnień. Próba ręcznego
+połączenia SSH się udała, jednak wykonania komendy: \texttt{/home/cezmurgr/pajton3/bin/python3
+/home/cezmurgr/source/utils/daemon.py 192.168.66.7:31415 console debug}
+zakończyło się niepowodzeniem i pokazaniem tego samego błędu: \texttt{socket.error: {[}Errno
+113{]} No route to host}. Wyglądało na to, że z komputera \texttt{right}
+nie można połączyć się do komputera \texttt{left}. Po sprawdzeniu
+tablic routingu okazało się, że komputer prawy jest podłączony przez
+dodatkowych switch, a nie jak reszta komputerów w pracowni do jednego
+switcha. Powodowało to problem przy połączeniu ponieważ po drodze
+pojawiała się jedna dodatkowa podsieć. 
+
+By definitywnie sprawdzić czy rzeczywiście dodatkowy switch powodował
+problem, wybrano dwa inne stanowiska w laboratorium oraz również nazwano
+je \texttt{left} i \texttt{right}. Konfiguracja sekcji \texttt{<computers>}
+musiała się w tym przypadku zmienić. 
+
+\inputencoding{latin2}\begin{lstlisting}
+<computers>
+        <computer name="right" hostname='192.168.66.6' />
+    <system>
+      <login remote_command='ssh cezmurgr@192.168.66.6' python='/home/cezmurgr/pajton3/bin/python3.4'/>
+    </system>
+    <computer name='left' hostname='192.168.66.5'/>
+    <system>
+      <login remote_command='ssh cezmurgr@192.168.66.5' python='/home/cezmurgr/pajton3/bin/python3.4'/>
+    </system>
+ </computers>
+\end{lstlisting}
+\inputencoding{utf8}
+Załadowanie pliku konfiguracyjnego ponownie pokazało błąd: \texttt{cannot
+start daemon for screen}. Błąd wyświetlony przez terminal systemowy
+był jednak inny: \texttt{/home/cezmurgr/pajton3/bin/python3: error
+while loading shared libraries: libpython3.4m.so.1.0: cannot open
+shared object file: No such file or directory}. Ten błąd wystąpił
+już wcześniej i wiedziano jak sobie z nim poradzić. W konfiguracji
+dwóch stanowisk prawdopodobnie zmienna środowiskowa nie była przesłana
+lub nie eksportowała się przy połączeniu SSH. Spróbowano zalogować
+się na komputer prawy oraz wykonać komendę ręcznie. Po zalogowaniu
+przez SSH zauważono, że zmienne środowiskowe zawierają jedynie podstawowe
+wpisy i ścieżki. Brakowało wszystkich zmiennych związanych ze ścieżkami
+do instalowanego Pythona oraz jego bibliotek. Wyeksportowano kolejno:
+\texttt{PATH=\$PATH:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cezmurgr/cmake/bin/:/home/cezmurgr/pajton3/bin/}
+oraz \texttt{LD\_LIBRARY\_PATH=/home/cezmurgr/pajton3/lib}. Ręczne
+wykonanie komendy z aplikacji BlenderVR zakończyło się sukcesem. Skrypt
+demona wystartował i próbowął nawiązać połączenie ze stanowiskiem
+\texttt{left}. 
+
+Przesyłanie zmiennych w aplikacji BlenderVR może odbywać się za pomocą
+odpowiednich wpisów w pliku konfiguracyjnym. By rozwiązać problem
+braku zmiennych środowiskowych dodano podsekcje \texttt{library path}
+w konfiguracji każdego ze stanowisk. Dodatkowo wpisano również ścieżkę
+do zainstalowanego Pythona 3.4. Nie jest to obowiązkowe ponieważ dokładna
+ścieżka jest podana w linijce \texttt{<login remote\_command='ssh
+cezmurgr@192.168.66.6' python='/home/cezmurgr/pajton3/bin/python3.4'/>}. 
+
+\inputencoding{latin2}\begin{lstlisting}
+<computers>
+        <computer name="right" hostname='192.168.66.6' />
+    <system>
+      <login remote_command='ssh cezmurgr@192.168.66.6' python='/home/cezmurgr/pajton3/bin/python3.4'/>
+	  <library path="/home/cezmurgr/pajton3/lib/" />
+	  <environment>PYTHONPATH=/home/cezmurgr/pajton3/bin/</environment>
+    </system>
+    <computer name='left' hostname='192.168.66.5'/>
+    <system>
+      <login remote_command='ssh cezmurgr@192.168.66.5' python='/home/cezmurgr/pajton3/bin/python3.4'/>
+	  <library path="/home/cezmurgr/pajton3/lib/" />
+	  <environment>PYTHONPATH=/home/cezmurgr/pajton3/bin/</environment>
+    </system>
+ </computers>
+\end{lstlisting}
+\inputencoding{utf8}
 \end{document}
