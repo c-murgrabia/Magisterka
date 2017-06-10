@@ -3492,14 +3492,14 @@ left
 \begin_layout Standard
 Przesyłanie zmiennych w aplikacji BlenderVR może odbywać się za pomocą odpowiedn
 ich wpisów w pliku konfiguracyjnym.
- By rozwiązać problem braku zmiennych środowiskowych dodano podsekcje 
+ By spróbować rozwiązać problem braku zmiennych środowiskowych dodano podsekcje
+ 
 \family typewriter
 library path
 \family default
  w konfiguracji każdego ze stanowisk.
  Dodatkowo wpisano również ścieżkę do zainstalowanego Pythona 3.4.
- Nie jest to obowiązkowe ponieważ dokładna ścieżka jest podana w linijce
- 
+ Nie było to obowiązkowe ponieważ dokładna ścieżka była podana: 
 \family typewriter
 <login remote_command='ssh cezmurgr@192.168.66.6' python='/home/cezmurgr/pajton3/bi
 n/python3.4'/>
@@ -3583,6 +3583,94 @@ on3/bin/python3.4'/>
 \begin_layout Plain Layout
 
  </computers>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ponowna próba uruchomienia aplikacji nie przyniosła jednak oczekiwanych
+ skutków.
+ Terminal ponownie pokazał błąd uruchomienia demona na drugim stanowisku.
+ Komunikat ponownie mówił o braku bibliotek.
+\end_layout
+
+\begin_layout Standard
+Problem wymagał głębszej analizy.
+ Pomocna okazała się dokumentacja ustawień serwera Open SSH.
+ Zawarte tam informacje nakierowały na możliwości serwera na przyjmowanie
+ zmiennych środowiskowych.
+ Z pomocą administratora laboratorium uzyskano dostęp do ustawień serwera
+ SSH.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+TUTAJ KONFIGURACJA KTORA BYLA W LABORATORIUM LUB PRZYKLADOWY PLIK
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Konfiguracja SSH nie pozwalała na przyjmowanie zmiennych środowiskowych
+ z zewnątrz.
+ Sesja była uruchamiana w ograniczonym środowisku zawierając tylko podstawowe
+ zmienne i nie można było ich automatycznie przesłać.
+ Za takie ustawienie odpowiadał parametr: 
+\family typewriter
+AcceptEnv
+\family default
+.
+ Należało go przestawić tak, by serwer akceptował zmienne środowiskowe z
+ zewnątrz.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+AcceptEnv PATH LD_LIBRARY_PATH
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dodatkowo w konfiguracji klienta SSH należało dodać zmienne wysyłane do
+ serwera.
+ Odpowiada za to parametr: 
+\family typewriter
+SendEnv
+\family default
+.
+ Po spacji podano jakie zmienne środowiskowe powinny zostać wysłane do komputera
+ docelowego.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SendEnv PATH LD_LIBRARY_PATH
 \end_layout
 
 \end_inset

@@ -1070,11 +1070,11 @@ demona wystartował i próbowął nawiązać połączenie ze stanowiskiem
 \texttt{left}. 
 
 Przesyłanie zmiennych w aplikacji BlenderVR może odbywać się za pomocą
-odpowiednich wpisów w pliku konfiguracyjnym. By rozwiązać problem
-braku zmiennych środowiskowych dodano podsekcje \texttt{library path}
-w konfiguracji każdego ze stanowisk. Dodatkowo wpisano również ścieżkę
-do zainstalowanego Pythona 3.4. Nie jest to obowiązkowe ponieważ dokładna
-ścieżka jest podana w linijce \texttt{<login remote\_command='ssh
+odpowiednich wpisów w pliku konfiguracyjnym. By spróbować rozwiązać
+problem braku zmiennych środowiskowych dodano podsekcje \texttt{library
+path} w konfiguracji każdego ze stanowisk. Dodatkowo wpisano również
+ścieżkę do zainstalowanego Pythona 3.4. Nie było to obowiązkowe ponieważ
+dokładna ścieżka była podana: \texttt{<login remote\_command='ssh
 cezmurgr@192.168.66.6' python='/home/cezmurgr/pajton3/bin/python3.4'/>}. 
 
 \inputencoding{latin2}\begin{lstlisting}
@@ -1092,6 +1092,38 @@ cezmurgr@192.168.66.6' python='/home/cezmurgr/pajton3/bin/python3.4'/>}.
 	  <environment>PYTHONPATH=/home/cezmurgr/pajton3/bin/</environment>
     </system>
  </computers>
+\end{lstlisting}
+\inputencoding{utf8}
+Ponowna próba uruchomienia aplikacji nie przyniosła jednak oczekiwanych
+skutków. Terminal ponownie pokazał błąd uruchomienia demona na drugim
+stanowisku. Komunikat ponownie mówił o braku bibliotek.
+
+Problem wymagał głębszej analizy. Pomocna okazała się dokumentacja
+ustawień serwera Open SSH. Zawarte tam informacje nakierowały na możliwości
+serwera na przyjmowanie zmiennych środowiskowych. Z pomocą administratora
+laboratorium uzyskano dostęp do ustawień serwera SSH. 
+
+\inputencoding{latin2}\begin{lstlisting}
+TUTAJ KONFIGURACJA KTORA BYLA W LABORATORIUM LUB PRZYKLADOWY PLIK
+\end{lstlisting}
+\inputencoding{utf8}
+Konfiguracja SSH nie pozwalała na przyjmowanie zmiennych środowiskowych
+z zewnątrz. Sesja była uruchamiana w ograniczonym środowisku zawierając
+tylko podstawowe zmienne i nie można było ich automatycznie przesłać.
+Za takie ustawienie odpowiadał parametr: \texttt{AcceptEnv}. Należało
+go przestawić tak, by serwer akceptował zmienne środowiskowe z zewnątrz.
+
+\inputencoding{latin2}\begin{lstlisting}
+AcceptEnv PATH LD_LIBRARY_PATH
+\end{lstlisting}
+\inputencoding{utf8}
+Dodatkowo w konfiguracji klienta SSH należało dodać zmienne wysyłane
+do serwera. Odpowiada za to parametr: \texttt{SendEnv}. Po spacji
+podano jakie zmienne środowiskowe powinny zostać wysłane do komputera
+docelowego.
+
+\inputencoding{latin2}\begin{lstlisting}
+SendEnv PATH LD_LIBRARY_PATH
 \end{lstlisting}
 \inputencoding{utf8}
 \end{document}
