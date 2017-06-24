@@ -1,6 +1,6 @@
 %% LyX 2.2.0 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
-\documentclass[11pt]{article}
+\documentclass[11pt,twoside]{article}
 \renewcommand{\ttdefault}{lmtt}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -11,6 +11,10 @@
 \usepackage{float}
 \usepackage{textcomp}
 \usepackage{graphicx}
+
+\usepackage{courier} %pio: dla lepszego fonta w lstlisting
+
+
 
 \makeatletter
 
@@ -35,19 +39,25 @@
 \providecommand{\tabularnewline}{\\}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
-\hyphenation{MechWarrior przes-trzen-nej u-żyt-kow-ni-ka jas-ki-ni jas-ki-nia naj-waż-niej-szy-mi do-łą-czo-no u-sta-wio-ne przy-sto-so-wa-nym prze-tes-to-wa-ne}
+\hyphenation{o-kien-ko MechWarrior przes-trzen-nej u-żyt-kow-ni-ka jas-ki-ni jas-ki-nia naj-waż-niej-szy-mi do-łą-czo-no u-sta-wio-ne przy-sto-so-wa-nym prze-tes-to-wa-ne}
 \sloppy
 
 \makeatother
 
 \usepackage{listings}
+\lstset{breaklines=true,
+postbreak={\space},
+language=XML,
+frame=single}
 \renewcommand{\lstlistingname}{\inputencoding{latin2}Listing}
 
 \begin{document}
-tutaj strona główna
+% prosta konfiguracja wyświetlania listingów tak, aby wyglądały jakoś po ludzku
+% więcej opcji można ustawić (i trzeba!) - listingi powinny wyglądać porządnie
+\lstset{basicstyle=\scriptsize\ttfamily,breaklines=true}
+\lstset{framextopmargin=50pt,frame=bottomline}
 
-System wizualizacji oparty o Blender w środowisku jaskini rzeczywistości
-wirtualnej
+strona tytułowa
 
 \section*{\newpage{}}
 
@@ -61,253 +71,264 @@ tutaj spis treści
 
 \part*{Słownik}
 \begin{itemize}
-\item \textbf{Rzeczywistość wirtualna (ang. Virtual Reality)} - sposób użycia
-technologii komputerowej do tworzenia trójwymiarowego świata, w którym
-obiekty dają wrażenie przestrzennej obecności\footnote{Steve Bryson,,Virtual reality: A Definition History - A Personal
-Essay'', 1998, s. 4 http://arxiv.org/pdf/1312.4322.pdf}. Do zanurzenia się w rzeczywistości wirtualnej potrzebne jest urządzenie
-wyświetlające obraz.
-\item \textbf{Maszyny arcade, automaty do gier} - konstrukcja służąca rozrywce,
-umieszczana najczęściej w salonach gier bądź też pubach lub klubach.
-Uruchomienie gry następuje w momencie wrzucenia monety bądź żetonu
-w otwór wrzutowy, zabawa ograniczona jest zwykle pewnym wyznacznikiem
-narzuconym przez producenta lub właściciela automatu (np. liczba prób/żyć,
-przejście na wyższy poziom, zdobycie określonego celu w zadanym czasie,
-ukończenie gry). Zwykle automat do gier wyposażony był w gałkę sterującą
-i kilka klawiszy.
-\item \textbf{CAVE (ang. Cave Automatic Virtual Environement)} - obiekt
-o kształtach sześcianu służący do zanurzenia się w rzeczywistość wirtualną.
-Składa się z akrylowych ekranów tylnej projekcji oraz projektorów,
-rzucających obrazy na każdą ze ścian. Człowiek wewnątrz musi nosić
-aktywne okulary 3D by móc oglądać dowolnie wyświetlony obiekt z każdej
-strony. Wewnątrz znajdują się również kamery śledzące pozycje użytkownika
-dzięki czemu obraz jest na bieżąco dostosowywany do pozycji śledzonego.
-\item \textbf{Tylna projekcja (ang: Rear Screen Projection)} - projekcja
-obrazu na półprzeźroczysty ekran znajdujący się między obserwatorem
-a urządzeniem. Dzięki wykorzystaniu tej techniki obraz jest jaśniejszy
-i bardziej wyraźny w porównaniu do klasycznej projekcji.
-\item \textbf{Aktywne okulary 3D} - rodzaj okularów 3D zasilanych bateriami
-by rozdzielać renderowane klatki specjalnie dla prawego i lewego oka.
-Działają na zasadzie migawki: kiedy aktualnie wyświetlana klatka jest
-przeznaczona dla lewego oka, prawa migawka pozostaje zamknięta i vice
-versa. Przy takiej formie odbierania obrazu wyświetlacz powinien odświeżać
-obraz na tyle szybko by każde z oczu otrzymywało przynajmniej 60 klatek
-na sekundę (co daje łącznie odświeżanie na poziomie 120 Hz)\footnote{http://www.cnet.com/news/active-3d-vs-passive-3d-whats-better/ (dostęp:
-22.05.2016)}
-\item \textbf{Odświeżanie obrazu} - dla ekranów LCD jest to liczba wyświetleń
-w ciągu sekundy danych dostarczonych przez procesor graficzny. Ekrany
-typu CRT odświeżają obraz wytrzeliwując elektrony pobudzające luminofor
-(patrz: CRT).
-\item \textbf{LCD (ang. Liquid Crystal Display)} - Rodzaj ciekło-krystalicznych
-wyświetlaczy gdzie obraz jest sterowany poprzez zmianę poszczególnych
-pikseli lub ich grup. Panel LCD nie emituje światła sam z siebie,
-dlatego wymagane jest podświetlenie by obraz stał się widoczny.
-\item \textbf{CRT (ang. Cathode-Ray Tube)} - Rodzaj wyświetlaczy bazujący
-na lampie obrazowej oraz dziale eletronowym. Wyświetlacz używa wiązki
-elektronów wystrzeliwanej z działa do wzbudzenia świecenia luminofora.
-Wiązka po wystrzeleniu przebiegała przez całą powierzchnię ekranu
-wywołując świecenie i ukazując na jego powierzchni obraz.
-\item \textbf{Luminofor}- związek chemiczny wykazujący luminescencję.
-\item \textbf{BGE (Blender Game Engine)} - jeden z komponentów Blendera
-3D. Jest to open-sourcowy silnik graficzny używany do tworzenia interaktywnych
-scen w czasie rzeczywistym.
-\item \textbf{HMD (Head Mounted Display)} - urządzenie wyświetlające przeznaczone
-do zakładania na głowę, wyposażone w soczewki pomiędzy ekranem a okiem.
-Obraz jest ustawiony tak by każde oko widziało swoją część co sprawia
-wrażenie stereoskopii. Wyświetlacze HMD pozwalają zanurzyć się w rzeczywistość
-wirtualną.
-\item \textbf{Stereoskopia}- technika pokazywania obrazu polegająca na tworzeniu
-lub uwydatnianiu jego głębii.
-\item \textbf{FullHD} - standard wyświetlania obrazu wysokiej jakości. Zazwyczaj
-zakłada się też, że wyświetlacz jest panoramiczny (stosunek boków
-jest 16:9) i posiada rozdzielczość 1920 na 1080 pikseli. Sygnał wideo
-jakości FullHD ma oznaczenie 1080p.
-\item \textbf{Organiczna dioda elektroluminescencyjna, OLED (ang. Organic
-Light-Emitting Diode)} - dioda wytwarzana ze związków organicznych.
-Jest to również oznaczenie klasy wyświetlaczy graficznych zbudowanych
-na diodach OLED. W przeciwieństwie do ekranów LCD, OLED nie wymaga
-dodatkowego podświetlenia i emituje światło sam z siebie co pozwala
-na uzyskanie prawdziwej czerni i lepszego kontrastu\footnote{http://www.oled-info.com/introduction (dostęp: 22.05.2016)}.
-\item \textbf{Immersja} - Odczuwanie, wczuwanie się w świat cyfrowy. Proces
-zanurzenia się w ukazywanej, nierealnej rzeczywistości.
-\item \textbf{Protokół SSH (ang. Secure Shell)} - zaszyfrowany protokół
-sieciowy pozwalający na zdalne logowanie do innych komputerów w obrębie
-danej sieci. Jest następną protokołu telnet, który przesyłał niezaszyfrowane
-hasła i inne informacje.
-\item \textbf{Finansowanie społecznościowe (ang. Crowdfunding)} - Źródło
-kapitału dostarczanego przez szeroką społeczność wirtualną, która
-chce wesprzeć kreatywnego pomysłodawcę\footnote{http://crowdfunding.pl/crowdfunding-faq/ (dostęp: 22.05.2016)}.
-Akcje zbiórki organizowane są zazwyczaj na platformach internetowych
-gdzie pomysłodawca przedstawia swój projekt. Każdy może wesprzeć dowolną
-kwotą pomysłodawcę.
-\item \textbf{6DoF (ang. six degrees of freedom - 6 stopni swobody)} - możliwości
-wykonania ruchu przez ciało w przestrzeni trójwymiarowej. Dla 6. stopni
-swobody są to:
+
+\item \textbf{Rzeczywistość wirtualna} - ang. \textit{Virtual Reality}, sposób użycia technologii
+	komputerowej do tworzenia trójwymiarowego świata, w którym obiekty dają wrażenie przestrzennej
+		obecności\footnote{Steve Bryson: \textit{Virtual reality: A Definition History - A Personal Essay},
+	1998, s.4, http://arxiv.org/pdf/1312.4322.pdf (dostęp: 22.05.2016)}. Do zanurzenia się w
+	rzeczywistości wirtualnej potrzebne jest urządzenie wyświetlające obraz.
+
+\item \textbf{Maszyny arcade, automaty do gier} - konstrukcja służąca rozrywce, umieszczana
+	najczęściej w salonach gier lub klubach.  Uruchomienie gry następuje w momencie wrzucenia monety
+	bądź żetonu w otwór wrzutowy, zabawa ograniczona jest zwykle pewnym parametrem gry narzuconym
+	przez producenta lub właściciela automatu (np. liczba prób/żyć, przejście na wyższy poziom,
+	zdobycie określonego celu w zadanym czasie, ukończenie gry). Zwykle automat do gier wyposażony
+	jest w gałkę sterującą i kilka klawiszy.
+
+\item \textbf{CAVE} - ang. \textit{Cave Automatic Virtual Environement}, obiekt o kształtach
+	sześcianu służący do zanurzenia się w rzeczywistości wirtualnej, nazywany także \textit{jaskinią}.
+	Składa się z ekranów tylnej projekcji oraz projektorów, rzucających obrazy na każdą ze ścian.
+	Człowiek znajdujący się wewnątrz musi nosić aktywne okulary 3D by móc oglądać wyświetlone
+	obiekty.  Wewnątrz jaskini znajdują się również kamery śledzące położenie użytkownika dzięki
+	czemu obraz jest na bieżąco dostosowywany do jego pozycji.
+
+\item \textbf{Tylna projekcja} - ang. \textit{Rear Screen Projection} projekcja obrazu na
+	półprzezroczysty ekran znajdujący się między obserwatorem a urządzeniem. Dzięki wykorzystaniu tej
+	techniki obraz jest jaśniejszy i bardziej wyraźny w porównaniu do klasycznej projekcji, w której
+	światło z projektora odbija się od powierzchni ekranu.
+
+\item \textbf{Aktywne okulary 3D} - rodzaj okularów 3D zasilanych bateriami.  Działają one na
+	zasadzie migawki: kiedy aktualnie wyświetlana klatka jest przeznaczona dla lewego oka, prawa
+	migawka pozostaje zamknięta i vice versa. Przy takiej formie odbierania obrazu wyświetlacz
+	powinien odświeżać obraz na tyle szybko by każde z oczu otrzymywało przynajmniej 60 klatek na
+	sekundę (co daje łącznie odświeżanie na poziomie 120
+	Hz)\footnote{http://www.cnet.com/news/active-3d-vs-passive-3d-whats-better/ (dostęp:
+	22.05.2016)}
+
+\item \textbf{Odświeżanie obrazu} - dla ekranów LCD jest to liczba wyświetleń w ciągu sekundy danych
+	dostarczonych przez procesor graficzny. Ekrany typu CRT odświeżają obraz wystrzeliwując elektrony
+	pobudzające luminofor (patrz: CRT).
+
+\item \textbf{LCD} - ang. \textit{Liquid Crystal Display}, Rodzaj ciekło-krystalicznych wyświetlaczy
+	gdzie obraz jest sterowany poprzez zmianę poszczególnych pikseli lub ich grup. Panel LCD nie
+	emituje światła sam z siebie, dlatego wymagane jest podświetlenie by obraz stał się widoczny.
+
+\item \textbf{CRT} - ang. \textit{Cathode-Ray Tube}, Rodzaj wyświetlaczy bazujący na lampie
+	obrazowej oraz dziale elektronowym. Wyświetlacz używa wiązki elektronów wystrzeliwanej z działa do
+	wzbudzenia świecenia luminofora.  Wiązka po wystrzeleniu przebiega przez całą powierzchnię
+	ekranu wywołując świecenie i ukazując na jego powierzchni obraz. Ponieważ luminofor wzbudzony
+	elektronami świeci bardzo krótko, wiązka musi w ciągu sekundy wielokrotnie oświetlać ekran.
+	Każdorazowe wyświetlenie jednego pełnego ekranu nazywa się odświeżeniem, a odbywa się to poprzez
+	takie sterowanie wiązką elektronów, aby przemiatały ekran linia po linii.
+
+\item \textbf{Luminofor}- związek chemiczny wykazujący luminescencję, używany w starych
+	technologiach telewizyjnych.
+
+\item \textbf{BGE} - ang. \textit{Blender Game Engine}, jeden z komponentów Blendera 3D. Jest to
+	dość stary kod oparty na silniku gier Bullet, używany w Blenderze do tworzenia interaktywnych scen
+	działających w czasie rzeczywistym i do tworzenia prostych gier. Mimo szerokich możliwości
+	silnik ten nie ułatwia pracy ponieważ brakuje w nim wielu kluczowych elementów obecnych od
+	początku w innych konkurecyjnych produktach. Na przykład brak jest wsparcia dla niektórych akcji
+	związanych z myszą, brakuje materiałów, shaderów i wszelkich innych elementów nadających się do
+	natychmiastowego zastosowania. Aby uzyskać odpowiednie funkcje należy je oprogramować lub
+	stworzyć samemu.
+
+\item \textbf{HMD} - ang. \textit{Head Mounted Display}, urządzenie wyświetlające przeznaczone do
+	zakładania na głowę, wyposażone w soczewki pomiędzy ekranem a okiem.  Obraz jest ustawiony tak by
+	każde oko widziało obraz tylko ze swojej perspektywy co wywołuje wrażenie widzenia przestrzennego.
+	Wyświetlacze HMD pozwalają zanurzyć się w rzeczywistość wirtualną, ponieważ łatwo uzyskać wrażenie
+	"otoczenia się" wyświetlaną sceną.
+
+\item \textbf{Stereoskopia}- technika pokazywania obrazu polegająca na tworzeniu lub uwydatnianiu
+	jego głębii. Sprowadza się zwykle do wykorzystania naturalnej umiejętności widzenia przestrzennego
+	i odczucia głębi, gdy każde oko widzi nieco inny obraz.
+
+\item \textbf{FullHD} - standard wyświetlania obrazu wysokiej jakości. Zazwyczaj zakłada się też, że
+	wyświetlacz jest panoramiczny (stosunek boków jest 16:9) i posiada rozdzielczość 1920 na 1080
+	pikseli. Sygnał wideo jakości FullHD ma oznaczenie 1080p. Litera p oznacza tryb wyświetlania
+	progresywny (ang. \textit{progressive}) oraz wyświetlanie kompletnego obrazu w każdej klatce.
+	Format oznaczony jako 1080i (ang. \textit{interlaced}) wyświetla w kolejnych klatkach na zmianę
+	tylko parzyste lub nieparzyste linie pikseli z obrazu i używany jest w starszych technologiach
+	telewizyjnych.
+
+\item \textbf{OLED} - ang. \textit{Organic Light-Emitting Diode}, organiczna dioda
+	elektroluminescencyjna dioda wytwarzana ze związków organicznych.  Jest to również oznaczenie
+	klasy wyświetlaczy graficznych zbudowanych na diodach OLED. W przeciwieństwie do ekranów LCD, OLED
+	nie wymaga dodatkowego podświetlenia i emituje światło sam z siebie co pozwala na uzyskanie
+	prawdziwej czerni i lepszego kontrastu\footnote{http://www.oled-info.com/introduction (dostęp:
+	22.05.2016)}.
+
+\item \textbf{Immersja} - Odczuwanie, wczuwanie się w świat cyfrowy. Proces zanurzenia się w
+	ukazywanej, nierealnej rzeczywistości.
+
+\item \textbf{Protokół SSH} - ang. \textit{Secure Shell}, zaszyfrowany protokół sieciowy pozwalający
+	na zdalne logowanie do innych komputerów przy wykorzystaniu sieci TCP/IP. Jest następną protokołu telnet,
+	który przesyłał niezaszyfrowane hasła i inne informacje.
+
+\item \textbf{Finansowanie społecznościowe} - ang. \textit{Crowdfunding}, Źródło kapitału
+	dostarczanego przez szeroką społeczność wirtualną, która chce wesprzeć kreatywnego
+	pomysłodawcę\footnote{http://crowdfunding.pl/crowdfunding-faq/ (dostęp: 22.05.2016)}.  Akcje
+	zbiórki organizowane są zazwyczaj na platformach internetowych gdzie pomysłodawca przedstawia swój
+	projekt. Każdy może wesprzeć dowolną kwotą pomysłodawcę.
+
+\item \textbf{6DoF} - ang. \textit{six degrees of freedom}, 6 stopni swobody, możliwości wykonania
+	ruchu przez ciało w przestrzeni trójwymiarowej. Dla sześciu stopni swobody są to:
 
 \begin{itemize}
-\item przesunięcie góra/dół względem osi X
-\item przesunięcie góra/dół względem osi Y
-\item przesunięcie góra/dół względem osi Z
-\item rotacja względem osi X
-\item rotacja względem osi Y
-\item rotacja względem osi Z
+\item przesunięcie góra/dół względem osi X;
+\item przesunięcie góra/dół względem osi Y;
+\item przesunięcie góra/dół względem osi Z;
+\item rotacja względem osi X;
+\item rotacja względem osi Y;
+\item rotacja względem osi Z.
 \end{itemize}
-\item \textbf{Podwójne buforowanie obrazu metodą Page Flipping -} metoda
-rysowania i wyświetlania klatek wykorzystująca dwa osobne bufory w
-pamięci. Gdy jeden z nich wyświetla gotową klatkę drugi rysuje kolejną.
-Kiedy operacje rysowania klatki są zakończone następuje przełączenie
-pomiędzy wyświetlaniem buforów.
-\item \textbf{Poczwórne buforowanie (ang: Quad buffering)} - stereoskopiczna
-implementacja podwójnego buforowania. W tym przypadku mamy 4 bufory,
-z czego po dwa przydzielone są do rysowania obrazu dla jednego oka.
-Operacja podmiany aktualnie wyświetlanego bufora jest jednoczesna
-dla buforów prawego i lewego oka.
-\item \textbf{Video Wall} - specjalny zestaw kilku lub więcej wyświetlaczy
-ułożonych jeden przy drugim. Tworzą w ten sposób jeden duży ekran.
-Wyświetlacze wykorzystywane przy budowie video walla zazwyczaj mają
-jak najcieńszą ramę dookoła ekranu by zminimalizować przerwy pomiędzy
-ekranami\footnote{http://www.pixell.com/what\_is\_a\_vw.htm (dostęp: 22.05.2016)}.
-\item \textbf{InfiniBand} - standard sieciowy wykorzystywany szczególnie
-przy budowie klastrów obliczeniowych. Pozwala na bardzo szybki dostęp
-do zasobów oraz znacząco zmniejsza opóźnienia. W przeciwieństwie do
-standardu Ethernet operacje związane z przesyłem danych wykonywane
-są przez specjalny adapter zamiast bezpośrednio na CPU. Do połączeń
-wykorzystywane są światłowody by zmaksymalizować ilość przesyłanych
-danych. Standard został stworzony przez firmę Mellanox.\footnote{http://www.mellanox.com/pdf/whitepapers/IB\_Intro\_WP\_190.pdf (dostęp:
-08.06.2017)}
+
+\item \textbf{Podwójne buforowanie obrazu metodą Page Flipping} metoda rysowania i wyświetlania
+	klatek wykorzystująca dwa osobne bufory w pamięci. Gdy jeden z nich wyświetla gotową klatkę drugi
+	rysuje kolejną.  Kiedy operacje rysowania klatki są zakończone następuje przełączenie pomiędzy
+	wyświetlaniem buforów.
+
+\item \textbf{Poczwórne buforowanie} - ang. \textit{Quad buffering}, implementacja podwójnego
+	buforowania w stereoskopii. W tym przypadku mamy 4 bufory, z czego po dwa przydzielone są do
+	rysowania obrazu dla jednego oka.  Operacja podmiany aktualnie wyświetlanego bufora jest
+	jednoczesna dla buforów prawego i lewego oka.
+
+\item \textbf{Video Wall} - ściana filmowa, specjalny zestaw kilku lub więcej wyświetlaczy ułożonych
+	jeden przy drugim. Tworzą w ten sposób jeden duży ekran. Wyświetlacze wykorzystywane przy budowie
+	ściany filmowej zazwyczaj mają jak najcieńszą ramę dookoła ekranu by zminimalizować przerwy pomiędzy
+	ekranami\footnote{http://www.pixell.com/what\_is\_a\_vw.htm (dostęp: 22.05.2016)}.
+
+\item \textbf{InfiniBand} - standard sieciowy wykorzystywany szczególnie przy budowie klastrów
+	obliczeniowych. Pozwala na bardzo szybki dostęp do zasobów oraz znacząco zmniejsza opóźnienia. W
+	przeciwieństwie do standardu Ethernet operacje związane z przesyłem danych wykonywane są przez
+	specjalny adapter zamiast bezpośrednio na CPU. Do połączeń wykorzystywane są światłowody by
+	zmaksymalizować ilość przesyłanych danych. Standard został stworzony przez firmę
+	Mellanox.\footnote{http://www.mellanox.com/pdf/whitepapers/IB\_Intro\_WP\_190.pdf (dostęp:
+	08.06.2017)}
+
 \end{itemize}
 
 \part*{\newpage{}Wstęp}
 
-Niniejsza praca ma na celu rozszerzenie możliwości wykorzystania jaskini
-wirtualnej rzeczywistości CAVE poprzez implementację silnika graficznego
-Blender Game Engine w Laboratorium Zanurzonej Wizualizacji Przestrzennej
-znajdującego się na Politechnice Gdańskiej. Wykorzystując aplikację
-BlenderVR każda scena odpowiednio zaprogramowana i zaprojektowana
-w BGE może zostać wyświetlona w jaskini wirtualnej rzeczywistości
-lub na architekturze odpowiednio podobnej. Aplikacja BlenderVR jak
-i Blender3D są programami open-source. Dzięki temu systemy typu CAVE
-mogą rozwijać się bardziej dynamicznie wraz z dedykowanymi dla nich
-scenami lub grami. Aktualnie głównymi silnikami graficznymi, które
-wykorzystywane są w Laboratorium Zanurzonej Wizualizacji Przestrzennej
-są Unity i Unreal Engine. Oba zostały przystosowane do pracy w jaskiniach
-wirtualnej rzeczywistości. Nie są one jednak programami open-source
-co nie pozwala na dokładne dopasowanie do potrzeb laboratorium. Wykorzystanie
-nowej opcji jaką jest Blender Game Engine rozszerzy możliwości modelowania
-scen dedykowanych dla CAVE’a.
+Niniejsza praca ma na celu rozszerzenie możliwości wykorzystania jaskini wirtualnej rzeczywistości
+CAVE poprzez wdrożenie silnika graficznego Blender Game Engine w Laboratorium Zanurzonej
+Wizualizacji Przestrzennej znajdującego się na Politechnice Gdańskiej. Wykorzystując aplikację
+BlenderVR każda scena odpowiednio zaprogramowana i zaprojektowana w BGE może zostać wyświetlona w
+jaskini wirtualnej rzeczywistości lub na architekturze odpowiednio podobnej. Aplikacja BlenderVR jak
+i Blender3D są programami open-source. Dzięki temu systemy typu CAVE mogą rozwijać się bardziej
+dynamicznie wraz z dedykowanymi dla nich scenami lub grami. Aktualnie głównymi silnikami
+graficznymi, które wykorzystywane są w Laboratorium Zanurzonej Wizualizacji Przestrzennej są Unity i
+Unreal Engine. Oba zostały przystosowane do pracy w jaskiniach wirtualnej rzeczywistości. Nie są one
+jednak całkowicie uwolnione od praw podmiotów obcych co nie pozwala na ich swobodne używanie.
+Wykorzystanie nowej opcji jaką jest Blender Game Engine na licencji GNU General Public Licence rozszerzy
+możliwości związane z uwolnionym od roszczeń oprogramowaniem do modelowania scen dedykowanych dla CAVE’a.
 
 \pagebreak{}
 
 \part{Technologia wirtualnej rzeczywistości}
 
-Wirtualna rzeczywistość od zawsze intrygowała człowieka. W wielu filmach
-czy książkach wizje przyszłości często zawierały urządzenia pozwalające
-oderwać się od rzeczywistości i w pełni zanurzyć się w dowolnie ukształtowanym
-świecie wirtualnym. Teraźniejszość coraz bardziej zaczyna przypominać
+Wirtualna rzeczywistość od zawsze intrygowała człowieka. W wielu filmach czy książkach wizje
+przyszłości często zawierały urządzenia pozwalające oderwać się od rzeczywistości i w pełni zanurzyć
+się w dowolnie ukształtowanym świecie wirtualnym. Teraźniejszość coraz bardziej zaczyna przypominać
 tę przyszłość.
 
-Pierwsze wzmianki o rzeczywistości wirtualnej mogą pochodzić z lat
-30. XX wieku. Terminu,,la réalité virtuelle'' użył Antonin Artaud
-w swoim zbiorze esejów pod tytułem,,Le Théâtre et son double''.
-Jako rzeczywistość wirtualna została opisana iluzjonistyczna natura
-postaci i obiektów w teatrze\footnote{http://www.almaclassics.com/excerpts/Theatre\_Double.pdf (dostęp 07.05.20016)}.
-To co dzisiaj kryje się pod nazwą rzeczywistości wirtualnej było popularyzowane
-dopiero przez media masowe w filmach takich jak:,,Brainstorm'' i,,The
-Lawnmover Man''. Pierwszym urządzeniem, które można by nazwać systemem
-VR była Sensorama\footnote{http://www.theverge.com/a/virtual-reality/oral\_history (dostęp 07.05.20016)}.
-Była to maszyna podobna wyglądem do automatów do gier wyświetlająca
-stereoskopowy obraz 3D, zapewniała przechylanie pozycji użytkownika
-oraz wspierała dźwięk przestrzenny. W budowie planowano również systemy
-generujące podmuchy wiatru oraz uwalniające odpowiednie zapachy\footnote{http://www.mortonheilig.com/SensoramaPatent.pdf (dostęp 07.05.20016)}.
-W latach 70. i 80. rozwój wirtualnej rzeczywistości nie był jednak
-nagłośniony. Mało kto wiedział o nowościach technologicznych w świecie
-VR. Dopiero w '91 zaczęto wydawać magazyn,,CyberEdge Journal'',
-który był biuletynem o gadżetach VR\footnote{http://www.theverge.com/a/virtual-reality/oral\_history (dostęp 07.05.20016)}.
+Pierwsze wzmianki o rzeczywistości wirtualnej pochodzą z lat 30. XX wieku. Terminu ,,la réalité
+virtuelle'' użył Antonin Artaud w swoim zbiorze esejów pod tytułem ,,Le Théâtre et son double''.
+Jako rzeczywistość wirtualna została opisana iluzjonistyczna natura postaci i obiektów w
+teatrze\footnote{http://www.almaclassics.com/excerpts/Theatre\_Double.pdf (dostęp 07.05.2016)}.  To
+co dzisiaj kryje się pod nazwą rzeczywistości wirtualnej było popularyzowane dopiero przez media
+masowe w filmach takich jak: ,,Brainstorm'' i ,,The Lawnmover Man''. Pierwszym urządzeniem, które
+można by nazwać systemem VR była
+Sensorama\footnote{http://www.theverge.com/a/virtual-reality/oral\_history (dostęp 07.05.2016)}.
+Była to maszyna podobna wyglądem do automatów do gier wyświetlająca stereoskopowy obraz 3D,
+zapewniała przechylanie pozycji użytkownika oraz wspierała dźwięk przestrzenny. W budowie planowano
+również systemy generujące podmuchy wiatru oraz uwalniające odpowiednie
+zapachy\footnote{http://www.mortonheilig.com/SensoramaPatent.pdf (dostęp 07.05.2016)}.  W latach '70
+i '80 rozwój wirtualnej rzeczywistości nie był jednak nagłośniony. Mało kto wiedział o nowościach
+technologicznych w świecie VR. Dopiero w '91 zaczęto wydawać magazyn ,,CyberEdge Journal'', który
+był biuletynem o gadżetach VR\footnote{http://www.theverge.com/a/virtual-reality/oral\_history
+(dostęp 07.05.2016)}.
 
 \section{Urządzenia montowane na głowie}
 
-Pierwsze gogle wirtualnej rzeczywistości dostępne komercyjnie zostały
-zapowiedziane na Consumer Electronics Show w 1994 roku. Nazywały się
-Forte VFX-1. Gogle mogły wyświetlać stereoskopowy obraz, miały wbudowane
-słuchawki stereo oraz sensor śledzący pozycje głowy w 3. osiach\footnote{http://www.ibiblio.org/GameBytes/issue21/flooks/vfx1.html (dostęp
-07.05.20016)}. Kolejną nowinką w tej dziedzinie były okulary Glasstron, wypuszczone
-w 1997 roku przez firmę Sony. W odróżnieniu od Forte VFX-1 miały dodatkowo
-czujniki pozycyjne co dodatkowo pogłębiało immersję. Gogle można było
-zastosować w grze o nazwie MechWarrior~2. Gracz, używając Glasstrona,
-mógł włączyć nową perspektywę z kokpitu maszyny kroczącej.
+Pierwsze gogle wirtualnej rzeczywistości dostępne komercyjnie zostały zapowiedziane na Consumer
+Electronics Show w 1994 roku. Nazywały się Forte VFX-1. Gogle mogły wyświetlać stereoskopowy obraz,
+miały wbudowane słuchawki stereo oraz sensor śledzący pozycje głowy w 3
+osiach\footnote{http://www.ibiblio.org/GameBytes/issue21/flooks/vfx1.html (dostęp 07.05.2016)}.
+Kolejną nowinką w tej dziedzinie były okulary Glasstron, wypuszczone w 1997 roku przez firmę Sony.
+W~odróżnieniu od Forte VFX-1 miały dodatkowo czujniki pozycyjne co dodatkowo pogłębiało immersję.
+Gogle można było zastosować w grze o nazwie MechWarrior~2. Gracz, używając Glasstrona, mógł włączyć
+nową perspektywę z kokpitu maszyny kroczącej.
 
-Można tu równiez wspomnieć o specyficznych zdjęciach ulic firmy Google
-- Street View. Wprowadzone w 2007 roku panoramiczne zdjęcia, które
-pozwalały przyglądać się okolicy z miejsca samochodu robiącego zdjęcia.
-Jest to ciekawe wykorzystanie technologii opartych o rzeczywistość
-wirtualną w nawigacji. Street View umożliwia rozejrzenie się za punktami
-orientacyjnymi na danej ulicy.
+Można tu równiez wspomnieć o specyficznych zdjęciach ulic firmy Google - Street View. Są to wprowadzone w
+2007 roku panoramiczne zdjęcia, które pozwalały przyglądać się okolicy z miejsca samochodu
+fotografującego.  Jest to ciekawe wykorzystanie technologii opartych o rzeczywistość wirtualną w nawigacji.
+Street View umożliwia rozejrzenie się za punktami orientacyjnymi na danej ulicy a w ostatnich latach
+jest rozszerzany o ścieżki górskie i różne miejsca niedostępne dla
+samochodów\footnote{https://googleblog.blogspot.com/2008/12/street-view-year-in-review-and-whats.html
+(dostęp 07.05.2016)}.
 
-Prawdziwą rewolucją stały się jednak gogle wirtualnej rzeczywistości
-od Oculusa. W 2012 roku, dzięki kampaniom crowfundingowym, firma zebrała
-2.5 miliona dolarów na rozwój projektu okularów VR\footnote{https://www.kickstarter.com/projects/1523379957/oculus-rift-step-into-the-game
-(dostęp 07.05.20016)}. Pierwszym modelem dostępnym do zamówienia był Rift Development Kit
-1. DK1 wyposażony został w 7mio calowy ekran o rozdzielczości 1280x800
-pikseli. Ten prototyp skonstruowano już tak, by każde z oczu widziało
-obraz z odpowiednim przesunięciem ale nie nakładający się w 100\%.
-Znaczy to, że lewe oko widziało troche więcej po lewej a prawe oko
-troche więcej po prawej w porównaniu do drugiego oka. Producenci zadbali
-również o użytkowników z wadami wzroku. Do zestawu dołączano 3. pary
-soczewek, które były dopasowane zależnie od potrzeby korekcji soczewki
-lub jej braku\footnote{http://in2gpu.com/2014/08/10/oculus-rift-dk1-vs-dk2/ (dostęp 07.05.20016)}.
-Gadżet sprzedał się w liczbie około 65 000 egzemplarzy\footnote{http://www.hypergridbusiness.com/2014/06/more-than-100000-oculus-rifts-sold/}.
+Prawdziwą rewolucją stały się jednak gogle wirtualnej rzeczywistości od Oculusa. W 2012 roku, dzięki
+kampaniom crowfundingowym, firma zebrała 2,5 miliona dolarów na rozwój projektu okularów
+VR\footnote{https://www.kickstarter.com/projects/1523379957/oculus-rift-step-into-the-game (dostęp
+07.05.2016)}. Pierwszym modelem dostępnym na zamówienie był Rift Development Kit 1 (DK1). DK1 wyposażony
+został w siedmio calowy ekran o rozdzielczości 1280×800 pikseli. Ten prototyp skonstruowano już tak, by
+każde z oczu widziało obraz z odpowiednim przesunięciem ale nie nakładający się w 100\%.  Znaczy to,
+że lewe oko widziało troche więcej po lewej a prawe oko trochę więcej po prawej w porównaniu do
+drugiego oka. Producenci zadbali również o użytkowników z wadami wzroku. Do zestawu dołączano 3
+pary soczewek, które były dopasowane zależnie od potrzeby korekcji soczewki lub jej
+braku\footnote{http://in2gpu.com/2014/08/10/oculus-rift-dk1-vs-dk2/ (dostęp 07.05.2016)}.  Gadżet
+sprzedał się w liczbie około 65000
+egzemplarzy\footnote{http://www.hypergridbusiness.com/2014/06/more-than-100000-oculus-rifts-sold/
+(dostęp: 09.05.2016)}.
 
-Po sukcesie jaki odniósł Rift DK1, Oculus rozpoczął prace nad kolejną
-wersją deweloperską. Tak powstał Rift Developer Kit 2. Wyposażony
-już w ekran OLED o rozdzieczości 1920x1080 pikseli. Zwiększone zostało
-również odświeżanie z 60Hz do 75Hz co zmniejszyło dyskomfort i możliwość
-wystąpienia nudności. Do zestawu DK2 dołączana była specjalna kamera,
-która pozwalała na śledzenie pozycji gogli w przestrzeni. Dzięki temu
-deweloperskie gogle Oculusa pozwalały na śledzenie 6DoF.
+Po sukcesie jaki odniósł Rift DK1, Oculus rozpoczął prace nad kolejną wersją deweloperską. Tak
+powstał Rift Developer Kit 2 (DK2), wyposażony już w ekran OLED o rozdzieczości 1920×1080 pikseli.
+Zwiększone zostało również odświeżanie z 60Hz do 75Hz co zmniejszyło dyskomfort i możliwość
+wystąpienia nudności. Do zestawu DK2 dołączana była specjalna kamera, która pozwalała na śledzenie
+pozycji gogli w przestrzeni. Dzięki temu deweloperskie gogle Oculusa pozwalały na śledzenie 6DoF.
 
-Następna wersja gogli CV1 - Consumer Version 1, czyli w pełni oficjalne
-wydanie, zapowiedziano na pierwszy kwartał 2016 roku\footnote{https://www.oculus.com/en-us/blog/first-look-at-the-rift-shipping-q1-2016/
-(dostęp 07.05.20016)}. Przedsprzedaż rozpoczęto 6 stycznia 2016 roku a wysyłkę zapowiedziano
-na 28 marca. W ciągu 10 dni otrzymano tyle zamówień, że datę wysyłki
-kolejnych partii Rift CV1 przesunięto na lipiec 2016\footnote{www.roadtovr.com/oculus-rift-pre-order-backorder-july/ (dostęp 07.05.20016)}.
-Nowa wersja Rifta została wyposażona w dwa osobne ekrany (po jednym
-na każde oko) o łącznej rozdzielczości 2160\texttimes 1200 pikseli
-i odświeżaniu 90Hz\footnote{http://www.roadtovr.com/oculus-rift-resolution-recommended-specs/
-(dostęp 07.05.20016)}. Do tego doszły różne usprawnienia zewnętrzne: ergonomiczny kształt,
-nowoczesny wygląd, wbudowane słuchawki stereo i nowa kamera śledząca.
+Następna wersja gogli CV1 - Consumer Version 1, czyli w pełni oficjalne wydanie, zapowiedziano na
+pierwszy kwartał 2016
+roku\footnote{https://www.oculus.com/en-us/blog/first-look-at-the-rift-shipping-q1-2016/ (dostęp
+09.05.2016)}. Przedsprzedaż rozpoczęto 6 stycznia 2016 roku a wysyłkę zapowiedziano na 28 marca. W
+ciągu 10 dni otrzymano tyle zamówień, że datę wysyłki kolejnych partii Rift CV1 przesunięto na
+lipiec 2016\footnote{www.roadtovr.com/oculus-rift-pre-order-backorder-july/ (dostęp 09.05.2016)}.
+Nowa wersja Rifta została wyposażona w dwa osobne ekrany (po jednym na każde oko) o łącznej
+rozdzielczości 2160×1200 pikseli i odświeżaniu
+90Hz\footnote{http://www.roadtovr.com/oculus-rift-resolution-recommended-specs/ (dostęp
+09.05.2016)}. Do tego doszły różne usprawnienia zewnętrzne: ergonomiczny kształt, nowoczesny wygląd,
+wbudowane słuchawki stereo i nowa kamera śledząca.
 
-Inne firmy również zaczęły wchodzić w branżę wirtualnej rzeczywistości.
-Swoją wersję okularów VR na rynek wprowadził również HTC (przy współpracy
-z platformą Steam). HTC Vive pierwszy raz został pokazany w 2015 roku
-na Mobile World Congress\footnote{http://www.theverge.com/2015/3/1/8127445/htc-vive-valve-vr-headset
-(dostęp 07.05.20016)}. Nie był on dostępny w przedsprzedażach aczkolwiek część wybranych
-przez firmę deweloperów dostała wersję Developer Edition wcześniej\footnote{http://www.pcmag.com/article2/0,2817,2479252,00.asp (dostęp 07.05.20016)}.
-Poza HTC również Sony, które wróciło na rynek VR, rozpoczęło prace
-nad goglami VR specjalnie dla konsoli PlayStation 4.
+Inne firmy również zaczęły wchodzić w branżę wirtualnej rzeczywistości.  Swoją wersję okularów VR na
+rynek wprowadził również HTC (przy współpracy z platformą Steam). HTC Vive pierwszy raz został
+pokazany w 2015 roku na Mobile World
+Congress\footnote{http://www.theverge.com/2015/3/1/8127445/htc-vive-valve-vr-headset (dostęp
+09.05.2016)}. Nie był on dostępny w przedsprzedażach aczkolwiek część wybranych przez firmę
+deweloperów dostała wersję Developer Edition
+wcześniej\footnote{http://www.pcmag.com/article2/0,2817,2479252,00.asp (dostęp 09.05.2016)}.  Poza
+HTC również Sony, które wróciło na rynek VR, rozpoczęło prace nad goglami VR specjalnie dla konsoli
+PlayStation 4.
 
-Poza HTC, Oculusem oraz Sony jest jeszcze kilku gigantów pracujących
-z goglami VR lub AR. Microsoft aktualnie dopracowuje gogle rozszerzonej
-rzeczywistości Hololens. Gogle mają przeźroczyste szkła, przez które
-widać otoczenie. Dopiero na to otoczenie nakładany jest obraz wirtualny
-np. na pustą ścianę w mieszkaniu nałożony może zostać obraz jakiegoś
-plakatu lub dekoracji. Gogle zapowiadają się rewelacyjnie przy pracach
-projektowych gdzie w naturalnym środowisku będzie można obejrzeć model
-1:1 lub nałożyć wykończenie na szkielet projektu.
+Poza HTC, Oculusem oraz Sony jest jeszcze kilku gigantów pracujących z goglami VR lub AR. Microsoft
+aktualnie dopracowuje gogle rozszerzonej rzeczywistości Hololens. Gogle mają przeźroczyste szkła,
+przez które widać otoczenie. Dopiero na to otoczenie nakładany jest obraz wirtualny np. na pustą
+ścianę w mieszkaniu nałożony może zostać obraz jakiegoś plakatu lub dekoracji. Gogle zapowiadają się
+rewelacyjnie przy pracach projektowych gdzie w naturalnym środowisku będzie można obejrzeć model 1:1
+lub nałożyć wykończenie na szkielet projektu.
 
 \section{Jaskinia wirtualnej rzeczywistości CAVE}
 
-Technologia wirtualnej rzeczywistości rozwija się w kilka różnych
-„gałęzi”. Oprócz okularów HMD istnieją również bardziej zaawansowane
-rozwiązania pozwalające na zanurzenie się w świecie wirtualnym. Jednym
-z nich jest jaskinia wirtualnej rzeczywistości. Rozwiązanie to jest
-skierowane głównie do deweloperów oraz instytucji naukowych z racji
-rozmiarów oraz wymaganych środków pieniężnych. CAVE – cave automatic
-virtual environement - składa się z kilku akrylowych ścian, na których
-wyświetlane są obrazy wirtualnego świata. Najpopularniejszą metodą
-jest użycie dwóch projektorów wyświetlających obraz na jedną ścianę
-odpowiednio dla lewego i prawego oka naprzemiennie. Użytkownik w takim
-przypadku musi nosić okulary spolaryzowane oddzielające obraz dla
+Technologia wirtualnej rzeczywistości rozwija się w kilku różnych ścieżkach. Oprócz okularów HMD
+istnieją bardziej zaawansowane rozwiązania pozwalające na zanurzenie się w świecie
+wirtualnym. Jednym z nich jest jaskinia wirtualnej rzeczywistości. Rozwiązanie to jest skierowane
+głównie do deweloperów oraz instytucji naukowych z racji rozmiarów oraz wymaganych niezbędnych zasobów.
+CAVE – \textit{cave automatic virtual environement} - składa się z kilku akrylowych ścian, na
+których wyświetlane są obrazy wirtualnego świata. Najpopularniejszą metodą jest użycie dwóch
+projektorów wyświetlających obraz na jedną ścianę odpowiednio dla lewego i prawego oka
+naprzemiennie. Użytkownik w takim przypadku musi nosić okulary spolaryzowane oddzielające obraz dla
 danego oka\footnote{https://www.evl.uic.edu/documents/cacm92-cave-cruz-neira.pdf (dostęp
-07.05.20016)}\footnote{http://www.visbox.com/technology/stereo/ (dostęp 07.05.20016)}.
+07.05.2016)}\footnote{http://www.visbox.com/technology/stereo/ (dostęp 07.05.2016)}.
 
 \begin{figure}[H]
 \begin{centering}
@@ -319,29 +340,23 @@ danego oka\footnote{https://www.evl.uic.edu/documents/cacm92-cave-cruz-neira.pdf
 
 \end{figure}
 
-Ilustracja załączona powyżej przedstawia podstawowe założenia budowy
-środowiska jaskini wirtualnej rzeczywistości. W standardowy rozkład
-ścian wchodzi: przednia, boczne oraz podłogowa. Projektory umieszczone
-są na zewnątrz, rzucając obraz od tyłu – jest to tzw. tylna projekcja
-(ang: Rear Screen Projection). Obraz rzucany na podłogę może być przez
-projektor z góry lub z dołu. Projektory użyte do wyświetlania muszą
-charakteryzować się wysoką rozdzielczością oraz szybkim odświeżaniem.
-Zazwyczaj jest to rozdzielczość FullHD oraz odświeżanie o częstotliwości
-powyżej 90Hz. Obraz rzucany na kwadratową ścianę jest ucinany na bokach
-a Często wykorzystuje się lustra by zmniejszyć odległość między projektorem
-a ekranem. Każdy projektor jest kontrolowany przez jeden z komputerów
-połączonych w klaster. W klastrze jeden z komputerów jest nadrzędny
-i sprawuje kontrole nad pozostałymi, renderującymi obraz dla projektorów.
-Jest to rozwiązanie zwiększające szybkość generowania klatek oraz
-tańsze w utrzymaniu.
+Ilustracja załączona powyżej przedstawia podstawowe założenia budowy środowiska jaskini wirtualnej
+rzeczywistości. W standardowy rozkład ścian wchodzą: ściana przednia, boczne oraz podłogowa. Projektory
+umieszczone są na zewnątrz, rzucając obraz od tyłu – jest to tzw. tylna projekcja (ang: Rear Screen
+Projection). Obraz rzucany na podłogę może być przez projektor z góry lub z dołu. Projektory użyte
+do wyświetlania muszą charakteryzować się wysoką rozdzielczością oraz szybkim odświeżaniem.
+Zazwyczaj jest to rozdzielczość FullHD oraz odświeżanie o częstotliwości powyżej 90Hz. Obraz rzucany
+na kwadratową ścianę jest ucinany na bokach. Często wykorzystuje się lustra by zmniejszyć odległość
+między projektorem a ekranem. Każdy projektor jest kontrolowany przez jeden z komputerów połączonych
+w klaster. W klastrze jeden z komputerów jest nadrzędny i sprawuje kontrole nad pozostałymi,
+renderującymi obraz dla projektorów.  Jest to rozwiązanie zwiększające szybkość generowania klatek
+oraz tańsze w utrzymaniu.
 
-Obraz wyświetlany w jaskini wirtualnej jest dostosowywany zależnie
-od położenia „użytkownika głównego”. Kamery śledzą położenie czujników
-zamontowanych na okularach by wyświetlany obraz był odpowiednio zsynchronizowany
-na krawędziach i dopasowany do perspektywy odbiorcy. Każdy inny użytkownik,
-który nie jest śledzony przez kamery widzi obraz nieco przesunięty
-względem użytkownika głównego. Objawia się to źle sklejonym obrazem
-lub/i nienaturalną perspektywą.
+Obraz wyświetlany w jaskini wirtualnej zależy od położenia „użytkownika
+głównego”. Kamery śledzą położenie czujników zamontowanych na okularach, a oprogramowanie zapewnia
+odpowiednią synchronizację obrazu na krawędziach i dopasowanie do perspektywy odbiorcy. Każdy inny
+użytkownik, który nie jest śledzony przez kamery widzi obraz nieco przesunięty względem użytkownika
+głównego. Objawia się to źle sklejonym obrazem lub nienaturalną perspektywą.
 
 \begin{figure}[H]
 \begin{centering}
@@ -351,15 +366,13 @@ lub/i nienaturalną perspektywą.
 
 \end{figure}
 
-Oprócz samego wyświetlania obrazu, jaskinia wirtualnej rzeczywistości
-pozwala również na interakcje ze światem otaczającym. Dzieje się to
-przy pomocy różnych kontrolerów np. FlySticka lub MagicWand. Są to
-bezprzewodowe joysticki wyposażone w zestaw czujników potrafiących
-określić pozycje (jako zestaw trzech wektorów) oraz orientacje (podawaną
-jako kwaternion) urządzenia w przestrzeni. Oprócz tego kontroler wyposażony
-jest w podstawowe części takie jak: analogowy, dwuosiowy joystick
-oraz kilka przycisków i/lub trigger. Przykładowy model został pokazany
-na obrazku (Fig. 3).
+Oprócz samego wyświetlania obrazu, jaskinia wirtualnej rzeczywistości pozwala również na interakcje
+ze światem otaczającym. Dzieje się to przy pomocy różnych kontrolerów np. FlySticka lub MagicWand.
+Są to bezprzewodowe joysticki wyposażone w zestaw czujników potrafiących określić pozycje
+(przekazywaną jako zestaw trzech wektorów) oraz orientację (wyrażaną jako kwaternion) urządzenia w
+przestrzeni. Oprócz tego kontroler wyposażony jest w podstawowe elementy takie jak: analogowy,
+dwuosiowy joystick oraz kilka przycisków lub spust. Przykładowy model został pokazany na rysunku
+(rysunek 3).
 
 \begin{figure}[H]
 \begin{centering}
@@ -369,72 +382,56 @@ na obrazku (Fig. 3).
 \end{figure}
 
 
-\subsection{Porównanie HMD i CAVE\protect\footnote{http://www.visbox.com/technology/cave-vs-hmd/ (dostęp 07.05.20016)}}
+\subsection{Porównanie HMD i CAVE\protect\footnote{http://www.visbox.com/technology/cave-vs-hmd/ (dostęp 12.05.2016)}}
 
-Head-mounted display oraz CAVE to bardzo różniące się sposoby na wizualizację
-świata wirtualnego. Wysokie koszty jaskini wirtualnej rzeczywistości
-pozwalają na większe możliwości wykorzystania oraz trochę większy
-komfort użytkowania. Z drugiej strony jednak jaskinia wirtualnej rzeczywistości
-zajmuje bardzo dużo miejsca w porównaniu do okularów wirtualnej rzeczywistości,
-które są też o wiele tańsze.
+Head-mounted display oraz CAVE to bardzo różniące się sposoby na wizualizację świata wirtualnego.
+Wysokie koszty jaskini wirtualnej rzeczywistości pozwalają na większe możliwości wykorzystania oraz
+trochę większy komfort użytkowania. Z drugiej strony jednak jaskinia wirtualnej rzeczywistości
+zajmuje bardzo dużo miejsca w porównaniu do okularów wirtualnej rzeczywistości, które są też o wiele
+tańsze.
 
 \begin{table}[H]
-\begin{centering}
-\caption{Porównanie HMD i CAVE\protect \\
-Źródło: Opracowanie własne, http://www.visbox.com/technology/cave-vs-hmd/}
-\par\end{centering}
-\centering{}%
+\caption{Porównanie HMD i CAVE}
 \begin{tabular*}{15cm}{@{\extracolsep{\fill}}|>{\centering}p{3cm}|>{\centering}p{4cm}|>{\centering}p{5cm}|}
-\cline{2-3} 
-\multicolumn{1}{>{\centering}p{3cm}|}{} & HMD & CAVE\tabularnewline
-\hline 
-Rozdzielczość (w megapikselach) & 1-2 Mpx/oko & 2-8 Mpx/ekran\tabularnewline
-\hline 
-Jakość obrazu & Wymaga użycia zniekształcenia; dobra & bardzo dobra\tabularnewline
-\hline 
-Immersja & Bardzo duża & Duża\tabularnewline
-\hline 
-Pole widzenia (w stopniach) & \textasciitilde{}110 & Takie jak człowieka\tabularnewline
-\hline 
-Mobilność użytkownika & Ograniczona okablowaniem i czujnikami & Nieograniczona\tabularnewline
-\hline 
-Użytkownicy & Jeden & Wielu\tabularnewline
-\hline 
-Komfort użytkowania & Ekran blisko oka może wywoływać ból głowy; możliwe nudności & Ekrany daleko od oka co pozwala na dłuższe użytkowanie; możliwe nudności\tabularnewline
-\hline 
-Koszt & Niewielki & Wysoki\tabularnewline
-\hline 
+\cline{2-3}
+\multicolumn{1}{>{\centering}p{3cm}|}{} & HMD & CAVE\tabularnewline \hline
+Rozdzielczość (w megapikselach) & 1-2 Mpx/oko & 2-8 Mpx/ekran\tabularnewline \hline
+Jakość obrazu & Wymaga użycia zniekształcenia; dobra & bardzo dobra\tabularnewline \hline
+Immersja & Bardzo duża & Duża\tabularnewline \hline
+Pole widzenia (w stopniach) & \textasciitilde{}110 & Takie jak człowieka\tabularnewline \hline
+Mobilność użytkownika & Ograniczona okablowaniem i czujnikami & Nieograniczona\tabularnewline \hline
+Użytkownicy & Jeden & Wielu\tabularnewline \hline
+Komfort użytkowania & Ekran blisko oka może wywoływać ból głowy; możliwe nudności & Ekrany daleko od oka co pozwala na dłuższe użytkowanie; możliwe nudności\tabularnewline \hline
+Koszt & Niewielki & Wysoki\tabularnewline \hline
 \end{tabular*}
+\noindent{ \footnotesize
+Źródło: Opracowanie własne, http://www.visbox.com/technology/cave-vs-hmd/	(dostęp: 12.05.2016)}
 \end{table}
 
-Obecnie systemy wirtualnej jaskini ją wykorzystywane głównie w laboratoriach
-instytutów. Nie są one dostępne dla szerszego odbioru. Urządzenia
-HMD są za to dostępne dla każdego a~ich obsługa i ustawienie jest
-znacznie łatwiejsze. Na rynku pojawiają się również coraz więcej modeli
-znanych i mniej znanych firm przystosowanych specjalnie do smartfonów.
-Wybór wśród nich jest więc znacznie wiekszy niż w przypadku CAVE'ów,
-które często muszą instalować i częściowo obsługiwać zewnętrzne firmy.
+Obecnie systemy wirtualnej jaskini ją wykorzystywane głównie w laboratoriach instytutów badawczych. Nie są one
+dostępne dla szerszego odbioru. Urządzenia HMD są za to dostępne dla każdego a~ich obsługa i
+ustawienie jest znacznie łatwiejsze. Na rynku pojawia się również coraz więcej modeli znanych i
+mniej znanych firm przystosowanych specjalnie do smartfonów.  Wybór wśród nich jest więc znacznie
+większy niż w przypadku CAVE'ów, które często muszą instalować i częściowo obsługiwać zewnętrzne
+firmy.
 
-\section{Opis aplikacji BlenderVR}
+\part{Opis aplikacji BlenderVR}
 
-\subsection{Opis aplikacji\protect\footnote{Strona instytutu LIMSI we Francji https://blendervr.limsi.fr/doku.php
+\section{Opis aplikacji\protect\footnote{Strona instytutu LIMSI we Francji https://blendervr.limsi.fr/doku.php
 (dostęp 07.05.20016)}}
 
-Aplikacja BlenderVR powstała w laboratorium LIMSI we Francji. Twórcami
-są: Dalai Felinto, Damien Touraine, David Poirier-Quinot, Laurent
-Pointal i Bran F.G. Katz. Aplikacja pozwala na użycie scen generowanych
-przez Blender Game Engine, w środowiskach wirtualnych: CAVE, okulary
-wirtualnej rzeczywistości HMD lub Video Wall.
+Aplikacja BlenderVR powstała w laboratorium LIMSI we Francji. Twórcami są: Dalai Felinto, Damien
+Touraine, David Poirier-Quinot, Laurent Pointal i Bran F.G. Katz. Aplikacja pozwala na użycie scen
+generowanych przez Blender Game Engine, w środowiskach wirtualnych: CAVE, okulary wirtualnej
+rzeczywistości HMD lub Video Wall.
 
-BlenderVR jest narzędziem skalowalnym oraz wieloplatformowym. Działa
-zarówno na komputerach z system Windows jak i Linux/iOS. Przenoszenie
-sceny pomiędzy różnymi platformami wirtualnej rzeczywistości nie wymaga
-jej edytowania. Wszystkim zajmuje się odpowiednia konfiguracja programu.
-Aplikację można dostosować do dowolnej liczby komputerów obsługujących
-różne ekrany. BlenderVR posiada wsparcie dla wyświetlania obrazu 3D
-(poczwórne buforowanie - ang: Quad Buffering) i protokołów komunikacyjnych
-np. VRPN – virtual reality peripherial network lub OSC – open sound
-control.
+BlenderVR jest narzędziem skalowalnym oraz wieloplatformowym. Działa zarówno na komputerach z
+systemem Windows jak i Linux/iOS. Przenoszenie sceny pomiędzy różnymi platformami wirtualnej
+rzeczywistości nie wymaga jej edytowania. Wszystkim zajmuje się odpowiednia konfiguracja programu.
+Aplikację można dostosować do dowolnej liczby komputerów obsługujących różne ekrany. BlenderVR
+posiada wsparcie dla wyświetlania obrazu 3D (poczwórne buforowanie - ang: Quad Buffering) i
+protokołów komunikacyjnych np. VRPN – \textit{virtual reality peripherial network} lub OSC –
+\textit{open sound control}.
 
 \begin{figure}[H]
 \begin{centering}
@@ -444,40 +441,38 @@ control.
 Źródło: https://blendervr.limsi.fr/doku.php (dostęp 07.05.20016)}
 \end{figure}
 
-Wszystkie ustawienia BlenderVR znajdują się w jednym pliku XML. Ułatwia
-to przenoszenie konfiguracji pomiędzy komputerami lub jej klonowanie.
-W pliku konfiguracyjnym najważniejszymi ustawieniami są:
+Wszystkie ustawienia BlenderVR znajdują się w jednym pliku XML. Ułatwia to przenoszenie konfiguracji
+pomiędzy komputerami lub jej klonowanie.  W pliku konfiguracyjnym najważniejszymi ustawieniami są:
+
 \begin{itemize}
-\item Ścieżki do bibliotek i programów, z których korzysta BlenderVR.
-\item Adresy komputerów typu „slave” – obsługujących wyświetlanie obrazu
-oraz dane logowania przez protokół SSH.
-\item Ilość ekranów, ich położenie oraz relacje oko - ekran.
-\item Ustawienia wtyczki do interakcji ze sceną: serwer odbierający dane
-z urządzeń wskazujących oraz konfiguracja czujników.
+	\item Ścieżki do bibliotek i programów, z których korzysta BlenderVR.
+	\item Adresy komputerów typu „slave” – obsługujących wyświetlanie obrazu
+	oraz dane logowania przez protokół SSH.
+	\item Ilość ekranów, ich położenie oraz relacje oko - ekran.
+	\item Ustawienia wtyczki do interakcji ze sceną: serwer odbierający dane
+	z urządzeń wskazujących oraz konfiguracja czujników.
 \end{itemize}
-Interfejs jest przejrzysty i prosty w obsłudze. Po uruchomieniu wystarczy
-załadować odpowiedni plik konfiguracyjny, następnie wybrać konfigurację
-ekranów i wskazać miejsca pliku ze sceną do symulacji. W zakładce
-„Run” znajduje się przycisk do uruchomienia programu oraz konsola
-do debugowania.
+
+Interfejs jest przejrzysty i prosty w obsłudze. Po uruchomieniu wystarczy załadować odpowiedni plik
+konfiguracyjny, następnie wybrać konfigurację ekranów i wskazać miejsca pliku ze sceną do symulacji.
+W zakładce „Run” znajduje się przycisk do uruchomienia programu oraz konsola do debugowania.
 
 \begin{figure}[H]
 \begin{centering}
 \includegraphics[scale=0.4]{graphic/user-interface-1}
 \par\end{centering}
 \caption{Interfejs aplikacji BlenderVR\protect \\
-Źródło: https://blendervr.limsi.fr/doku.php (dostęp 07.05.20016)}
+Źródło: https://blendervr.limsi.fr/doku.php (dostęp 15.05.2016)}
 \end{figure}
 
 
 \subsection{Opis pliku konfiguracyjnego}
 
-Jedną z najwazniejszych części aplikacji jest plik konfiguracyjny.
-W nim zawarte są wszystkie informacje odnośnie połączeń do komputerów
-podrzędnych, ustawień ekranów, wyświetlania obrazu oraz konfiguracji
-wtyczek. Plik ustawień zapisywany jest w formacie XML. Ułatwia to
-edycję ponieważ wystarczy do tego zwykły edytor plików tekstowych.
-Przykładowa konfiguracja dla CAVE w systemie Linux:
+Jedną z najważniejszych części aplikacji jest plik konfiguracyjny.  W nim zawarte są wszystkie
+informacje odnośnie połączeń do komputerów podrzędnych, ustawień ekranów, wyświetlania obrazu oraz
+konfiguracji wtyczek. Plik ustawień zapisywany jest w formacie XML. Ułatwia to edycję ponieważ
+wystarczy do tego zwykły edytor plików tekstowych.  Przykładowa konfiguracja dla CAVE w systemie
+Linux pokazana jest poniżej.
 
 \inputencoding{latin2}\begin{lstlisting}
 <?xml version="1.0"?>
@@ -571,36 +566,33 @@ python='/usr/local/blender/2.74/dependencies/bin/python3.3'/>
 
 \subsubsection*{Sekcja <Starter>}
 
-Zawiera definicje ustawień ekranów. Lista musi zawierać wszystkie
-ekrany oddzielone przecinkami, które będą używane w danej formie ustawienia.
-Np. ustawienie,,console'' będzie korzystać tylko z ekranu o nazwie,,console''
-natomiast ustawienie,,CAVE'' z ekranów: floor, front, left, right.
+Zawiera definicje ustawień ekranów. Lista musi zawierać wszystkie ekrany oddzielone przecinkami,
+które będą używane w danej formie ustawienia.  Np. ustawienie ,,console'' będzie korzystać tylko z
+ekranu o nazwie ,,console'' natomiast ustawienie ,,CAVE'' z ekranów: floor, front, left, right.
 Sekcja wskazuje również gdzie znaleźć program Blender3D.
 
 \subsubsection*{Sekcja <Users>}
 
-Każdy użytkownik, który będzie śledzony powinien zostać tutaj wpisany.
-Dzięki temu program dostosuje renderowany obraz do położenia danego
-użytkownika. Dla każdego z wpisanych użytkowników należy zdefiniować
-pozycję startową (default\_position) oraz rozstaw oczu (eye\_separation).
+Każdy użytkownik, który będzie śledzony powinien zostać tutaj wpisany.  Dzięki temu program
+dostosuje renderowany obraz do położenia danego użytkownika. Dla każdego z wpisanych użytkowników
+należy zdefiniować pozycję startową (\texttt{default\_position}) oraz rozstaw oczu
+(\texttt{eye\_separation}).
 
 \subsubsection*{Sekcja <Computers>}
 
-W tej sekcji opisany jest jak każdy z komputerów renderujących działa.
-Mieszczą się tutaj informacje odnośnie konfiguracji blenderplayer
-np. ścieżki do plików, zmienne środowiskowe itp. Mogą być one różne
-dla każdego stanowiska. Każdy węzeł renderujący (komputer) musi mieć
-sprecyzowaną nazwę oraz adres sieciowy (lub nazwę sięciową).
+W tej sekcji opisany jest jak każdy z komputerów renderujących działa.  Mieszczą się tutaj
+informacje odnośnie konfiguracji blenderplayer np. ścieżki do plików, zmienne środowiskowe itp. Mogą
+być one różne dla każdego stanowiska. Każdy węzeł renderujący (komputer) musi mieć sprecyzowaną
+nazwę oraz adres sieciowy (lub nazwę sieciową).
 
 \subsubsection*{Sekcja <System>}
 
-Zawiera ścieżki do najważniejszych plików programu oraz systemu, zwłaszcza
-w przypadku platformy Windows gdzie należy podać ścieżkę do katalogu
-Windowsa. Tutaj można dopisywać również ścieżki wspólne dla wszystkich
-stacji renderujących. Jeśli pewne ścieżki na każdym z komputerów są
-takie same wystarczy umieścić je tutaj zamiast wypisywać to samo dla
-każdego komputera w sekcji <computers>. Sekcja ta zawiera kilka szczególnych
-podsekcji, które warto opisać:
+Zawiera ścieżki do najważniejszych plików programu oraz systemu, zwłaszcza w przypadku platformy
+Windows gdzie należy podać ścieżkę do katalogu Windowsa. Tutaj można dopisywać również ścieżki
+wspólne dla wszystkich stacji renderujących. Jeśli pewne ścieżki na każdym z komputerów są takie
+same wystarczy umieścić je tutaj zamiast wypisywać to samo dla każdego komputera w sekcji
+\texttt{<computers>}. Sekcja ta zawiera kilka szczególnych podsekcji, których opis jest poniżej:
+
 \begin{itemize}
 \item Library Path - pluginy często wymagają dostępu do zewnętrznych bibliotek.
 W tej podsekcji możemy wskazać gdzie znajdują się niezbędne pliki.
@@ -609,18 +601,18 @@ Np: \texttt{<library path=\textquotedbl{}/usr/local/lib/vrpn/\textquotedbl{}
 \item Login - precyzuje jak wygląda komenda połączenia się z komputerami
 odpowiedzialnymi za renderowanie. Np: \texttt{<login remote\_command=\textquotedbl{}ssh
 me@host\textquotedbl{} python=\textquotedbl{}/usr/bin/python3\textquotedbl{}/>}.
-\item Daemon - opcje dotyczące uruchomienia demona. Parametr \textbf{Transmit}
+\item Daemon - opcje dotyczące uruchomienia demona. Parametr \texttt{Transmit}
 decyduje czy demon przesyła zmienne środowiskowe do blendera kiedy
-go uruchamia. \textbf{Environment} natomiast dodaje specyficzne zmienne
+go uruchamia. \texttt{Environment} natomiast dodaje specyficzne zmienne
 środowiskowe dla samego demona.
 \item Blenderplayer - w tej podsekcji ustawiona jest ścieżka do aplikacji
 blenderplayer.
 \end{itemize}
 
-\section{Instalacja i testy aplikacji w Laboratorium Zanurzonej Wizualizacji
+\part{Instalacja i testy aplikacji w Laboratorium Zanurzonej Wizualizacji
 Przestrzennej}
 
-\subsection{Środowisko wdrożeniowe systemu operacyjnego Windows}
+\section{Środowisko wdrożeniowe systemu operacyjnego Windows}
 
 Test aplikacji BlenderVR został przeprowadzony na specjalnie przygotowanych
 stanowiskach komputerowych. W skład jednostki testowej wchodził sprzęt:
@@ -628,80 +620,76 @@ stanowiskach komputerowych. W skład jednostki testowej wchodził sprzęt:
 \item Komputer stacjonarny wyposażony w:
 
 \begin{itemize}
-\item procesor Intel Xeon E5-1630
-\item karta graficzna Nvidia Quadro k5200
-\item 32 GB pamięci RAM
-\item Dysk HDD o pojemności 500 GB
+\item procesor Intel Xeon E5-1630,
+\item karta graficzna NVIDIA Quadro k5200,
+\item 32 GB pamięci RAM,
+\item Dysk HDD o pojemności 500 GB,
 \end{itemize}
 \item Monitor ASUS 24'' z możliwością wyświetlenia obrazu 3D. Częstotliwość
-odświeżania do 144Hz
-\item Aktywne okulary 3D
+odświeżania do 144Hz,
+\item Aktywne okulary 3D.
 \end{itemize}
-System operacyjny zainstalowany na jednostkach testowych to Windows
-7 Professional. Każdy komputer wpięty został w tę samą sieć Ethernet.
-Żaden nie ma dostępu do Internetu. Wszystkie niezbędne programy oraz
-pakiety zostały dostarczone ze źródeł zewnętrznych przy użyciu dysku
-przenośnego.
+
+System operacyjny zainstalowany na jednostkach testowych to Windows 7 Professional. Każdy komputer
+wpięty został w tę samą sieć Ethernet.  Żaden nie ma dostępu do Internetu. Wszystkie niezbędne
+programy oraz pakiety zostały dostarczone ze źródeł zewnętrznych przy użyciu dysku przenośnego.
 
 \subsection{Instalacja aplikacji BlenderVR w systemie operacyjnym Windows}
 
-Deweloperzy dostarczają gotową paczkę instalacyjną. Należy ściągnąć
-instalator ze strony internetowej oraz go uruchomić. Podczas procesu
-oprócz BlenderVR zostanie zainstalowany również Python oraz pakiet
-bibliotek graficznych Qt4.8. W systemie dodatkowo zostaną utworzone
-ścieżki tak, by aplikacja przy uruchomieniu nie miała problemów ze
-znalezieniem wszystkich zależności. W laboratorium instalacja paczki
-BlenderVR przebiegła pomyślnie i bez żadnych problemów.
+Deweloperzy dostarczają gotową paczkę instalacyjną. Należy ściągnąć instalator ze strony
+internetowej oraz go uruchomić. Podczas procesu instalacji, oprócz BlenderVR, zostanie zainstalowany również
+Python oraz pakiet bibliotek graficznych Qt4.8. W systemie dodatkowo zostaną utworzone ścieżki, tak
+aby aplikacja przy uruchomieniu nie miała problemów ze znalezieniem wszystkich zależności. W
+laboratorium instalacja paczki BlenderVR przebiegła pomyślnie i bez żadnych problemów.
 
 \subsection{Uruchomienie aplikacji BlenderVR w systemie operacyjnym Windows}
 
-W przypadku systemu operacyjnego Windows uruchomienie jest proste.
-Wystarczy użyć skrótu na pulpicie, który jest tworzony po zainstalowaniu
-gotowej paczki. Przygotowano odpowiedni plik konfiguracyjny dla systemu
-Windows na bazie przykładu dostępnego na stronie dewelopera: 
+W przypadku systemu operacyjnego Windows uruchomienie jest proste.  Wystarczy użyć skrótu na
+pulpicie, który jest tworzony po zainstalowaniu paczki instalacyjnej. Przygotowano odpowiedni plik
+konfiguracyjny dla systemu Windows na bazie przykładu dostępnego na stronie dewelopera:
 
 \inputencoding{latin2}\begin{lstlisting}
-<?xml version="1.0"?> 
-<blendervr>     
-	<starter blender="C:/blender/blender.exe"> 
-		<config name="Fullscreen">fullscreen</config>   
-		<config name="Console">console</config>       
-		<config name="Split">console half left, console half right</config>   
-	</starter>  
-<users> 
-<user name="user A" />  
-</users>   
-<computers>   
-<system> 
+<?xml version="1.0"?>
+<blendervr>
+	<starter blender="C:/blender/blender.exe">
+		<config name="Fullscreen">fullscreen</config>
+		<config name="Console">console</config>
+		<config name="Split">console half left, console half right</config>
+	</starter>
+<users>
+<user name="user A" />
+</users>
+<computers>
+<system>
 <daemon transmit="True">
 <environment>SystemRoot=C:/Windows</environment>
-</daemon>   
+</daemon>
 <blenderplayer executable="C:/blender/blenderplayer.exe" />
-</system>  
-      <computer name="Any" hostname="*" /> 
-   </computers>  
-  <screens>    
-    <screen name="fullscreen" computer="Any">  
-           <display options="-f"> 
+</system>
+      <computer name="Any" hostname="*" />
+   </computers>
+  <screens>
+    <screen name="fullscreen" computer="Any">
+           <display options="-f">
            <graphic_buffer buffer="mono" user="user A" eye="middle" />
-           </display>  
-          <wall>   
-             <corner name="topRightCorner">1.0, 1.0, -1.0</corner> 
-             <corner name="topLeftCorner">-1.0, 1.0, -1.0</corner> 
-             <corner name="bottomRightCorner">1.0, -1.0, -1.0</corner> 
-           </wall>     
-   </screen>    
-   <screen name="console" computer="Any">    
-      	 <display options="-w 400 400"> 
+           </display>
+          <wall>
+             <corner name="topRightCorner">1.0, 1.0, -1.0</corner>
+             <corner name="topLeftCorner">-1.0, 1.0, -1.0</corner>
+             <corner name="bottomRightCorner">1.0, -1.0, -1.0</corner>
+           </wall>
+   </screen>
+   <screen name="console" computer="Any">
+      	 <display options="-w 400 400">
            <graphic_buffer buffer="mono" user="user A" eye="middle" />
-           </display>   
-         <wall>        
-        <corner name="topRightCorner">1.0, 1.0, -1.0</corner>  
-             <corner name="topLeftCorner">-1.0, 1.0, -1.0</corner>   
-             <corner name="bottomRightCorner">1.0, -1.0, -1.0</corner>  
-          </wall>   
-     </screen>   
-     <screen name="console half left" computer="Any"> 
+           </display>
+         <wall>
+        <corner name="topRightCorner">1.0, 1.0, -1.0</corner>
+             <corner name="topLeftCorner">-1.0, 1.0, -1.0</corner>
+             <corner name="bottomRightCorner">1.0, -1.0, -1.0</corner>
+          </wall>
+     </screen>
+     <screen name="console half left" computer="Any">
            <display options="-w 400 400 200 300">
             <graphic_buffer user="user A" />
             </display>
@@ -726,83 +714,72 @@ Windows na bazie przykładu dostępnego na stronie dewelopera:
 </blendervr>
 \end{lstlisting}
 \inputencoding{utf8}
-Po pierwszej próbie uruchomienia BlenderVR konsola systemu Windows
-zwróciła błąd: \texttt{C:\textbackslash{}BlenderVR\textbackslash{}Required\textbackslash{}Python3\textbackslash{}python.exe: Can't
-open file C:/BlenderVR/source/utilsdaemon.py}. Natomiast okienko logowania
-BlenderVR wyświetliło komendę, która była wykonywana przy ładowaniu
-pliku: \texttt{C:/BlenderVR/Required/Python3/python.exe C:/BlenderVR/source/utils\textbackslash{}daemon.py}.
-Wiersz tekstu w pliku konfiguracyjnym odpowiedzialny za początek ścieżki:
-\texttt{<system root='C:/BlenderVR/source/'>} oraz za wykonanie polecenia
-uruchomienia skryptu: \texttt{C:/BlenderVR/Required/Python3/python.exe}.
-Wyglądało na to, że aplikacja dodaje do ścieżki katalog oraz skrypt
-do uruchomienia jednak z błędnym znakiem separacji katalogów. Zwrócono
-uwagę na to, że program nie parsuje wszystkich ścieżek odpowiednio
-do systemu operacyjnego. W systemach Windows używany jest znak '\textbackslash{}'
-jako separator katalogów. W przykładowym pliku konfiguracyjnym na
-stronie dewelopera (na podstawie którego pisany był plik aktualnie
-testowany) znajdują się ścieżki pisane w stylu unixowym. Zmiana znaków
-w pliku konfiguracyjnym ze \textquotedbl{}slash\textquotedbl{} na
-\textquotedbl{}backslash\textquotedbl{} spowodowała inny błąd. Tym
-razem w oknie logowania wyświetlone zostało \texttt{C:BlenderVRRequiredPython3Python.exe
-command not found}. Zdiagnozowano dzięki temu problem z parsowaniem
-znaków '/' i '\textbackslash{}' przez aplikację.
+
+
+Po pierwszej próbie uruchomienia BlenderVR konsola systemu Windows zwróciła błąd:
+\texttt{C:\textbackslash{}BlenderVR\textbackslash{}Required\textbackslash{}Python3\textbackslash{}python.exe:
+Can't open file C:/BlenderVR/source/utilsdaemon.py}. Natomiast okienko logowania BlenderVR
+wyświetliło komendę, która była wykonywana przy ładowaniu pliku:
+\texttt{C:/BlenderVR/Required/Python3/python.exe
+C:/BlenderVR/source/utils\textbackslash{}daemon.py}.  Wiersz tekstu w pliku konfiguracyjnym
+odpowiedzialny za początek ścieżki: \texttt{<system root='C:/BlenderVR/source/'>} oraz za wykonanie
+polecenia uruchomienia skryptu: \texttt{C:/BlenderVR/Required/Python3/python.exe}.  Wyglądało na to,
+że aplikacja dodaje do ścieżki katalog oraz skrypt do uruchomienia jednak z błędnym znakiem
+separacji katalogów. Zwrócono uwagę na to, że program nie parsuje wszystkich ścieżek odpowiednio do
+systemu operacyjnego. W systemach Windows używany jest znak '\textbackslash{}' jako separator
+katalogów. W przykładowym pliku konfiguracyjnym na stronie dewelopera (na podstawie którego pisany
+był plik aktualnie testowany) znajdują się ścieżki pisane w stylu unixowym. Zmiana znaków w pliku
+konfiguracyjnym ze \textquotedbl{}slash\textquotedbl{} na \textquotedbl{}backslash\textquotedbl{}
+spowodowała inny błąd. Tym razem w oknie logowania wyświetlone zostało
+\texttt{C:BlenderVRRequiredPython3Python.exe command not found}. Zdiagnozowano dzięki temu problem z
+parsowaniem znaków '/' i '\textbackslash{}' przez aplikację.
 
 Moduł odpowiedzialny za ładowanie demona został znaleziony w pliku:
-\texttt{BlenderVR/modules/blendervr/console/logic/screen.py}. Fragment
-kodu: \texttt{self.\_daemon{[}'command'{]}.append(os.path.join(system{[}'root'{]},'utils',
-'daemon.py')).} Za przygotowanie ścieżki odpowiedniej dla danego systemu
-odpowiedzialna jest część \texttt{os.path.join}. W przypadku systemu
-Windows komenda ta dostawia ‘\textbackslash{}’ do ścieżki, co powodowało
-błąd przy dalszym parsowaniu ścieżki. Z powyższych testów wynikało
-jednak, że dostawiony backslash jest błędny i usuwany podczas przekazywania
-komendy do konsoli Windowsa. Zmieniono tą część kodu i wpisano na
-sztywno: \texttt{self.\_daemon{[}'command'{]}.append(\textquotedbl{}/\textquotedbl{}.join((system{[}'root'{]},
-utils', 'daemon.py'))).} Poprawka w kodzie pozwoliła aplikacji odpowiednio
-zinterpretować ścieżki. Do konsoli Windows została przekazana następująca
-komenda: \texttt{C:/BlenderVR/Required/Python3/python.exe C:/BlenderVR/source/utils/daemon.py}.
-Wpis w okienku logowania „Daemon for screen console started” oznajmił,
-że konfiguracja jest prawidłowa i załadowana. Następnie wybrano jedną
-z dostępnych scen przykładowych. Załadowano ją wraz z odpowiadającym
-jej plikiem procesora dla sceny. Po przejściu do zakładki „run” i
-kliknięciu przycisku startu na ekranie pojawiła się wybrana scena.
-Próba uruchomienia w podstawowej konfiguracji zakończyła się sukcesem. 
+\texttt{BlenderVR/modules/blendervr/console/logic/screen.py}. Fragment kodu:
+\texttt{self.\_daemon{[}'command'{]}.append(os.path.join(system{[}'root'{]},'utils', 'daemon.py')).}
+Za przygotowanie ścieżki odpowiedniej dla danego systemu odpowiedzialna jest część
+\texttt{os.path.join}. W przypadku systemu Windows komenda ta dostawia ‘\textbackslash{}’ do
+ścieżki, co powodowało błąd przy dalszym parsowaniu ścieżki. Z powyższych testów wynikało jednak, że
+dostawiony backslash jest błędny i usuwany podczas przekazywania komendy do konsoli Windowsa.
+Zmieniono tą część kodu i wpisano na sztywno:
+\texttt{self.\_daemon{[}'command'{]}.append(\textquotedbl{}/\textquotedbl{}.join((system{[}'root'{]},
+utils', 'daemon.py'))).} Poprawka w kodzie pozwoliła aplikacji odpowiednio zinterpretować ścieżki.
+Do konsoli Windows została przekazana następująca komenda:
+\texttt{C:/BlenderVR/Required/Python3/python.exe C:/BlenderVR/source/utils/daemon.py}.  Wpis w
+okienku logowania „Daemon for screen console started” oznajmił, że konfiguracja jest prawidłowa i
+załadowana. Następnie wybrano jedną z dostępnych scen przykładowych. Załadowano ją wraz z
+odpowiadającym jej plikiem procesora dla sceny. Po przejściu do zakładki „run” i kliknięciu
+przycisku startu na ekranie pojawiła się wybrana scena.  Próba uruchomienia w podstawowej
+konfiguracji zakończyła się sukcesem.
 
 \subsection{Działanie aplikacji BlenderVR w innych konfiguracjach w środowisku
 Windows}
 
-Po udanej próbie uruchomienia BlenderVR w konfiguracji podstawowej
-kolejnym punktem był test z użyciem dwóch stanowisk. Wykonano próbę
-połączenia przez protokół SSH, który nie jest natywnie wbudowany w
-system Windows. Został użyty program, który umożliwiał uruchomienie
-serwera oraz klienta protokołu SSH. Wybranym programem był prosty
-w obsłudze OpenSSH. 
+Po udanej próbie uruchomienia BlenderVR w konfiguracji podstawowej kolejnym punktem był test z
+użyciem dwóch stanowisk. Wykonano próbę połączenia przez protokół SSH, który nie jest natywnie
+wbudowany w system Windows. Został użyty program, który umożliwiał uruchomienie serwera oraz klienta
+protokołu SSH. Wybranym programem był prosty w obsłudze OpenSSH.
 
-BlenderVR wymaga by połączenie między komputerami nie wymagało hasła.
-Na obu stanowiskach wymieniono klucze SSH. Przy załadowaniu odpowiednio
-napisanej konfiguracji nastąpiła próba połączenia oraz uruchomienie
-demona na obu stanowiskach. 
+BlenderVR wymaga by połączenie między komputerami nie wymagało hasła.  Na obu stanowiskach
+wymieniono klucze SSH. Przy załadowaniu odpowiednio napisanej konfiguracji nastąpiła próba
+połączenia oraz uruchomienie demona na obu stanowiskach.
 
-Podstawowe ustawienia w pliku konfiguracyjnym pozostają te same: oba
-środowiska uruchomieniowe posiadają identyczną architekturę. Dzięki
-temu wystarczy jedynie dopisać dodatkowe komputery do ustawień wraz
-z ich adresami IP. 
+Podstawowe ustawienia w pliku konfiguracyjnym pozostają te same: oba środowiska uruchomieniowe
+posiadają identyczną architekturę. Dzięki temu wystarczy jedynie dopisać dodatkowe komputery do
+ustawień wraz z ich adresami IP.
 
-Procedura uruchamiania BlenderVR w tym przypadku jest taka sama jak
-przy teście wykonanym na jednym stanowisku. Załadowanie pliku konfiguracyjnego
-jednak wyświetliło taki sam błąd jak poprzednio: \texttt{cannot start
-daemon for screen dual}. Po pierwsze sprawdzono czy połączenie SSH
-jest możliwe wraz ze zdalnym uruchomieniem Pythona. Poprzez konsolę
-Windowsa udało się bez problemów podłączyć do drugiego komputera.
-Problem nie leżał w samym połączeniu. Raz jeszcze został zweryfikowany
-plik konfiguracyjny, ale nie znaleziono w nim błędów. Próba wykonania
-tego samego polecenia co aplikacje BlenderVR zwraca komunikat o nieistniejącym
-pliku. Podłoże tego problemu najprawodpodobniej leży w ograniczeniach
-nałożonych na konto, które nie ma praw administratora komputera. W
-laboratorium konta dostępne do testów miały wystarczające uprawnienia
-by instalować i uruchamiać większość programów znajdujących się poza
-dyskiem C (lub pewnymi jego katalogami). Sesja SSH nie posiadała wszystkich
-zmiennych środowiskowych oraz była uruchamiana w ograniczonym środowisku
-co powodowało problemy ze zdalnym uruchomieniem skryptu demona. 
+Procedura uruchamiania BlenderVR w tym przypadku jest taka sama jak przy teście wykonanym na jednym
+stanowisku. Załadowanie pliku konfiguracyjnego wyświetliło jednak taki sam błąd jak poprzednio:
+\texttt{cannot start daemon for screen dual}. Po pierwsze sprawdzono czy połączenie SSH jest możliwe
+wraz ze zdalnym uruchomieniem Pythona. Poprzez konsolę Windowsa udało się bez problemów podłączyć do
+drugiego komputera.  Problem nie leżał w samym połączeniu. Raz jeszcze został zweryfikowany plik
+konfiguracyjny, ale nie znaleziono w nim błędów. Próba wykonania tego samego polecenia co aplikacje
+BlenderVR zwraca komunikat o nieistniejącym pliku. Podłoże tego problemu najprawdopodobniej leży w
+ograniczeniach nałożonych na konto, które nie ma praw administratora komputera. W laboratorium konta
+dostępne do testów miały wystarczające uprawnienia by instalować i uruchamiać większość programów
+znajdujących się poza dyskiem C (lub pewnymi jego katalogami). Sesja SSH nie posiadała wszystkich
+zmiennych środowiskowych oraz była uruchamiana w ograniczonym środowisku co powodowało problemy ze
+zdalnym uruchomieniem skryptu demona.
 
 \begin{figure}
 \begin{centering}
@@ -818,81 +795,71 @@ właśnie środowisku. Wsparcie dla protokołu SSH jest pod Linuxem zapewniane
 przez serwer OpenSSH, więc etap uruchomienia dwóch stanowisk powinien
 być prostszy w konfiguracji.
 
-\subsection{Środowisko wdrożeniowe systemu operacyjnego Linux}
+\section{Środowisko wdrożeniowe systemu operacyjnego Linux}
 
-Hardware'owa konfiguracja stanowiska PC jest identyczna jak w przypadku
-systemu Windows. Zainstalowaną dystrybucją linuxa jest CentOS w wersji
-6.8. Pakiety zainstalowane domyślnie w systemie:
+Hardware'owa konfiguracja stanowiska PC jest identyczna jak w przypadku systemu Windows.
+Zainstalowaną dystrybucją Linuxa jest CentOS w wersji 6.8. Pakiety zainstalowane domyślnie w
+systemie:
+
 \begin{itemize}
-\item Python 2.7
-\item Qt4
-\item gmake
-\item glibc 2.12
+\item Python 2.7,
+\item Qt4,
+\item gmake,
+\item glibc 2.12.
 \end{itemize}
-Instalacja pakietów w systemie Linux jest utrudniona z powodu braku
-dostępu do Internetu w pracowni. Każdy wymagany pakiet musi zostać
-dostarczony z zewnątrz, skonfigurowany i zainstalowany. Konto użytkownika
-nie miało praw super-user więc każdy z pakietów był instalowany lokalnie
-w katalogu domowym użytkownika, a następnie odpowiednie ścieżki do
-nowego oprogramowania zostały dodane do zmiennej środowiskowej PATH.
+
+Instalacja pakietów w systemie Linux jest utrudniona z powodu braku dostępu do Internetu w pracowni.
+Każdy wymagany pakiet musi zostać dostarczony z zewnątrz, skonfigurowany i zainstalowany. Konto
+użytkownika nie miało praw super-user więc każdy z pakietów był instalowany lokalnie w katalogu
+domowym użytkownika, a następnie odpowiednie ścieżki do nowego oprogramowania zostały dodane do
+zmiennej środowiskowej \texttt{PATH}.
 
 \subsection{Instalacja aplikacji BlenderVR w systemie operacyjnym Linux}
 
-Instalacja wszystkich niezbędnych pakietów w środowisku Linux jest
-procesem bardziej skomplikowanym niż w przypadku systemu Windows.
-Instrukcja dostępna na stronie dewelopera aplikacji nie jest dokładna
-i wiele wyników poprawnej konfiguracji osiągnięto metodą prób i błędów.
-Wszystkie pakiety dostarczone były jako źródła na nośniku wymiennym
-a następnie kompilowane i instalowane na obu stanowiskach.
+Instalacja wszystkich niezbędnych pakietów w środowisku Linux jest procesem bardziej skomplikowanym
+niż w przypadku systemu Windows.  Instrukcja dostępna na stronie dewelopera aplikacji nie jest
+dokładna i wiele wyników poprawnej konfiguracji osiągnięto metodą prób i błędów.  Wszystkie pakiety
+dostarczone były jako źródła na nośniku wymiennym a następnie kompilowane i instalowane na obu
+stanowiskach.
 
-Pakietem, który jest wymagany podczas procesu instalacji wszystkich
-zależności jest przede wszystkim cmake. Był on już zainstalowany na
-stanowiskach w laboratorium, dlatego pominięto ten krok. 
+Pakietem, który jest wymagany podczas procesu instalacji wszystkich zależności jest przede wszystkim
+\texttt{cmake}. Był on już zainstalowany na stanowiskach w laboratorium, dlatego pominięto ten krok.
 
-Podstawowym wymaganym programem jest Python w wersji 3.4. Należy skompilować
-źródła z dodatkową flagą \texttt{-{}-enable-shared}. Nie jest to zawarte
-w instrukcji na stronie dewelopera i powoduje problemy przy kompilacji
-pakietu PySide w dalszej części procesu. Jedyna wzmianka znaleziona
-o problemie oraz rozwiązaniu znajduje się w sekcji często zadawanych
-pytań. 
+Podstawowym wymaganym programem jest Python w wersji 3.4. Należy skompilować źródła z dodatkową
+flagą \texttt{-{}-enable-shared}. Nie jest to zawarte w instrukcji na stronie dewelopera i powoduje
+problemy przy kompilacji pakietu PySide w dalszej części procesu. Jedyna wzmianka znaleziona o
+problemie oraz rozwiązaniu znajduje się w sekcji często zadawanych pytań.
 
-Kolejnym wymaganym pakietem jest Qt4 wraz z nagłówkami. Nagłówki funkcji
-mogą być dostępne w osobnym pakiecie np. libqt4-dev. W takim wypadku
-należy skompilować i zainstalować podstawowe biblioteki qt4 oraz nagłówki.
-Jest to wymagane przez pakiet PySide. Pakiety źródłowe Qt4 dostępne
-są na stronie deweloperów.
+Kolejnym wymaganym pakietem jest Qt4 wraz z nagłówkami. Nagłówki funkcji mogą być dostępne w osobnym
+pakiecie np. libqt4-dev. W takim wypadku należy skompilować i zainstalować podstawowe biblioteki qt4
+oraz nagłówki.  Jest to wymagane przez pakiet PySide. Pakiety źródłowe Qt4 dostępne są na stronie
+deweloperów.
 
-Źródła Pythona3.4 nie zawsze zawierają w sobie modułu PIP. Należy
-spróbować wykonać polecenie \texttt{pip3 install virtualenv}. Jeśli
-PIP nie jest zainstalowany najłatwiej użyć polecenia: \texttt{python
-get-pip.py} lub ściągnąć źródło ze strony https://pypi.python.org. 
+Źródła Pythona3.4 nie zawsze zawierają w sobie modułu PIP. Należy spróbować wykonać polecenie
+\texttt{pip3 install virtualenv}. Jeśli PIP nie jest zainstalowany najłatwiej użyć polecenia:
+\texttt{python get-pip.py} lub ściągnąć źródło ze strony https://pypi.python.org.
 
-Następnym krokiem jest kompilacja PySide. W laboratorium użyto wersji
-1.2.2 – takiej, jakiej zalecają deweloperzy. Pakiet został skompilowany
-z domyślnymi ustawieniami. W tym kroku wystąpiło najwięcej problemów
-z kompilacją. Pierwszym napotkanym był problem z brakiem bibliotek
-Pythona, gdy ten został wcześniej skompilowany bez flagi \texttt{-{}-enable-shared}.
-Kolejnym błędem był brak pakietu qmake4. W poprzednim kroku został
-zainstalowany Qt4 wraz z qmake4. By usunąć błąd należało dodać dodatkową
-opcję ze ścieżką do programu qmake: \texttt{python3 /home/cezmurgr/PySide-1.2.4/setup.py
-install -{}-qmake /usr/bin/qmake-qt4}. Po rozwiązaniu tych dwóch problemów,
-kompilacja i instalacja PySide przebiegła pomyślnie. 
+Następnym krokiem jest kompilacja PySide. W laboratorium użyto wersji 1.2.2 – takiej, jaka jest
+zalecana przez deweloperów. Pakiet został skompilowany z domyślnymi ustawieniami. W tym kroku
+wystąpiło najwięcej problemów z kompilacją. Pierwszym napotkanym był problem z brakiem bibliotek
+Pythona, gdy ten został wcześniej skompilowany bez flagi \texttt{-{}-enable-shared}.  Kolejnym
+błędem był brak pakietu qmake4. W poprzednim kroku został zainstalowany Qt4 wraz z qmake4. By usunąć
+błąd należało dodać dodatkową opcję ze ścieżką do programu qmake: \texttt{python3
+/home/cezmurgr/PySide-1.2.4/setup.py install -{}-qmake /usr/bin/qmake-qt4}. Po rozwiązaniu tych
+problemów, kompilacja i instalacja PySide przebiegła pomyślnie.
 
-Ostatnim niezbędnym pakietem jest VirtualEnv. Pakiet pozwala utworzyć
-wirtualne środowisko uruchomieniowe. Podczas kompilacji i następnie
-instalacji pakietu nie wystąpiły żadne problemy. 
+Ostatnim niezbędnym pakietem jest VirtualEnv. Pakiet pozwala utworzyć wirtualne środowisko
+uruchomieniowe. Podczas kompilacji i następnie instalacji pakietu nie wystąpiły żadne problemy.
 
-Podsumowując: niewiele czasu pochłonęło ściąganie oraz przerzucanie
-przez dysk zewnętrzny pakietów. Najwięcej czasu poświęcono jednak
-kompilacji i instalacji z nie do końca jasnymi instrukcjami. Większość
-kompilacji zakończyła się niepowodzeniem, ponieważ zabrakło konkretnej
-opcji przy konfiguracji poprzedniego pakietu, lub pakiet był instalowany
-w złej kolejności.
+Podsumowując: niewiele czasu pochłonęło ściąganie oraz przerzucanie przez dysk zewnętrzny pakietów.
+Najwięcej czasu poświęcono jednak kompilacji i instalacji z nie do końca jasnymi instrukcjami.
+Większość kompilacji zakończyła się niepowodzeniem, ponieważ zabrakło konkretnej opcji przy
+konfiguracji poprzedniego pakietu, lub pakiet był instalowany w złej kolejności.
 
 \subsection{Uruchomienie aplikacji BlenderVR w systemie Linux}
 
-W przypadku środowiska Linux uruchomienie następuje przez polecenia
-w terminalu. Należy użyć komend w kolejności:
+W przypadku środowiska Linux uruchomienie aplikacji następuje po wpisaniu poleceń w terminalu.
+Należy użyć komend w kolejności:
 
 \texttt{\$ cd \$INSTALL\_DIR }
 
@@ -900,17 +867,16 @@ w terminalu. Należy użyć komend w kolejności:
 
 \texttt{\$ ./source/blendervr}
 
-Niestety, pierwsze uruchomienie się nie powiodło, a w terminalu pokazał
-się błąd:\texttt{ /home/cezmurgr/pajton3/bin/python3: error while
-loading shared libraries: libpython3.4m.so.1.0: cannot open shared
-object file: No such file or directory}. Problem rozwiązano poprzez
-eksport nowej zmiennej środowiskowej o nazwie: \texttt{LD\_LIBRARY\_PATH=LD\_LIBRARY\_PATH=/home/cezmurgr/pajton3/lib}.
-Zmienna wskazuje na katalog, w którym znajduje się \texttt{libpython3.4m.so.1.0}.
-Dzięki temu BlenderVR uruchomił się zgodnie z założeniami. Na ekranie
-pokazał się interfejs aplikacji. 
+Niestety, pierwsze uruchomienie się nie powiodło, a w terminalu pokazał się błąd:
+\texttt{/home/cezmurgr/pajton3/bin/python3: error while loading shared libraries:
+libpython3.4m.so.1.0: cannot open shared object file: No such file or directory}. Problem rozwiązano
+poprzez eksport nowej zmiennej środowiskowej o nazwie:
+\texttt{LD\_LIBRARY\_PATH=LD\_LIBRARY\_PATH=/home/cezmurgr/pajton3/lib}.  Zmienna wskazuje na
+katalog, w którym znajduje się \texttt{libpython3.4m.so.1.0}.  Dzięki temu BlenderVR uruchomił się
+zgodnie z założeniami. Na ekranie pokazał się interfejs aplikacji.
 
-Również w tym przypadku pierwszym krokiem jest załadowanie pliku konfiguracyjnego.
-Został on napisany w oparciu o przykład dostępny na stronie dewelopera.
+Również w tym przypadku pierwszym krokiem jest załadowanie pliku konfiguracyjnego.  Został on
+napisany w oparciu o przykład dostępny na stronie dewelopera.
 
 \inputencoding{latin2}\begin{lstlisting}
 <?xml version="1.0"?>
@@ -970,32 +936,28 @@ Został on napisany w oparciu o przykład dostępny na stronie dewelopera.
 </blendervr>
 \end{lstlisting}
 \inputencoding{utf8}
-Po załadowaniu pliku konfiguracyjnego wybrano podstawową scenę do
-testu. Okienko logowania nie wykazało żadnych błędów. Uruchomienie
-sceny przyniosło oczekiwany skutek. Zgodnie z konfiguracją, na ekranie
-wyświetliło się okienko 400x400px z wybraną sceną testową. Nie wykryto
-żadnych problemów i zakłóceń w działaniu sceny czy aplikacji.
+
+Po załadowaniu pliku konfiguracyjnego wybrano podstawową scenę do testu. Okienko logowania nie
+wykazało żadnych błędów. Uruchomienie sceny przyniosło oczekiwany skutek. Zgodnie z konfiguracją, na
+ekranie wyświetliło się okienko 400×400px z wybraną sceną testową. Nie wykryto problemów lub
+zakłóceń w działaniu zarówno sceny jak i aplikacji.
 
 \subsection{Działanie aplikacji BlenderVR w innych konfiguracjach w środowisku
 Linux}
 
-Dokładnie tak jak w przypadku systemu Windows kolejnym krokiem było
-sprawdzenie aplikacji z użyciem dwóch stanowisk. BlenderVR oraz wszystkie
-niezbędne pakiety zostały zainstalowane na drugm stanowisku w taki
-sam sposób jak na pierwszym. Znano już występujące problemy podczas
-instalacji więc tym razem udało się ją przeprowadzić bezbłędnie. Trudności
-wystąpiły dopiero przy tworzeniu pliku konfiguracyjnego. Na stronie
-dewelopera znajduje się przykładowy plik konfiguracji połączenia dwóch
-stanowisk, jednak jest on przygotowany z myślą o systemie Windows.
-Na bazie poprzednio napisanego pliku konfiguracyjnego dla jednego
-stanowiska dodawano poszczególne sekcje związane z połączeniem przez
-SSH.
+Dokładnie tak jak w przypadku systemu Windows kolejnym krokiem było sprawdzenie aplikacji z użyciem
+dwóch stanowisk. BlenderVR oraz wszystkie niezbędne pakiety zostały zainstalowane na drugim
+stanowisku w taki sam sposób jak na pierwszym. Znano już występujące problemy podczas instalacji
+więc tym razem udało się ją przeprowadzić bezbłędnie. Trudności wystąpiły dopiero przy tworzeniu
+pliku konfiguracyjnego. Na stronie dewelopera znajduje się przykładowy plik konfiguracji połączenia
+dwóch stanowisk, jednak jest on przygotowany z myślą o systemie Windows.  Na bazie poprzednio
+napisanego pliku konfiguracyjnego dla jednego stanowiska dodawano poszczególne sekcje związane z
+połączeniem przez SSH.
 
-Oba komputery zostały wymienione kluczami SSH. Pierwsze logowanie
-nastąpiło ręcznie w terminalu by zostawić ,,odcisk'' i logować się
-bez potrzeby wpisywania hasła za każdym kolejnym razem. W sekcji \texttt{<computers>}
-dodano wpisy odpowiedzialne za połączenie oraz uruchomienie skryptu
-demona. 
+Oba komputery zostały wymienione kluczami SSH. Pierwsze logowanie nastąpiło ręcznie w terminalu by
+wygenerować ,,odcisk palca'' w kluczach SSH i logować się bez potrzeby wpisywania hasła za każdym
+kolejnym razem. W sekcji \texttt{<computers>} dodano wpisy odpowiedzialne za połączenie oraz
+uruchomienie skryptu demona.
 
 \inputencoding{latin2}\begin{lstlisting}
 <computers>
@@ -1010,72 +972,64 @@ demona.
  </computers>
 \end{lstlisting}
 \inputencoding{utf8}
-Zdefiniowano dwa komputery: prawy - \texttt{right} oraz lewy - \texttt{left}.
-Lewy był komputerem, na którym pracowano i uruchamiano główne okno
-BlenderVR. Prawy służył jako „slave”. Adresy IP użyte do logowania
-zostały przypisane w sieci InfiniBand. Zapewni ona bardzo małe opóźnienia
-wymagane przy synchronizacji wszystkich wyświetlanych scen. Załadowanie
-pliku konfiguracyjnego wyświetliło jednak błąd: \texttt{cannot start
-daemon for screen}. W terminalu systemowym wyświetliły się szczegóły
-dotyczące błędu: \texttt{socket.error: {[}Errno 113{]} No route to
-host}. Informacje pozyskane od administratora sieci nie pomogły w
-rozwiązaniu błędu. Według nich wszystkie komputery były w jednej podsieci
-oraz nie było między nimi restrykcji jeśli chodzi o protokoły SSH.
-Sprawdzono łączność pomiędzy komputerami używając pingowania. Wszystkie
-pingi przeszły i nie zarejestrowano żadnych opóźnień. Próba ręcznego
-połączenia SSH się udała, jednak wykonania komendy: \texttt{/home/cezmurgr/pajton3/bin/python3
-/home/cezmurgr/source/utils/daemon.py 192.168.66.7:31415 console debug}
-zakończyło się niepowodzeniem i pokazaniem tego samego błędu: \texttt{socket.error: {[}Errno
-113{]} No route to host}. Wyglądało na to, że z komputera \texttt{right}
-nie można połączyć się do komputera \texttt{left}. Po sprawdzeniu
-tablic routingu okazało się, że komputer prawy jest podłączony przez
-dodatkowych switch, a nie jak reszta komputerów w pracowni do jednego
-switcha. Powodowało to problem przy połączeniu ponieważ po drodze
-pojawiała się jedna dodatkowa podsieć. 
+
+Zdefiniowano dwa komputery: prawy - \texttt{right} oraz lewy - \texttt{left}.  Lewy był komputerem,
+na którym pracowano i uruchamiano główne okno BlenderVR. Prawy służył jako jednostka podrzędna,
+określana w konfiguracji jako „slave”. Adresy IP użyte do logowania zostały przypisane w sieci
+InfiniBand. Zapewnia ona bardzo małe opóźnienia wymagane przy synchronizacji wszystkich wyświetlanych
+scen. Załadowanie pliku konfiguracyjnego wyświetliło jednak błąd: \texttt{cannot start daemon for
+screen}. W terminalu systemowym wyświetliły się szczegóły dotyczące błędu: \texttt{socket.error:
+{[}Errno 113{]} No route to host}. Informacje pozyskane od administratora sieci nie pomogły w
+rozwiązaniu błędu. Według nich wszystkie komputery były w jednej podsieci oraz nie było między nimi
+restrykcji jeśli chodzi o protokoły SSH.  Sprawdzono łączność pomiędzy komputerami używając
+pingowania. Wszystkie pingi przeszły i nie zarejestrowano żadnych opóźnień. Próba ręcznego
+połączenia SSH się udała, jednak wykonanie komendy: \texttt{/home/cezmurgr/pajton3/bin/python3
+/home/cezmurgr/source/utils/daemon.py 192.168.66.7:31415 console debug} zakończyło się
+niepowodzeniem i pokazaniem tego samego błędu: \texttt{socket.error: {[}Errno 113{]} No route to
+host}. Wyglądało na to, że z komputera \texttt{right} nie można połączyć się do komputera
+\texttt{left}. Po sprawdzeniu tablic routingu okazało się, że komputer prawy jest podłączony przez
+dodatkowych switch, a nie jak reszta komputerów w pracowni do jednego switcha.  Powodowało to
+problem przy połączeniu ponieważ po drodze pojawiała się jedna dodatkowa podsieć.
 
 By definitywnie sprawdzić czy rzeczywiście dodatkowy switch powodował
 problem, wybrano dwa inne stanowiska w laboratorium oraz również nazwano
 je \texttt{left} i \texttt{right}. Konfiguracja sekcji \texttt{<computers>}
-musiała się w tym przypadku zmienić. 
+musiała się w tym przypadku zmienić.
 
 \inputencoding{latin2}\begin{lstlisting}
 <computers>
-        <computer name="right" hostname='192.168.66.6' />
-    <system>
-      <login remote_command='ssh cezmurgr@192.168.66.6' python='/home/cezmurgr/pajton3/bin/python3.4'/>
-    </system>
-    <computer name='left' hostname='192.168.66.5'/>
-    <system>
-      <login remote_command='ssh cezmurgr@192.168.66.5' python='/home/cezmurgr/pajton3/bin/python3.4'/>
-    </system>
+  <computer name="right" hostname='192.168.66.6' />
+  <system>
+    <login remote_command='ssh cezmurgr@192.168.66.6' python='/home/cezmurgr/pajton3/bin/python3.4'/>
+  </system>
+  <computer name='left' hostname='192.168.66.5'/>
+  <system>
+    <login remote_command='ssh cezmurgr@192.168.66.5' python='/home/cezmurgr/pajton3/bin/python3.4'/>
+  </system>
  </computers>
 \end{lstlisting}
 \inputencoding{utf8}
-Załadowanie pliku konfiguracyjnego ponownie pokazało błąd: \texttt{cannot
-start daemon for screen}. Błąd wyświetlony przez terminal systemowy
-był jednak inny: \texttt{/home/cezmurgr/pajton3/bin/python3: error
-while loading shared libraries: libpython3.4m.so.1.0: cannot open
-shared object file: No such file or directory}. Ten błąd wystąpił
-już wcześniej i wiedziano jak sobie z nim poradzić. W konfiguracji
-dwóch stanowisk prawdopodobnie zmienna środowiskowa nie była przesłana
-lub nie eksportowała się przy połączeniu SSH. Spróbowano zalogować
-się na komputer prawy oraz wykonać komendę ręcznie. Po zalogowaniu
-przez SSH zauważono, że zmienne środowiskowe zawierają jedynie podstawowe
-wpisy i ścieżki. Brakowało wszystkich zmiennych związanych ze ścieżkami
-do instalowanego Pythona oraz jego bibliotek. Wyeksportowano kolejno:
+
+Załadowanie pliku konfiguracyjnego ponownie pokazało błąd: \texttt{cannot start daemon for screen}.
+Błąd wyświetlony przez terminal systemowy był jednak inny:
+\texttt{/home/cezmurgr/pajton3/bin/python3: error while loading shared libraries:
+libpython3.4m.so.1.0: cannot open shared object file: No such file or directory}. Ten błąd wystąpił
+już wcześniej i wiedziano jak sobie z nim poradzić. W konfiguracji dwóch stanowisk prawdopodobnie
+zmienna środowiskowa nie była przesłana lub nie eksportowała się przy połączeniu SSH. Spróbowano
+zalogować się na komputer prawy oraz wykonać komendę ręcznie. Po zalogowaniu przez SSH zauważono, że
+zmienne środowiskowe zawierają jedynie podstawowe wpisy i ścieżki. Brakowało wszystkich zmiennych
+związanych ze ścieżkami do instalowanego Pythona oraz jego bibliotek. Wyeksportowano kolejno:
 \texttt{PATH=\$PATH:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/cezmurgr/cmake/bin/:/home/cezmurgr/pajton3/bin/}
-oraz \texttt{LD\_LIBRARY\_PATH=/home/cezmurgr/pajton3/lib}. Ręczne
-wykonanie komendy z aplikacji BlenderVR zakończyło się sukcesem. Skrypt
-demona wystartował i próbowął nawiązać połączenie ze stanowiskiem
-\texttt{left}. 
+oraz \texttt{LD\_LIBRARY\_PATH=/home/cezmurgr/pajton3/lib}. Ręczne wykonanie komendy z aplikacji
+BlenderVR zakończyło się sukcesem. Skrypt demona wystartował i próbował nawiązać połączenie ze
+stanowiskiem \texttt{left}.
 
-Przesyłanie zmiennych w aplikacji BlenderVR może odbywać się za pomocą
-odpowiednich wpisów w pliku konfiguracyjnym. By spróbować rozwiązać
-problem braku zmiennych środowiskowych dodano podsekcje \texttt{library
-path} w konfiguracji każdego ze stanowisk. Dodatkowo wpisano również
-ścieżkę do zainstalowanego Pythona 3.4. Nie było to obowiązkowe ponieważ
-dokładna ścieżka była podana: \texttt{<login remote\_command='ssh
-cezmurgr@192.168.66.6' python='/home/cezmurgr/pajton3/bin/python3.4'/>}. 
+Przesyłanie zmiennych w aplikacji BlenderVR może odbywać się za pomocą odpowiednich wpisów w pliku
+konfiguracyjnym. By spróbować rozwiązać problem braku zmiennych środowiskowych dodano podsekcje
+\texttt{library path} w konfiguracji każdego ze stanowisk. Dodatkowo wpisano również ścieżkę do
+zainstalowanego Pythona 3.4. Nie było to obowiązkowe ponieważ dokładna ścieżka była już podana:
+\texttt{<login remote\_command='ssh cezmurgr@192.168.66.6'
+python='/home/cezmurgr/pajton3/bin/python3.4'/>}.
 
 \inputencoding{latin2}\begin{lstlisting}
 <computers>
@@ -1094,36 +1048,162 @@ cezmurgr@192.168.66.6' python='/home/cezmurgr/pajton3/bin/python3.4'/>}.
  </computers>
 \end{lstlisting}
 \inputencoding{utf8}
-Ponowna próba uruchomienia aplikacji nie przyniosła jednak oczekiwanych
-skutków. Terminal ponownie pokazał błąd uruchomienia demona na drugim
-stanowisku. Komunikat ponownie mówił o braku bibliotek.
 
-Problem wymagał głębszej analizy. Pomocna okazała się dokumentacja
-ustawień serwera Open SSH. Zawarte tam informacje nakierowały na możliwości
-serwera na przyjmowanie zmiennych środowiskowych. Z pomocą administratora
-laboratorium uzyskano dostęp do ustawień serwera SSH. 
+Ponowna próba uruchomienia aplikacji nie przyniosła jednak oczekiwanych skutków. Terminal ponownie
+pokazał błąd uruchomienia demona na drugim stanowisku. Komunikat ponownie mówił o braku bibliotek.
+
+Problem wymagał głębszej analizy. Pomocna okazała się dokumentacja ustawień serwera Open SSH.
+Zawarte tam informacje zasugerowały, że serwer ma możliwość przyjmowania odpowienio zdefiniowanych,
+wybranych zmiennych środowiskowych. Z pomocą administratora laboratorium uzyskano dostęp do ustawień
+serwera SSH.
 
 \inputencoding{latin2}\begin{lstlisting}
 TUTAJ KONFIGURACJA KTORA BYLA W LABORATORIUM LUB PRZYKLADOWY PLIK
 \end{lstlisting}
 \inputencoding{utf8}
-Konfiguracja SSH nie pozwalała na przyjmowanie zmiennych środowiskowych
-z zewnątrz. Sesja była uruchamiana w ograniczonym środowisku zawierając
-tylko podstawowe zmienne i nie można było ich automatycznie przesłać.
-Za takie ustawienie odpowiadał parametr: \texttt{AcceptEnv}. Należało
-go przestawić tak, by serwer akceptował zmienne środowiskowe z zewnątrz.
+
+Konfiguracja SSH nie pozwalała na przyjmowanie zmiennych środowiskowych z zewnątrz. Sesja była
+uruchamiana w ograniczonym środowisku zawierającym tylko podstawowe zmienne i nie można było ich
+automatycznie przesłać między maszynami.  Za takie ustawienie odpowiadał parametr:
+\texttt{AcceptEnv}. Należało go przestawić tak, by serwer akceptował zmienne środowiskowe z
+zewnątrz.
 
 \inputencoding{latin2}\begin{lstlisting}
 AcceptEnv PATH LD_LIBRARY_PATH
 \end{lstlisting}
 \inputencoding{utf8}
-Dodatkowo w konfiguracji klienta SSH należało dodać zmienne wysyłane
-do serwera. Odpowiada za to parametr: \texttt{SendEnv}. Po spacji
-podano jakie zmienne środowiskowe powinny zostać wysłane do komputera
-docelowego.
+
+Dodatkowo w konfiguracji klienta SSH należało dodać zmienne wysyłane do serwera. Odpowiada za to
+parametr: \texttt{SendEnv}. Po spacji podano jakie zmienne środowiskowe powinny zostać wysłane do
+komputera docelowego.
 
 \inputencoding{latin2}\begin{lstlisting}
 SendEnv PATH LD_LIBRARY_PATH
 \end{lstlisting}
 \inputencoding{utf8}
+
+Takie ustawienia serwera oraz klienta SSH rozwiązały problem przesyłania zmiennych. Plik
+konfiguracyjny załadował się bez błędów, a na obu stanowiskach uruchomił się demon. Próba
+uruchomienia aplikacji BlenderVR na dwóch stanowiskach zakończyła się sukcesem. Na obu komputerach
+uruchomił się Blenderplayer wraz z przykładową sceną.
+
+Dodatkowo przy tym teście spróbowano uruchomić również bardziej zaawansowane sceny. Załadowanie
+pliku konfiguracyjnego oraz sceny przebiegało bezproblemowo. Jednak w tym przypadku wystąpił
+błąd: \texttt{transition or error}. Błąd nie wyświetlił się ani w konsoli aplikacji ani w terminalu
+systemowym, zamiast tego wyświetlił się w zakładce ,,Run'' w miejsce standardowo pokazywanego napisu
+,,Running'' kiedy próbowano uruchomić program.
+
+\inputencoding{latin2}\begin{lstlisting}
+TUTAJ ZDJ�CIE B��DU
+\end{lstlisting}
+\inputencoding{utf8}
+
+Sprawdzono wszystkie dostępne sceny. Okazało się, że działały tylko dwie podstawowe:
+\texttt{basic.blend} oraz \texttt{simple.blend}. Pozostałe sceny: \texttt{bench.blend,
+head-navigation.blend, keyboardAndMouse.blend, chess.blend, mountain.blend, occulus-rift.blend,
+spider.blend, test.blend} pokazywały ten sam błąd. Deweloperzy pozostawili ten przypadek bez
+komentarza i nie udało się dowiedzieć co może być przyczyną, mimo wielokrotnych prób nawiązania z
+nimi korespondencji.  Przyczyną mogły być prawdopodobnie błędy samego Blender Game Engine, który
+wczytując pliki ze scenami demonstracyjnymi mógł ulec awarii w przypadku gdy sceny te pochodziły ze
+starszej wersji programu.  Analiza tego problemu wymagałaby więcej czasu i wejścia w proces
+debugowania samego Blendera i jego modułu Blender Game Engine, co nie było celem pracy.
+
+Po udanym połączeniu dwóch stanowisk skupiono się na kolejnej ważnej funkcjonalności BlenderVR:
+możliwości uruchomienia sceny w 3D na wielu stanowiskach. Serwer SSH został odpowiednio
+skonfigurowany i przetestowany.  Plik konfiguracyjny był również uzupełniony o sekcje związane z
+połączeniem do drugiego komputera. Należało przygotować konfigurację umożliwiającą obsługę sceny w
+trójwymiarze. Aplikacja powinna uruchomić Blenderplayer z dodatkową opcją \texttt{-hwpageflip} co
+pozwoli na obsługę dwóch buforów graficznych (lewe i prawe oko) oraz wyświetlanie sceny z
+odświeżaniem 120 klatek na sekundę. Przykładowa konfiguracja znajduje się na stronie dewelopera. Na
+jej podstawie, oraz używając konfiguracji z poprzedniego testu, napisano nowy plik konfiguracyjny.
+
+\inputencoding{latin2}\begin{lstlisting}
+KONFIGURACJA netword_3d_unix
+\end{lstlisting}
+\inputencoding{utf8}
+
+Konfiguracja została załadowana poprawnie. Jednak uruchomienie symulacji się nie udało. Na ekranie
+obu komputerów pojawiło się czarne okienko, które po chwili znikło. Aplikacja wyświetliła w okienku
+logowania:
+
+\inputencoding{latin2}\begin{lstlisting}
+2017-03-16 11:02:51,162 Command to run daemon: /home/cezmurgr/source/venv/bin/python3 /home/cezmurgr/source/utils/daemon.py dev3mini.lzwp.pg.edu.pl:31415 console debug
+2017-03-16 11:02:51,163 Its environment variables: {}  2016-12-14 11:02:51,207 Daemon for screen 'console' started
+2017-03-16 11:02:57,077 Command to run blenderplayer: /home/cezmurgr/blender/blenderplayer -w 2560 1440 24 120 -s hwpageflip .basic.vr.blend - dev3mini.lzwp.pg.edu.pl:31415 console
+2017-03-16 11:02:57,078 Its path: /home/cezmurgr/source/samples/basic/basic
+2017-03-16 11:02:57,079 Its environment variables: {'DISPLAY': ':0.0', 'PYTHONPATH': '/home/cezmurgr/pajton3/bin'}
+connect failed: No such file or directory /home/sources/blender-release/intern/ghost/intern/GHOST_WindowX11.cpp:220: X11 glXChooseVisual() failed, verify working openGL system!
+initial window could not find the GLX extension error: could not create main window
+\end{lstlisting}
+\inputencoding{utf8}
+
+Wyszukano w Internecie możliwe przyczyny błędu. Sugestie w większości podobnych przypadków dotyczyły
+wadliwego działania przestarzałych sterowników kart graficznych zainstalowanych w systemie. Na tym
+etapie sprawdzono jeszcze jak zachowuje się system po ustawieniu wyższych wartości odświeżania
+ekranu. Możliwości sprzętowe pozwalały osiągnąć rozdzielczość 2560×1440 pikseli przy odświeżaniu
+nawet 144 Hz.  Ustawiona w CentOS rozdzielczość zgadzała się z najwyższą dostępną dla monitorów ale
+odświeżanie było na poziomie 60Hz. Próba zmiany ustawień na 120Hz spowodowała wyłączenie się
+monitora i jego blokadę na 30 sekund. To samo zdarzyło się w przypadku próby ustawienia
+częstotliwości 144 Hz. Sam monitor nie wyświetlał w tym czasie żadnej informacji diagnostycznej
+świadczącej o braku połączenia, lub że ustawione parametry przekraczają jego możliwości. W takim
+przypadku zazwyczaj jest to komunikat: \texttt{Out of range}. Sprawdzono czy na czas wyłączenia
+ekranu system nie jest zawieszony. Uruchomiono terminal oraz przygotowano dwa polecenia:
+
+\inputencoding{latin2}\begin{lstlisting}
+xrandr -s 2560x1440 -r 120
+\end{lstlisting}
+\inputencoding{utf8}
+Polecenie zmienia wartość odświeżania na 120Hz.
+
+\inputencoding{latin2}\begin{lstlisting}
+xrandr -s 2560x1440 -r 60
+\end{lstlisting}
+\inputencoding{utf8}
+Polecenie zmienia wartość odświeżania na 60Hz.
+
+Użycie polecenia na stałe zmienia ustawienia i nie wymaga potwierdzenia.  Zwiększenie częstotliwości
+odświeżania wyłączyło monitor. Dopiero użycie polecenia, które zmniejszało częstotliwość ponownie
+przywracało obraz. Test pozwolił stwierdzić, że system nadal działa, a tylko obraz nie jest
+wyświetlany.
+
+Zgodnie z podpowiedziami znalezionymi w Sieci sprawdzono wersję zainstalowanego sterownika. Była to
+wersja przestarzała 352.41. Najnowszą dostępną wersją była 375.66. Z pomocą administratora najnowsza
+wersja sterownika została zainstalowana na obu stanowiskach. Kolejna próba zmiany rozdzielczości
+połowicznie się udała. Test rozdzielczości 2560×1440 oraz odświeżania 144~Hz zakończył się
+pozytywnie. Monitor tym razem się nie wyłączył.  Test z odświeżaniem na poziomie 120~Hz dał wynik
+negatywny. Ekran stał się czarny na 30 sekund i włączył się dopiero po przywróceniu poprzednich
+ustawień. Stwarzało to jednak pewien problem ponieważ częstotliwość odświeżania aktywnych okularów
+3D wynosi 120Hz. Wymagane było by scena uruchamiana była w tej częstotliwości.
+
+Kolejna próba uruchomienia przykładowej sceny w 3D na obu stanowiskach ponownie zakończyła się
+błędem: \texttt{(...)GHOST\_WindowX11.cpp:220: X11 glXChooseVisual() failed, verify working openGL
+system!}. Postanowiono zmienić ustawienia i spróbować uruchomić scenę raz jeszcze w 144Hz zamiast w
+120Hz. Niestety test również zakończył się tym samym błędem.
+
+Sprawdzono logi systemowe. Najważniejsze były wpisy dotyczące ustawień sterowników NVIDIA oraz Xorg
+- podstawowego środowiska graficznego Linuxa. Sprawdzono log Xorg w momencie, w którym uruchamiana
+jest scena w BlenderVR:
+
+\inputencoding{latin2}\begin{lstlisting}
+[  1016.863] AUDIT: Wed Dec 14 09:59:07 2016: 3348: client 34 connected from local host ( uid=505 gid=505 pid=4270 )
+[  1016.898] AUDIT: Wed Dec 14 09:59:07 2016: 3348: client 34 disconnected
+\end{lstlisting}
+\inputencoding{utf8}
+
+Te dwa wpisy pojawiały się za każdym razem gdy uruchamiano przykładową scenę w aplikacji. PID w logu
+oraz PID sprawdzony w procesach potwierdziły, że to blenderplayer próbuje otworzyć nowe okno. W
+Internecie niestety nie znaleziono niczego co mogłoby być związane z działaniem aplikacji i
+powodować rozłączenie. Podobne błędy były powodowane zazwyczaj przez uruchamianie elementu z błędnie
+ustawionym programem domyślnym.\footnote{Źródło:
+http://grokbase.com/t/centos/centos/13a3ga4gmj/xorg-fills-up-var-log-xorg-0-log-with-audit-messages-up-to-system-crash
+(dostęp: 18.05.2017)}. Problem mógł również wynikać ze sterownika. Jego aktualizacja rozwiązała w
+pewnym sensie część problemu: można było ustawić odświeżanie na poziomie 144Hz i nie powodowało to
+gaśnięcia ekranu. Założono temat na oficjalnym forum NVIDIA z opisem problemu oraz konfiguracją
+stanowiska. Niestety pozostał on bez odpowiedzi.
+
+Logi zebrane podczas tej próby zostały wysłane do deweloperów aplikacji BlenderVR. Nie mieli oni
+jednak czasu przyjrzeć się im dogłębnie.  Problem nigdy nie wystąpił podczas testów w ich
+laboratorium. Mógł on wynikać z różnic pomiędzy dystrybucjami systemów Linux. System użyty przez
+deweloperów aplikacji to Ubuntu 14.04.1.
+
 \end{document}
